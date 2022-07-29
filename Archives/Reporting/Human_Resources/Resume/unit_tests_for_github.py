@@ -3,7 +3,7 @@ import pdfkit
 
 
 class UnitTestsReportingHumanResourcesResumeForGitHub(unittest.TestCase):
-    #
+    # ok
     def test_resume(self):
         print('test_resume')
 
