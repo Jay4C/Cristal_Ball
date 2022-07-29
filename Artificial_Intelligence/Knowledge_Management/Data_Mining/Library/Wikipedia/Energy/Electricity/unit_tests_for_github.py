@@ -301,6 +301,123 @@ class UnitTestsDataMiningWikipediaElectricity(unittest.TestCase):
         else:
             print("no tbody")
 
+    # ok
+    def test_extract_the_list_of_countries_by_electricity_imports(self):
+        print('test_extract_the_list_of_countries_by_electricity_imports')
+
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103'
+        }
+
+        url = "https://en.wikipedia.org/wiki/List_of_countries_by_electricity_imports"
+
+        # Request the content of a page from the url
+        html = requests.get(url, headers=headers)
+
+        # print(html.content)
+
+        time.sleep(3)
+
+        # Parse the content of html_doc
+        soup = BeautifulSoup(html.content, 'html.parser')
+
+        data = []
+
+        if soup.find_all("tbody")[0] is not None:
+            all_tr = soup.find_all("tbody")[0].find_all("tr")
+
+            for tr in all_tr:
+                if tr.find('td'):
+                    country_region_1 = ''
+                    country_region_2 = ''
+
+                    if tr.find_all('td')[0].find('i') is not None:
+                        country_region_1 += tr.find_all('td')[0].find('i').text.replace('\xa0', '').replace('\n', '')
+                    else:
+                        country_region_1 += tr.find_all('td')[0].find('a').text.replace('\xa0', '').replace('\n', '')
+
+                    electricity_imports_in_gwh_mostly_in_2007 = tr.find_all('td')[1].text.replace(',', '')\
+                        .replace('\n', '').replace('[contradictory]', '')
+
+                    if tr.find_all('td')[2].find('i') is not None:
+                        country_region_2 += tr.find_all('td')[2].find('i').text.replace('\xa0', '').replace('\n', '')\
+                            .lower().capitalize()
+                    else:
+                        country_region_2 += tr.find_all('td')[2].text.replace('\xa0', '').replace('\n', '')\
+                            .lower().capitalize()
+
+                    electricity_imports_in_gwh_in_last_date = tr.find_all('td')[3].text.replace(',', '') \
+                        .replace('\n', '').replace('[contradictory]', '')
+
+                    last_date = tr.find_all('td')[4].text.replace(' est.', '').replace('\n', '')\
+                        .replace('[1]', '').replace(' est.', '')
+
+                    data_element = {
+                        'country_region_1': country_region_1,
+                        'electricity_imports_in_gwh_mostly_in_2007': electricity_imports_in_gwh_mostly_in_2007,
+                        'country_region_2': country_region_2,
+                        'electricity_imports_in_gwh_in_last_date': electricity_imports_in_gwh_in_last_date,
+                        'last_date': last_date
+                    }
+
+                    data.append(data_element)
+
+                    print(str(data_element) + ",")
+        else:
+            print("no tbody")
+
+    # ok
+    def test_extract_the_list_of_countries_by_electricity_exports(self):
+        print('test_extract_the_list_of_countries_by_electricity_exports')
+
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103'
+        }
+
+        url = "https://en.wikipedia.org/wiki/List_of_countries_by_electricity_exports"
+
+        # Request the content of a page from the url
+        html = requests.get(url, headers=headers)
+
+        # print(html.content)
+
+        time.sleep(3)
+
+        # Parse the content of html_doc
+        soup = BeautifulSoup(html.content, 'html.parser')
+
+        data = []
+
+        if soup.find_all("tbody")[1] is not None:
+            all_tr = soup.find_all("tbody")[1].find_all("tr")
+
+            for tr in all_tr:
+                if tr.find('td'):
+                    country_region = ''
+
+                    rank = tr.find_all('td')[0].text.replace('\xa0', '').replace('\n', '')
+
+                    country_region += tr.find_all('td')[1].find('a').text.replace('\xa0', '').replace('\n', '')
+
+                    electricity_exports_in_gwh = tr.find_all('td')[2].text.replace(',', '')\
+                        .replace('\n', '').replace('[contradictory]', '')
+
+                    date_of_information = tr.find_all('td')[3].text.replace(' est.', '').replace('\n', '')\
+                        .replace('[1]', '').replace(' est.', '').replace('FY ', '')
+
+                    data_element = {
+                        'rank': rank,
+                        'country_region': country_region,
+                        'electricity_exports_in_gwh': electricity_exports_in_gwh,
+                        'date_of_information': date_of_information
+                    }
+
+                    data.append(data_element)
+
+                    print(str(data_element) + ",")
+        else:
+            print("no tbody")
+
 
 if __name__ == '__main__':
     unittest.main()
