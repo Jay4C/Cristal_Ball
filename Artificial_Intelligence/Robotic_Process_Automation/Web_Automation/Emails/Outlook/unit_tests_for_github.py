@@ -438,6 +438,13 @@ Kind regards,"""
         browser.quit()
         print('browser.quit()')
 
+    # ok
+    def test_close_all_firefox_processes(self):
+        print('test_close_all_firefox_processes')
+        import os
+        os.system("taskkill /F /IM geckodriver.exe")
+        os.system("taskkill /F /IM firefox.exe")
+
 
 if __name__ == '__main__':
     unittest.main()
