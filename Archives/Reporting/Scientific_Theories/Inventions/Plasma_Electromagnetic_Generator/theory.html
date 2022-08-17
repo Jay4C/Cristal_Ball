@@ -231,26 +231,492 @@
                     I_{1}(t)
                   \]
 
-                  le courant induit par le champ magnetique
+                  le courant induit par le champ magnétique
 
                   \[
-                    \overrightarrow{B}_{01}(t)
+                    \overrightarrow{B}_{012}(t)
                   \]
 
-                  et
+                  par induction électromagnétique.
+
+                  <br>
+                  <br>
+
+                  Soit
 
                   \[
-                    \overrightarrow{B}_{2}(t)
+                    L_{B}
                   \]
 
-                  par susceptibilité magnétique et optique non linéaire.
+                  l'inductance de la bobine du générateur.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    l_{B}
+                  \]
+
+                  la longueur de la bobine du générateur.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    N_{B}
+                  \]
+
+                  le nombre de tours de fils de la bobine du générateur.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    S_{B}
+                  \]
+
+                  la surface de la bobine du générateur.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    \mu_{B}
+                  \]
+
+                  la susceptibilité magnetique du noyau de la bobine du générateur.
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    L_{B} = \frac{ \mu_{B} * N_{B}^{2} * S_{B} }{ l_{B} }
+                  \]
+
+                  la susceptibilité magnetique du noyau de la bobine du générateur.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    E_{ma}
+                  \]
+
+                  l'énergie magnétique de la bobine du générateur.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    P_{ma}
+                  \]
+
+                  la puissance instantanée de la bobine du générateur.
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    P_{ma} = \frac{d E_{ma}}{d t}
+                  \]
+
+                  la puissance instantanée de la bobine du générateur.
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    E_{ma} = \frac{ L_{B} * I_{1}(t)^{2} }{ 2 }
+                  \]
+
+                  <br>
+                  <br>
+
+                  D'où,
+
+                  \[
+                    P_{ma} = \frac{ L_{B} }{ 2 } * \frac{d I_{1}^{2}(t) }{d t }
+                            = L_{B} * I_{1}(t) * \frac{d I_{1}(t) }{d t }
+                  \]
+
+                  <br>
+                  <br>
+
+                  Exprimer
+
+                  \[
+                    I_{1}(t)
+                  \]
+
+                  en fonction de
+
+                  \[
+                    \overrightarrow{B}_{012}(t)
+                  \]
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    \Phi_{B}
+                  \]
+
+                  le flux magnétique de la bobine du générateur.
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    \overrightarrow{B}_{012}(t) = \overrightarrow{B}_{0}(t) + \overrightarrow{B}_{1}(t)
+                        + \overrightarrow{B}_{2}(t)
+                  \]
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    \Phi_{B} = \iint \overrightarrow{B}_{012}(t) . \overrightarrow{dS}_{B}(t)
+                    = B_{012}(t) * S_{B}
+                    = L_{B} * I_{1}(t)
+                  \]
+
+                  \[
+                    I_{1}(t) = \frac{ B_{012}(t) * S_{B} }{ L_{B} }
+                  \]
+
+                  \[
+                    \frac{d I_{1}(t)}{d t} = \frac{ S_{B} }{ L_{B} } * \frac{d B_{012}(t) }{d t}
+                  \]
+
+                  <br>
+                  <br>
+
+                  D'où,
+
+                  \[
+                    P_{ma} = \frac{ L_{B} * B_{012}(t) * S_{B} * S_{B} }{ L_{B} * L_{B} } * \frac{d B_{012}(t) }{d t}
+                    = \frac{ B_{012}(t) * S_{B}^{2} }{ L_{B} } * \frac{d B_{012}(t) }{d t}
+                    = \frac{ l_{B} * S_{B} * B_{012}(t) }{ \mu_{B} * N_{B}^{2} } * \frac{d B_{012}(t) }{d t}
+                  \]
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    B_{0}(t) = B_{0} * \cos(\omega_{0} * t)
+                  \]
+
+                  \[
+                    B_{01}(t) = B_{0} * \cos(\omega_{0} * t) + B_{1}
+                  \]
+
+                  \[
+                    B_{012}(t) = B_{0} * \cos(\omega_{0} * t) + B_{1} + B_{2}
+                  \]
+
+                  \[
+                    \frac{d B_{012}(t) }{d t} = - B_{0} * \omega_{0} * \sin(\omega_{0} * t)
+                  \]
+
+                  <br>
+                  <br>
+
+                  D'où,
+
+                  \[
+                    P_{ma} = \frac{ - l_{B} * S_{B} * ( B_{0} * \cos(\omega_{0} * t) + B_{1} + B_{2} )
+                    * B_{0} * \omega_{0} * \sin(\omega_{0} * t) }{ \mu_{B} * N_{B}^{2} }
+                  \]
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    N_{r}
+                  \]
+
+                  le nombre de réacteur à plasma du générateur.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    P_{ma7}
+                  \]
+
+                  la puissance du Pmeg-7.
+
+                  <br>
+                  <br>
+
+                  D'où,
+
+                  \[
+                    P_{ma7} = N_{r} * P_{ma}
+                  \]
+
+                  la puissance du Pmeg-7.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    P_{0} = i_{0}(t) * u_{0}(t)
+                  \]
+
+                  la puissance d'entrée du réacteur à plasma.
+
+                  <br>
+                  <br>
+
+                  Soit COP le coefficient de performance du générateur.
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    COP = \frac{ P_{ma} }{ P_{0} }
+                  \]
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    i_{0}(t) = I_{0} * \cos(\omega_{0} * t)
+                  \]
+
+                  \[
+                    u_{0}(t) = U_{0} * \cos(\omega_{0} * t)
+                  \]
+
+                  \[
+                    P_{0}(t) = I_{0} * U_{0} * \cos^{2}(\omega_{0} * t)
+                  \]
+
+                  <br>
+                  <br>
+
+                  D'où,
+
+                  \[
+                    COP = \frac{ - l_{B} * S_{B} * ( B_{0} * \cos(\omega_{0} * t) + B_{1} + B_{2} )
+                    * B_{0} * \omega_{0} * \sin(\omega_{0} * t) }{ \mu_{B} * N_{B}^{2} * I_{0} * U_{0} *
+                    \cos^{2}(\omega_{0} * t) }
+                  \]
+
+                  \[
+                    COP = \frac{ - l_{B} * S_{B} * ( B_{0} * \cos(\omega_{0} * t) + B_{1} + B_{2} )
+                    * B_{0} * \omega_{0} * \tan(\omega_{0} * t) }{ \mu_{B} * N_{B}^{2} * I_{0} * U_{0} *
+                    \cos(\omega_{0} * t) }
+                  \]
+
+                  <br>
+                  <br>
+
+                  Exprimer
+
+                  \[
+                    B_{0}
+                  \]
+
+                  en fonction de
+
+                  \[
+                    I_{0}
+                  \]
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    B_{0} = \frac{ I_{0} * \mu_{0} }{ \pi * d_{vis} }
+                  \]
+
+                  où
+
+                  \[
+                    d_{vis}
+                  \]
+
+                  est le diamètre de la vis.
+
+                  <br>
+                  <br>
+
+                  D'où,
+
+                  \[
+                    COP_{r} = \frac{ P_{ma7} }{ P_{0} } = \frac{ N_{r} * P_{ma} }{ P_{0} } = N_{r} * COP
+                  \]
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    E_{0}
+                  \]
+
+                  l'énergie apportée par l'utilisateur au générateur.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    E_{t}
+                  \]
+
+                  l'énergie totale du générateur.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    \alpha
+                  \]
+
+                  le coefficient de capture du vide.
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    E_{cv} = \alpha * E_{0}
+                  \]
+
+                  l'énergie capturée du vide par le générateur.
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    E_{t} = E_{0} + E_{cv} = E_{0} + \alpha * E_{0} = E_{0} * ( \alpha + 1 )
+                  \]
+
+                  <br>
+                  <br>
+
+                  Soit
+
+                  \[
+                    \eta
+                  \]
+
+                  le rendement de la machine.
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    \eta = \frac{ E_{0} }{ E_{t} } = \frac{ E_{0} }{ E_{0} * ( \alpha + 1 ) }
+                    = \frac{ 1 }{ ( \alpha + 1 ) }
+                  \]
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    COP = \frac{ - \mu_{0} * \omega_{0} * l_{B} * S_{B} * \tan(\omega_{0} * t) }
+                    { \pi * d_{vis} * \mu_{B} * N_{B}^{2} * U_{0} * \cos(\omega_{0} * t) }
+                    * ( \frac{ I_{0} * \mu_{0} * \cos(\omega_{0} * t) }{ \pi * d_{vis} } + B_{1} + B_{2} )
+                  \]
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    P_{ma}(t) = \frac{ - I_{0} * \mu_{0} * \omega_{0} * l_{B} * S_{B} * \sin(\omega_{0} * t) }
+                    { \pi * d_{vis} * \mu_{B} * N_{B}^{2} }
+                    * ( \frac{ I_{0} * \mu_{0} * \cos(\omega_{0} * t) }{ \pi * d_{vis} } + B_{1} + B_{2} )
+                  \]
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    I_{1}(t) = \frac{ S_{B} * ( B_{0} * \cos(\omega_{0} * t) + B_{1} + B_{2} ) }{ L_{B} }
+                    = \frac{ S_{B} * l_{B} * ( B_{0} * \cos(\omega_{0} * t) + B_{1} + B_{2} ) }{ \mu_{B} * N_{B}^{2} * S_{B} }
+                    = \frac{ l_{B} * ( B_{0} * \cos(\omega_{0} * t) + B_{1} + B_{2} ) }{ \mu_{B} * N_{B}^{2} }
+                  \]
+
+                  <br>
+                  <br>
+
+                  On a :
+
+                  \[
+                    U_{1}(t) = \frac{ P_{ma}(t) }{ I_{1}(t) }
+                    = \frac{ - I_{0} * \mu_{0} * \omega_{0} * l_{B} * S_{B} * \mu_{B} * N_{B}^{2} * \sin(\omega_{0} * t)
+                    * ( B_{0} * \cos(\omega_{0} * t) + B_{1} + B_{2} ) }{ \mu_{B} * N_{B}^{2} * \pi * d_{vis} * l_{B} *
+                    ( B_{0} * \cos(\omega_{0} * t) + B_{1} + B_{2} ) }
+                  \]
+
+                  \[
+                    U_{1}(t) = \frac{ - I_{0} * \mu_{0} * \omega_{0} * \sin(\omega_{0} * t) }{ \pi * d_{vis} }
+                  \]
               </h6>
-
           </div>
         </div>
         <!-- Theory -->
       </div>
 
+      <br>
+      <br>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
