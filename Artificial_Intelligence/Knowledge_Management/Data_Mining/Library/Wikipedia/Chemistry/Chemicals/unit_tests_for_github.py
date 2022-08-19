@@ -160,6 +160,86 @@ class UnitTestsDataMiningWikipediaChemistryChemicals(unittest.TestCase):
         else:
             print("no tbody")
 
+    # ok
+    def test_extract_the_abundances_of_the_elements(self):
+        print('test_extract_the_abundances_of_the_elements')
+
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103'
+        }
+
+        url = "https://en.wikipedia.org/wiki/Abundances_of_the_elements_(data_page)"
+
+        # Request the content of a page from the url
+        html = requests.get(url, headers=headers)
+
+        # print(html.content)
+
+        time.sleep(3)
+
+        # Parse the content of html_doc
+        soup = BeautifulSoup(html.content, 'html.parser')
+
+        data = []
+
+        if soup.find_all("tbody")[0] is not None:
+            all_tr = soup.find_all("tbody")[0].find_all("tr")
+
+            for tr in all_tr:
+                if tr.find('td'):
+                    element = str(tr.find_all('td')[0].text.replace(',', '').replace('\n', '').encode("utf-8"))\
+                        .replace("b'", "").replace("'", "")
+
+                    c1_crust_crc_handbook = str(tr.find_all('td')[1].text.replace(',', '').replace('\n', '')
+                                                .encode("utf-8")).replace("b'", "").replace("'", "")\
+                        .replace("\\xc3\\x9710\\xe2\\x88\\x92", "*10^-")
+
+                    c2_crust_kaye_and_laby = str(tr.find_all('td')[2].text.replace(',', '').replace('\n', '')
+                                                 .encode("utf-8")).replace("b'", "").replace("'", "")\
+                        .replace("\\xc3\\x9710\\xe2\\x88\\x92", "*10^-")
+
+                    c3_crust_greenwood = str(tr.find_all('td')[3].text.replace(',', '').replace('\n', '')
+                                             .encode("utf-8")).replace("b'", "").replace("'", "")\
+                        .replace("\\xc3\\x9710\\xe2\\x88\\x92", "*10^-")
+
+                    c4_crust_ahrens_taylor = str(tr.find_all('td')[4].text.replace(',', '').replace('\n', '')
+                                                 .encode("utf-8")).replace("b'", "").replace("'", "")\
+                        .replace("\\xc3\\x9710\\xe2\\x88\\x92", "*10^-")
+
+                    c5_crust_ahrens_wanke = str(tr.find_all('td')[5].text.replace(',', '').replace('\n', '')
+                                                .encode("utf-8")).replace("b'", "").replace("'", "")\
+                        .replace("\\xc3\\x9710\\xe2\\x88\\x92", "*10^-")
+
+                    c6_crust_ahrens_weaver = str(tr.find_all('td')[6].text.replace(',', '').replace('\n', '')
+                                                 .encode("utf-8")).replace("b'", "").replace("'", "")\
+                        .replace("\\xc3\\x9710\\xe2\\x88\\x92", "*10^-")
+
+                    u1_upper_crust_ahrens_taylor = str(tr.find_all('td')[7].text.replace(',', '').replace('\n', '')
+                                                       .encode("utf-8")).replace("b'", "").replace("'", "")\
+                        .replace("\\xc3\\x9710\\xe2\\x88\\x92", "*10^-")
+
+                    u2_upper_crust_ahrens_shaw = str(tr.find_all('td')[8].text.replace(',', '').replace('\n', '')
+                                                     .encode("utf-8")).replace("b'", "").replace("'", "")\
+                        .replace("\\xc3\\x9710\\xe2\\x88\\x92", "*10^-")
+
+                    data_element = {
+                        'element': element,
+                        'c1_crust_crc_handbook': c1_crust_crc_handbook,
+                        'c2_crust_kaye_and_laby': c2_crust_kaye_and_laby,
+                        'c3_crust_greenwood': c3_crust_greenwood,
+                        'c4_crust_ahrens_taylor': c4_crust_ahrens_taylor,
+                        'c5_crust_ahrens_wanke': c5_crust_ahrens_wanke,
+                        'c6_crust_ahrens_weaver': c6_crust_ahrens_weaver,
+                        'u1_upper_crust_ahrens_taylor': u1_upper_crust_ahrens_taylor,
+                        'u2_upper_crust_ahrens_shaw': u2_upper_crust_ahrens_shaw
+                    }
+
+                    data.append(data_element)
+
+                    print(str(data_element) + ",")
+        else:
+            print("no tbody")
+
 
 if __name__ == '__main__':
     unittest.main()
