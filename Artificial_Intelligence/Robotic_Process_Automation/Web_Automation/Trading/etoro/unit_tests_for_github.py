@@ -192,7 +192,7 @@ class UnitTestsRPATradingEtoro(unittest.TestCase):
 
         market = 'https://www.etoro.com/markets/eurusd'
 
-        position = 'sell'
+        position = 'buy'
 
         amount = '1000'
 
@@ -210,8 +210,8 @@ class UnitTestsRPATradingEtoro(unittest.TestCase):
         options = Options()
         options.headless = False
         browser = webdriver.Firefox(
-            executable_path='M:\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub_Jay4C\\Cristal_Ball'
-                            '\\geckodriver.exe',
+            executable_path='C:\\Users\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques'
+                            '\\GitHub_Jay4C\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 

@@ -220,6 +220,149 @@ Kind regards,"""
         browser.quit()
         print('browser.quit()')
 
+    #
+    def test_attach_one_attachment(self):
+        print('test_attach_one_attachment')
+
+        my_email = ''
+        my_password = ''
+
+        file = 'C:\\Users\\ALOYAU MARIA\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub_Jay4C' \
+               '\\Cristal_Ball\\Archives\\Reporting\\Human_Resources\\Resume\\Resume_For_Me' \
+               '\\CV_De_Jason_ALOYAU_[Developpeur_Python]_v1.pdf'
+
+        url = "https://outlook.live.com/owa/"
+
+        time.sleep(5)
+
+        warnings.filterwarnings(
+            action="ignore",
+            message="unclosed",
+            category=ResourceWarning
+        )
+
+        time.sleep(5)
+
+        # With Firefox
+        options = Options()
+        options.headless = False
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\ALOYAU MARIA\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques'
+                            '\\GitHub_Jay4C\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
+
+        time.sleep(5)
+
+        # maximize window
+        browser.maximize_window()
+
+        time.sleep(5)
+
+        # open
+        browser.get(url)
+
+        time.sleep(5)
+
+        # Click on the 'Connexion' button
+        connexion_button = browser.find_element(
+            by=By.XPATH,
+            value="/html/body/header/div/aside/div/nav/ul/li[2]/a"
+        )
+        connexion_button.click()
+        print('connexion_button.click() clicked')
+
+        time.sleep(5)
+
+        # Insert my email
+        email_input = browser.find_element(
+            by=By.XPATH,
+            value='//*[@id="i0116"]'
+        )
+        email_input.clear()
+        email_input.send_keys(
+            my_email
+        )
+        print("email inserted")
+
+        time.sleep(5)
+
+        # Click on the 'Suivant' button
+        suivant_button = browser.find_element(
+            by=By.XPATH,
+            value='//*[@id="idSIButton9"]'
+        )
+        suivant_button.click()
+        print('suivant_button.click() clicked')
+
+        time.sleep(5)
+
+        # Insert my password
+        password_input = browser.find_element(
+            by=By.XPATH,
+            value='//*[@id="i0118"]'
+        )
+        password_input.clear()
+        password_input.send_keys(
+            my_password
+        )
+        print("password inserted")
+
+        time.sleep(5)
+
+        # Click on the 'Se connecter' button
+        se_connecter_button = browser.find_element(
+            by=By.XPATH,
+            value='//*[@id="idSIButton9"]'
+        )
+        se_connecter_button.click()
+        print('se_connecter_button.click() clicked')
+
+        time.sleep(5)
+
+        # Click on the 'Ne plus afficher ce message' button
+        ne_plus_afficher_ce_message_button = browser.find_element(
+            by=By.XPATH,
+            value='//*[@id="KmsiCheckboxField"]'
+        )
+        ne_plus_afficher_ce_message_button.click()
+        print('ne_plus_afficher_ce_message_button.click() clicked')
+
+        time.sleep(5)
+
+        # Click on the 'Non' button
+        non_button = browser.find_element(
+            by=By.XPATH,
+            value='//*[@id="idBtn_Back"]'
+        )
+        non_button.click()
+        print('non_button.click() clicked')
+
+        time.sleep(15)
+
+        # Click on the 'Nouveau courrier' button
+        nouveau_courrier_button = browser.find_element(
+            by=By.XPATH,
+            value='/html/body/div[2]/div/div[2]/div[2]/div[1]/div/div/div/div/div/div[1]/div[2]/div/div/button/span'
+        )
+        nouveau_courrier_button.click()
+        print('nouveau_courrier_button.click() clicked')
+
+        time.sleep(7)
+
+        # Attach one attachment
+        attachment_file_input = browser.find_element(
+            by=By.XPATH,
+            value='/html/body/div[2]/div/div[2]/div[2]/div[2]/div[1]/div/div/div[3]/div/div/div[2]/div[1]/div/div/div/div[3]/input[1]'
+        )
+        attachment_file_input.clear()
+        attachment_file_input.send_keys(
+            file
+        )
+        print("file inserted")
+
+        time.sleep(7)
+
     # ok
     def test_send_several_emails(self):
         print('test_send_several_emails')
