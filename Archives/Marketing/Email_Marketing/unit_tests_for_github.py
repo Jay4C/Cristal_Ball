@@ -53,6 +53,49 @@ class UnitTestsEmailMarketingForGitHub(unittest.TestCase):
             else:
                 print('Sent to : ' + str(email) + ' from ' + str(fromaddr))
 
+    def test_send_one_email_with_gmail_account(self):
+        fromaddr = ''
+        password = ''
+        smtp_server = 'smtp.gmail.com'
+        smtp_port = 465
+
+        emails = [
+            ''
+        ]
+
+        body = (
+            "Hello,\n\n"
+            "Do you ship your products internationally please ? \n"
+            "Kind regards,\n\n"
+        )
+
+        for email in emails:
+            toaddr = email
+            msg = MIMEMultipart()
+            msg['From'] = fromaddr
+            msg['To'] = toaddr
+            msg['Subject'] = "Request of information about your products"
+
+            msg.attach(MIMEText(body, 'plain'))
+
+            text = msg.as_string()
+
+            try:
+                server_ssl = smtplib.SMTP_SSL(smtp_server, smtp_port)
+                server_ssl.ehlo()
+                server_ssl.login(fromaddr, password)
+                server_ssl.sendmail(fromaddr, toaddr, text)
+                server_ssl.quit()
+            except (gaierror, ConnectionRefusedError):
+                # tell the script to report if your message was sent or which errors need to be fixed
+                print('Failed to connect to the server. Bad connection settings?')
+            except smtplib.SMTPServerDisconnected:
+                print('Failed to connect to the server. Wrong user/password?')
+            except smtplib.SMTPException as e:
+                print('SMTP error occurred: ' + str(e))
+            else:
+                print('Sent to : ' + str(email) + ' from ' + str(fromaddr))
+
 
 if __name__ == '__main__':
     unittest.main()
