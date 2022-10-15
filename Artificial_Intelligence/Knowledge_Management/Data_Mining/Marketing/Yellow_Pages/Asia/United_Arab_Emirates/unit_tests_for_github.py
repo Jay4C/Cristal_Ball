@@ -682,6 +682,74 @@ class UnitTestsDataMinerYellowPagesUnitedArabEmiratesWithSelenium(unittest.TestC
 
         browser.quit()
 
+    # ok
+    def test_extract_all_urls_company_from_all_page_result(self):
+        print('test_extract_all_urls_company_from_all_page_result')
+
+        warnings.filterwarnings(
+            action="ignore",
+            message="unclosed",
+            category=ResourceWarning
+        )
+
+        time.sleep(5)
+
+        # with Firefox
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
+                            '\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
+
+        time.sleep(5)
+
+        # maximize window
+        browser.maximize_window()
+
+        time.sleep(5)
+
+        # open
+        browser.get('https://www.yellow-pages.ae')
+
+        time.sleep(5)
+
+        # Click on the 'I agree' button
+        i_agree_button = browser.find_element(
+            by=By.XPATH,
+            value="/html/body/div[1]/div/div/div[2]/button[1]"
+        )
+        i_agree_button.click()
+        print('i_agree_button.click() clicked')
+
+        time.sleep(5)
+
+        number_of_pages = 48
+
+        urls = []
+
+        for i in range(1, number_of_pages + 1):
+            url = 'https://www.yellow-pages.ae/index.php/Terms::gold/page::' + str(i) + '/hpp::20/'
+            print('url : ' + url)
+
+            # open
+            browser.get(url)
+
+            time.sleep(5)
+
+            if browser.find_element(by=By.CLASS_NAME, value='post-read-more') is not None:
+                all_urls = browser.find_elements(by=By.CLASS_NAME, value='post-read-more')
+
+                for url in all_urls:
+                    link = url.get_attribute('href')
+                    urls.append(link)
+                    print('link : ' + link)
+            else:
+                print('no a class post-read-more')
+
+        browser.quit()
+
 
 if __name__ == '__main__':
     unittest.main()
