@@ -266,7 +266,7 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
 
         number_of_pages = 48
 
-        for i in range(1, number_of_pages + 1):
+        for i in range(43, number_of_pages + 1):
             url_page = 'https://www.yellow-pages.ae/index.php/Terms::gold/page::' + str(i) + '/hpp::20/'
             print('url_page : ' + url_page)
 
@@ -282,7 +282,9 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
 
                 for url_1 in all_urls:
                     link = url_1.get_attribute('href')
-                    urls.append(link)
+
+                    if link not in urls:
+                        urls.append(link)
             else:
                 print('no a class post-read-more')
 
@@ -400,8 +402,7 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
                     )
                     request_input.clear()
                     request_input.send_keys(
-                        'Hello. Do you buy gold please ? Do you pay in EUR ? Kind regards. Phone number '
-                        ': +33.7.49.16.33.29')
+                        'Hello. Do you buy gold please ? Do you pay in EUR ? Kind regards.')
                     print("request_input.send_keys('request')")
 
                     time.sleep(5)
