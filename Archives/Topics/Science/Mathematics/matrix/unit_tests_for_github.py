@@ -2,7 +2,7 @@ import unittest
 from matrix import Matrix
 
 
-class UnitTestsTopicsGeolocationGeopyForGitHub(unittest.TestCase):
+class UnitTestsTopicsScienceMathematicsMatrix(unittest.TestCase):
     # ok
     def test_1(self):
         print('test_1')
