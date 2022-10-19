@@ -6,6 +6,8 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.keys import Keys
 import unittest
 import subprocess
+from random_user_agent.user_agent import UserAgent
+from random_user_agent.params import SoftwareName, OperatingSystem
 
 
 class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
@@ -36,7 +38,7 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
         options = Options()
         options.headless = False
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
+            executable_path='C:\\Users\\\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
                             '\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
@@ -73,7 +75,7 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
         options = Options()
         options.headless = False
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
+            executable_path='C:\\Users\\\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
                             '\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
@@ -116,8 +118,8 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
             value='//*[@id="name"]'
         )
         first_and_last_name_input.clear()
-        first_and_last_name_input.send_keys('Jason ALOYAU')
-        print("first_and_last_name_input.send_keys('Jason ALOYAU')")
+        first_and_last_name_input.send_keys('')
+        print("first_and_last_name_input.send_keys('')")
 
         time.sleep(5)
 
@@ -127,8 +129,8 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
             value='//*[@id="email"]'
         )
         email_address_input.clear()
-        email_address_input.send_keys('jason.aloyau@outlook.fr')
-        print("email_address_input.send_keys('jason.aloyau@outlook.fr')")
+        email_address_input.send_keys('')
+        print("email_address_input.send_keys('')")
 
         time.sleep(5)
 
@@ -138,8 +140,8 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
             value='//*[@id="field2"]'
         )
         business_name_input.clear()
-        business_name_input.send_keys('Voltorus')
-        print("business_name_input.send_keys('Voltorus')")
+        business_name_input.send_keys('')
+        print("business_name_input.send_keys('')")
 
         time.sleep(5)
 
@@ -149,8 +151,8 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
             value='//*[@id="url"]'
         )
         website_input.clear()
-        website_input.send_keys('https://holomorphe.wordpress.com/')
-        print("website_input.send_keys('https://holomorphe.wordpress.com/')")
+        website_input.send_keys('')
+        print("website_input.send_keys('')")
 
         time.sleep(5)
 
@@ -165,10 +167,10 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
             value='//*[@id="s2id_autogen7_search"]'
         )
         country_input.clear()
-        country_input.send_keys('France')
+        country_input.send_keys('')
         time.sleep(3)
         country_input.send_keys(Keys.ENTER)
-        print("country_input.send_keys('France')")
+        print("country_input.send_keys('')")
 
         time.sleep(5)
 
@@ -178,8 +180,7 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
             value='//*[@id="description"]'
         )
         request_input.clear()
-        request_input.send_keys('Hello. Do you buy gold please ? Do you pay in EUR ? Kind regards. Phone number '
-                                ': +33.7.49.16.33.29')
+        request_input.send_keys('Hello. Do you buy gold please ? Do you pay in EUR ? Kind regards.')
         print("request_input.send_keys('request')")
 
         time.sleep(5)
@@ -225,6 +226,12 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
     def test_submit_requests_for_all_companies_for_selling_gold(self):
         print('test_submit_requests_for_all_companies_for_selling_gold')
 
+        # User Agent
+        software_names = [SoftwareName.CHROME.value]
+        operating_systems = [OperatingSystem.WINDOWS.value, OperatingSystem.LINUX.value]
+        user_agent_rotator = UserAgent(software_names=software_names, operating_systems=operating_systems, limit=100)
+        user_agent = user_agent_rotator.get_random_user_agent()
+
         warnings.filterwarnings(
             action="ignore",
             message="unclosed",
@@ -236,8 +243,9 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
         # with Firefox
         options = Options()
         options.headless = True
+        options.add_argument("user-agent=[" + user_agent + "]")
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
+            executable_path='C:\\Users\\\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
                             '\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
@@ -266,7 +274,7 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
 
         number_of_pages = 48
 
-        for i in range(43, number_of_pages + 1):
+        for i in range(44, number_of_pages + 1):
             url_page = 'https://www.yellow-pages.ae/index.php/Terms::gold/page::' + str(i) + '/hpp::20/'
             print('url_page : ' + url_page)
 
@@ -323,8 +331,8 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
                         value='//*[@id="name"]'
                     )
                     first_and_last_name_input.clear()
-                    first_and_last_name_input.send_keys('Jason ALOYAU')
-                    print("first_and_last_name_input.send_keys('Jason ALOYAU')")
+                    first_and_last_name_input.send_keys('')
+                    print("first_and_last_name_input.send_keys('')")
 
                     time.sleep(5)
 
@@ -334,8 +342,8 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
                         value='//*[@id="email"]'
                     )
                     email_address_input.clear()
-                    email_address_input.send_keys('jason.aloyau@outlook.fr')
-                    print("email_address_input.send_keys('jason.aloyau@outlook.fr')")
+                    email_address_input.send_keys('')
+                    print("email_address_input.send_keys('')")
 
                     time.sleep(5)
 
@@ -345,8 +353,8 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
                         value='//*[@id="field2"]'
                     )
                     business_name_input.clear()
-                    business_name_input.send_keys('Voltorus')
-                    print("business_name_input.send_keys('Voltorus')")
+                    business_name_input.send_keys('')
+                    print("business_name_input.send_keys('')")
 
                     time.sleep(5)
 
@@ -356,8 +364,8 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
                         value='//*[@id="url"]'
                     )
                     website_input.clear()
-                    website_input.send_keys('https://holomorphe.wordpress.com/')
-                    print("website_input.send_keys('https://holomorphe.wordpress.com/')")
+                    website_input.send_keys('')
+                    print("website_input.send_keys('')")
 
                     time.sleep(5)
 
@@ -373,10 +381,10 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
                             value='//*[@id="s2id_autogen7_search"]'
                         )
                         country_input.clear()
-                        country_input.send_keys('France')
+                        country_input.send_keys('')
                         time.sleep(3)
                         country_input.send_keys(Keys.ENTER)
-                        print("country_input.send_keys('France')")
+                        print("country_input.send_keys('')")
                     except Exception as e:
                         print('error insert your country : ' + str(e))
                         browser.find_element(
@@ -388,10 +396,10 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
                             value='//*[@id="s2id_autogen7_search"]'
                         )
                         country_input.clear()
-                        country_input.send_keys('France')
+                        country_input.send_keys('')
                         time.sleep(3)
                         country_input.send_keys(Keys.ENTER)
-                        print("country_input.send_keys('France')")
+                        print("country_input.send_keys('')")
 
                     time.sleep(5)
 
@@ -474,6 +482,272 @@ class UnitTestsRPAWAMarketingYPUnitedArabEmirates(unittest.TestCase):
                     time.sleep(5)
                 except Exception as e:
                     print('error : ' + str(e))
+
+        browser.quit()
+
+    # 
+    def test_submit_requests_for_all_companies_for_selling_water(self):
+        print('test_submit_requests_for_all_companies_for_selling_water')
+
+        # User Agent
+        software_names = [
+            SoftwareName.CHROME.value,
+            SoftwareName.YAHOO_SLURP_WEB_CRAWLER_BOT.value,
+            SoftwareName.ALEXA_BOT.value,
+            SoftwareName.AMAYA.value,
+            SoftwareName.AMAZON_API_GATEWAY.value
+        ]
+
+        operating_systems = [
+            OperatingSystem.WINDOWS.value,
+            OperatingSystem.LINUX.value,
+            OperatingSystem.ANDROID.value,
+            OperatingSystem.BADA.value,
+            OperatingSystem.BLACKBERRY.value,
+            OperatingSystem.MAC_OS_X.value,
+            OperatingSystem.FREEBSD.value
+        ]
+
+        user_agent_rotator = UserAgent(
+            software_names=software_names,
+            operating_systems=operating_systems,
+            limit=100
+        )
+        user_agent = user_agent_rotator.get_random_user_agent()
+
+        warnings.filterwarnings(
+            action="ignore",
+            message="unclosed",
+            category=ResourceWarning
+        )
+
+        time.sleep(5)
+
+        # with Firefox
+        options = Options()
+        options.headless = True
+        options.add_argument("user-agent=[" + user_agent + "]")
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
+                            '\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
+
+        time.sleep(5)
+
+        # maximize window
+        browser.maximize_window()
+
+        time.sleep(5)
+
+        # open
+        browser.get('https://www.yellow-pages.ae')
+
+        time.sleep(5)
+
+        # Click on the 'I agree' button
+        i_agree_button = browser.find_element(
+            by=By.XPATH,
+            value="/html/body/div[1]/div/div/div[2]/button[1]"
+        )
+        i_agree_button.click()
+        print('i_agree_button.click() clicked')
+
+        time.sleep(5)
+
+        for i1 in range(100000000, 1000000000):
+            url_page = 'https://www.yellow-pages.ae/company/1' \
+                       + str(i1) \
+                       + '.shtml'
+
+            print('url_page : ' + url_page)
+
+            time.sleep(5)
+
+            # open
+            browser.get(url_page)
+
+            time.sleep(7)
+
+            try:
+                # Click on the 'Contact' button
+                try:
+                    contact_button = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div[2]/div/div/div/div[2]/div/ul/li[3]/a"
+                    )
+                    contact_button.click()
+                    print('contact_button.click() clicked')
+                except Exception as e:
+                    print('error contact_button : ' + str(e))
+                    contact_button = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div[1]/div/div/div/div[2]/div/ul/li[3]/a"
+                    )
+                    contact_button.click()
+                    print('contact_button.click() clicked')
+
+                time.sleep(5)
+
+                # Insert your first and last name
+                first_and_last_name_input = browser.find_element(
+                    by=By.XPATH,
+                    value='//*[@id="name"]'
+                )
+                first_and_last_name_input.clear()
+                first_and_last_name_input.send_keys('')
+                print("first_and_last_name_input.send_keys('')")
+
+                time.sleep(5)
+
+                # Insert your email address
+                email_address_input = browser.find_element(
+                    by=By.XPATH,
+                    value='//*[@id="email"]'
+                )
+                email_address_input.clear()
+                email_address_input.send_keys('')
+                print("email_address_input.send_keys('')")
+
+                time.sleep(5)
+
+                # Insert your business name
+                business_name_input = browser.find_element(
+                    by=By.XPATH,
+                    value='//*[@id="field2"]'
+                )
+                business_name_input.clear()
+                business_name_input.send_keys('')
+                print("business_name_input.send_keys('')")
+
+                time.sleep(5)
+
+                # Insert your website
+                website_input = browser.find_element(
+                    by=By.XPATH,
+                    value='//*[@id="url"]'
+                )
+                website_input.clear()
+                website_input.send_keys('')
+                print("website_input.send_keys('')")
+
+                time.sleep(5)
+
+                # Insert your country
+                try:
+                    browser.find_element(
+                        by=By.XPATH,
+                        value='/html/body/div[2]/div/div/div/div[1]/div/div/div[3]/div/div/form/center/table/tbody/tr[5]/td[2]/div/a/span[2]'
+                    ).click()
+                    time.sleep(3)
+                    country_input = browser.find_element(
+                        by=By.XPATH,
+                        value='//*[@id="s2id_autogen7_search"]'
+                    )
+                    country_input.clear()
+                    country_input.send_keys('')
+                    time.sleep(3)
+                    country_input.send_keys(Keys.ENTER)
+                    print("country_input.send_keys('')")
+                except Exception as e:
+                    print('error insert your country : ' + str(e))
+                    browser.find_element(
+                        by=By.XPATH,
+                        value='/html/body/div/div/div/div/div[1]/div/div/div[3]/div/div/form/center/table/tbody/tr[5]/td[2]/div/a/span[2]').click()
+                    time.sleep(3)
+                    country_input = browser.find_element(
+                        by=By.XPATH,
+                        value='//*[@id="s2id_autogen7_search"]'
+                    )
+                    country_input.clear()
+                    country_input.send_keys('')
+                    time.sleep(3)
+                    country_input.send_keys(Keys.ENTER)
+                    print("country_input.send_keys('')")
+
+                time.sleep(5)
+
+                # Insert your request
+                request_input = browser.find_element(
+                    by=By.XPATH,
+                    value='//*[@id="description"]'
+                )
+                request_input.clear()
+                request_input.send_keys(
+                    'Hello. Do you buy gold please ? Do you pay in EUR ? Kind regards.')
+                print("request_input.send_keys('request')")
+
+                time.sleep(5)
+
+                # Delete the Element <div id="select2-drop-mask" class="select2-drop-mask">
+                browser.execute_script("document.getElementById('select2-drop-mask').remove();")
+
+                time.sleep(3)
+
+                # Click on the 'My free request is not advertising, promotion or a jobapplication.' checkbox
+                try:
+                    free_request_checkbox = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div[2]/div/div/div/div[1]/div/div/div[3]/div/div/form/center/table/tbody/tr[8]/td/input[1]"
+                    )
+                    free_request_checkbox.click()
+                    print('free_request_checkbox.click()')
+                except Exception as e:
+                    print('error free_request_checkbox : ' + str(e))
+                    free_request_checkbox = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div[1]/div/div/div/div[1]/div/div/div[3]/div/div/form/center/table/tbody/tr[8]/td/input[1]"
+                    )
+                    free_request_checkbox.click()
+                    print('free_request_checkbox.click()')
+
+                time.sleep(3)
+
+                # Click on the 'I accept the terms of use and privacy policy of sjn AG.' checkbox
+                try:
+                    accept_terms_checkbox = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div[2]/div/div/div/div[1]/div/div/div[3]/div/div/form/center/table/tbody/tr[8]/td/input[2]"
+                    )
+                    accept_terms_checkbox.click()
+                    print('accept_terms_checkbox.click()')
+                except Exception as e:
+                    print('error accept_terms_checkbox : ' + str(e))
+                    accept_terms_checkbox = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div[1]/div/div/div/div[1]/div/div/div[3]/div/div/form/center/table/tbody/tr[8]/td/input[2]"
+                    )
+                    accept_terms_checkbox.click()
+                    print('accept_terms_checkbox.click()')
+
+                time.sleep(5)
+
+                # Click on the 'Send your message' button
+                try:
+                    send_your_message_button = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div[2]/div/div/div/div[1]/div/div/div[3]/div/div/form/center/table/tbody/tr[9]/td/center/input[9]"
+                    )
+                    send_your_message_button.click()
+                    print('send_your_message_button.click()')
+                except Exception as e:
+                    print('error send_your_message_button : ' + str(e))
+                    send_your_message_button = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div[1]/div/div/div/div[1]/div/div/div[3]/div/div/form/center/table/tbody/tr[9]/td/center/input[9]"
+                    )
+                    send_your_message_button.click()
+                    print('send_your_message_button.click()')
+
+                time.sleep(5)
+
+                print(browser.find_element(by=By.XPATH,
+                                           value='/html/body').text.replace(
+                    '\n', ''))
+
+                time.sleep(5)
+            except Exception as e:
+                print('error main : ' + str(e))
 
         browser.quit()
 
