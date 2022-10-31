@@ -1,5 +1,6 @@
 import unittest
 import base64
+import json
 
 
 class UnitTestsTopicsSecurityBase64ForGitHub(unittest.TestCase):
@@ -12,7 +13,7 @@ class UnitTestsTopicsSecurityBase64ForGitHub(unittest.TestCase):
 
         pdf = open(filename_1, 'rb')
 
-        filename_1_base64 = base64.b64encode(pdf.read())
+        filename_1_base64 = base64.b64encode(pdf.read()).decode('utf-8')
 
         pdf.close()
 

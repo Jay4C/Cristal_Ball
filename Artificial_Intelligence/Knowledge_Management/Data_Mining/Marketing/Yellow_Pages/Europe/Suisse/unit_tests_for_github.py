@@ -717,7 +717,7 @@ class UnitTestsDataMinerYellowPagesSuisseWithRequests(unittest.TestCase):
         else:
             print('no span class comments')
 
-        for i in range(10, number_of_pages + 1):
+        for i in range(1, number_of_pages + 1):
             url_page = url_first + '&page=' + str(i)
 
             print(url_page)
@@ -795,8 +795,8 @@ class UnitTestsDataMinerYellowPagesSuisseWithRequests(unittest.TestCase):
                 # Credentials
                 host = "localhost"
                 port = 27017
-                username = ""
-                password = ""
+                username = "Admin"
+                password = "123aqwZSX"
                 uri = "mongodb://" + username + ":" + password + "@" + host + ":" + str(port)
                 myclient = pymongo.MongoClient(uri)
                 companydb = myclient["companydb"]

@@ -207,7 +207,39 @@ class UnitTestsDatabaseManagementMongoDBForCompanyDBForGitHub(unittest.TestCase)
         for x in switzerland.find():
             print(x)
 
-    #
+    # ok
+    def test_list_all_records_from_switzerland_collection_for_email(self):
+        print('test_list_all_records_from_switzerland_collection_for_email')
+
+        # Credentials
+        host = "localhost"
+        port = 27017
+        username = ""
+        password = ""
+        uri = "mongodb://" + username + ":" + password + "@" + host + ":" + str(port)
+        myclient = pymongo.MongoClient(uri)
+
+        companydb = myclient["companydb"]
+        switzerland = companydb["switzerland"]
+
+        myquery = {
+            "city": "Genève",
+            "activity": "avocat"
+        }
+
+        emails = []
+
+        for x in switzerland.find(myquery):
+            email = x.get('email').lower()
+
+            if email != '':
+                if email not in emails:
+                    emails.append(email)
+
+        for email in emails:
+            print(email)
+
+    # ok
     def test_delete_some_records_from_switzerland_collection(self):
         print('test_delete_some_records_from_switzerland_collection')
 
