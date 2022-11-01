@@ -144,6 +144,8 @@ class UnitTestsDatabaseManagementMongoDBForCompanyDBForGitHub(unittest.TestCase)
 
         myclient.close()
 
+
+class UnitTestsDatabaseManagementMongoDBForCompanyDBForCollectionSwitzerlandForGitHub(unittest.TestCase):
     # ok
     def test_create_collection_switzerland_into_database_companydb(self):
         print("test_create_collection_switzerland_into_database_companydb")
@@ -279,6 +281,111 @@ class UnitTestsDatabaseManagementMongoDBForCompanyDBForGitHub(unittest.TestCase)
         for x in switzerland.find():
             myquery = x
             switzerland.delete_one(myquery)
+
+
+class UnitTestsDatabaseManagementMongoDBForCompanyDBForCollectionEuropagesForGitHub(unittest.TestCase):
+    # ok
+    def test_create_collection_europages_into_database_companydb(self):
+        print("test_create_collection_europages_into_database_companydb")
+
+        # Credentials
+        host = "localhost"
+        port = 27017
+        username = ""
+        password = ""
+        uri = "mongodb://" + username + ":" + password + "@" + host + ":" + str(port)
+        myclient = pymongo.MongoClient(uri)
+
+        # Collection 'Switzerland'
+        companydb = myclient["companydb"]
+        europages = companydb["europages"]
+        print(companydb.list_collection_names())
+
+        myclient.close()
+
+    # ok
+    def test_insert_one_record_into_europages_collection(self):
+        print('test_insert_one_record_into_europages_collection')
+
+        # Credentials
+        host = "localhost"
+        port = 27017
+        username = ""
+        password = ""
+        uri = "mongodb://" + username + ":" + password + "@" + host + ":" + str(port)
+        myclient = pymongo.MongoClient(uri)
+
+        companydb = myclient["companydb"]
+        europages = companydb["europages"]
+        my_dict = {
+            'company_name': 'SBA-TRAFOTECH GMBH',
+            'address': 'Winkelleite 14  91332 Heiligenstadt I.ofr.',
+            'phone_number': '+49 91988090',
+            'website': 'http://www.sba.de',
+            'email': "'info@sba.de',",
+            'activity': 'Fabricant/ Producteur',
+            'country': 'Allemagne'
+        }
+        europages.insert_one(my_dict)
+        myclient.close()
+
+    # ok
+    def test_list_all_records_from_europages_collection(self):
+        print('test_list_all_records_from_europages_collection')
+
+        # Credentials
+        host = "localhost"
+        port = 27017
+        username = ""
+        password = ""
+        uri = "mongodb://" + username + ":" + password + "@" + host + ":" + str(port)
+        myclient = pymongo.MongoClient(uri)
+
+        companydb = myclient["companydb"]
+        europages = companydb["europages"]
+
+        for x in europages.find():
+            print(x)
+
+    # ok
+    def test_delete_some_records_from_europages_collection(self):
+        print('test_delete_some_records_from_europages_collection')
+
+        host = "localhost"
+        port = 27017
+        username = ""
+        password = ""
+        uri = "mongodb://" + username + ":" + password + "@" + host + ":" + str(port)
+        myclient = pymongo.MongoClient(uri)
+
+        companydb = myclient["mesdamesdb"]
+        europages = companydb["europages"]
+
+        records = [
+            ''
+        ]
+
+        for record in records:
+            myquery = {"pn": record}
+            europages.delete_one(myquery)
+
+    # ok
+    def test_delete_all_records_from_europages_collection(self):
+        print('test_delete_all_records_from_europages_collection')
+
+        host = "localhost"
+        port = 27017
+        username = ""
+        password = ""
+        uri = "mongodb://" + username + ":" + password + "@" + host + ":" + str(port)
+        myclient = pymongo.MongoClient(uri)
+
+        companydb = myclient["companydb"]
+        europages = companydb["europages"]
+
+        for x in europages.find():
+            myquery = x
+            europages.delete_one(myquery)
 
 
 if __name__ == '__main__':
