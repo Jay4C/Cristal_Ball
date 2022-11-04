@@ -1,3 +1,4 @@
+import json
 import ssl
 import unittest
 from websocket import create_connection
@@ -14,9 +15,9 @@ class UnitTestsInternetCommunicationWebsockets(unittest.TestCase):
         print(ws.recv())
         ws.close()
 
-    #
+    # ok
     def test_example_for_xtb_real(self):
-        print('test_example_1')
+        print('test_example_for_xtb_real')
         ws = websocket.WebSocket()
         url = 'wss://ws.xtb.com/real'
 
@@ -28,12 +29,16 @@ class UnitTestsInternetCommunicationWebsockets(unittest.TestCase):
             "arguments": {
                 "userId": "",
                 "password": ""
-            }
+            },
+            "prettyPrint": true
         }
         """
 
         ws.send(request)
-        print(ws.recv())
+        response = json.loads(ws.recv())
+        status = response['status']
+        streamsessionid = response['streamSessionId']
+        print("status : " + str(status) + " - streamsessionid : " + str(streamsessionid))
         ws.close()
 
     # ok
