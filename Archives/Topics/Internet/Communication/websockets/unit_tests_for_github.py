@@ -1,9 +1,41 @@
 import ssl
 import unittest
 from websocket import create_connection
+import websocket
 
 
 class UnitTestsInternetCommunicationWebsockets(unittest.TestCase):
+    # ok
+    def test_example(self):
+        print('test_example')
+        ws = websocket.WebSocket()
+        ws.connect("ws://echo.websocket.events")
+        ws.send("Hello, Server")
+        print(ws.recv())
+        ws.close()
+
+    #
+    def test_example_for_xtb_real(self):
+        print('test_example_1')
+        ws = websocket.WebSocket()
+        url = 'wss://ws.xtb.com/real'
+
+        ws.connect(url=url)
+
+        request = """
+        {
+            "command": "login",
+            "arguments": {
+                "userId": "",
+                "password": ""
+            }
+        }
+        """
+
+        ws.send(request)
+        print(ws.recv())
+        ws.close()
+
     # ok
     def test_short_lived_one_off_send_receive(self):
         print('test_short_lived_one_off_send_receive')

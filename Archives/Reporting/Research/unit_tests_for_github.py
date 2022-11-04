@@ -65,7 +65,7 @@ class UnitTestsResearchForGitHub(unittest.TestCase):
                     <br>
                     <br>
                     
-                    Selon le montage du Michael Faraday, le dispositif expérimental se compose d'un aimant 
+                    Selon le montage de Michael Faraday, le dispositif expérimental se compose d'un aimant 
                     permanent cylindrique et d'un disque conducteur adjacent, tous deux disposés de manière à 
                     tourner autour d'un axe. L'axe de symétrie de l'aimant et du disque coïncide avec l'axe de 
                     rotation, et l'aimant a sa polarisation dans la direction axiale (c'est-à-dire que les pôles 
@@ -98,7 +98,7 @@ class UnitTestsResearchForGitHub(unittest.TestCase):
                     
                     Aujourd'hui, très peu de scientifiques se sont penchés sur cette machine, et cela est très 
                     compréhensible puisque la source d'énergie collectée par la 'N machine' vient en grande partie de 
-                    de cette fameuse énergie communément appelée l'énergie de l'espace ou l'énergie quantique du vide 
+                    cette fameuse énergie communément appelée l'énergie de l'espace ou l'énergie quantique du vide 
                     ou l'énergie du point zéro, et cette source d'énergie est accessible gratuitement en tout point de 
                     l'univers.
                     
