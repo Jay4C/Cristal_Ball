@@ -9,7 +9,7 @@ from selenium.webdriver.firefox.options import Options
 import pymysql.cursors
 
 # unibet race url
-global_url = "https://www.unibet.fr/turf/race/07-11-2022-R2-C1-munich-daglfing-prix-de-santiago-de-chile.html"
+global_url = "https://www.unibet.fr/turf/race/07-11-2022-R3-C8-bordeaux-le-bouscat-prix-de-verdelais.html"
 
 
 class UnitTestsSupervisedLearningPMU(unittest.TestCase):

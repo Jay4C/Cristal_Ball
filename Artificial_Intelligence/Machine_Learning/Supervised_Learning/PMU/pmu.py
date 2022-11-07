@@ -4,6 +4,7 @@ from datetime import date
 from selenium import webdriver
 from requests_tor import RequestsTor
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.common.by import By
 
 
 class PMU:
@@ -1518,8 +1519,7 @@ class PMU:
         options = Options()
         options.headless = False
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
-                            '\\Cristal_Ball\\geckodriver.exe',
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -1536,23 +1536,31 @@ class PMU:
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath("//p[@class='race-meta ui-mainview-block']").text.lower().split(" - ")[
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
+            ).text.lower().split(" - ")[
                 3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
-                "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                      "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                cote_direct = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                cote_direct = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("price-live").text
+                ).find_element(
+                    by=By.CLASS_NAME,
+                    value="price-live"
+                ).text
 
                 print("num_pmu : " + str(num_pmu) + " , cote_direct : " + str(cote_direct))
 
@@ -1597,8 +1605,7 @@ class PMU:
         options = Options()
         options.headless = False
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
-                            '\\Cristal_Ball\\geckodriver.exe',
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -1615,23 +1622,26 @@ class PMU:
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath("//p[@class='race-meta ui-mainview-block']").text.lower().split(" - ")[
-                3].replace(' partants', '')
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']").text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                cote_matin = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                cote_matin = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("price-morning").text
+                ).find_element(by=By.CLASS_NAME, value="price-morning").text
 
                 print("num_pmu : " + str(num_pmu) + " , cote_matin : " + str(cote_matin))
 
@@ -1674,8 +1684,11 @@ class PMU:
 
         # with Firefox
         options = Options()
-        options.headless = True
-        browser = webdriver.Firefox(executable_path='geckodriver.exe', options=options)
+        options.headless = False
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -1690,24 +1703,27 @@ class PMU:
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique")\
+                ).find_element(by=By.CLASS_NAME, value="musique")\
                     .text \
                     .replace('a', '') \
                     .replace('m', '') \
@@ -1810,8 +1826,11 @@ class PMU:
 
         # with Firefox
         options = Options()
-        options.headless = True
-        browser = webdriver.Firefox(executable_path='geckodriver.exe', options=options)
+        options.headless = False
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -1826,24 +1845,27 @@ class PMU:
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique")\
+                ).find_element(by=By.CLASS_NAME, value="musique")\
                     .text \
                     .replace('a', '') \
                     .replace('m', '') \
@@ -1872,10 +1894,11 @@ class PMU:
 
                 average_musique = average / len(musique)
 
-                cote_direct = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                cote_direct = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("price-live").text
+                ).find_element(by=By.CLASS_NAME, value="price-live").text
 
                 print("num_pmu : " + str(num_pmu) + " , cote_direct : " + str(cote_direct))
 
@@ -1918,8 +1941,11 @@ class PMU:
 
         # with Firefox
         options = Options()
-        options.headless = True
-        browser = webdriver.Firefox(executable_path='geckodriver.exe', options=options)
+        options.headless = False
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -1934,24 +1960,27 @@ class PMU:
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique")\
+                ).find_element(by=By.CLASS_NAME, value="musique")\
                     .text \
                     .replace('a', '') \
                     .replace('m', '') \
@@ -1980,10 +2009,11 @@ class PMU:
 
                 average_musique = average / len(musique)
 
-                cote_matin = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                cote_matin = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("price-morning").text
+                ).find_element(by=By.XPATH, value="price-morning").text
 
                 print("num_pmu : " + str(num_pmu) + " , cote_matin : " + str(cote_matin))
 
@@ -2026,8 +2056,11 @@ class PMU:
 
         # with Firefox
         options = Options()
-        options.headless = True
-        browser = webdriver.Firefox(executable_path='geckodriver.exe', options=options)
+        options.headless = False
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -2043,8 +2076,9 @@ class PMU:
             time.sleep(20)
 
             number_of_racers = int(
-                browser.find_element_by_xpath(
-                    "//p[@class='race-meta ui-mainview-block']"
+                browser.find_element(
+                    by=By.XPATH,
+                    value="//p[@class='race-meta ui-mainview-block']"
                 ).text.lower().split(" - ")[3].replace(' partants', '')
             )
 
@@ -2089,16 +2123,18 @@ class PMU:
             musiques = []
 
             for i in range(1, number_of_racers + 1):
-                num_pmu = browser.find_element_by_xpath(
-                    "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                num_pmu = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                     "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
                 ).text
 
                 try:
-                    musique = browser.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                    musique = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                         "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                    ).find_element_by_class_name("musique") \
+                    ).find_element(by=By.CLASS_NAME, value="musique") \
                         .text \
                         .replace('a', '') \
                         .replace('m', '') \
@@ -2135,8 +2171,9 @@ class PMU:
 
             for i in range(1, number_of_racers + 1):
                 try:
-                    num_pmu = browser.find_element_by_xpath(
-                        "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                    num_pmu = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                         "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
                     ).text
 
