@@ -32,14 +32,14 @@ assembly = "assembly_device"
 
 # assembly_bottom_support
 title = "assembly_bottom_support"
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.00,0.90,0.00)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,1,0),0))
 
 # assembly_top_support
 title = "assembly_top_support"
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.188,0.835,0.784)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,14),App.Rotation(App.Vector(0,1,0),0))
@@ -55,6 +55,6 @@ __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
 title = "assembly_bottom_support"
 __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
 
-Mesh.export(__objs__,u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + assembly + ".stl")
+Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + assembly + ".stl")
 
 del __objs__

@@ -69,7 +69,7 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_ecrou_6m").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_ecrou_6m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_ecrou_6m.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -87,9 +87,7 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\part_ecrou_6m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\part_ecrou_6m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -166,7 +164,7 @@ DOC.recompute()
 __objs__=[]
 __objs__.append(FreeCAD.getDocument("part_vis_metal_m6_70l").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_vis_metal_m6_70l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_vis_metal_m6_70l.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -184,9 +182,7 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\part_vis_metal_m6_70l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\part_vis_metal_m6_70l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -263,7 +259,7 @@ DOC.recompute()
 __objs__=[]
 __objs__.append(FreeCAD.getDocument("part_vis_metal_m6_30l").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_vis_metal_m6_30l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_vis_metal_m6_30l.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -281,9 +277,7 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\part_vis_metal_m6_30l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\part_vis_metal_m6_30l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -351,7 +345,7 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_tube").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_tube.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_tube.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -369,9 +363,7 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\part_tube.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\part_tube.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -482,7 +474,7 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_top_support").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_top_support.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_top_support.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -500,9 +492,7 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\part_top_support.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\part_top_support.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -581,7 +571,7 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_mamelon_a_visser_12_17_m").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_mamelon_a_visser_12_17_m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_mamelon_a_visser_12_17_m.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -599,9 +589,7 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\part_mamelon_a_visser_12_17_m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\part_mamelon_a_visser_12_17_m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -668,7 +656,7 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_manchon_a_visser_12_17_f").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_manchon_a_visser_12_17_f.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_manchon_a_visser_12_17_f.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -686,9 +674,7 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\part_manchon_a_visser_12_17_f.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\part_manchon_a_visser_12_17_f.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -813,7 +799,7 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_bottom_support").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_bottom_support.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/part_bottom_support.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -831,9 +817,7 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\part_bottom_support.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\part_bottom_support.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -888,14 +872,14 @@ assembly = "assembly_bottom_support"
 
 # part_bottom_support
 title = "part_bottom_support"
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.00,0.90,0.00)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,1,0),180))
 
 # part_tube
 title = "part_tube"
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.60,0.80,0.90)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,-18),App.Rotation(App.Vector(0,1,0),0))
@@ -904,7 +888,7 @@ FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vec
 color = (0.90,0.00,0.90)
 i1 = 8
 title = 'part_ecrou_6m'
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 for i in range(0, i1):
     degre = 45
     d1 = 50
@@ -936,7 +920,7 @@ for i in range(0, i1):
 color = (0.90,0.50,0.40)
 i2 = 8
 title = 'part_vis_metal_m6_70l'
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 for i in range(0, i2):
     degre = 45
     d1 = 50
@@ -968,7 +952,7 @@ for i in range(0, i2):
 color = (0.90,0.00,0.90)
 i3 = 6
 title = 'part_ecrou_6m'
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 for i in range(i1, i1 + i3):
     degre = 60
     d1 = 50
@@ -1000,7 +984,7 @@ for i in range(i1, i1 + i3):
 color = (0.90,0.50,0.40)
 i4 = 6
 title = 'part_vis_metal_m6_30l'
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 for i in range(0, i4):
     degre = 60
     d1 = 50
@@ -1034,7 +1018,7 @@ for i in range(0, i4):
 color = (0.90,0.00,0.90)
 i5 = 8
 title = 'part_ecrou_6m'
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 for i in range(i1 + i3, i1 + i3 + i5):
     degre = 45
     d1 = 50
@@ -1064,7 +1048,7 @@ for i in range(i1 + i3, i1 + i3 + i5):
 
 # part_mamelon_a_visser_12_17_m
 title = "part_mamelon_a_visser_12_17_m"
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.188,0.835,0.784)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,- 18 - 11 - 13),App.Rotation(App.Vector(0,1,0),0))
@@ -1137,7 +1121,7 @@ for i in range(i1 + i3, i1 + i3 + i5):
 title = "part_mamelon_a_visser_12_17_m"
 __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
 
-Mesh.export(__objs__,u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + assembly + ".stl")
+Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + assembly + ".stl")
 
 del __objs__
 """)
@@ -1153,9 +1137,7 @@ del __objs__
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\assembly_bottom_support.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\assembly_bottom_support.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1208,21 +1190,21 @@ assembly = "assembly_top_support"
 
 # part_top_support
 title = "part_top_support"
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.00,0.90,0.00)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,1,0),0))
 
 # part_mamelon_a_visser_12_17_m
 title = "part_mamelon_a_visser_12_17_m"
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.188,0.835,0.784)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,11),App.Rotation(App.Vector(0,1,0),0))
 
 # part_manchon_a_visser_12_17_f
 title = "part_manchon_a_visser_12_17_f"
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.20,0.30,0.40)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,1,0),0))
@@ -1231,7 +1213,7 @@ FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vec
 color = (0.90,0.00,0.90)
 i1 = 8
 title = 'part_ecrou_6m'
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 for i in range(0, i1):
     degre = 45
     d1 = 50
@@ -1263,7 +1245,7 @@ for i in range(0, i1):
 color = (0.90,0.00,0.90)
 i2 = 6
 title = 'part_ecrou_6m'
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 for i in range(i1, i1 + i2):
     degre = 60
     d1 = 50
@@ -1295,7 +1277,7 @@ for i in range(i1, i1 + i2):
 color = (0.90,0.00,0.90)
 i3 = 6
 title = 'part_ecrou_6m'
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 for i in range(i1 + i2, i1 + i2 + i3):
     degre = 60
     d1 = 50
@@ -1327,7 +1309,7 @@ for i in range(i1 + i2, i1 + i2 + i3):
 color = (0.90,0.50,0.40)
 i4 = 6
 title = 'part_vis_metal_m6_70l'
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 for i in range(0, i4):
     degre = 60
     d1 = 50
@@ -1413,7 +1395,7 @@ for i in range(0, i4):
     elif i >= 100 and i < 1000:
         __objs__.append(FreeCAD.getDocument(assembly).getObject(title + str(i)))
 
-Mesh.export(__objs__,u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + assembly + ".stl")
+Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + assembly + ".stl")
 
 del __objs__
 """)
@@ -1429,9 +1411,7 @@ del __objs__
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\assembly_top_support.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\assembly_top_support.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1484,14 +1464,14 @@ assembly = "assembly_device"
 
 # assembly_bottom_support
 title = "assembly_bottom_support"
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.00,0.90,0.00)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,1,0),0))
 
 # assembly_top_support
 title = "assembly_top_support"
-stl_file = u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.188,0.835,0.784)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,14),App.Rotation(App.Vector(0,1,0),0))
@@ -1507,7 +1487,7 @@ __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
 title = "assembly_bottom_support"
 __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
 
-Mesh.export(__objs__,u"C:/Users/Jason/Dropbox/1_Personnel/1_Recurrentes/3_Outils_Numeriques/GitHub/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + assembly + ".stl")
+Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_2/Stl/" + assembly + ".stl")
 
 del __objs__
 """)
@@ -1523,9 +1503,7 @@ del __objs__
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Dropbox\\\\1_Personnel\\\\1_Recurrentes\\\\3_Outils_Numeriques'
-            '\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts'
-            '\\\\assembly_device.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_2\\\\Scripts\\\\assembly_device.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
