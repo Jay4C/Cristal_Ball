@@ -100,7 +100,15 @@ class UnitTestsDatabaseManagementMongoDBForMesdamesDBForGitHub(unittest.TestCase
     def test_delete_all_records_from_mesdames_collection(self):
         print('test_delete_all_records_from_mesdames_collection')
 
-        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        # Credentials
+        host = "localhost"
+        port = 27017
+        username = ""
+        password = ""
+        database = "mesdamesdb"
+        uri = "mongodb://" + username + ":" + password + "@" + host + ":" + str(port) + "/" + database
+        myclient = pymongo.MongoClient(uri)
+
         mesdamesdb = myclient["mesdamesdb"]
         mesdames_c = mesdamesdb["mesdames_c"]
 
