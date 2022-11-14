@@ -8,24 +8,24 @@ import time
 # Homopolar generator
 # https://patentimages.storage.googleapis.com/0c/c9/14/0e4d740f16793e/WO1995008210A1.pdf
 class UnitsTestsHGVersion3Parts(unittest.TestCase):
-    #
-    #
-    def test_part_tige_filetee_m30_1000l(self):
-        print("test_part_tige_filetee_m30_1000l")
+    # ok
+    # https://www.visseriefixations.fr/tiges-filetees/acier-classe-8-8/tige-filetee-acier-8-8-brut-din-975/tige-filetee-m36-acier-8-8-brut-din-975.html
+    def test_part_tige_filetee_m36_1000l(self):
+        print("test_part_tige_filetee_m36_1000l")
 
-        if os.path.exists("Scripts\\part_tige_filetee_m30_1000l.py"):
-            os.remove("Scripts\\part_tige_filetee_m30_1000l.py")
+        if os.path.exists("Scripts\\part_tige_filetee_m36_1000l.py"):
+            os.remove("Scripts\\part_tige_filetee_m36_1000l.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("Scripts\\part_tige_filetee_m30_1000l.py", "w") as file:
+        with open("Scripts\\part_tige_filetee_m36_1000l.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Drawing, math, Mesh
 
 DOC = FreeCAD.activeDocument()
 
-DOC_NAME = "part_tige_filetee_m30_1000l"
+DOC_NAME = "part_tige_filetee_m36_1000l"
 
 
 def clear_doc():
@@ -51,27 +51,27 @@ else:
 EPS = 0.10
 EPS_C = EPS * -0.5
 
-# part_tige_filetee_m30_1000l
-d1 = 30
+# part_tige_filetee_m36_1000l
+d1 = 36
 L = 1000
-part_tige_filetee_m30_1000l = Part.makeCylinder(d1/2, L)
+part_tige_filetee_m36_1000l = Part.makeCylinder(d1/2, L)
 
-Part.show(part_tige_filetee_m30_1000l)
+Part.show(part_tige_filetee_m36_1000l)
 
 DOC.recompute()
 
 __objs__ = []
 
-__objs__.append(FreeCAD.getDocument("part_tige_filetee_m30_1000l").getObject("Shape"))
+__objs__.append(FreeCAD.getDocument("part_tige_filetee_m36_1000l").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_tige_filetee_m30_1000l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tige_filetee_m36_1000l.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_tige_filetee_m30_1000l_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_tige_filetee_m36_1000l_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -144,31 +144,31 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_tige_filetee_m30_1000l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_tige_filetee_m36_1000l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    #
-    #
-    def test_part_ecrou_30m(self):
-        print("test_part_ecrou_30m")
+    # ok
+    # https://www.visseriefixations.fr/ecrous/ecrous-hexagonaux/ecrou-hexagonal-hu/ecrou-hu-acier-brut-din-934/ecrou-hu-acier-brut-classe-8-din-934/ecrou-hu-m36-brut-din-934.html
+    def test_part_ecrou_36m(self):
+        print("test_part_ecrou_36m")
 
-        if os.path.exists("Scripts\\part_ecrou_30m.py"):
-            os.remove("Scripts\\part_ecrou_30m.py")
+        if os.path.exists("Scripts\\part_ecrou_36m.py"):
+            os.remove("Scripts\\part_ecrou_36m.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("Scripts\\part_ecrou_30m.py", "w") as file:
+        with open("Scripts\\part_ecrou_36m.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
 DOC = FreeCAD.activeDocument()
 
-DOC_NAME = "part_ecrou_30m"
+DOC_NAME = "part_ecrou_36m"
 
 
 def clear_doc():
@@ -194,9 +194,9 @@ else:
 EPS = 0.10
 EPS_C = EPS * -0.5
 
-d1 = 30
-e = 47.95
-h = 30
+d1 = 36
+e = d1*1.6
+h = d1*0.8
 
 cylinder_1 = Part.makeCylinder(e/2, h)
 
@@ -210,16 +210,16 @@ DOC.recompute()
 
 __objs__=[]
 
-__objs__.append(FreeCAD.getDocument("part_ecrou_30m").getObject("Shape"))
+__objs__.append(FreeCAD.getDocument("part_ecrou_36m").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_ecrou_30m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_36m.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_ecrou_30m_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_ecrou_36m_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -292,31 +292,31 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_ecrou_30m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_ecrou_36m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    #
-    #
-    def test_part_rondelle_30m(self):
-        print("test_part_rondelle_30m")
+    # ok
+    # https://www.visseriefixations.fr/rondelles-circlips/rondelles-plates/sans-chanfrein/serie-moyenne-m/inox/rondelle-m-inox-a2-nfe-25513/rondelle-m-0-36-inox-a2.html
+    def test_part_rondelle_36m(self):
+        print("test_part_rondelle_36m")
 
-        if os.path.exists("Scripts\\part_rondelle_30m.py"):
-            os.remove("Scripts\\part_rondelle_30m.py")
+        if os.path.exists("Scripts\\part_rondelle_36m.py"):
+            os.remove("Scripts\\part_rondelle_36m.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("Scripts\\part_rondelle_30m.py", "w") as file:
+        with open("Scripts\\part_rondelle_36m.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
 DOC = FreeCAD.activeDocument()
 
-DOC_NAME = "part_rondelle_30m"
+DOC_NAME = "part_rondelle_36m"
 
 
 def clear_doc():
@@ -342,9 +342,9 @@ else:
 EPS = 0.10
 EPS_C = EPS * -0.5
 
-d1 = 31
-d2 = 52
-s = 4
+d1 = 37
+d2 = 70
+s = 5
 
 cylinder_1 = Part.makeCylinder(d2/2, s)
 
@@ -358,16 +358,16 @@ DOC.recompute()
 
 __objs__=[]
 
-__objs__.append(FreeCAD.getDocument("part_rondelle_30m").getObject("Shape"))
+__objs__.append(FreeCAD.getDocument("part_rondelle_36m").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_30m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_36m.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_rondelle_30m_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_rondelle_36m_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -440,14 +440,162 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_rondelle_30m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_rondelle_36m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    #
+    # ok
+    # https://www.aimant-boutique.fr/ferrite/anneaux-aimantes/anneau-140.0-x-60.0-x-20.0-mm-y30-ferrite
+    def test_part_magnet_1d140_2d60_20e(self):
+        print("test_part_magnet_1d140_2d60_20e")
+
+        if os.path.exists("Scripts\\part_magnet_1d140_2d60_20e.py"):
+            os.remove("Scripts\\part_magnet_1d140_2d60_20e.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_magnet_1d140_2d60_20e.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_magnet_1d140_2d60_20e"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+d1 = 60
+d2 = 140
+s = 20
+
+cylinder_1 = Part.makeCylinder(d2/2, s)
+
+cylinder_2 = Part.makeCylinder(d1/2, s)
+
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__=[]
+
+__objs__.append(FreeCAD.getDocument("part_magnet_1d140_2d60_20e").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_magnet_1d140_2d60_20e.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+
+# Generate PNG files
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_magnet_1d140_2d60_20e_'
+# Ombré
+Gui.runCommand('Std_DrawStyle',5)
+i = 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+# Filaire
+Gui.runCommand('Std_DrawStyle',2)
+i += 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_magnet_1d140_2d60_20e.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
     # https://www.laserboost.com/
     def test_part_faraday_disc(self):
         print("test_part_faraday_disc")
@@ -490,8 +638,9 @@ else:
 EPS = 0.10
 EPS_C = EPS * -0.5
 
-d1 = 30.1
-d2 = 72
+d_magnet = 140
+d1 = 36.1
+d2 = d_magnet + 2*2
 s = 5
 
 cylinder_1 = Part.makeCylinder(d2/2, s)
@@ -508,11 +657,11 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_faraday_disc").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_faraday_disc.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_faraday_disc.stl"
 
 Mesh.export(__objs__, stl_file)
 
-dxf_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_faraday_disc.dxf"
+dxf_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_faraday_disc.dxf"
 
 importDXF.export(__objs__, dxf_file)
 
@@ -521,7 +670,7 @@ setview()
 del __objs__
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_faraday_disc_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_faraday_disc_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -594,162 +743,14 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_faraday_disc.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_faraday_disc.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
-    # https://www.aimant-boutique.fr/ferrite/anneaux-aimantes/anneau-72.0-x-32.0-x-15.0-mm-y35-ferrite-adherence-6-kg
-    def test_part_magnet_1d72_2d32_15e(self):
-        print("test_part_magnet_1d72_2d32_15e")
-
-        if os.path.exists("Scripts\\part_magnet_1d72_2d32_15e.py"):
-            os.remove("Scripts\\part_magnet_1d72_2d32_15e.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_magnet_1d72_2d32_15e.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_magnet_1d72_2d32_15e"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-d1 = 32
-d2 = 72
-s = 15
-
-cylinder_1 = Part.makeCylinder(d2/2, s)
-
-cylinder_2 = Part.makeCylinder(d1/2, s)
-
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__=[]
-
-__objs__.append(FreeCAD.getDocument("part_magnet_1d72_2d32_15e").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_magnet_1d72_2d32_15e.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_magnet_1d72_2d32_15e_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_magnet_1d72_2d32_15e.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
+    #
     # https://www.123roulement.com/paliers-UCFL-206#lg=1&slide=0
     def test_part_palier_2_fixation_support(self):
         print("test_part_palier_2_fixation_support")
@@ -844,14 +845,14 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_palier_2_fixation_support").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_palier_2_fixation_support.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_palier_2_fixation_support.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_palier_2_fixation_support_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_palier_2_fixation_support_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -924,14 +925,14 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_palier_2_fixation_support.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_palier_2_fixation_support.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
+    #
     # https://www.123roulement.com/paliers-UCP206-D1
     def test_part_palier_2_fixation_ossature(self):
         print("test_part_palier_2_fixation_ossature")
@@ -1021,14 +1022,14 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_palier_2_fixation_ossature").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_palier_2_fixation_ossature.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_palier_2_fixation_ossature.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_palier_2_fixation_ossature_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_palier_2_fixation_ossature_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -1101,7 +1102,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_palier_2_fixation_ossature.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_palier_2_fixation_ossature.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1178,14 +1179,14 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_tube").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_tube.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tube.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_tube_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_tube_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -1258,14 +1259,14 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_tube.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_tube.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
+    #
     # https://www.sculpteo.com/fr/
     def test_part_support(self):
         print("test_part_support")
@@ -1400,7 +1401,7 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_support").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_support.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_support.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -1418,15 +1419,15 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_support.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_support.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
-    # https://www.123courroies.com/moyeu-amovible/71618-moyeu-amovible-ma1210-30-4014486252361.html
+    #
+    #
     def test_part_moyeu_amovible_generator(self):
         print("test_part_moyeu_amovible_generator")
 
@@ -1487,14 +1488,14 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_moyeu_amovible_generator").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_moyeu_amovible_generator.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_moyeu_amovible_generator.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_moyeu_amovible_generator_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_moyeu_amovible_generator_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -1567,15 +1568,15 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_moyeu_amovible_generator.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_moyeu_amovible_generator.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
-    # https://www.123courroies.com/profil-z-10x6-spz-10x8/73970-poulie-trapezoidale-moyeu-amovible-spz80-1ma-4014486249866.html
+    #
+    #
     def test_part_poulie_generator(self):
         print("test_part_poulie_generator")
 
@@ -1636,14 +1637,14 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_poulie_generator").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_poulie_generator.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_poulie_generator.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_poulie_generator_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_poulie_generator_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -1716,15 +1717,15 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_poulie_generator.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_poulie_generator.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
-    # https://3transmissions.eu/accouplement-rigide-fendu-ks/
+    #
+    #
     def test_part_accouplement_rigide_mecanique(self):
         print("test_part_accouplement_rigide_mecanique")
 
@@ -1785,14 +1786,14 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_accouplement_rigide_mecanique").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_accouplement_rigide_mecanique.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_accouplement_rigide_mecanique.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_accouplement_rigide_mecanique_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_accouplement_rigide_mecanique_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -1865,427 +1866,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_accouplement_rigide_mecanique.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.visseriefixations.fr/rondelles-circlips/rondelles-plates/sans-chanfrein/serie-etroite-z/acier/rondelle-z-acier-zingue-blanc-nfe-25513/rondelle-z-0-16-z-blanc-nfe-25513.html
-    def test_part_rondelle_16m(self):
-        print("test_part_rondelle_16m")
-
-        if os.path.exists("Scripts\\part_rondelle_16m.py"):
-            os.remove("Scripts\\part_rondelle_16m.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_rondelle_16m.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_rondelle_16m"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-d1 = 17
-d2 = 30
-s = 3
-
-cylinder_1 = Part.makeCylinder(d2/2, s)
-
-cylinder_2 = Part.makeCylinder(d1/2, s)
-
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__=[]
-
-__objs__.append(FreeCAD.getDocument("part_rondelle_16m").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_16m.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_rondelle_16m.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.visseriefixations.fr/ecrous/ecrous-hexagonaux/ecrou-hexagonal-hu/ecrou-hu-acier-brut-din-934/ecrou-hu-acier-brut-classe-8-din-934/ecrou-hu-m16-brut-din-934.html
-    def test_part_ecrou_16m(self):
-        print("test_part_ecrou_16m")
-
-        if os.path.exists("Scripts\\part_ecrou_16m.py"):
-            os.remove("Scripts\\part_ecrou_16m.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_ecrou_16m.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_ecrou_16m"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-d1 = 16
-e = 26.75
-h = 13
-
-cylinder_1 = Part.makeCylinder(e/2, h)
-
-cylinder_2 = Part.makeCylinder(d1/2, h)
-
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__=[]
-
-__objs__.append(FreeCAD.getDocument("part_ecrou_16m").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_ecrou_16m.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_ecrou_16m.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.visseriefixations.fr/tiges-filetees/acier-classe-4-6/tige-filetee-acier-4-6-brut-din-975/tige-filetee-m16-acier-4-6-brut-din-975.html
-    def test_part_tige_filetee_m16_1000l_cut(self):
-        print("test_part_tige_filetee_m16_1000l_cut")
-
-        if os.path.exists("Scripts\\part_tige_filetee_m16_1000l_cut.py"):
-            os.remove("Scripts\\part_tige_filetee_m16_1000l_cut.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_tige_filetee_m16_1000l_cut.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Drawing, math, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_tige_filetee_m16_1000l_cut"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-# Parameters
-h_rondelle_16m = 3
-h_ecrou_16m = 13
-e_support = 5
-h_palier_2_fixation_support = 40.2
-h_palier_2_fixation_ossature = 48
-h_poulie_generator = 25.4
-L_tube = 1000 - (e_support + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_poulie_generator + h_rondelle_30m + h_ecrou_30m) - (e_support + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m)
-
-# part_tige_filetee_m16_1000l_cut
-d1 = 16
-L_tige = L_tube + e_support*2 + h_palier_2_fixation_support*2 + h_rondelle_16m*2 + h_ecrou_16m*2
-part_tige_filetee_m16_1000l_cut = Part.makeCylinder(d1/2, L_tige)
-
-Part.show(part_tige_filetee_m16_1000l_cut)
-
-DOC.recompute()
-
-__objs__ = []
-
-__objs__.append(FreeCAD.getDocument("part_tige_filetee_m16_1000l_cut").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_tige_filetee_m16_1000l_cut.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_tige_filetee_m16_1000l_cut_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(665*1.5), round(695*1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60*1.5), round(615*1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_tige_filetee_m16_1000l_cut.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.visseriefixations.fr/vis-a-tete-hexagonale/vis-a-tete-hexagonale-standard/acier-8-8-noir/th-acier-8-8-noir-filetage-total-din-933/th-m30x70-acier-8-8-noir-ef-din-933.html
-    def test_part_vis_metal_m30_70l(self):
-        print("test_part_vis_metal_m30_70l")
-
-        if os.path.exists("Scripts\\part_vis_metal_m30_70l.py"):
-            os.remove("Scripts\\part_vis_metal_m30_70l.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_vis_metal_m30_70l.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_vis_metal_m30_70l"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS = tolerance to use to cut the parts
-EPS = 0.10
-
-EPS_C = EPS * -0.5
-
-# Dimensions
-L = 70
-k = 18.7
-d1 = 30
-e = 50.85
-
-cylinder_1 = Part.makeCylinder(e/2, L+k)
-
-cylinder_2 = Part.makeCylinder(d1/2, L)
-
-cylinder_3 = Part.makeCylinder(e/2, L)
-
-# cylinder_3 cut by cylinder_2
-cylinder_3 = cylinder_3.cut(cylinder_2)
-
-# cylinder_1 cut by cylinder_3
-cylinder_3_vector = FreeCAD.Vector(0, 0, k)
-cylinder_3.translate(cylinder_3_vector)
-cylinder_1 = cylinder_1.cut(cylinder_3)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__ = []
-__objs__.append(FreeCAD.getDocument("part_vis_metal_m30_70l").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_vis_metal_m30_70l.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_vis_metal_m30_70l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_accouplement_rigide_mecanique.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -2351,7 +1932,7 @@ Start_faraday_disc = (1000 - L_tube)/2 + h_rondelle_30m + h_ecrou_30m
 h_disc_and_magnet = h_disc + h_magnet
 
 # part_tige_filetee_m30_1000l
-part_tige_filetee_m30_1000l_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_tige_filetee_m30_1000l.stl"
+part_tige_filetee_m30_1000l_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tige_filetee_m30_1000l.stl"
 Mesh.insert(part_tige_filetee_m30_1000l_stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject("part_tige_filetee_m30_1000l").ShapeColor = (0.10,0.10,0.10)
 FreeCAD.getDocument(assembly).getObject("part_tige_filetee_m30_1000l").Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,0,1),0))
@@ -2360,7 +1941,7 @@ FreeCAD.getDocument(assembly).getObject("part_tige_filetee_m30_1000l").Placement
 color = (0.90, 0.80, 0.70)
 i1 = round((L_tube - 2*h_rondelle_30m - 2*h_ecrou_30m)/h_disc_and_magnet)
 title = 'part_faraday_disc'
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + title + ".stl"
 for i in range(0, i1):
     x = 0
     y = 0
@@ -2387,7 +1968,7 @@ for i in range(0, i1):
 color = (0.70, 0.70, 0.70)
 i2 = round((L_tube - 2*h_rondelle_30m - 2*h_ecrou_30m)/h_disc_and_magnet)
 title = 'part_magnet_1d72_2d32_15e'
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/" + title + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + title + ".stl"
 for i in range(0, i2):
     x = 0
     y = 0
@@ -2412,21 +1993,21 @@ for i in range(0, i2):
 
 # part_tube
 color = (0.45, 0.99, 0.05)
-part_tube_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_tube.stl"
+part_tube_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tube.stl"
 Mesh.insert(part_tube_stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject("part_tube").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_tube").Placement = App.Placement(App.Vector(0,0,Start_faraday_disc - h_rondelle_30m - h_ecrou_30m),App.Rotation(App.Vector(0,0,1),0))
 
 # part_rondelle_30m
 color = (0.45, 0.05, 0.95)
-part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_30m.stl"
+part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_30m.stl"
 Mesh.insert(part_rondelle_30m_stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_30m").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_30m").Placement = App.Placement(App.Vector(0,0,Start_faraday_disc - h_rondelle_30m),App.Rotation(App.Vector(0,0,1),0))
 
 # part_ecrou_30m
 color = (0.45, 0.55, 0.65)
-part_ecrou_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_ecrou_30m.stl"
+part_ecrou_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_30m.stl"
 Mesh.insert(part_ecrou_30m_stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject("part_ecrou_30m").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_ecrou_30m").Placement = App.Placement(App.Vector(0,0,Start_faraday_disc - h_rondelle_30m - h_ecrou_30m),App.Rotation(App.Vector(0,0,1),0))
@@ -2436,7 +2017,7 @@ color = (0.45, 0.05, 0.95)
 x = 0
 y = 0
 z = Start_faraday_disc + h_disc + i2 * h_disc_and_magnet - h_rondelle_30m - 1
-part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_30m.stl"
+part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_30m.stl"
 Mesh.insert(part_rondelle_30m_stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_30m001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_30m001").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2446,7 +2027,7 @@ color = (0.45, 0.55, 0.65)
 x = 0
 y = 0
 z = Start_faraday_disc + h_disc + i2 * h_disc_and_magnet - 1
-part_ecrou_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_ecrou_30m.stl"
+part_ecrou_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_30m.stl"
 Mesh.insert(part_ecrou_30m_stl_file,assembly)
 FreeCADGui.getDocument(assembly).getObject("part_ecrou_30m001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_ecrou_30m001").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2495,7 +2076,7 @@ __objs__.append(FreeCAD.getDocument(assembly).getObject("part_rondelle_30m001"))
 # part_ecrou_30m001
 __objs__.append(FreeCAD.getDocument(assembly).getObject("part_ecrou_30m001"))
 
-Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/" + assembly + ".stl")
+Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + assembly + ".stl")
 
 del __objs__
 """)
@@ -2511,7 +2092,7 @@ del __objs__
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\assembly_shaft.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\assembly_shaft.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -2575,7 +2156,7 @@ h1 = (L_tube - 400)/2
 
 # part_support
 color = (0.10, 0.20, 0.30)
-part_support_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_support.stl"
+part_support_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_support.stl"
 Mesh.insert(part_support_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_support").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_support").Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,0,1),0))
@@ -2585,7 +2166,7 @@ x = -148/2
 y = 80/2
 z = h1
 color = (0.20, 0.40, 0.60)
-part_palier_2_fixation_support_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_palier_2_fixation_support.stl"
+part_palier_2_fixation_support_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_palier_2_fixation_support.stl"
 Mesh.insert(part_palier_2_fixation_support_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_palier_2_fixation_support").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_palier_2_fixation_support").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),90))    
@@ -2595,7 +2176,7 @@ x = 0
 y = 0
 z = h1 + h_palier_2_fixation_support
 color = (0.40, 0.60, 0.80)
-part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_30m.stl"
+part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_30m.stl"
 Mesh.insert(part_rondelle_30m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_30m").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_30m").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2605,7 +2186,7 @@ x = 0
 y = 0
 z = h1 + h_palier_2_fixation_support + h_rondelle_30m
 color = (0.60, 0.80, 0.90)
-part_ecrou_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_ecrou_30m.stl"
+part_ecrou_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_30m.stl"
 Mesh.insert(part_ecrou_30m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_ecrou_30m").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_ecrou_30m").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2615,7 +2196,7 @@ x = 117/2
 y = 0
 z = h1 + h_palier_2_fixation_support
 color = (0.10, 0.00, 0.20)
-part_rondelle_16m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_16m.stl"
+part_rondelle_16m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_16m.stl"
 Mesh.insert(part_rondelle_16m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_16m").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_16m").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2625,7 +2206,7 @@ x = -117/2
 y = 0
 z = h1 + h_palier_2_fixation_support
 color = (0.10, 0.00, 0.20)
-part_rondelle_16m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_16m.stl"
+part_rondelle_16m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_16m.stl"
 Mesh.insert(part_rondelle_16m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_16m001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_16m001").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2635,7 +2216,7 @@ x = 117/2
 y = 0
 z = h1 + h_palier_2_fixation_support + h_rondelle_16m
 color = (0.10, 0.90, 0.20)
-part_ecrou_16m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_ecrou_16m.stl"
+part_ecrou_16m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_16m.stl"
 Mesh.insert(part_ecrou_16m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_ecrou_16m").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_ecrou_16m").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2645,7 +2226,7 @@ x = -117/2
 y = 0
 z = h1 + h_palier_2_fixation_support + h_rondelle_16m
 color = (0.10, 0.90, 0.20)
-part_ecrou_16m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_ecrou_16m.stl"
+part_ecrou_16m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_16m.stl"
 Mesh.insert(part_ecrou_16m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_ecrou_16m001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_ecrou_16m001").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2671,7 +2252,7 @@ __objs__.append(FreeCAD.getDocument(assembly).getObject("part_ecrou_16m"))
 
 __objs__.append(FreeCAD.getDocument(assembly).getObject("part_ecrou_16m001"))
 
-Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/" + assembly + ".stl")
+Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + assembly + ".stl")
 
 del __objs__
 """)
@@ -2687,7 +2268,7 @@ del __objs__
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\assembly_support.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\assembly_support.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -2745,14 +2326,14 @@ k_vis_metal_30m_70l = 18.7
 
 # part_moyeu_amovible_generator
 color = (0.10, 0.20, 0.30)
-part_moyeu_amovible_generator_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_moyeu_amovible_generator.stl"
+part_moyeu_amovible_generator_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_moyeu_amovible_generator.stl"
 Mesh.insert(part_moyeu_amovible_generator_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_moyeu_amovible_generator").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_moyeu_amovible_generator").Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,0,1),0))
 
 # part_poulie_generator
 color = (0.30, 0.60, 0.90)
-part_poulie_generator_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_poulie_generator.stl"
+part_poulie_generator_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_poulie_generator.stl"
 Mesh.insert(part_poulie_generator_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_poulie_generator").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_poulie_generator").Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,0,1),0))
@@ -2762,7 +2343,7 @@ x = 0
 y = 0
 z = h_poulie_generator
 color = (0.10, 0.00, 0.00)
-part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_30m.stl"
+part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_30m.stl"
 Mesh.insert(part_rondelle_30m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_30m").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_30m").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2772,7 +2353,7 @@ x = 0
 y = 0
 z = - h_rondelle_30m
 color = (0.10, 0.00, 0.00)
-part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_30m.stl"
+part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_30m.stl"
 Mesh.insert(part_rondelle_30m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_30m001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_30m001").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2782,7 +2363,7 @@ x = 0
 y = 0
 z = - h_rondelle_30m - k_vis_metal_30m_70l
 color = (0.10, 0.90, 0.90)
-part_vis_metal_m30_70l_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_vis_metal_m30_70l.stl"
+part_vis_metal_m30_70l_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_vis_metal_m30_70l.stl"
 Mesh.insert(part_vis_metal_m30_70l_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_vis_metal_m30_70l").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_vis_metal_m30_70l").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2792,7 +2373,7 @@ x = 0
 y = 0
 z = h_poulie_generator + h_rondelle_30m
 color = (0.20, 0.70, 0.90)
-part_accouplement_rigide_mecanique_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_accouplement_rigide_mecanique.stl"
+part_accouplement_rigide_mecanique_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_accouplement_rigide_mecanique.stl"
 Mesh.insert(part_accouplement_rigide_mecanique_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_accouplement_rigide_mecanique").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_accouplement_rigide_mecanique").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2814,7 +2395,7 @@ __objs__.append(FreeCAD.getDocument(assembly).getObject("part_vis_metal_m30_70l"
 
 __objs__.append(FreeCAD.getDocument(assembly).getObject("part_accouplement_rigide_mecanique"))
 
-Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/" + assembly + ".stl")
+Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + assembly + ".stl")
 
 del __objs__
 """)
@@ -2830,7 +2411,7 @@ del __objs__
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\assembly_poulie.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\assembly_poulie.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -2895,7 +2476,7 @@ h1 = (L_tube - 400)/2
 
 # assembly_shaft
 color = (0.10, 0.20, 0.30)
-assembly_shaft_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/assembly_shaft.stl"
+assembly_shaft_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/assembly_shaft.stl"
 Mesh.insert(assembly_shaft_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("assembly_shaft").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("assembly_shaft").Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,0,1),0))
@@ -2905,7 +2486,7 @@ x = 0
 y = 0
 z = (1000 - L_tube)/2 + h1 - 5
 color = (0.20, 0.40, 0.60)
-assembly_support_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/assembly_support.stl"
+assembly_support_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/assembly_support.stl"
 Mesh.insert(assembly_support_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("assembly_support").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("assembly_support").Placement = App.Placement(App.Vector(0,0,z),App.Rotation(App.Vector(0,1,0),180))
@@ -2915,7 +2496,7 @@ x = 0
 y = 0
 z = (1000 - L_tube)/2 + L_tube - h1 + 5 + 2
 color = (0.20, 0.40, 0.60)
-assembly_support_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/assembly_support.stl"
+assembly_support_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/assembly_support.stl"
 Mesh.insert(assembly_support_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("assembly_support001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("assembly_support001").Placement = App.Placement(App.Vector(0,0,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2925,7 +2506,7 @@ x = 117/2
 y = 0
 z = h1 + h_palier_2_fixation_support - 6
 color = (0.30, 0.90, 0.60)
-part_tige_filetee_m16_1000l_cut_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_tige_filetee_m16_1000l_cut.stl"
+part_tige_filetee_m16_1000l_cut_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tige_filetee_m16_1000l_cut.stl"
 Mesh.insert(part_tige_filetee_m16_1000l_cut_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_tige_filetee_m16_1000l_cut").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_tige_filetee_m16_1000l_cut").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2935,7 +2516,7 @@ x = -117/2
 y = 0
 z = h1 + h_palier_2_fixation_support - 6
 color = (0.30, 0.90, 0.60)
-part_tige_filetee_m16_1000l_cut_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_tige_filetee_m16_1000l_cut.stl"
+part_tige_filetee_m16_1000l_cut_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tige_filetee_m16_1000l_cut.stl"
 Mesh.insert(part_tige_filetee_m16_1000l_cut_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_tige_filetee_m16_1000l_cut001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_tige_filetee_m16_1000l_cut001").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
@@ -2945,7 +2526,7 @@ x = 0
 y = 0
 z = (1000 - L_tube)/2 - 5 - h_palier_2_fixation_support - h_rondelle_30m - h_ecrou_30m - h_rondelle_30m
 color = (0.90, 0.50, 0.40)
-part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_30m.stl"
+part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_30m.stl"
 Mesh.insert(part_rondelle_30m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_30m").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_30m").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
@@ -2955,7 +2536,7 @@ x = -165/2
 y = 84/2
 z = (1000 - L_tube)/2 - 5 - h_palier_2_fixation_support - h_rondelle_30m - h_ecrou_30m - h_rondelle_30m - h_palier_2_fixation_ossature
 color = (0.50, 0.90, 0.40)
-part_palier_2_fixation_ossature_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_palier_2_fixation_ossature.stl"
+part_palier_2_fixation_ossature_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_palier_2_fixation_ossature.stl"
 Mesh.insert(part_palier_2_fixation_ossature_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_palier_2_fixation_ossature").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_palier_2_fixation_ossature").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),90))
@@ -2965,7 +2546,7 @@ x = 0
 y = 0
 z = (1000 - L_tube)/2 - 5 - h_palier_2_fixation_support - h_rondelle_30m - h_ecrou_30m - h_rondelle_30m - h_palier_2_fixation_ossature - h_rondelle_30m
 color = (0.90, 0.50, 0.40)
-part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_30m.stl"
+part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_30m.stl"
 Mesh.insert(part_rondelle_30m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_30m001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_30m001").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
@@ -2975,7 +2556,7 @@ x = 0
 y = 0
 z = (1000 - L_tube)/2 - 5 - h_palier_2_fixation_support - h_rondelle_30m - h_ecrou_30m - h_rondelle_30m - h_palier_2_fixation_ossature - h_rondelle_30m - h_ecrou_30m
 color = (0.40, 0.30, 0.00)
-part_ecrou_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_ecrou_30m.stl"
+part_ecrou_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_30m.stl"
 Mesh.insert(part_ecrou_30m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_ecrou_30m").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_ecrou_30m").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
@@ -2985,7 +2566,7 @@ x = 0
 y = 0
 z = (1000 - L_tube)/2 + L_tube + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + 3
 color = (0.90, 0.50, 0.40)
-part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_30m.stl"
+part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_30m.stl"
 Mesh.insert(part_rondelle_30m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_30m002").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_30m002").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
@@ -2995,7 +2576,7 @@ x = -165/2
 y = 84/2
 z = (1000 - L_tube)/2 + L_tube + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + 3 + h_rondelle_30m
 color = (0.50, 0.90, 0.40)
-part_palier_2_fixation_ossature_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_palier_2_fixation_ossature.stl"
+part_palier_2_fixation_ossature_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_palier_2_fixation_ossature.stl"
 Mesh.insert(part_palier_2_fixation_ossature_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_palier_2_fixation_ossature001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_palier_2_fixation_ossature001").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),90))
@@ -3005,7 +2586,7 @@ x = 0
 y = 0
 z = (1000 - L_tube)/2 + L_tube + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + 3 + h_rondelle_30m + h_palier_2_fixation_ossature
 color = (0.90, 0.50, 0.40)
-part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_30m.stl"
+part_rondelle_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_30m.stl"
 Mesh.insert(part_rondelle_30m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_rondelle_30m003").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_rondelle_30m003").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
@@ -3015,7 +2596,7 @@ x = 0
 y = 0
 z = (1000 - L_tube)/2 + L_tube + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + 3 + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m
 color = (0.40, 0.30, 0.00)
-part_ecrou_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_ecrou_30m.stl"
+part_ecrou_30m_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_30m.stl"
 Mesh.insert(part_ecrou_30m_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("part_ecrou_30m001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("part_ecrou_30m001").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
@@ -3025,7 +2606,7 @@ x = 0
 y = 0
 z = - h_palier_2_fixation_ossature - h_rondelle_30m - h_ecrou_30m + 1
 color = (0.40, 0.40, 0.40)
-assembly_poulie_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/assembly_poulie.stl"
+assembly_poulie_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/assembly_poulie.stl"
 Mesh.insert(assembly_poulie_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("assembly_poulie").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("assembly_poulie").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
@@ -3035,7 +2616,7 @@ x = 0
 y = 0
 z = (1000 - L_tube)/2 + L_tube + h1 + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m + h_ecrou_30m/2 + 2
 color = (0.40, 0.40, 0.40)
-assembly_poulie_stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/assembly_poulie.stl"
+assembly_poulie_stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/assembly_poulie.stl"
 Mesh.insert(assembly_poulie_stl_file, assembly)
 FreeCADGui.getDocument(assembly).getObject("assembly_poulie001").ShapeColor = color
 FreeCAD.getDocument(assembly).getObject("assembly_poulie001").Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),180))
@@ -3073,12 +2654,12 @@ __objs__.append(FreeCAD.getDocument(assembly).getObject("assembly_poulie"))
 
 __objs__.append(FreeCAD.getDocument(assembly).getObject("assembly_poulie001"))
 
-Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/" + assembly + ".stl")
+Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + assembly + ".stl")
 
 del __objs__
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\assembly_generator_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\assembly_generator_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -3151,7 +2732,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\assembly_generator.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\assembly_generator.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -3160,7 +2741,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
 
 class UnitTestsVersion3Trash(unittest.TestCase):
-    # ok
+    #
     # https://www.visseriefixations.fr/vis-a-tete-hexagonale/vis-a-tete-hexagonale-standard/acier-8-8-noir/th-acier-8-8-noir-filetage-total-din-933/th-m16x200-acier-8-8-noir-ef-din-933.html
     def test_part_vis_metal_m16_200l(self):
         print("test_part_vis_metal_m16_200l")
@@ -3230,7 +2811,7 @@ DOC.recompute()
 __objs__ = []
 __objs__.append(FreeCAD.getDocument("part_vis_metal_m16_200l").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_vis_metal_m16_200l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_vis_metal_m16_200l.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -3248,14 +2829,14 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_vis_metal_m16_200l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_vis_metal_m16_200l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
+    #
     # https://www.visseriefixations.fr/rondelles-circlips/rondelles-plates/sans-chanfrein/serie-etroite-z/acier/rondelle-z-acier-zingue-blanc-nfe-25513/rondelle-z-0-12-z-blanc-nfe-25513.html
     def test_part_rondelle_12m(self):
         print("test_part_rondelle_12m")
@@ -3316,7 +2897,7 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_rondelle_12m").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_rondelle_12m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_12m.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -3334,14 +2915,14 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_rondelle_12m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_rondelle_12m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
+    #
     # https://www.visseriefixations.fr/ecrous/ecrous-hexagonaux/ecrou-hexagonal-hu/ecrou-hu-acier-brut-din-934/ecrou-hu-acier-brut-classe-8-din-934/ecrou-hu-m12-brut-din-934.html
     def test_part_ecrou_12m(self):
         print("test_part_ecrou_12m")
@@ -3402,7 +2983,7 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_ecrou_12m").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_ecrou_12m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_12m.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -3420,14 +3001,14 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_ecrou_12m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_ecrou_12m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
+    #
     # https://www.visseriefixations.fr/vis-a-tete-hexagonale/vis-a-tete-hexagonale-standard/acier-8-8-noir/th-acier-8-8-noir-filetage-total-din-933/th-m12x200-acier-8-8-noir-ef-din-933.html
     def test_part_vis_metal_m12_200l(self):
         print("test_part_vis_metal_m12_200l")
@@ -3497,7 +3078,7 @@ DOC.recompute()
 __objs__=[]
 __objs__.append(FreeCAD.getDocument("part_vis_metal_m12_200l").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_vis_metal_m12_200l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_vis_metal_m12_200l.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -3515,14 +3096,14 @@ setview()
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_vis_metal_m12_200l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_vis_metal_m12_200l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
+    #
     # https://www.leroymerlin.fr/produits/chauffage-plomberie/circuit-alimentation-en-eau/tube-et-raccord-alimentation/raccord-alimentation/lot-de-2-mamelons-a-visser-laiton-m-12-x-17-pour-tube-en-cuivre-65814231.html
     def test_part_mamelon_a_visser_12_17_m(self):
         print("test_part_mamelon_a_visser_12_17_m")
@@ -3594,14 +3175,14 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_mamelon_a_visser_12_17_m").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_mamelon_a_visser_12_17_m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_mamelon_a_visser_12_17_m.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_mamelon_a_visser_12_17_m_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_mamelon_a_visser_12_17_m_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -3674,14 +3255,14 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_mamelon_a_visser_12_17_m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_mamelon_a_visser_12_17_m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
+    #
     # https://www.leroymerlin.fr/produits/chauffage-plomberie/circuit-alimentation-en-eau/tube-et-raccord-alimentation/raccord-alimentation/lot-de-2-manchons-a-visser-laiton-f-12-x-17-pour-tube-en-cuivre-65815253.html
     def test_part_manchon_a_visser_12_17_f(self):
         print("part_manchon_a_visser_12_17_f")
@@ -3741,14 +3322,14 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_manchon_a_visser_12_17_f").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_manchon_a_visser_12_17_f.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_manchon_a_visser_12_17_f.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_manchon_a_visser_12_17_f_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_manchon_a_visser_12_17_f_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -3821,14 +3402,14 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_manchon_a_visser_12_17_f.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_manchon_a_visser_12_17_f.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
+    #
     # https://www.visseriefixations.fr/tiges-filetees/acier-classe-4-6/tige-filetee-acier-4-6-brut-din-975/tige-filetee-m16-acier-4-6-brut-din-975.html
     def test_part_tige_filetee_m16_1000l(self):
         print("test_part_tige_filetee_m16_1000l")
@@ -3884,14 +3465,14 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_tige_filetee_m16_1000l").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Python-Macros-For-FreeCAD/HG/Version_3/Stl/part_tige_filetee_m16_1000l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tige_filetee_m16_1000l.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Png\\\\part_tige_filetee_m16_1000l_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_tige_filetee_m16_1000l_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -3964,7 +3545,575 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Python-Macros-For-FreeCAD\\\\HG\\\\Version_3\\\\Scripts\\\\part_tige_filetee_m16_1000l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_tige_filetee_m16_1000l.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    #
+    # https://www.visseriefixations.fr/rondelles-circlips/rondelles-plates/sans-chanfrein/serie-etroite-z/acier/rondelle-z-acier-zingue-blanc-nfe-25513/rondelle-z-0-16-z-blanc-nfe-25513.html
+    def test_part_rondelle_16m(self):
+        print("test_part_rondelle_16m")
+
+        if os.path.exists("Scripts\\part_rondelle_16m.py"):
+            os.remove("Scripts\\part_rondelle_16m.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_rondelle_16m.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_rondelle_16m"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+d1 = 17
+d2 = 30
+s = 3
+
+cylinder_1 = Part.makeCylinder(d2/2, s)
+
+cylinder_2 = Part.makeCylinder(d1/2, s)
+
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__=[]
+
+__objs__.append(FreeCAD.getDocument("part_rondelle_16m").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_16m.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_rondelle_16m.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    #
+    # https://www.visseriefixations.fr/ecrous/ecrous-hexagonaux/ecrou-hexagonal-hu/ecrou-hu-acier-brut-din-934/ecrou-hu-acier-brut-classe-8-din-934/ecrou-hu-m16-brut-din-934.html
+    def test_part_ecrou_16m(self):
+        print("test_part_ecrou_16m")
+
+        if os.path.exists("Scripts\\part_ecrou_16m.py"):
+            os.remove("Scripts\\part_ecrou_16m.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_ecrou_16m.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_ecrou_16m"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+d1 = 16
+e = 26.75
+h = 13
+
+cylinder_1 = Part.makeCylinder(e/2, h)
+
+cylinder_2 = Part.makeCylinder(d1/2, h)
+
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__=[]
+
+__objs__.append(FreeCAD.getDocument("part_ecrou_16m").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_16m.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_ecrou_16m.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    #
+    # https://www.visseriefixations.fr/tiges-filetees/acier-classe-4-6/tige-filetee-acier-4-6-brut-din-975/tige-filetee-m16-acier-4-6-brut-din-975.html
+    def test_part_tige_filetee_m16_1000l_cut(self):
+        print("test_part_tige_filetee_m16_1000l_cut")
+
+        if os.path.exists("Scripts\\part_tige_filetee_m16_1000l_cut.py"):
+            os.remove("Scripts\\part_tige_filetee_m16_1000l_cut.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_tige_filetee_m16_1000l_cut.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Drawing, math, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_tige_filetee_m16_1000l_cut"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+# Parameters
+h_rondelle_16m = 3
+h_ecrou_16m = 13
+e_support = 5
+h_palier_2_fixation_support = 40.2
+h_palier_2_fixation_ossature = 48
+h_poulie_generator = 25.4
+L_tube = 1000 - (e_support + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_poulie_generator + h_rondelle_30m + h_ecrou_30m) - (e_support + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m)
+
+# part_tige_filetee_m16_1000l_cut
+d1 = 16
+L_tige = L_tube + e_support*2 + h_palier_2_fixation_support*2 + h_rondelle_16m*2 + h_ecrou_16m*2
+part_tige_filetee_m16_1000l_cut = Part.makeCylinder(d1/2, L_tige)
+
+Part.show(part_tige_filetee_m16_1000l_cut)
+
+DOC.recompute()
+
+__objs__ = []
+
+__objs__.append(FreeCAD.getDocument("part_tige_filetee_m16_1000l_cut").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tige_filetee_m16_1000l_cut.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+
+# Generate PNG files
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_tige_filetee_m16_1000l_cut_'
+# Ombré
+Gui.runCommand('Std_DrawStyle',5)
+i = 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+# Filaire
+Gui.runCommand('Std_DrawStyle',2)
+i += 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(665*1.5), round(695*1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60*1.5), round(615*1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_tige_filetee_m16_1000l_cut.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    #
+    # https://www.visseriefixations.fr/vis-a-tete-hexagonale/vis-a-tete-hexagonale-standard/acier-8-8-noir/th-acier-8-8-noir-filetage-total-din-933/th-m30x70-acier-8-8-noir-ef-din-933.html
+    def test_part_vis_metal_m30_70l(self):
+        print("test_part_vis_metal_m30_70l")
+
+        if os.path.exists("Scripts\\part_vis_metal_m30_70l.py"):
+            os.remove("Scripts\\part_vis_metal_m30_70l.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_vis_metal_m30_70l.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_vis_metal_m30_70l"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS = tolerance to use to cut the parts
+EPS = 0.10
+
+EPS_C = EPS * -0.5
+
+# Dimensions
+L = 70
+k = 18.7
+d1 = 30
+e = 50.85
+
+cylinder_1 = Part.makeCylinder(e/2, L+k)
+
+cylinder_2 = Part.makeCylinder(d1/2, L)
+
+cylinder_3 = Part.makeCylinder(e/2, L)
+
+# cylinder_3 cut by cylinder_2
+cylinder_3 = cylinder_3.cut(cylinder_2)
+
+# cylinder_1 cut by cylinder_3
+cylinder_3_vector = FreeCAD.Vector(0, 0, k)
+cylinder_3.translate(cylinder_3_vector)
+cylinder_1 = cylinder_1.cut(cylinder_3)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__ = []
+__objs__.append(FreeCAD.getDocument("part_vis_metal_m30_70l").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_vis_metal_m30_70l.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_vis_metal_m30_70l.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    #
+    # https://www.aimant-boutique.fr/ferrite/anneaux-aimantes/anneau-72.0-x-32.0-x-15.0-mm-y35-ferrite-adherence-6-kg
+    def test_part_magnet_1d72_2d32_15e(self):
+        print("test_part_magnet_1d72_2d32_15e")
+
+        if os.path.exists("Scripts\\part_magnet_1d72_2d32_15e.py"):
+            os.remove("Scripts\\part_magnet_1d72_2d32_15e.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_magnet_1d72_2d32_15e.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_magnet_1d72_2d32_15e"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+d1 = 32
+d2 = 72
+s = 15
+
+cylinder_1 = Part.makeCylinder(d2/2, s)
+
+cylinder_2 = Part.makeCylinder(d1/2, s)
+
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__=[]
+
+__objs__.append(FreeCAD.getDocument("part_magnet_1d72_2d32_15e").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_magnet_1d72_2d32_15e.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+
+# Generate PNG files
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_magnet_1d72_2d32_15e_'
+# Ombré
+Gui.runCommand('Std_DrawStyle',5)
+i = 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+# Filaire
+Gui.runCommand('Std_DrawStyle',2)
+i += 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_magnet_1d72_2d32_15e.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
