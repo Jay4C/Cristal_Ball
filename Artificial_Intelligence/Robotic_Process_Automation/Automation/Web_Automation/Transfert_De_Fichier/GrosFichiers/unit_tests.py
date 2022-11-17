@@ -1028,7 +1028,7 @@ Téléphone : """
             email_destinataire = email.lower()
 
             objet = "Spontaneous application for a job as a renewable energy engineer on a full-time contract " \
-                    "of indefinite duration - Mr Jason ALOYAU"
+                    "of indefinite duration - Mr "
 
             message = """Hello, 
 
@@ -1037,7 +1037,7 @@ I am sending you my resume to apply for a job as a renewable energy engineer for
 
 While waiting for your return, please believe, my most sincere greetings.
 
-Jason ALOYAU
+
 General engineer graduated from Leonardo da Vinci Engineering School
 Phone : """
 

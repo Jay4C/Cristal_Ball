@@ -1,0 +1,130 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Subject
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Presentation of Stanley Meyer's water electrolyser for the generation of dihydrogen
+                     - Holomorphe company
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Good morning,
+                    <br>
+                    <br>
+                    I am working on Stanley Meyer's water electrolyser for the generation of dihydrogen based on the
+                    water electrolysis process and more particularly on the electronic polarization process
+                    of water molecule.
+                    <br>
+                    <br>
+                    You can find more information about Stanley Meyer's water electrolyser on the following links :
+                </h1>
+            </mj-text>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://holomorphe.com/chemical-products/about_stanley_meyer">
+            About Stanley Meyer
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://holomorphe.com/chemical-products/use_cases_with_stanley_meyer_water_electrolyser">
+            Some use cases with Stanley Meyer water electrolyser
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://holomorphe.com/chemical-products/theories_to_know_about_stanley_meyer_water_electrolyser">
+            Some theories to know about Stanley Meyer water electrolyser
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://holomorphe.com/chemical-products/electronic_circuit_diagram_of_stanley_meyer_water_electrolyser">
+            Electronic circuit diagram of the patent US 5149407 (Stanley Meyer's water electrolyzer)
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US5149407A/en">
+                US patent 5149407A - Process and apparatus for the production of fuel gas and the enhanced
+                release of thermal energy from such gas
+            </mj-button>
+
+            <mj-text align="center">
+                <h1>
+                    I will be glad to exchange with you more and more about Stanley Meyer's water electrolyser for
+                    a future collaboration.
+                    <br>
+                    <br>
+                    While waiting for your return, please believe, my sincere greetings.
+                    <br>
+                    <br>
+                    Mr
+                    <br>
+                    President of the Holomorphe company
+                    <br>
+                    General engineer graduated from the Leonardo da Vinci School of Engineering in Paris La D&eacute;fense
+                    <br>
+                    Headquarters address: 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    Phone: 07.49.16.33.29
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

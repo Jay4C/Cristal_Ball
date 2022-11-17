@@ -75,7 +75,7 @@ class UnitTestsEmailMarketingWithMailjetAPIForEnergyLawyersForMe(unittest.TestCa
                         }
                     ],
                     "Subject": "Demande d'étude du générateur d'électricité de Bruce DePalma pour l'autorisation "
-                               "d'exploiter des installations de production d'électricité - Monsieur Jason ALOYAU",
+                               "d'exploiter des installations de production d'électricité - Monsieur ",
                     "TextPart": "Bonjour, Maître, \n\n"
                                 "Actuellement, je travaille sur le générateur d'électricité de l'inventeur Bruce "
                                 "DePalma dont le brevet est tombé dans le domaine public et numéroté : "
@@ -250,7 +250,7 @@ class UnitTestsEmailMarketingWithMailjetAPIForEnergyLawyersForMe(unittest.TestCa
                             }
                         ],
                         "Subject": "Demande d'étude du générateur d'électricité de Bruce DePalma pour l'autorisation "
-                                   "d'exploiter des installations de production d'électricité - Monsieur Jason ALOYAU",
+                                   "d'exploiter des installations de production d'électricité - Monsieur ",
                         "TextPart": "Bonjour, Maître, \n\n"
                                     "Actuellement, je travaille sur le générateur d'électricité de l'inventeur Bruce "
                                     "DePalma dont le brevet est tombé dans le domaine public et numéroté : "
@@ -427,7 +427,7 @@ class UnitTestsEmailMarketingWithMailjetAPIForEnergyLawyersForMe(unittest.TestCa
                         ],
                         "Subject": "Demande d'étude du générateur d'électricité de Bruce DePalma pour l'autorisation "
                                    "d'exploiter des installations de production d'électricité en Suisse - Monsieur "
-                                   "Jason ALOYAU",
+                                   "",
                         "TextPart": "Bonjour, \n\n"
                                     "Actuellement, je travaille sur le générateur d'électricité de l'inventeur Bruce "
                                     "DePalma dont le brevet est tombé dans le domaine public et numéroté : "

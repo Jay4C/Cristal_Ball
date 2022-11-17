@@ -1,0 +1,146 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Demande d'informations pour l'achat de bras de robots professionnels - Soci&eacute;t&eacute; Holomorphe
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Tout d'abord, je suis en train de monter un projet de production de gaz (hydrog&egrave;ne et/ou
+                    m&eacute;thane de synth&egrave;se) directement inject&eacute;e dans un r&eacute;seau de transport
+                    de gaz naturel.
+                    <br>
+                    <br>
+                    Puis, je suis &agrave; la recherche de fabricants de bras de robots professionnels pour automatiser
+                    l'assemblage des technologies de l'hydrog&egrave;ne utilis&eacute;es par la soci&eacute;t&eacute;
+                    Holomorphe.
+                    <br>
+                    <br>
+                    De plus, je recherche &eacute;galement un l&egrave;ve-container pouvant effectuer des
+                    d&eacute;placements sur les axes x, y et z des coordonn&eacute;es cart&eacute;siennes et le
+                    l&egrave;ve-container doit &ecirc;tre install&eacute; de mani&egrave;re suspendu au plafond de
+                    l'installation de production de gaz.
+                    <br>
+                    <br>
+                    D'ailleurs, j'utilise le logiciel FreeCAD (https://www.freecadweb.org/?lang=fr) avec le langage
+                    Python (https://fr.wikipedia.org/wiki/Python_(langage)) pour concevoir le plan
+                    d'assemblage des technologies de l'hydrog&egrave;ne avec des bras de robots professionnels
+                    (https://wiki.freecadweb.org/Robot_tutorial/fr).
+                    <br>
+                    <br>
+                    Ensuite, la masse moyenne des pi&egrave;ces m&eacute;caniques de pr&eacute;cision des technologies
+                    est environ &eacute;gale &agrave; deux kilogrammes et le container final p&egrave;serait entre
+                    trois &agrave; quatre tonnes.
+                    <br>
+                    <br>
+                    Ainsi, mes questions sont :
+                    <br>
+                    - Est-ce que vous fabriquez des bras de robots professionnels et des l&egrave;ve-containers
+                     s'il vous pla&icirc;t ?
+                    <br>
+                    - Si oui, est-ce que vous pourriez me communiquer un catalogue avec les prix et les frais
+                    optionnels (livraison, montage ...) de vos bras de robots professionnels et vos
+                    l&egrave;ve-containers avec la documentation technique pour la programmation informatique
+                    avec le langage Python, les dimensions r&eacute;elles et les donn&eacute;es
+                    &eacute;nerg&eacute;tiques s'il vous pla&icirc;t ?
+                    <br>
+                    <br>
+                    Pour apporter des informations compl&eacute;mentaires &agrave; ce futur projet, j'ai mis en
+                    pi&egrave;ce jointe le document suivant :
+                    <br>
+                    - Un sch&eacute;ma tr&egrave;s simplifi&eacute; de la production de m&eacute;thane de
+                    synth&egrave;se au format PNG.
+                    <br>
+                    <br>
+                    Dans l'attente de votre retour, je vous prie de croire, mes sinc&egrave;res salutations.
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Pr&eacute;sident de la soci&eacute;t&eacute; Holomorphe
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste diplom&eacute; &agrave; l'E.S.I.L.V. Paris La D&eacute;fense
+                    <br>
+                    Adresse du si&egrave;ge social : 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    T&eacute;l&eacute;phone :
+                    <br>
+                    <br>
+                    N.B. : N'h&eacute;sitez pas &agrave; me laisser un message vocal ou un sms, et je vous
+                    t&eacute;l&eacute;phonerai dans les meilleurs d&eacute;lais.
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+
+        <!-- Datarade -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://datarade.ai/data-providers/holomorphe/profile">
+                Datarade
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

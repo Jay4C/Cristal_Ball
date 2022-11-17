@@ -1,0 +1,140 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Demande d'informations pour des d&eacute;penses de recherches et d&eacute;veloppements sur
+                    l'anti-gravit&eacute; et la physique des plasmas - Soci&eacute;t&eacute; Holomorphe
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Tout d'abord, je suis en train de faire des recherches sur des a&eacute;ronefs &eacute;lectriques
+                    bas&eacute;s sur l'anti-gravit&eacute; (https://en.wikipedia.org/wiki/Anti-gravity) et la
+                    magn&eacute;tohydrodynamique (https://fr.wikipedia.org/wiki/Magn%C3%A9tohydrodynamique).
+                    <br>
+                    <br>
+                    Puis, j'&eacute;tudie &eacute;galement le processus de Breit-Wheeler
+                    (https://en.wikipedia.org/wiki/Breit%E2%80%93Wheeler_process)
+                    pour produire de la mati&egrave;re &agrave; partir de l'&eacute;nergie.
+                    <br>
+                    <br>
+                    Ensuite, vous pourriez voir une liste de brevets r&eacute;f&eacute;rant &agrave;
+                    l'anti-gravit&eacute; ci-dessous de mani&egrave;re non exhaustive :
+                    <br>
+                    - Method and apparatus for generating a dynamic force field
+                    (https://patents.google.com/patent/US3626606)
+                    <br>
+                    - Method and apparatus for generating a secondary gravitational force field
+                    (https://patents.google.com/patent/US3626605)
+                    <br>
+                    - Inertial propulsion device to move an object up and down
+                    (https://patents.google.com/patent/US8066226B2/en?q=anti+gravity&oq=anti+gravity)
+                    <br>
+                    <br>
+                    De plus, je voudrai effectuer l'int&eacute;gralit&eacute; des futures d&eacute;penses de recherches
+                    et d&eacute;veloppements de la soci&eacute;t&eacute; Holomorphe sur la physique des plasmas en
+                    abordant les sujets tels que l'anti-gravit&eacute;, la magn&eacute;tohydrodynamique,
+                    le processus de Breit-Wheeler, la transmutation nucl&eacute;aire et l'ionisation.
+                    <br>
+                    <br>
+                    Ainsi, mes questions sont :
+                    <br>
+                    - Est-ce que vous pourriez faire des recherches et d&eacute;veloppements sur la physique des plasmas
+                    concernant les sujets ci-dessus au sein de votre laboratoire de recherche pour le compte de la
+                    soci&eacute;t&eacute; Holomorphe s'il vous pla&icirc;t ?
+                    <br>
+                    - Est-ce que vous seriez int&eacute;ress&eacute; de travailler sur ces sujets s'il vous
+                    pla&icirc;t ?
+                    <br>
+                    <br>
+                    Dans l'attente de votre retour, je vous prie de croire, mes sinc&egrave;res salutations.
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Pr&eacute;sident de la soci&eacute;t&eacute; Holomorphe
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste diplom&eacute; &agrave; l'E.S.I.L.V. Paris La D&eacute;fense
+                    <br>
+                    Adresse du si&egrave;ge social : 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    T&eacute;l&eacute;phone : 07.49.16.33.29
+                    <br>
+                    <br>
+                    N.B. : N'h&eacute;sitez pas &agrave; me laisser un message vocal ou un sms, et je vous
+                    t&eacute;l&eacute;phonerai dans les meilleurs d&eacute;lais.
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+
+        <!-- Datarade -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://datarade.ai/data-providers/holomorphe/profile">
+                Datarade
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

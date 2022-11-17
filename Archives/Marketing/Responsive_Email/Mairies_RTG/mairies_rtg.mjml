@@ -1,0 +1,158 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Demande d'informations pour des données compilées pour le plan local d'urbanisme - Soci&eacute;t&eacute; Holomorphe
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Tout d'abord, je suis en train de monter un projet de production de gaz (hydrog&egrave;ne et/ou
+                    m&eacute;thane de synth&egrave;se) directement inject&eacute;e dans un r&eacute;seau de transport
+                    de gaz naturel.
+                    <br>
+                    <br>
+                    Puis, je suis &agrave; la recherche d'un terrain constructible d'au moins 1000 m&egrave;tres
+                    carr&eacute;s raccordable à un r&eacute;seau de transport de gaz naturel. Le terrain doit se
+                    situer dans la r&eacute;gion Ile-de-France proche d'une gare de train dans une commune ayant
+                    moins de 10000 habitants.
+                    <br>
+                    <br>
+                    Ensuite, je voudrai avoir des donn&eacute;es compil&eacute;es sur le plan local d'urbanisme pour
+                    savoir les types de parcelles disponibles dans votre commune.
+                    <br>
+                    <br>
+                    Les donn&eacute;es compil&eacute;es au format Excel ou JSON ou XML ou CSV ou autre doivent avoir
+                    au moins les informations suivantes:
+                    <br>
+                    - Adresse postale
+                    <br>
+                    - Prefixe parcelle
+                    <br>
+                    - Section parcelle
+                    <br>
+                    - Numéro parcelle
+                    <br>
+                    - Contenance parcelle
+                    <br>
+                    - Coordonnées gps
+                    <br>
+                    - Type de parcelle (constructible, boisée, inondable, agricole ...)
+                    <br>
+                    - Hauteur maximal du bâti
+                    <br>
+                    - Coefficient d'occupation du sol
+                    <br>
+                    - Viabilisation (eau, &eacute;lectricit&eacute;, assainissement, gaz, t&eacute;l&eacute;phone,
+                    voirie ...)
+                    <br>
+                    <br>
+                    Ainsi, mes questions sont :
+                    <br>
+                    - Est-ce que vous pouvez me communiquer ces donn&eacute;es compil&eacute;es de votre commune
+                    s'il vous pla&icirc;t ?
+                    <br>
+                    - Est-ce que ce type de projet peut &ecirc;tre abouti dans votre commune s'il vous pla&icirc;t ?
+                    <br>
+                    <br>
+                    Pour apporter des informations compl&eacute;mentaires &agrave; ce futur projet, j'ai mis en
+                    pi&egrave;ces jointes les documents suivants :
+                    <br>
+                    - Un sch&eacute;ma tr&egrave;s simplifi&eacute; de la production de m&eacute;thane de
+                    synth&egrave;se au format PNG.
+                    <br>
+                    - Un fichier Excel contenant des parcelles pouvant probablement &ecirc;tre raccord&eacute;
+                    au r&eacute;seau de transport de gaz naturel
+                    <br>
+                    <br>
+                    Dans l'attente de votre retour, je vous prie de croire, mes sinc&egrave;res salutations.
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Pr&eacute;sident de la soci&eacute;t&eacute; Holomorphe
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste diplom&eacute; &agrave; l'E.S.I.L.V. Paris La D&eacute;fense
+                    <br>
+                    Adresse du si&egrave;ge social : 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    T&eacute;l&eacute;phone : 07.49.16.33.29
+                    <br>
+                    <br>
+                    N.B. : N'h&eacute;sitez pas &agrave; me laisser un message vocal ou un sms, et je vous rappelerai
+                    dans les meilleurs d&eacute;lais.
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+
+        <!-- Datarade -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://datarade.ai/data-providers/holomorphe/profile">
+                Datarade
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

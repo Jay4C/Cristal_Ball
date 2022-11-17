@@ -1303,7 +1303,7 @@ class UnitTestsWebAutomationTPLinkWithHeadless(unittest.TestCase):
 
         ]
 
-        message = """Slt çà va ? Il faut tjrs me téléphoner sur mon nouveau numéro de téléphone : 0745752700 pour que je sois rapide à répondre. Jason ALOYAU"""
+        message = """Slt çà va ? Il faut tjrs me téléphoner sur mon nouveau numéro de téléphone : 0745752700 pour que je sois rapide à répondre. """
 
         time.sleep(5)
 

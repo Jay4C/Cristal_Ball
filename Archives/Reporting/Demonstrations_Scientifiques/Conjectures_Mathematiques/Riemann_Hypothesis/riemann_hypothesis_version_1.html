@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+    crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <!-- MathJax -->
+
+    <title>An attempt to prove the Riemann hypothesis written by Mr  - Version 1</title>
+  </head>
+  <body>
+    <!-- container -->
+    <div class="container">
+        <br>
+
+        <!-- Contact -->
+        <div class="card text-center">
+            <div class="card-header">
+              Contact
+            </div>
+            <div class="card-body">
+              <!-- Informations personnelles -->
+              <table class="table table-striped table-bordered">
+                  <thead>
+                      <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">Postal address</th>
+                          <th scope="col">Phone number</th>
+                          <th scope="col">Email</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Monsieur </td>
+                          <td>6 Avenue Léon Blum 93800 Epinay-sur-Seine</td>
+                          <td>07.49.16.33.29</td>
+                          <td>jason.aloyau@outlook.fr</td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+        </div>
+        <!-- Contact -->
+
+        <br>
+
+        <!-- An attempt to prove the Riemann hypothesis - Version 1 -->
+        <div class="card">
+          <h5 class="card-header text-center">
+            An attempt to prove the Riemann hypothesis written by Mr  - Version 1
+          </h5>
+          <div class="card-body">
+              <!-- Problem -->
+                <div class="card">
+                  <h5 class="card-header text-center">
+                      Problem
+                  </h5>
+                  <div class="card-body">
+                      <h5>
+                          Riemann's hypothesis suggests that all non-trivial zeros of the zeta function all have a real
+                          part equal to a half.
+
+                          <br>
+                          <br>
+
+                          Demonstrate that that all non-trivial zeros of the zeta function all have a real
+                          part equal to a half.
+                      </h5>
+                  </div>
+                </div>
+              <!-- Problem -->
+
+              <br>
+              <br>
+
+              <!-- Proof -->
+                <div class="card">
+                  <h5 class="card-header text-center">
+                      Proof
+                  </h5>
+                  <div class="card-body">
+                      <h5>
+                          We have :
+
+                          <br>
+
+                          \[
+                            exp(z) = \sum_{n=0}^{+\infty} \frac{z^{n}}{n!}
+                          \]
+
+                          <br>
+
+                          \[
+                            a^{x} = exp(x * ln(a))
+                          \]
+
+                          <br>
+
+                          \[
+                            a^{b} = exp(b * ln(a))
+                          \]
+
+                          <br>
+
+                          \[
+                            z^{w} = exp(w * ln(z))
+                          \]
+
+                          <br>
+
+                          \[
+                            ch(x) = \frac{exp(x) + exp(-x)}{2}
+                          \]
+
+                          <br>
+
+                          \[
+                            sh(x) = \frac{exp(x) - exp(-x)}{2}
+                          \]
+
+                          <br>
+
+                          \[
+                            cos(x) = \frac{exp(i*x) + exp(-i*x)}{2}
+                          \]
+
+                          <br>
+
+                          \[
+                            sin(x) = \frac{exp(i*x) - exp(-i*x)}{2*i}
+                          \]
+
+                          <br>
+
+                          \[
+                            sin(x) = \frac{exp(i*x) - exp(-i*x)}{2*i}
+                          \]
+
+                          <br>
+
+                          \[
+                            \zeta(z) = \sum_{n=1}^{+\infty} \frac{1}{n^{z}} , Re(z) > 1
+                          \]
+
+                          <br>
+                          <br>
+
+                          Find all z when
+                          \[
+                            \zeta(z) = 0
+                          \]
+                          and
+                          \[
+                            Re(z) = \frac{1}{2}
+                          \]
+
+                          <br>
+                          <br>
+
+                          \[
+                            \forall (x, y) \in \Re , i \in \Im , z = x + i * y
+                          \]
+
+                          <br>
+
+
+                      </h5>
+                  </div>
+                </div>
+              <!-- Proof -->
+          </div>
+        </div>
+        <!-- An attempt to prove the Riemann hypothesis - Version 1 -->
+    </div>
+    <!-- container -->
+
+    <br>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  </body>
+</html>

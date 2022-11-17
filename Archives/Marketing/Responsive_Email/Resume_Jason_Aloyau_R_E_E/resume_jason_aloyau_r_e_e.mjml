@@ -1,0 +1,169 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Subject
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Spontaneous application for a job as renewable energy engineer in full time contract -
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Hello,
+                    <br>
+                    <br>
+                    Today, I am applying for a job as renewable energy engineer in full time contract for manufacturing
+                    free energy devices at big scale and I am available for a first exchange by phone and
+                    videoconference.
+                    <br>
+                    <br>
+                    Please find attached my following files :
+                    <br>
+                    - My resume in PDF format
+                    <br>
+                    - A simple diagram showing some use cases with free energy devices in PNG format
+                    <br>
+                    - A list of free energy devices in Open Office Calc format
+                    <br>
+                    <br>
+                    In addition, you can have more information about free energy devices for electricity production
+                    without the need to use energy sources such as oil, coal, natural gas, nuclear, biomass, wind, sun,
+                    geothermal, hydraulic and wave energy and hydrothermal or hydrokinetic energy at the following
+                    links :
+                </h1>
+            </mj-text>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="http://www.free-energy-info.tuks.nl/Intro.pdf">
+                Free energy devices
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://en.wikipedia.org/wiki/Vacuum_energy">
+                Vacuum energy
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://en.wikipedia.org/wiki/Zero-point_energy">
+                Zero-point energy
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://en.wikipedia.org/wiki/Casimir_effect">
+                Casimir effect
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://github.com/Jay4C/Free-energy-devices">
+                An exhaustive list of free energy machines
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://github.com/Jay4C/Python-Macros-For-FreeCAD">
+                Some computer-aided designs of free energy machines with FreeCAD
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://www.greenoptimistic.com/chas-campbell-gravitational-engine/">
+                Chas Campbell's gravitational engine
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="http://free-energy-info.tuks.nl/LTseung.pdf">
+                The machines of Chas Campbell
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://en.wikipedia.org/wiki/Cold_fusion">
+                Cold fusion
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US20020125774A1/en?oq=US20020125774">
+                Patent US20020125774A1 - Continuous electric generator - Inventor: Alberto Molina-Martinez
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US20150188400A1/en">
+                Patent US20150188400A1 - Magnetic induction motor-generator - Inventors: Robert Louis Kemp and
+                Thomas Edward Kemp
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US4661747A/en?oq=US4661747">
+                Patent US4661747A - Efficient electrical conversion switch tube suitable for inductive loads -
+                Inventor: Edwin Gray
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US6545444B2/en?oq=US6545444">
+                Patent US6545444 - Device and method for using a single-pole motor to create electromagnetic fields
+                to charge batteries - Inventor: John Bedini
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US6362718B1/en?oq=US6362718">
+                Patent US6362718B1 - Stationary electromagnetic generator - Inventors: Stephen Patrick and
+                Thomas Bearden and James Hayes and Kenneth Moore and James Kenny
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/FR739458A/en?oq=FR739458">
+                Patent FR739458 - Perpetual self-generator of electrical energy - Inventor: Andre-Louis-Victor Coutier
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://www.youtube.com/user/TheEngpjk/videos">
+                Some YouTube videos posted by Patrick Kelly about free energy machines
+            </mj-button>
+
+            <mj-text align="center">
+                <h1>
+                    While waiting for your return, please believe, my sincere greetings.
+                    <br>
+                    <br>
+
+                    <br>
+                    General engineer graduated from Leonard de Vinci Engineering School in Paris La Defense in France
+                    <br>
+                    Mailing address : 6 Avenue Leon Blum 93800 Epinay-sur-Seine (France)
+                    <br>
+                    Phone : 00.33.7.49.16.33.29
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub / Jay4C
+            </mj-button>
+        </mj-column>
+        <!-- github -->
+    </mj-section>
+    <!-- References -->
+  </mj-body>
+</mjml>

@@ -1,0 +1,120 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Demande d'informations pour tester des a&eacute;ronefs avec de l'hydrog&egrave;ne
+                    - Soci&eacute;t&eacute; Holomorphe
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Tout d'abord, je travaille sur l'&eacute;lectrolyseur &agrave; eau de Stanley Meyer et
+                    vous pouvez avoir plus d'informations sur ce type d'&eacute;lectrolyseur aux liens suivants :
+                    <br>
+                    - https://www.holomorphe.com/chemical-products/gas-mixture-of-pure-dihydrogen
+                    <br>
+                    - https://www.holomorphe.com/chemical-products/about_stanley_meyer
+                    <br>
+                    - https://www.holomorphe.com/chemical-products/cad-stanley-meyer-water-electrolyser
+                    <br>
+                    - https://patents.google.com/patent/US5149407A/en
+                    <br>
+                    <br>
+                    Puis, je voudrai travailler avec des propri&eacute;taires d'a&eacute;ronefs pour tester
+                    l'&eacute;lectrolyseur &agrave; eau de Stanley Meyer sur des a&eacute;ronefs afin de les alimenter
+                    avec de l'hydrog&egrave;ne.
+                    <br>
+                    <br>
+                    Ainsi, mes questions sont :
+                    <br>
+                    - Est-ce que c'est possible de faire fonctionner vos a&eacute;ronefs avec de
+                    l'hydrog&egrave;ne s'il vous pla&icirc;t ?
+                    <br>
+                    - Quelle est la quantit&eacute; de volume libre restante sur vos a&eacute;ronefs pour embarquer un
+                    &eacute;lectrolyseur &agrave; eau de Stanley Meyer s'il vous pla&icirc;t ?
+                    <br>
+                    <br>
+                    Dans l'attente de votre retour, je vous prie de croire, mes sinc&egrave;res salutations.
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Pr&eacute;sident de la soci&eacute;t&eacute; Holomorphe
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste diplom&eacute; &agrave; l'&Eacute;cole Sup&eacute;rieure
+                    d'Ing&eacute;nieurs L&eacute;onard de Vinci &agrave; Paris La D&eacute;fense
+                    <br>
+                    Adresse du si&egrave;ge social : 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    T&eacute;l&eacute;phone : 07.49.16.33.29
+                    <br>
+                    <br>
+                    N.B. : N'h&eacute;sitez pas &agrave; me laisser un message vocal ou un sms, et je vous
+                    t&eacute;l&eacute;phonerai dans les meilleurs d&eacute;lais.
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,155 @@
+import unittest
+from pylatex import Document, Command
+from pylatex.utils import NoEscape
+
+
+class UnitTestsDemonstrationIsotopicGeneratorFR2680613(unittest.TestCase):
+    def test_demonstration_invention(self):
+        doc = Document('isotopic_generator_FR_2680613')
+
+        # Preamble of the document
+        doc.preamble.append(Command('title', 'FR patent n°4,936,961 - Demonstration for isotopic generator FR 268,061,3'))
+        doc.preamble.append(Command('author', ''))
+        doc.preamble.append(Command('date', NoEscape(r'\today')))
+        doc.preamble.append(Command('usepackage', NoEscape(r'amsmath')))
+        doc.preamble.append(Command('usepackage', NoEscape(r'circuitikz')))
+        doc.append(NoEscape(r'\maketitle'))
+
+        doc.append(NoEscape(r'\underline{Calculations}'))
+        doc.append('\n')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{B1}$'))
+        doc.append(' the magnetic field of the coil 1.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{B2}$'))
+        doc.append(' the magnetic field of the coil 2.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{B3}$'))
+        doc.append(' the magnetic field of the coil 3.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{N1}$'))
+        doc.append(' the number of turns of the coil 1.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{N2}$'))
+        doc.append(' the number of turns of the coil 2.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{N3}$'))
+        doc.append(' the number of turns of the coil 3.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{l1}$'))
+        doc.append(' the length of the coil 1.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{l2}$'))
+        doc.append(' the length of the coil 2.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{l3}$'))
+        doc.append(' the length of the coil 3.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{i1}$'))
+        doc.append(' the current across the coil 1.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{i2}$'))
+        doc.append(' the current across the coil 2.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{i3}$'))
+        doc.append(' the current across the coil 3.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{u1}$'))
+        doc.append(' the voltage across in the coil 1.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{u2}$'))
+        doc.append(' the voltage across in the coil 2.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{u3}$'))
+        doc.append(' the voltage across in the coil 3.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{f1}$'))
+        doc.append(' the frequency across in the coil 1.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{f2}$'))
+        doc.append(' the frequency across in the coil 2.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{f3}$'))
+        doc.append(' the frequency across in the coil 3.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{L1}$'))
+        doc.append(' the inductance of the coil 1.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{L2}$'))
+        doc.append(' the inductance of the coil 2.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{L3}$'))
+        doc.append(' the inductance of the coil 3.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{S}$'))
+        doc.append(' the area of the iron core.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{l}$'))
+        doc.append(' the length of the iron core.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{D}$'))
+        doc.append(' the diameter of the iron core.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{\mu}$'))
+        doc.append(' the permeability of the iron core.')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{\mu_{r}}$'))
+        doc.append(' the relative permeability of the iron core.')
+        doc.append('\n')
+        doc.append('\n')
+        doc.append('Be ')
+        doc.append(NoEscape(r'$\boxed{\mu_{0}}$'))
+        doc.append(' the permeability of the empty space.')
+        doc.append('\n')
+        doc.append('We have : ')
+        doc.append(
+            NoEscape(
+                r'''
+                $$
+                \boxed{
+                \begin{cases}
+                L = (N^{2} * \mu_{0} * S)/l \\
+                N = \sqrt{(L * l)/(\mu_{0} * S)} \\
+                B = (\mu_{0} * N * I_{L})/l \\
+                N = (B * l)/(\mu_{0} * I_{L}) \\
+                I_{L} = (B * l)/(\mu_{0} * N) \\
+                |U_{L}| = \omega_{L} * L * |I_{L}| = 2 * \pi * f_{L} * L * |I_{L}| \\
+                |I_{L}| = |U_{L}|/(2 * \pi * f_{L} * L)
+                \end{cases}
+                }
+                $$
+                '''
+            )
+        )
+
+        doc.generate_pdf(clean_tex=True)
+
+
+if __name__ == '__main__':
+    unittest.main()

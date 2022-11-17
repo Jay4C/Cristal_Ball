@@ -1,0 +1,87 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Candidature spontan&eacute;e pour un poste de d&eacute;veloppeur Python / RPA / Data miner
+                    / Full-stack en freelance et en t&eacute;l&eacute;travail
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Je vous prie de bien vouloir trouver en pi&egrave;ce jointe mon curriculum vitae pour une candidature
+                    spontan&eacute;e en tant que d&eacute;veloppeur Python / RPA / Data miner / Full-stack en
+                    freelance et en t&eacute;l&eacute;travail.
+                    <br>
+                    <br>
+                    Je suis disponible &agrave; temps complet en t&eacute;l&eacute;travail uniquement.
+                    <br>
+                    <br>
+                    Tr&egrave;s bonne journ&eacute;e &agrave; vous,
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste diplom&eacute; &agrave; l'&Eacute;cole sup&eacute;rieure
+                    d'ing&eacute;nieurs L&eacute;onard de Vinci &agrave; Paris La D&eacute;fense
+                    <br>
+                    T&eacute;l&eacute;phone :
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                Mon compte GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Malt -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.malt.fr/profile/jasonaloyau">
+                Mon profile Malt
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- Mon CV -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://holomorphe.com/contents/resume_of_mr_jason_aloyau">
+                Mon curriculum vitae
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

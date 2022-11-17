@@ -123,7 +123,7 @@ class UnitTestsResearchForGitHub(unittest.TestCase):
               <div class="card-body">
                 <h6>
                     Les travaux d'expérimentation se porteront sur un générateur d'électricité nommé 'N machine' qui 
-                    a été fabriqué par Monsieur Jason ALOYAU.
+                    a été fabriqué par Monsieur .
                 </h6>
                 
                 <br>

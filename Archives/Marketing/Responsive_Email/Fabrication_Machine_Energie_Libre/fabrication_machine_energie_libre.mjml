@@ -1,0 +1,193 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Prestations de services d'&eacute;dition de logiciels applicatifs pour fabriquer des machines
+                    &agrave; &eacute;nergie libre pour la production d'&eacute;lectricit&eacute;
+                    - Soci&eacute;t&eacute; Holomorphe
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Je vous prie de bien vouloir prendre connaissance des documentations suivantes pour voir
+                    quelques machines &agrave; &eacute;nergie libre pour la production d'&eacute;lectricit&eacute;
+                    sans avoir besoin d'utiliser les sources d'&eacute;nergie telles que le p&eacute;trole,
+                    le charbon, le gaz naturel, le nucl&eacute;aire, la biomasse, le vent, le soleil,
+                    la g&eacute;othermie, l'&eacute;nergie hydraulique et l'&eacute;nergie houlomotrice,
+                    hydrothermique ou hydrocin&eacute;tique.
+                </h1>
+            </mj-text>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://www.choix-realite.org/4783/les-machines-a-energie-libre">
+                Les machines &agrave; &eacute;nergie libre
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://fr.wikipedia.org/wiki/%C3%89nergie_du_vide">
+                &Eacute;nergie du vide
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://fr.wikipedia.org/wiki/%C3%89nergie_du_point_z%C3%A9ro">
+                &Eacute;nergie du point z&eacute;ro
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://www.spirit-science.fr/Matiere/Phys3-ether.html">
+                &Eacute;nergie de l'&eacute;ther
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://github.com/Jay4C/Free-energy-devices">
+                Liste exhaustive de machines &agrave; &eacute;nergie libre
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://github.com/Jay4C/Python-Macros-For-FreeCAD">
+                Quelques conceptions assist&eacute;es par ordinateur de machines &agrave; &eacute;nergie libre
+                avec FreeCAD
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://www.greenoptimistic.com/chas-campbell-gravitational-engine/">
+                Moteur gravitationnel de Chas Campbell
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="http://free-energy-info.tuks.nl/LTseung.pdf">
+                Dispositifs de Chas Campbell
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://en.wikipedia.org/wiki/Cold_fusion">
+                Fusion froide
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US20020125774A1/en?oq=US20020125774">
+                Brevet US 20020125774A1 - G&eacute;n&eacute;rateur &eacute;lectrique continu - Inventeur :
+                Alberto Molina-Martinez
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US20150188400A1/en">
+                Brevet US 20150188400A1 - Moteur-moteur-g&eacute;n&eacute;rateur &agrave; induction
+                magn&eacute;tique - Inventeurs : Robert Louis Kemp et Thomas Edward Kemp
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US4661747A/en?oq=US4661747">
+                Brevet US 4661747A - Tube de commutation de conversion &eacute;lectrique efficace adapt&eacute;
+                aux charges inductives - Inventeur : Edwin Gray
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US6545444B2/en?oq=US6545444">
+                Brevet US 6545444 - Dispositif et proc&eacute;d&eacute; d'utilisation d'un moteur monopolaire pour
+                cr&eacute;er des champs &eacute;lectromagn&eacute;tiques pour charger les batteries - Inventeur :
+                John Bedini
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/US6362718B1/en?oq=US6362718">
+                Brevet US 6362718B1 - G&eacute;n&eacute;rateur &eacute;lectromagn&eacute;tique immobile
+                - Inventeurs : Stephen Patrick et Thomas Bearden et James Hayes et Kenneth Moore et James Kenny
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://patents.google.com/patent/FR739458A/en?oq=FR739458">
+                Brevet FR 739458 - Auto-g&eacute;n&eacute;rateur perp&eacute;tuel d'&eacute;nergie
+                &eacute;lectrique - Inventeur : Andre-Louis-Victor Coutier
+            </mj-button>
+
+            <mj-button font-family="Helvetica" background-color="#a5bae0" color="black"
+            href="https://www.youtube.com/user/TheEngpjk/videos">
+                Quelques vid&eacute;os YouTube publi&eacute;es par Patrick Kelly &agrave; propos des machines
+                &agrave; &eacute;nergie libre
+            </mj-button>
+
+            <mj-text align="center">
+                <h1>
+                    <br>
+                    <br>
+                    Dans l'attente de votre retour, je vous prie de croire, mes sinc&egrave;res salutations.
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Pr&eacute;sident de la soci&eacute;t&eacute; Holomorphe
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste diplom&eacute; &agrave; l'&Eacute;cole Sup&eacute;rieure
+                    d'Ing&eacute;nieurs L&eacute;onard de Vinci &agrave; Paris La D&eacute;fense
+                    <br>
+                    Adresse du si&egrave;ge social : 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    T&eacute;l&eacute;phone : 07.49.16.33.29
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

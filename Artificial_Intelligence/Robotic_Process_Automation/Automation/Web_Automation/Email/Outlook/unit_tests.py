@@ -2701,7 +2701,7 @@ Head office address: 31 Avenue de Ségur 75007 Paris
 Phone : 
 Siren : 883632556
 GitHub : Jay4C
-LinkedIn : Jason ALOYAU"""
+LinkedIn : """
 
         time.sleep(5)
 

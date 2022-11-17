@@ -29,7 +29,7 @@ EPS = 0.10
 EPS_C = EPS * -0.5
 
 d_magnet = 140
-d1 = 36.1
+d1 = 30.1
 d2 = d_magnet + 2*2
 s = 5
 

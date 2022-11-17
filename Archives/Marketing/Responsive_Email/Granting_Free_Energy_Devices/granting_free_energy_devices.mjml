@@ -1,0 +1,142 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Subject
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Request of information for licensing an electricity power plant by using free energy
+                    devices - Holomorphe company
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Hello,
+                    <br>
+                    <br>
+                    Under the electricity sector regulation law,
+                    <br>
+                    Under the electricity law,
+                    <br>
+                    <br>
+                    Today, I am working on the Chas Campbell devices based on the gravitational energy.
+                    <br>
+                    <br>
+                    This technology permits to produce electricity thanks to the gravitational energy of a
+                    flywheel or an other gravity wheel.
+                    <br>
+                    <br>
+                    This kind of technology has not emissions to the atmosphere, water or land, and doesn't need
+                    wind, hydro, biomass, waste (including waste heat), bio-fuel, geothermal, fuel cells, tidal,
+                    temperature inversion or convection or even solar to operate.
+                    <br>
+                    <br>
+                    This kind of machine uses cosmic energy and cosmic wave energy and gravitational energy of a
+                    pulse circular motion of a flywheel as energy source.
+                    <br>
+                    <br>
+                    My questions are :
+                    <br>
+                    - Is it allowed to use this kind of machine for producing electricity under the electricity
+                    sector regulation law and the electricity law by using cosmic energy or gravitational energy
+                    of a flywheel or an other gravity wheel as an alternative form of energy in your country please ?
+                    <br>
+                    - Is it allowed to use free energy devices based on zero point energy, radiant energy, vacuum
+                    energy or cosmic energy in your country please ?
+                    <br>
+                    <br>
+                    Please find in attachment the Chas Campbell devices in PDF format.
+                    <br>
+                    <br>
+                    While waiting for your return, please believe, my sincere greetings.
+                    <br>
+                    <br>
+                    Mr
+                    <br>
+                    President of the Holomorphe company
+                    <br>
+                    General engineer graduated from the Leonardo da Vinci School of Engineering in Paris La D&eacute;fense
+                    <br>
+                    Headquarters address: 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    Phone: 07.49.16.33.29
+                    <br>
+                    <br>
+                    References :
+                    <br>
+                    - http://frienergi.alternativkanalen.com/Chapt4.html
+                    <br>
+                    - https://slidelegend.com/chas-campbell-devices-panacea-bocaf_59ec29151723ddedf00336ba.html
+                    <br>
+                    - https://www.greenoptimistic.com/chas-campbell-gravitational-engine/
+                    <br>
+                    - http://free-energy-info.tuks.nl/LTseung.pdf
+                    <br>
+                    - https://en.wikipedia.org/wiki/Vacuum_energy
+                    <br>
+                    - https://www.guardian-angel-reading.com/blog-of-the-angels/cosmic-energy/
+                    <br>
+                    - https://en.wikipedia.org/wiki/Zero-point_energy
+                    <br>
+                    - https://en.wikipedia.org/wiki/Radiant_energy
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,128 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Demande d'informations pour l'achat de v&ecirc;tements de protection aluminis&eacute;s
+                    - Soci&eacute;t&eacute; Holomorphe
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Tout d'abord, je suis en train de monter un projet combinant la m&eacute;thanation par la
+                    r&eacute;action de Sabatier et la production de dihydrog&egrave;ne gazeux pur afin de les
+                    injecter dans un r&eacute;seau de gaz naturel depuis un m&ecirc;me site.
+                    <br>
+                    <br>
+                    Apr&egrave;s, je suis &agrave; la recherche de v&ecirc;tements de protection aluminis&eacute;s standards
+                    et/ou sur-mesure pour se prot&eacute;ger contre la chaleur, les flammes, les projections de mat&eacute;riaux
+                    en fusion jusqu’&agrave; 2000 degr&eacute;s celsuis, les ondes &eacute;lectromagn&eacute;tiques,
+                    les arcs &eacute;lectriques, les d&eacute;charges &eacute;lectriques et toutes sortes de nuisances
+                    &eacute;lectriques afin de se sentir dans une cage de Faraday.
+                    <br>
+                    <br>
+                    Ainsi, mes questions sont :
+                    <br>
+                    - Est-ce que vous vendez ces types de v&ecirc;tements s'il vous pla&icirc;t ?
+                    <br>
+                    - Est-ce que vous pourriez me communiquer un catalogue de ces types de v&ecirc;tements avec les
+                    prix et les tailles s'il vous pla&icirc;t ?
+                    <br>
+                    <br>
+                    Pour apporter des informations compl&eacute;mentaires &agrave; ce futur projet, j'ai mis en
+                    pi&egrave;ce jointe le document suivant :
+                    <br>
+                    - Un sch&eacute;ma tr&egrave;s simplifi&eacute; de la production de m&eacute;thane de
+                    synth&egrave;se au format PNG.
+                    <br>
+                    <br>
+                    Dans l'attente de votre retour, je vous prie de croire, mes sinc&egrave;res salutations.
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Pr&eacute;sident de la soci&eacute;t&eacute; Holomorphe
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste diplom&eacute; &agrave; l'E.S.I.L.V. Paris La D&eacute;fense
+                    <br>
+                    Adresse du si&egrave;ge social : 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    T&eacute;l&eacute;phone : 07.49.16.33.29
+                    <br>
+                    <br>
+                    N.B. : N'h&eacute;sitez pas &agrave; me laisser un message vocal ou un sms, et je vous rappelerai
+                    dans les meilleurs d&eacute;lais.
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+
+        <!-- Datarade -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://datarade.ai/data-providers/holomorphe/profile">
+                Datarade
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- MathJax.js -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <title>Mr </title>
+</head>
+<body>
+    <div class="container">
+        <br>
+
+      <!-- Schéma de principe -->
+      <div class="card text-center">
+        <div class="card-header">
+            Schematic diagram
+        </div>
+        <div class="card-body">
+            <img src="principe.png" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+      <!-- Schéma de principe -->
+
+      <br>
+
+      <!-- Contact -->
+      <div class="card text-center">
+        <div class="card-header">
+          Contact
+        </div>
+        <div class="card-body">
+          <!-- Informations personnelles -->
+          <table class="table table-striped table-bordered">
+              <thead>
+                  <tr>
+                      <th scope="col">Person</th>
+                      <th scope="col">Phone number</th>
+                      <th scope="col">Email</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Mr </td>
+                      <td>07.45.75.27.00</td>
+                      <td>jason.aloyau@outlook.fr</td>
+                  </tr>
+              </tbody>
+          </table>
+          <!-- Informations personnelles -->
+        </div>
+      </div>
+      <!-- Contact -->
+
+      <br>
+
+      <!-- Fundamental research  -->
+      <div class="card text-center">
+        <div class="card-header">
+            Vibrating Magnet Electromagnetic generator - Part 2 - Two secondary coils
+        </div>
+        <div class="card-body">
+          <!-- Course -->
+          <div class="card">
+            <div class="card-header">
+              Course
+            </div>
+            <div class="card-body">
+                <!-- Course -->
+                <div class="accordion" id="course">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h2 class="mb-0">
+                            <button class="btn btn-light btn-block text-left"
+                                    type="button"
+                                    data-toggle="collapse"
+                                    data-target="#collapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="collapseOne">
+                              Course
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#course">
+                          <div class="card-body">
+                              <!-- Energy of a magnetic moment under magnetic field -->
+                              <div class="card">
+                                <div class="card-header text-center">
+                                    Energy of a magnetic moment under magnetic field
+                                </div>
+                                <div class="card-body">
+                                    The potential energy of a magnet of magnetic moment, in a magnetic field, is defined as the
+                                    mechanical work of the magnetic force (in fact, torque magnetic) on the re-alignment of the vector
+                                    of the magnetic moment dipole, and is equal to :
+                                    <br>
+                                    \[
+                                        E_{p,m} = - \vec{m} * \vec{B}
+                                    \]
+                                </div>
+                              </div>
+                              <!-- Energy of a magnetic moment under magnetic field -->
+
+                              <br>
+
+                              <!-- Energy stored in an inductor -->
+                              <div class="card">
+                                <div class="card-header text-center">
+                                    Energy stored in an inductor
+                                </div>
+                                <div class="card-body">
+                                    Consider an ideal inductor (of L inductor). In order to pass a current through the inductor,
+                                    it is necessary to bring energy to start the current. This energy, which is then stored by the
+                                    magnetic field of the inductor, is recoverable once the current is turned off.
+
+                                    <br>
+
+                                    \[
+                                        P = U * I = L * I * \frac{\mathrm d I}{\mathrm d t}
+                                    \]
+
+                                    <br>
+
+                                    \[
+                                        E_{stored} = \int_{0}^{t} P dt = \int_{0}^{I} L * I^{'} dI^{'} = \frac{L * I^{2}}{2}
+                                    \]
+
+                                    <br>
+
+                                    \[
+                                        B = \frac{\mu * N * I}{l}
+                                    \]
+
+                                    <br>
+
+                                    \[
+                                        L = \frac{\mu * N^{2} * A}{l}
+                                    \]
+
+                                    <br>
+
+                                    \[
+                                        u = \frac{Energy}{volume} = \frac{\frac{L * I^{2}}{2}}{A * l} = \frac{B^{2}}{2 * \mu_{0}}
+                                    \]
+
+                                    <br>
+
+                                    \[
+                                        E = \frac{1}{2} * \int \vec{H} * \vec{B} dV
+                                    \]
+                                </div>
+                              </div>
+                              <!-- Energy stored in an inductor -->
+
+                                <br>
+
+                                <!-- Magnetic flux -->
+                                <div class="card">
+                                  <div class="card-header text-center">
+                                    Magnetic flux
+                                  </div>
+                                  <div class="card-body">
+                                    The magnetic flux or magnetic induction flux, is a measurable physical quantity characterizing
+                                      the intensity and spatial distribution of the magnetic field. This quantity is equal to the flux
+                                      of the magnetic induction through an oriented surface. This flow is by definition the scalar
+                                      product of these two vectors1 (see mathematical definition below). Its unit of expression in
+                                      the International System of Units is the weber (unit homogeneous with volts-seconds).
+
+                                      <br>
+
+                                      \[
+                                        d\Phi = \vec{B} * d\vec{S} = \lVert \vec{B} \rVert * \lVert d\vec{S} \rVert * cos(\theta)
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \Phi = \iint\limits_S d\Phi = \iint\limits_S \vec{B} \cdot d\vec{S}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{B} = \vec{rot(\vec{A})}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \Phi_{B} = \int\limits_s \vec{A} \cdot \vec{dl}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        e(t) = - \frac{\mathrm d \Phi(t)}{\mathrm d t}
+                                      \]
+                                  </div>
+                                </div>
+                                <!-- Magnetic flux -->
+
+                                <br>
+
+                                <!-- Electromagnetic induction -->
+                                <div class="card">
+                                  <div class="card-header text-center">
+                                      Electromagnetic induction
+                                  </div>
+                                  <div class="card-body">
+                                      Electromagnetic induction is a physical phenomenon leading to the appearance of an
+                                      electromotive force in an electrical conductor subjected to a variable magnetic field flux.
+                                      This electromotive force can generate an electric current in the conductor. This phenomenon
+                                      is of paramount practical importance. It is used in particular in generators and electrical
+                                      transformers, coils, or even induction plates thanks to eddy currents.
+
+                                      <br>
+
+                                      \[
+                                        \vec{F} = q * \vec{E} + q * \vec{v} \times \vec{B}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        e = \oint (\vec{v} \times \vec{B}) \cdot \vec{dl}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{j} = \sigma * (- \vec{\nabla V} + \vec{E_{em}})
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{E_{em}} = -\frac{\partial \vec{A}}{\partial t} + \vec{v} \times \vec{B}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \epsilon = -\frac{\mathrm d\Phi}{\mathrm d t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        U = R * I - \epsilon
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \epsilon = -\frac{\mathrm d\phi}{\mathrm d t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        u = - L * \frac{\mathrm d i}{\mathrm d t}
+                                      \]
+                                  </div>
+                                </div>
+                                <!-- Electromagnetic induction -->
+
+                                <br>
+
+                                <!-- Induced current -->
+                                <div class="card">
+                                  <div class="card-header text-center">
+                                      Induced current
+                                  </div>
+                                  <div class="card-body">
+                                      The induced current is an electric current which, by its effects, opposes the causes which gave
+                                      rise to it (Lenz's law).
+
+                                      <br>
+
+                                      \[
+                                        \epsilon = -\frac{\mathrm d\Phi}{\mathrm d t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        U = - N * \frac{\mathrm d\Phi}{\mathrm d t}
+                                      \]
+                                  </div>
+                                </div>
+                                <!-- Induced current -->
+
+                                <br>
+
+                                <!-- Electromotive force -->
+                                <div class="card">
+                                  <div class="card-header text-center">
+                                      Electromotive force
+                                  </div>
+                                  <div class="card-body">
+                                      The electromotive force, or electromotance1, is one of the characteristic parameters of an
+                                      electric generator. It is, contrary to what its name indicates, homogeneous with a voltage
+                                      and is expressed in volts. In an electric circuit, to set loads in motion, it is necessary
+                                      to supply work, and the electromotive force corresponds to the work which a generator supplies
+                                      to the circuit per unit of load. This force is most often provided by an electric generator,
+                                      which imposes an electric voltage across its terminals. In this case, the electromotive force
+                                      is associated with a point component. In the case of electromagnetic induction, the
+                                      electromotive force often takes the form of a counter-electromotive force, opposing in
+                                      its opposite direction the establishment of a magnetic field. In such a case, it is
+                                      distributed over the entire circuit, the electromotive force is associated with a mesh of
+                                      the circuit, and results from the curvilinear integral on this mesh of the electromagnetic
+                                      force induced on each element of length by the variation of the magnetic field.
+
+                                      <br>
+
+                                      \[
+                                        e = \frac{W}{i * t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{rot(\vec{E})} = - \frac{\partial \vec{B}}{\partial t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        e = \oint_C \vec{E} \cdot \vec{dl} = - \frac{\mathrm d\phi}{\mathrm dt}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        dG = - S * dT + V * dP + e * dq
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        (\frac{\partial e}{\partial T})_{q} = (\frac{\partial S}{\partial q})_{T}
+                                      \]
+                                  </div>
+                                </div>
+                                <!-- Electromotive force -->
+
+                                <br>
+
+                                <!-- Lenz–Faraday law -->
+                                <div class="card">
+                                  <div class="card-header text-center">
+                                    Lenz–Faraday law
+                                  </div>
+                                  <div class="card-body">
+                                      An electrical circuit, represented by an arbitrarily oriented contour C, subjected to a
+                                      variable magnetic flux Φ (resulting from a variable magnetic field B) is the seat of an
+                                      electromotive force e such that:
+
+                                      <br>
+
+                                      \[
+                                        e = - \frac{\mathrm d\Phi}{\mathrm dt}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        e = \oint \vec{E} \cdot \vec{dl}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \Phi = \iint_S \vec{B} \cdot \vec{n} * dS
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \oint \vec{E} \cdot \vec{dl} = - \iint_S \frac{\partial \vec{B}}{\partial t} \cdot \vec{n} * dS
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{rot(\vec{E})} = - \frac{\partial \vec{B}}{\partial t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \Phi = \iint_\Sigma \vec{B} \cdot \vec{n} * d\Sigma
+                                            = \iint_\Sigma (\vec{rot(\vec{A})}) \cdot \vec{n} * d\Sigma
+                                            = \oint_C \vec{A} \cdot \vec{dl}
+                                      \]
+                                  </div>
+                                </div>
+                                <!-- Lenz–Faraday law -->
+
+                                <br>
+
+                                <!-- Maxwell's equations -->
+                                <div class="card">
+                                  <div class="card-header text-center">
+                                      Maxwell's equations
+                                  </div>
+                                  <div class="card-body">
+                                      Maxwell's equations, also called Maxwell-Lorentz equations, are fundamental laws of physics.
+                                      They constitute, with the expression of the electromagnetic force of Lorentz, the basic
+                                      postulates of electromagnetism.
+
+                                      <br>
+
+                                      \[
+                                        div(\vec{E}) = \frac{\rho}{\epsilon_0}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \oint_\Sigma \vec{E} \cdot \vec{dS}
+                                        = \frac{1}{\epsilon_0} * \int_V \rho * d\tau
+                                        = \frac{Q_{int}}{\epsilon_0}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \oint_\Sigma \vec{B} \cdot \vec{dS} = 0
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        div(\vec{B}) = 0
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{B} = \vec{rot(\vec{A})}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{rot(\vec{E})} = - \frac{\partial \vec{B}}{\partial t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        e = - \frac{\mathrm d \Phi}{\mathrm dt}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        e = \oint_C \vec{E} \cdot \vec{dl}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \Phi = \int_S \vec{B} \cdot \vec{dS}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{rot(\vec{grad(F)})} = 0
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{E} = - \vec{grad(V)} - \frac{\partial \vec{A}}{\partial t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{rot(\vec{B})} = \mu_0 * \vec{j} + \mu_0 * \epsilon_0 * \frac{\partial \vec{E}}{\partial t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \oint_C \vec{B} \cdot \vec{dl} = \mu_0 * \int_S (\vec{j} \cdot \vec{dS})
+                                        + \mu_0 * \epsilon_0 * \int_S (\frac{\partial \vec{E}}{\partial t} \cdot \vec{dS})
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        div(\vec{j}) + \frac{1}{\epsilon_0} * \frac{\partial \rho}{\partial t} = 0
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        - \nabla^{2}\vec{E} + \mu_0 * \epsilon_0 * \frac{\partial^{2} \vec{E}}{\partial t^{2}} =
+                                        - \vec{grad(\frac{\rho}{\epsilon_0})} - \mu_0 * \frac{\partial \vec{j}}{\partial t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        - \nabla^{2}\vec{B} + \mu_0 * \epsilon_0 * \frac{\partial^{2} \vec{B}}{\partial t^{2}} =
+                                        - \vec{rot(\mu_0 * \vec{j})}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        c^{2} = \frac{1}{\mu_0 * \epsilon_0}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{B} = \vec{rot(\vec{A})}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{E} = - \vec{grad(V)} - \frac{\partial \vec{A}}{\partial t}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \frac{1}{c^{2}} * \frac{\partial^{2} \vec{A}}{\partial t^{2}} - \nabla^{2}\vec{A} =
+                                        \mu_0 * \vec{j}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \frac{1}{c^{2}} * \frac{\partial^{2} V}{\partial t^{2}} - \nabla^{2}V = \frac{\rho}{\epsilon_0}
+                                      \]
+                                  </div>
+                                </div>
+                                <!-- Maxwell's equations -->
+
+                                <br>
+
+                                <!-- Poynting's theorem -->
+                                <div class="card">
+                                  <div class="card-header text-center">
+                                      Poynting's theorem
+                                  </div>
+                                  <div class="card-body">
+                                      Poynting's theorem, stated by John Henry Poynting, concerns the conservation of energy in
+                                      an electromagnetic field. It establishes a relation between electromagnetic energy, Joule
+                                      effect and the flux of the Poynting vector. In informal terms, the flux of the Poynting vector
+                                      through a closed surface can be said to be equal to the sum of the change in electromagnetic
+                                      energy and the Joule effect in the interior volume at the surface.
+
+                                      <br>
+
+                                      \[
+                                        - \iiint \frac{\partial W_{em}}{\partial t} * d\tau = \iiint div(\vec{\Pi}) * d\tau
+                                        + \iiint \vec{j} \cdot \vec{E} * d\tau
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        - \frac{\partial (\frac{\epsilon_0 * E^{2}}{2} + \frac{B^{2}}{2 * \mu_0})}{\partial t} =
+                                      div(\frac{\vec{E} \times \vec{B}}{\mu_0}) + \vec{j} \cdot \vec{E}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        - \frac{\partial (\frac{\vec{E} \cdot \vec{D}}{2} + \frac{\vec{B} \cdot \vec{H}}{2})}{\partial t} =
+                                      div(\vec{E} \times \vec{H}) + \vec{j} \cdot \vec{E}
+                                      \]
+                                  </div>
+                                </div>
+                                <!-- Poynting's theorem -->
+
+                                <br>
+
+                                <!-- Poynting Vector -->
+                                <div class="card">
+                                  <div class="card-header text-center">
+                                      Poynting Vector
+                                  </div>
+                                  <div class="card-body">
+                                      In physics, the Poynting vector is the flux density related to the propagation of the
+                                      electromagnetic wave. Its direction is the direction of propagation. The flux of the
+                                      Poynting vector through a surface (closed or not) is equal to the power carried by the
+                                      wave through this surface. The modulus of this vector is therefore a power per unit area,
+                                      that is to say an energy flux density; it is homogeneous with an energetic illumination
+                                      and an energetic exitance; and, in the International System (SI) of units, it is expressed
+                                      in watts per square meter.
+
+                                      <br>
+
+                                      \[
+                                        \frac{\partial e(t)}{\partial t} + div(\vec{\Pi(t)}) = s(t)
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{\Pi(t)} = \frac{\vec{E(t)} \times \vec{B(t)}}{\mu_0}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        \vec{\Pi(t)} = \vec{E(t)} \times \vec{H(t)}
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        P_{S} = \iint_S (\vec{\Pi(t)} \cdot \vec{dS})
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        U_{em} = \iiint_V (W_{em} * d\tau)
+                                      \]
+
+                                      <br>
+
+                                      \[
+                                        - \frac{\partial W_{em}}{\partial t} = div(\vec{P}) + \vec{j} \cdot \vec{E}
+                                      \]
+                                  </div>
+                                </div>
+                                <!-- Poynting Vector -->
+
+                                <br>
+
+                                <!-- Magnetization -->
+                                <div class="card">
+                                  <div class="card-header text-center">
+                                      Magnetization
+                                  </div>
+                                  <div class="card-body">
+                                      Magnetization, usually denoted by the symbol M (in capitals), is defined as the volume density
+                                      of magnetic moment.
+
+                                      <br>
+
+                                      \[
+                                        M = \frac{\mathrm dm}{\mathrm dV}
+                                      \]
+
+                                      <br>
+
+                                      M = n * mean_value(m)
+                                  </div>
+                                </div>
+                                <!-- Magnetization -->
+
+                                <br>
+
+                                <!-- Magnetic susceptibility -->
+                                <div class="card">
+                                  <div class="card-header text-center">
+                                      Magnetic susceptibility
+                                  </div>
+                                  <div class="card-body">
+                                      The magnetic susceptibility of a material seen as a continuous medium is a dimensionless
+                                      quantity which characterizes the ability of this material to become magnetized under the
+                                      effect of a magnetic excitation. Any material, if it can be seen as a continuous and homogeneous
+                                      medium, has a homogeneous magnetic field which is written in the form :
+
+                                      <br>
+
+                                      \[
+                                        \vec{B} = \mu_0 * (\vec{H} + \vec{M})
+                                      \]
+
+                                      <br>
+
+                                      B, H, M represent vector fields whose norms are: H for the applied or external magnetic field,
+                                      also called magnetic excitation, that is to say the field that exists in the absence of the
+                                      material. It is expressed in amperes per meter (A/m). M for the magnetic response of the
+                                      material when the latter is placed in the presence of H, this response is called "magnetization"
+                                      and is also expressed in amperes per meter (A/m), mu_0 is the permeability of the vacuum,
+                                      it allows the conversion of H+M in B which do not have the same units of measurement.
+                                      B for the total field inside the material, it is called magnetic induction and is expressed
+                                      in tesla (T).
+
+                                      <br>
+
+                                      \[
+                                        \vec{B} = \mu * \vec{H}
+                                      \]
+                                  </div>
+                                </div>
+                                <!-- Magnetic susceptibility -->
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Course -->
+            </div>
+          </div>
+          <!-- Course -->
+
+          <br>
+
+          <!-- Proof -->
+          <div class="card">
+            <div class="card-header">
+              Proof
+            </div>
+            <div class="card-body">
+                <div class="accordion" id="proof">
+                  <div class="card">
+                    <!-- Part 2 -->
+                    <div class="card-header" id="proof_part_1">
+                      <h2 class="mb-0">
+                        <button class="btn btn-light btn-block text-left"
+                                type="button"
+                                data-toggle="collapse"
+                                data-target="#proof_part_1_collapse"
+                                aria-expanded="true"
+                                aria-controls="proof_part_1_collapse">
+                          Part 2
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="proof_part_1_collapse"
+                         class="collapse"
+                         aria-labelledby="proof_part_1"
+                         data-parent="#proof">
+                      <div class="card-body">
+                        <!-- Ring of permanent magnet -->
+                        <div class="card">
+                          <div class="card-header text-center">
+                              Ring of permanent magnet
+                          </div>
+                          <div class="card-body">
+                              Let the external diameter of the magnet :
+                              \[
+                                De_{magnet}
+                              \]
+
+                              <br>
+
+                              Let the internal diameter of the magnet :
+                              \[
+                                Di_{magnet}
+                              \]
+
+                              <br>
+
+                              Let the surface of the magnet :
+                              \[
+                                S_{magnet} = \pi * (\frac{De_{magnet} - Di_{magnet}}{2})^{2}
+                              \]
+
+                              <br>
+
+                              Let the length of the magnet :
+                              \[
+                                l_{magnet}
+                              \]
+
+                              <br>
+
+                              Let the volume of the magnet :
+                              \[
+                                V_{magnet} = S_{magnet} * l_{magnet}
+                              \]
+
+                              <br>
+
+                              Let the magnetic susceptibility of the magnet :
+                              \[
+                                \chi_{magnet}
+                              \]
+
+                              <br>
+
+                              Let the magnetic permeability of the magnet :
+                              \[
+                                \mu_{magnet}
+                              \]
+                          </div>
+                        </div>
+                        <!-- Ring of permanent magnet -->
+
+                        <br>
+
+                        <!-- Primary coil -->
+                        <div class="card">
+                          <div class="card-header text-center">
+                              Primary coil
+                          </div>
+                          <div class="card-body">
+                              Let be the length of the primary coil :
+                              \[
+                                l_{coil_p}
+                              \]
+
+                              <br>
+
+                              Let be the diameter of the primary coil :
+                              \[
+                                d_{coil_p}
+                              \]
+
+                              <br>
+
+                              Let be the surface of the primary coil :
+                              \[
+                                S_{coil_p} = \pi * (\frac{d_{coil_p}}{2})^{2}
+                              \]
+
+                              <br>
+
+                              Let be the number of turns of the primary coil :
+                              \[
+                                N_{coil_p}
+                              \]
+
+                              <br>
+
+                              Let be the voltage of the primary coil :
+                              \[
+                                U_{coil_p}
+                              \]
+
+                              <br>
+
+                              Let be the intensity of the primary coil :
+                              \[
+                                I_{coil_p}
+                              \]
+
+                              <br>
+
+                              Let be the power of the primary coil :
+                              \[
+                                P_{coil_p}
+                              \]
+
+                              <br>
+
+                              Let be the electromotrice force of the primary coil :
+                              \[
+                                e_{coil_p} = - \frac{\mathrm d\Phi_{coil_p}}{\mathrm dt}
+                                = - L_{coil_p} * \frac{\mathrm dI_{coil_p}}{\mathrm dt}
+                              \]
+
+                              <br>
+
+                              Let be the magnetic permeability of the primary coil :
+                              \[
+                                \mu_{coil_p}
+                              \]
+
+                              <br>
+
+                              Let be the inductance of the primary coil :
+                              \[
+                                L_{coil_p} = \frac{\mu_{coil_p} * (N_{coil_p})^{2} * S_{coil_p}}{l_{coil_p}}
+                              \]
+
+                              <br>
+
+                              Let be the magnetic energy of the primary coil :
+                              \[
+                                E_{magnetic_coil_p} = \frac{L_{coil_p} * (I_{coil_p})^{2}}{2}
+                              \]
+
+                              <br>
+
+                              Let be the value of magnetic field of the primary coil :
+                              \[
+                                B_{coil_p} = \frac{\mu_{coil_p} * N_{coil_p} * I_{coil_p}}{l_{coil_p}}
+                              \]
+
+                              <br>
+
+                              Let be the value of magnetic field of the primary coil :
+                              \[
+                                \Phi_{coil_p} = \iint_S (\vec{B_{coil_p}} \cdot \vec{dS_{coil_p}})
+                                = B_{coil_p} * S_{coil_p} * cos(\theta_{coil_p})
+                              \]
+
+                              <br>
+
+                              Let be the frequency of the primary coil :
+                              \[
+                                f_{coil_p}
+                              \]
+
+                              <br>
+
+                              Let be the period of the primary coil :
+                              \[
+                                T_{coil_p}
+                              \]
+
+                              <br>
+
+                              Let be the magnetic permittivity of the primary coil :
+                              \[
+                                \epsilon_{coil_p}
+                              \]
+                          </div>
+                        </div>
+                        <!-- Primary coil -->
+
+                        <br>
+
+                        <!-- Secondary coil -->
+                        <div class="card">
+                          <div class="card-header text-center">
+                              Secondary coil
+                          </div>
+                          <div class="card-body">
+                              Let be the length of the secondary coil :
+                              \[
+                                l_{coil_s}
+                              \]
+
+                              <br>
+
+                              Let be the diameter of the secondary coil :
+                              \[
+                                d_{coil_s}
+                              \]
+
+                              <br>
+
+                              Let be the surface of the secondary coil :
+                              \[
+                                S_{coil_s} = \pi * (\frac{d_{coil_s}}{2})^{2}
+                              \]
+
+                              <br>
+
+                              Let be the number of turns of the secondary coil :
+                              \[
+                                N_{coil_s}
+                              \]
+
+                              <br>
+
+                              Let be the voltage of the secondary coil :
+                              \[
+                                U_{coil_s}
+                              \]
+
+                              <br>
+
+                              Let be the intensity of the secondary coil :
+                              \[
+                                I_{coil_s}
+                              \]
+
+                              <br>
+
+                              Let be the power of the secondary coil :
+                              \[
+                                P_{coil_s}
+                              \]
+
+                              <br>
+
+                              Let be the electromotrice force of the secondary coil :
+                              \[
+                                e_{coil_s} = - \frac{\mathrm d\Phi_{coil_s}}{\mathrm dt}
+                                = - L_{coil_s} * \frac{\mathrm dI_{coil_s}}{\mathrm dt}
+                              \]
+
+                              <br>
+
+                              Let be the magnetic permeability of the secondary coil :
+                              \[
+                                \mu_{coil_s}
+                              \]
+
+                              <br>
+
+                              Let be the inductance of the secondary coil :
+                              \[
+                                L_{coil_s} = \frac{\mu_{coil_s} * (N_{coil_s})^{2} * S_{coil_s}}{l_{coil_s}}
+                              \]
+
+                              <br>
+
+                              Let be the magnetic energy of the secondary coil :
+                              \[
+                                E_{magnetic_coil_s} = \frac{L_{coil_s} * (I_{coil_s})^{2}}{2}
+                              \]
+
+                              <br>
+
+                              Let be the value of magnetic field of the secondary coil :
+                              \[
+                                B_{coil_s} = \frac{\mu_{coil_s} * N_{coil_s} * I_{coil_s}}{l_{coil_s}}
+                              \]
+
+                              <br>
+
+                              Let be the value of magnetic field of the secondary coil :
+                              \[
+                                \Phi_{coil_s} = \iint_S (\vec{B_{coil_s}} \cdot \vec{dS_{coil_s}})
+                                = B_{coil_s} * S_{coil_s} * cos(\theta_{coil_s})
+                              \]
+
+                              <br>
+
+                              Let be the frequency of the secondary coil :
+                              \[
+                                f_{coil_s}
+                              \]
+
+                              <br>
+
+                              Let be the period of the secondary coil :
+                              \[
+                                T_{coil_s}
+                              \]
+
+                              <br>
+
+                              Let be the magnetic permittivity of the secondary coil :
+                              \[
+                                \epsilon_{coil_s}
+                              \]
+                          </div>
+                        </div>
+                        <!-- Secondary coil -->
+
+                        <br>
+
+                        <!-- Magnetic core -->
+                        <div class="card">
+                          <div class="card-header text-center">
+                              Magnetic core
+                          </div>
+                          <div class="card-body">
+                              Let be the surface of the magnetic core :
+                              \[
+                                S_{core}
+                              \]
+
+                              <br>
+
+                              Let be the length of the magnetic core :
+                              \[
+                                l_{core}
+                              \]
+
+                              <br>
+
+                              Let be the magnetic permeability of the magnetic core :
+                              \[
+                                \mu_{core}
+                              \]
+
+                              <br>
+
+                              Let be the magnetic permittivity of the magnetic core :
+                              \[
+                                \epsilon_{core}
+                              \]
+                          </div>
+                        </div>
+                        <!-- Magnetic core -->
+
+                        <br>
+
+                        <!-- Matrix of mutual coupling with two secondary coils -->
+                        <div class="card">
+                          <div class="card-header text-center">
+                              Matrix of mutual coupling with two secondary coils
+                          </div>
+                          <div class="card-body">
+                              \[
+                                    \begin{array}{c c c}
+                                    &
+                                    \begin{array}{c c c} p & s1 & s2 \end{array} \\
+                                    MC =
+                                    &
+                                    \begin{array}{c c c} p \\ s1 \\ s2 \end{array}
+                                    \left[
+                                    \begin{array}{c c c}
+                                    0 & 0 & 0 \\
+                                    \frac{1}{2} & 0 & 1 \\
+                                    \frac{1}{2} & 1 & 0
+                                    \end{array}
+                                    \right]
+                                    \end{array}
+                              \]
+                          </div>
+                        </div>
+                        <!-- Matrix of mutual coupling with two secondary coils -->
+
+                        <br>
+
+                        <!-- Equation of mutual coupling with two secondary coils in series -->
+                        <div class="card">
+                          <div class="card-header text-center">
+                              Equation of mutual coupling with two secondary coils in series
+                          </div>
+                          <div class="card-body">
+                            \begin{cases}
+                                v_{p}(t) = R_{p} * i_{p}(t) + L_{p} * \frac{\mathrm d i_{p}(t)}{\mathrm dt} + M_{p \rightarrow s1} * \frac{\mathrm d i_{s1}(t)}{\mathrm dt} + M_{p \rightarrow s2} * \frac{\mathrm d i_{s2}(t)}{\mathrm dt} \\
+                                v_{s1}(t) = R_{s1} * i_{s1}(t) + L_{s1} * \frac{\mathrm d i_{s1}(t)}{\mathrm dt} + M_{s1 \rightarrow s2} * \frac{\mathrm d i_{s2}(t)}{\mathrm dt} \\
+                                v_{s2}(t) = R_{s2} * i_{s2}(t) + L_{s2} * \frac{\mathrm d i_{s2}(t)}{\mathrm dt} + M_{s2 \rightarrow s1} * \frac{\mathrm d i_{s1}(t)}{\mathrm dt}
+                            \end{cases}
+
+                            <br>
+
+                            \begin{cases}
+                              R_{s1} = R_{s2} = R_{s} \\
+                              i_{s1}(t) = i_{s2}(t) = i_{s}(t) \\
+                              M_{s1 \rightarrow s2} = M_{s2 \rightarrow s1} \\
+                              L_{s1} = L_{s2} = L_{s} \\
+                              v_{s}(t) = v_{s1}(t) + v_{s2}(t) \\
+                              M_{p \rightarrow s1} = M_{p \rightarrow s2} = \frac{1}{2} \\
+                              M_{s1 \rightarrow s2} = M_{s2 \rightarrow s1} = 1
+                            \end{cases}
+
+                            <br>
+
+                            \begin{cases}
+                                v_{p}(t) = R_{p} * i_{p}(t) + L_{p} * \frac{\mathrm d i_{p}(t)}{\mathrm dt} + \frac{\mathrm d i_{s}(t)}{\mathrm dt} \\
+                                v_{s}(t) = 2 * R_{s} * i_{s}(t) + 2 * ( L_{s} + 1) * \frac{\mathrm d i_{s}(t)}{\mathrm dt}
+                            \end{cases}
+                          </div>
+                        </div>
+                        <!-- Equation of mutual coupling with two secondary coils in series -->
+                      </div>
+                    </div>
+                    <!-- Part 2 -->
+                  </div>
+                </div>
+            </div>
+          </div>
+          <!-- Proof -->
+        </div>
+      </div>
+      <!-- Fundamental research  -->
+
+      <br>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</body>
+</html>

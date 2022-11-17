@@ -863,7 +863,7 @@ GitHub : https://www.github.com/Jay4C"""
 
                 print('nouveau destinataire : ' + destinataire)
 
-                objet = "Candidature spontanée pour un poste en contrat à durée indéterminée en tant qu'ingénieur en nouvelles technologies d'hydrogène / Spontaneous application for a position on a permanent contract as an engineer in new hydrogen technologies – Jason ALOYAU"
+                objet = "Candidature spontanée pour un poste en contrat à durée indéterminée en tant qu'ingénieur en nouvelles technologies d'hydrogène / Spontaneous application for a position on a permanent contract as an engineer in new hydrogen technologies – "
 
                 message = """Bonjour,
 

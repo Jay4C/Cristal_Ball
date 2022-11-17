@@ -865,12 +865,12 @@ class UnitTestsEmailSpamFilteringGmailAccount(unittest.TestCase):
                             mailbox.move(msg.uid, folder)
                             print("moved " + folder + " : " + msg.uid)
                         elif "undeliverable: spontaneous application for a job as renewable energy engineer in full " \
-                             "time contract - jason aloyau".lower() in msg.subject.lower():
+                             "time contract - ".lower() in msg.subject.lower():
                             folder = "[Gmail]/Corbeille"
                             mailbox.move(msg.uid, folder)
                             print("moved " + folder + " : " + msg.uid)
                         elif "non remis : spontaneous application for a job as renewable energy " \
-                             "engineer in full time contract - jason aloyau".lower() in msg.subject.lower():
+                             "engineer in full time contract - ".lower() in msg.subject.lower():
                             folder = "[Gmail]/Corbeille"
                             mailbox.move(msg.uid, folder)
                             print("moved " + folder + " : " + msg.uid)

@@ -1303,7 +1303,7 @@ class UnitTestsWebAutomationYellowPagesCanadaWithDarkWebWithHeadless(unittest.Te
                                                                                    "Then, we can find one free energy generator at the following link : " \
                                                                                    "https://patents.google.com/patent/US20020125774A1/en?oq=US20020125774A1.\n\n" \
                                                                                    "Best regards,\n\n" \
-                                                                                   "Mr Jason ALOYAU\n" \
+                                                                                   "Mr \n" \
                                                                                    "CEO of Holomorphe\n" \
                                                                                    "Headquarter : 31 Avenue de Ségur 75007 Paris\n" \
                                                                                    "Website : https://www.holomorphe.com/chemical-products/cad-stanley-meyer-water-electrolyser\n" \
@@ -1569,7 +1569,7 @@ class UnitTestsWebAutomationYellowPagesCanadaWithDarkWebWithHeadless(unittest.Te
                                                                                "Then, we can find one free energy generator at the following link : " \
                                                                                "https://patents.google.com/patent/US20020125774A1/en?oq=US20020125774A1.\n\n" \
                                                                                "Best regards,\n\n" \
-                                                                               "Mr Jason ALOYAU\n" \
+                                                                               "Mr \n" \
                                                                                "CEO of Holomorphe\n" \
                                                                                "Headquarter : 31 Avenue de Ségur 75007 Paris\n" \
                                                                                "Website : https://www.holomorphe.com/chemical-products/cad-stanley-meyer-water-electrolyser\n" \

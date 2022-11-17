@@ -9,23 +9,23 @@ import time
 # https://patentimages.storage.googleapis.com/0c/c9/14/0e4d740f16793e/WO1995008210A1.pdf
 class UnitsTestsHGVersion3Parts(unittest.TestCase):
     # ok
-    # https://www.visseriefixations.fr/tiges-filetees/acier-classe-8-8/tige-filetee-acier-8-8-brut-din-975/tige-filetee-m36-acier-8-8-brut-din-975.html
-    def test_part_tige_filetee_m36_1000l(self):
-        print("test_part_tige_filetee_m36_1000l")
+    # https://www.visseriefixations.fr/tiges-filetees/acier-classe-8-8/tige-filetee-acier-8-8-brut-din-975/tige-filetee-m30-acier-8-8-brut-din-975.html
+    def test_part_tige_filetee_m30_1000l(self):
+        print("test_part_tige_filetee_m30_1000l")
 
-        if os.path.exists("Scripts\\part_tige_filetee_m36_1000l.py"):
-            os.remove("Scripts\\part_tige_filetee_m36_1000l.py")
+        if os.path.exists("Scripts\\part_tige_filetee_m30_1000l.py"):
+            os.remove("Scripts\\part_tige_filetee_m30_1000l.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("Scripts\\part_tige_filetee_m36_1000l.py", "w") as file:
+        with open("Scripts\\part_tige_filetee_m30_1000l.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Drawing, math, Mesh
 
 DOC = FreeCAD.activeDocument()
 
-DOC_NAME = "part_tige_filetee_m36_1000l"
+DOC_NAME = "part_tige_filetee_m30_1000l"
 
 
 def clear_doc():
@@ -51,27 +51,27 @@ else:
 EPS = 0.10
 EPS_C = EPS * -0.5
 
-# part_tige_filetee_m36_1000l
-d1 = 36
+# part_tige_filetee_m30_1000l
+d1 = 30
 L = 1000
-part_tige_filetee_m36_1000l = Part.makeCylinder(d1/2, L)
+part_tige_filetee_m30_1000l = Part.makeCylinder(d1/2, L)
 
-Part.show(part_tige_filetee_m36_1000l)
+Part.show(part_tige_filetee_m30_1000l)
 
 DOC.recompute()
 
 __objs__ = []
 
-__objs__.append(FreeCAD.getDocument("part_tige_filetee_m36_1000l").getObject("Shape"))
+__objs__.append(FreeCAD.getDocument("part_tige_filetee_m30_1000l").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tige_filetee_m36_1000l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tige_filetee_m30_1000l.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_tige_filetee_m36_1000l_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_tige_filetee_m30_1000l_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -144,7 +144,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_tige_filetee_m36_1000l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_tige_filetee_m30_1000l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -152,23 +152,23 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         pywinauto.keyboard.send_keys('{ENTER}')
 
     # ok
-    # https://www.visseriefixations.fr/ecrous/ecrous-hexagonaux/ecrou-hexagonal-hu/ecrou-hu-acier-brut-din-934/ecrou-hu-acier-brut-classe-8-din-934/ecrou-hu-m36-brut-din-934.html
-    def test_part_ecrou_36m(self):
-        print("test_part_ecrou_36m")
+    # https://www.visseriefixations.fr/ecrous/ecrous-hexagonaux/ecrou-hexagonal-hu/ecrou-hu-acier-brut-din-934/ecrou-hu-acier-brut-classe-8-din-934/ecrou-hu-m30-brut-din-934.html
+    def test_part_ecrou_30m(self):
+        print("test_part_ecrou_30m")
 
-        if os.path.exists("Scripts\\part_ecrou_36m.py"):
-            os.remove("Scripts\\part_ecrou_36m.py")
+        if os.path.exists("Scripts\\part_ecrou_30m.py"):
+            os.remove("Scripts\\part_ecrou_30m.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("Scripts\\part_ecrou_36m.py", "w") as file:
+        with open("Scripts\\part_ecrou_30m.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
 DOC = FreeCAD.activeDocument()
 
-DOC_NAME = "part_ecrou_36m"
+DOC_NAME = "part_ecrou_30m"
 
 
 def clear_doc():
@@ -194,7 +194,7 @@ else:
 EPS = 0.10
 EPS_C = EPS * -0.5
 
-d1 = 36
+d1 = 30
 e = d1*1.6
 h = d1*0.8
 
@@ -210,16 +210,16 @@ DOC.recompute()
 
 __objs__=[]
 
-__objs__.append(FreeCAD.getDocument("part_ecrou_36m").getObject("Shape"))
+__objs__.append(FreeCAD.getDocument("part_ecrou_30m").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_36m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_30m.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_ecrou_36m_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_ecrou_30m_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -292,7 +292,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_ecrou_36m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_ecrou_30m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -300,23 +300,23 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         pywinauto.keyboard.send_keys('{ENTER}')
 
     # ok
-    # https://www.visseriefixations.fr/rondelles-circlips/rondelles-plates/sans-chanfrein/serie-moyenne-m/inox/rondelle-m-inox-a2-nfe-25513/rondelle-m-0-36-inox-a2.html
-    def test_part_rondelle_36m(self):
-        print("test_part_rondelle_36m")
+    # https://www.visseriefixations.fr/rondelles-circlips/rondelles-plates/sans-chanfrein/serie-moyenne-m/inox/rondelle-m-inox-a2-nfe-25513/rondelle-m-0-30-inox-a2.html
+    def test_part_rondelle_30m(self):
+        print("test_part_rondelle_30m")
 
-        if os.path.exists("Scripts\\part_rondelle_36m.py"):
-            os.remove("Scripts\\part_rondelle_36m.py")
+        if os.path.exists("Scripts\\part_rondelle_30m.py"):
+            os.remove("Scripts\\part_rondelle_30m.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("Scripts\\part_rondelle_36m.py", "w") as file:
+        with open("Scripts\\part_rondelle_30m.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
 DOC = FreeCAD.activeDocument()
 
-DOC_NAME = "part_rondelle_36m"
+DOC_NAME = "part_rondelle_30m"
 
 
 def clear_doc():
@@ -342,9 +342,9 @@ else:
 EPS = 0.10
 EPS_C = EPS * -0.5
 
-d1 = 37
-d2 = 70
-s = 5
+d1 = 31
+d2 = 60
+s = 4
 
 cylinder_1 = Part.makeCylinder(d2/2, s)
 
@@ -358,16 +358,16 @@ DOC.recompute()
 
 __objs__=[]
 
-__objs__.append(FreeCAD.getDocument("part_rondelle_36m").getObject("Shape"))
+__objs__.append(FreeCAD.getDocument("part_rondelle_30m").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_36m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_30m.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_rondelle_36m_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_rondelle_30m_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -440,417 +440,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_rondelle_36m.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.aimant-boutique.fr/ferrite/anneaux-aimantes/anneau-140.0-x-60.0-x-20.0-mm-y30-ferrite
-    def test_part_magnet_1d140_2d60_20e(self):
-        print("test_part_magnet_1d140_2d60_20e")
-
-        if os.path.exists("Scripts\\part_magnet_1d140_2d60_20e.py"):
-            os.remove("Scripts\\part_magnet_1d140_2d60_20e.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_magnet_1d140_2d60_20e.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_magnet_1d140_2d60_20e"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-d1 = 60
-d2 = 140
-s = 20
-
-cylinder_1 = Part.makeCylinder(d2/2, s)
-
-cylinder_2 = Part.makeCylinder(d1/2, s)
-
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__=[]
-
-__objs__.append(FreeCAD.getDocument("part_magnet_1d140_2d60_20e").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_magnet_1d140_2d60_20e.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_magnet_1d140_2d60_20e_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_magnet_1d140_2d60_20e.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.laserboost.com/
-    def test_part_faraday_disc(self):
-        print("test_part_faraday_disc")
-
-        if os.path.exists("Scripts\\part_faraday_disc.py"):
-            os.remove("Scripts\\part_faraday_disc.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_faraday_disc.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh, importDXF
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_faraday_disc"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-d_magnet = 140
-d1 = 36.1
-d2 = d_magnet + 2*2
-s = 5
-
-cylinder_1 = Part.makeCylinder(d2/2, s)
-
-cylinder_2 = Part.makeCylinder(d1/2, s)
-
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__=[]
-
-__objs__.append(FreeCAD.getDocument("part_faraday_disc").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_faraday_disc.stl"
-
-Mesh.export(__objs__, stl_file)
-
-dxf_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_faraday_disc.dxf"
-
-importDXF.export(__objs__, dxf_file)
-
-setview()
-
-del __objs__
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_faraday_disc_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_faraday_disc.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.sculpteo.com/fr/
-    def test_part_support_magnet(self):
-        print("test_part_support_magnet")
-
-        if os.path.exists("Scripts\\part_support_magnet.py"):
-            os.remove("Scripts\\part_support_magnet.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_support_magnet.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh, math
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_support_magnet"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-d_magnet = 140
-
-d_exterieur = d_magnet + 2*2
-d_interieur = d_magnet
-d_arbre = 36.1
-h_support_global = 5
-h_support_magnet = 3
-
-# Cylinder_1
-cylinder_1 = Part.makeCylinder(d_exterieur/2, h_support_global)
-
-# Cut cylinder_1 by cylinder_2
-cylinder_2 = Part.makeCylinder(d_arbre/2, h_support_global)
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-# holes for emptying the part
-degre = 72
-for i in range(int(360/degre)):
-    radius = d_interieur/2 - 3 - (d_arbre + 10)/2
-    alpha=(i*degre*math.pi)/180
-    hole_vector = FreeCAD.Vector(radius*math.cos(alpha), radius*math.sin(alpha), 0)
-    hole = Part.makeCylinder((d_arbre + 10)/2, h_support_global)
-    hole.translate(hole_vector)
-    cylinder_1 = cylinder_1.cut(hole)
-
-# Cylinder_3
-cylinder_3 = Part.makeCylinder(d_interieur/2, h_support_magnet)
-cylinder_3_vector = FreeCAD.Vector(0, 0, h_support_global - h_support_magnet)
-cylinder_3.translate(cylinder_3_vector)
-cylinder_1 = cylinder_1.cut(cylinder_3)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__ = []
-
-__objs__.append(FreeCAD.getDocument("part_support_magnet").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_support_magnet.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_support_magnet.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_rondelle_30m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1124,6 +714,722 @@ setview()
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
+    # ok
+    # https://www.aimant-boutique.fr/ferrite/anneaux-aimantes/anneau-140.0-x-60.0-x-20.0-mm-y30-ferrite
+    def test_part_magnet_1d140_2d60_20e(self):
+        print("test_part_magnet_1d140_2d60_20e")
+
+        if os.path.exists("Scripts\\part_magnet_1d140_2d60_20e.py"):
+            os.remove("Scripts\\part_magnet_1d140_2d60_20e.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_magnet_1d140_2d60_20e.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_magnet_1d140_2d60_20e"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+d1 = 60
+d2 = 140
+s = 20
+
+cylinder_1 = Part.makeCylinder(d2/2, s)
+
+cylinder_2 = Part.makeCylinder(d1/2, s)
+
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__=[]
+
+__objs__.append(FreeCAD.getDocument("part_magnet_1d140_2d60_20e").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_magnet_1d140_2d60_20e.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+
+# Generate PNG files
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_magnet_1d140_2d60_20e_'
+# Ombré
+Gui.runCommand('Std_DrawStyle',5)
+i = 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+# Filaire
+Gui.runCommand('Std_DrawStyle',2)
+i += 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_magnet_1d140_2d60_20e.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://www.laserboost.com/
+    def test_part_faraday_disc(self):
+        print("test_part_faraday_disc")
+
+        if os.path.exists("Scripts\\part_faraday_disc.py"):
+            os.remove("Scripts\\part_faraday_disc.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_faraday_disc.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh, importDXF
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_faraday_disc"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+d_magnet = 140
+d1 = 30.1
+d2 = d_magnet + 2*2
+s = 5
+
+cylinder_1 = Part.makeCylinder(d2/2, s)
+
+cylinder_2 = Part.makeCylinder(d1/2, s)
+
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__=[]
+
+__objs__.append(FreeCAD.getDocument("part_faraday_disc").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_faraday_disc.stl"
+
+Mesh.export(__objs__, stl_file)
+
+dxf_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_faraday_disc.dxf"
+
+importDXF.export(__objs__, dxf_file)
+
+setview()
+
+del __objs__
+
+# Generate PNG files
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_faraday_disc_'
+# Ombré
+Gui.runCommand('Std_DrawStyle',5)
+i = 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+# Filaire
+Gui.runCommand('Std_DrawStyle',2)
+i += 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_faraday_disc.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://www.sculpteo.com/fr/
+    def test_part_support_magnet(self):
+        print("test_part_support_magnet")
+
+        if os.path.exists("Scripts\\part_support_magnet.py"):
+            os.remove("Scripts\\part_support_magnet.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_support_magnet.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh, math
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_support_magnet"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+d_magnet = 140
+
+d_exterieur = d_magnet + 2*2
+d_interieur = d_magnet
+d_arbre = 30.1
+h_support_global = 5
+h_support_magnet = 3
+
+# Cylinder_1
+cylinder_1 = Part.makeCylinder(d_exterieur/2, h_support_global)
+
+# Cut cylinder_1 by cylinder_2
+cylinder_2 = Part.makeCylinder(d_arbre/2, h_support_global)
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+# holes for emptying the part
+degre = 72
+for i in range(int(360/degre)):
+    radius = d_interieur/2 - 3 - (d_arbre + 10)/2
+    alpha=(i*degre*math.pi)/180
+    hole_vector = FreeCAD.Vector(radius*math.cos(alpha), radius*math.sin(alpha), 0)
+    hole = Part.makeCylinder((d_arbre + 10)/2, h_support_global)
+    hole.translate(hole_vector)
+    cylinder_1 = cylinder_1.cut(hole)
+
+# Cylinder_3
+cylinder_3 = Part.makeCylinder(d_interieur/2, h_support_magnet)
+cylinder_3_vector = FreeCAD.Vector(0, 0, h_support_global - h_support_magnet)
+cylinder_3.translate(cylinder_3_vector)
+cylinder_1 = cylinder_1.cut(cylinder_3)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__ = []
+
+__objs__.append(FreeCAD.getDocument("part_support_magnet").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_support_magnet.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_support_magnet.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://i0.wp.com/3transmissions.eu/wp-content/uploads/2021/04/accouplements_rigides_fendus_ks.png?ssl=1
+    def test_part_accouplement_rigide_mecanique(self):
+            print("test_part_accouplement_rigide_mecanique")
+
+            if os.path.exists("Scripts\\part_accouplement_rigide_mecanique.py"):
+                os.remove("Scripts\\part_accouplement_rigide_mecanique.py")
+            else:
+                print("The file does not exist")
+
+            # Writing to file
+            with open("Scripts\\part_accouplement_rigide_mecanique.py", "w") as file:
+                # Writing data to a file
+                file.write("""import FreeCAD, Part, Drawing, math, Mesh
+
+    DOC = FreeCAD.activeDocument()
+
+    DOC_NAME = "part_accouplement_rigide_mecanique"
+
+
+    def clear_doc():
+        # Clear the active document deleting all the objects
+        for obj in DOC.Objects:
+            DOC.removeObject(obj.Name)
+
+
+    def setview():
+        # Rearrange View
+        FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+        FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+    if DOC is None:
+        FreeCAD.newDocument(DOC_NAME)
+        FreeCAD.setActiveDocument(DOC_NAME)
+        DOC = FreeCAD.activeDocument()
+    else:
+        clear_doc()
+
+    # EPS= tolerance to use to cut the parts
+    EPS = 0.10
+    EPS_C = EPS * -0.5
+
+    # part_accouplement_rigide_mecanique
+    R = 57.7
+    L = 83
+    Di = 30
+    part_accouplement_rigide_mecanique = Part.makeCylinder(R/2, L)
+
+    cylinder_1 = Part.makeCylinder(Di/2, L)
+
+    # Cut part_accouplement_rigide_mecanique by cylinder_1
+    part_accouplement_rigide_mecanique = part_accouplement_rigide_mecanique.cut(cylinder_1)
+
+    Part.show(part_accouplement_rigide_mecanique)
+
+    DOC.recompute()
+
+    __objs__ = []
+
+    __objs__.append(FreeCAD.getDocument("part_accouplement_rigide_mecanique").getObject("Shape"))
+
+    stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_accouplement_rigide_mecanique.stl"
+
+    Mesh.export(__objs__, stl_file)
+
+    setview()
+
+    # Generate PNG files
+    file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_accouplement_rigide_mecanique_'
+    # Ombré
+    Gui.runCommand('Std_DrawStyle',5)
+    i = 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    # Filaire
+    Gui.runCommand('Std_DrawStyle',2)
+    i += 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+    """)
+
+            time.sleep(3)
+
+            pywinauto.mouse.click(button="left", coords=(round(690 * 1.5), round(695 * 1.5)))
+
+            time.sleep(3)
+
+            pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+            time.sleep(3)
+
+            pywinauto.keyboard.send_keys(
+                'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_accouplement_rigide_mecanique.py"{)}.read{(}{)}{)}'
+            )
+
+            time.sleep(3)
+
+            pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://lemetal.fr/tube-rond-acier-noir/326-tube-rond-o-159-x-4-creux-acier-noir.html#/longueur_en_centimetre-100
+    def test_part_tube(self):
+        print("test_part_tube")
+
+        if os.path.exists("Scripts\\part_tube.py"):
+            os.remove("Scripts\\part_tube.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_tube.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Drawing, math, Mesh
+
+    DOC = FreeCAD.activeDocument()
+
+    DOC_NAME = "part_tube"
+
+
+    def clear_doc():
+        # Clear the active document deleting all the objects
+        for obj in DOC.Objects:
+            DOC.removeObject(obj.Name)
+
+
+    def setview():
+        # Rearrange View
+        FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+        FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+    if DOC is None:
+        FreeCAD.newDocument(DOC_NAME)
+        FreeCAD.setActiveDocument(DOC_NAME)
+        DOC = FreeCAD.activeDocument()
+    else:
+        clear_doc()
+
+    # EPS= tolerance to use to cut the parts
+    EPS = 0.10
+    EPS_C = EPS * -0.5
+
+    # part_tube
+    r_tube = 159/2
+    e_tube = 4
+    h_rondelle_30m = 4
+    h_ecrou_30m = 30
+    e_support = 5
+    h_palier_2_fixation_support = 40.2
+    h_palier_2_fixation_ossature = 48
+    h_poulie_generator = 25.4
+    L = 1000 - (e_support + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_poulie_generator + h_rondelle_30m + h_ecrou_30m) - (e_support + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m)
+
+    print(L)
+
+    part_tube = Part.makeCylinder(r_tube, L)
+
+    cylinder_1 = Part.makeCylinder(r_tube - e_tube, L)
+
+    part_tube = part_tube.cut(cylinder_1)
+
+    Part.show(part_tube)
+
+    DOC.recompute()
+
+    __objs__ = []
+
+    __objs__.append(FreeCAD.getDocument("part_tube").getObject("Shape"))
+
+    stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tube.stl"
+
+    Mesh.export(__objs__, stl_file)
+
+    setview()
+
+    # Generate PNG files
+    file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_tube_'
+    # Ombré
+    Gui.runCommand('Std_DrawStyle',5)
+    i = 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    # Filaire
+    Gui.runCommand('Std_DrawStyle',2)
+    i += 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+    """)
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_tube.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
     #
     # 
     def test_part_palier_4_fixations_support(self):
@@ -1306,8 +1612,8 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    #
-    # 
+    # ok
+    # https://www.123roulement.com/paliers-UCP206-D1#lg=1&slide=0
     def test_part_palier_2_fixation_ossature(self):
         print("test_part_palier_2_fixation_ossature")
 
@@ -1477,163 +1783,6 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys(
             'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_palier_2_fixation_ossature.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    #
-    #
-    def test_part_tube(self):
-        print("test_part_tube")
-
-        if os.path.exists("Scripts\\part_tube.py"):
-            os.remove("Scripts\\part_tube.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_tube.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Drawing, math, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_tube"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-# part_tube
-r_tube = 88.9/2
-e_tube = 2
-h_rondelle_30m = 4
-h_ecrou_30m = 30
-e_support = 5
-h_palier_2_fixation_support = 40.2
-h_palier_2_fixation_ossature = 48
-h_poulie_generator = 25.4
-L = 1000 - (e_support + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_poulie_generator + h_rondelle_30m + h_ecrou_30m) - (e_support + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m)
-
-print(L)
-
-part_tube = Part.makeCylinder(r_tube, L)
-
-cylinder_1 = Part.makeCylinder(r_tube - e_tube, L)
-
-part_tube = part_tube.cut(cylinder_1)
-
-Part.show(part_tube)
-
-DOC.recompute()
-
-__objs__ = []
-
-__objs__.append(FreeCAD.getDocument("part_tube").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tube.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_tube_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_tube.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1932,155 +2081,6 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys(
             'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_poulie_generator.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    #
-    #
-    def test_part_accouplement_rigide_mecanique(self):
-        print("test_part_accouplement_rigide_mecanique")
-
-        if os.path.exists("Scripts\\part_accouplement_rigide_mecanique.py"):
-            os.remove("Scripts\\part_accouplement_rigide_mecanique.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_accouplement_rigide_mecanique.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Drawing, math, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_accouplement_rigide_mecanique"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-# part_accouplement_rigide_mecanique
-R = 57.7
-L = 83
-Di = 30
-part_accouplement_rigide_mecanique = Part.makeCylinder(R/2, L)
-
-cylinder_1 = Part.makeCylinder(Di/2, L)
-
-# Cut part_accouplement_rigide_mecanique by cylinder_1
-part_accouplement_rigide_mecanique = part_accouplement_rigide_mecanique.cut(cylinder_1)
-
-Part.show(part_accouplement_rigide_mecanique)
-
-DOC.recompute()
-
-__objs__ = []
-
-__objs__.append(FreeCAD.getDocument("part_accouplement_rigide_mecanique").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_accouplement_rigide_mecanique.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_accouplement_rigide_mecanique_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(690 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_accouplement_rigide_mecanique.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -2947,6 +2947,447 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys(
             'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\assembly_generator.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+
+class Trash(unittest.TestCase):
+    # ok
+    # https://www.visseriefixations.fr/tiges-filetees/acier-classe-8-8/tige-filetee-acier-8-8-brut-din-975/tige-filetee-m36-acier-8-8-brut-din-975.html
+    def test_part_tige_filetee_m36_1000l(self):
+        print("test_part_tige_filetee_m36_1000l")
+
+        if os.path.exists("Scripts\\part_tige_filetee_m36_1000l.py"):
+            os.remove("Scripts\\part_tige_filetee_m36_1000l.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_tige_filetee_m36_1000l.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Drawing, math, Mesh
+
+    DOC = FreeCAD.activeDocument()
+
+    DOC_NAME = "part_tige_filetee_m36_1000l"
+
+
+    def clear_doc():
+        # Clear the active document deleting all the objects
+        for obj in DOC.Objects:
+            DOC.removeObject(obj.Name)
+
+
+    def setview():
+        # Rearrange View
+        FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+        FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+    if DOC is None:
+        FreeCAD.newDocument(DOC_NAME)
+        FreeCAD.setActiveDocument(DOC_NAME)
+        DOC = FreeCAD.activeDocument()
+    else:
+        clear_doc()
+
+    # EPS= tolerance to use to cut the parts
+    EPS = 0.10
+    EPS_C = EPS * -0.5
+
+    # part_tige_filetee_m36_1000l
+    d1 = 36
+    L = 1000
+    part_tige_filetee_m36_1000l = Part.makeCylinder(d1/2, L)
+
+    Part.show(part_tige_filetee_m36_1000l)
+
+    DOC.recompute()
+
+    __objs__ = []
+
+    __objs__.append(FreeCAD.getDocument("part_tige_filetee_m36_1000l").getObject("Shape"))
+
+    stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_tige_filetee_m36_1000l.stl"
+
+    Mesh.export(__objs__, stl_file)
+
+    setview()
+
+    # Generate PNG files
+    file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_tige_filetee_m36_1000l_'
+    # Ombré
+    Gui.runCommand('Std_DrawStyle',5)
+    i = 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    # Filaire
+    Gui.runCommand('Std_DrawStyle',2)
+    i += 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+    """)
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(665 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_tige_filetee_m36_1000l.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://www.visseriefixations.fr/ecrous/ecrous-hexagonaux/ecrou-hexagonal-hu/ecrou-hu-acier-brut-din-934/ecrou-hu-acier-brut-classe-8-din-934/ecrou-hu-m36-brut-din-934.html
+    def test_part_ecrou_36m(self):
+        print("test_part_ecrou_36m")
+
+        if os.path.exists("Scripts\\part_ecrou_36m.py"):
+            os.remove("Scripts\\part_ecrou_36m.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_ecrou_36m.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+    DOC = FreeCAD.activeDocument()
+
+    DOC_NAME = "part_ecrou_36m"
+
+
+    def clear_doc():
+        # Clear the active document deleting all the objects
+        for obj in DOC.Objects:
+            DOC.removeObject(obj.Name)
+
+
+    def setview():
+        # Rearrange View
+        FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+        FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+    if DOC is None:
+        FreeCAD.newDocument(DOC_NAME)
+        FreeCAD.setActiveDocument(DOC_NAME)
+        DOC = FreeCAD.activeDocument()
+    else:
+        clear_doc()
+
+    # EPS= tolerance to use to cut the parts
+    EPS = 0.10
+    EPS_C = EPS * -0.5
+
+    d1 = 36
+    e = d1*1.6
+    h = d1*0.8
+
+    cylinder_1 = Part.makeCylinder(e/2, h)
+
+    cylinder_2 = Part.makeCylinder(d1/2, h)
+
+    cylinder_1 = cylinder_1.cut(cylinder_2)
+
+    Part.show(cylinder_1)
+
+    DOC.recompute()
+
+    __objs__=[]
+
+    __objs__.append(FreeCAD.getDocument("part_ecrou_36m").getObject("Shape"))
+
+    stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_ecrou_36m.stl"
+
+    Mesh.export(__objs__, stl_file)
+
+    setview()
+
+    # Generate PNG files
+    file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_ecrou_36m_'
+    # Ombré
+    Gui.runCommand('Std_DrawStyle',5)
+    i = 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    # Filaire
+    Gui.runCommand('Std_DrawStyle',2)
+    i += 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+    """)
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_ecrou_36m.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://www.visseriefixations.fr/rondelles-circlips/rondelles-plates/sans-chanfrein/serie-moyenne-m/inox/rondelle-m-inox-a2-nfe-25513/rondelle-m-0-36-inox-a2.html
+    def test_part_rondelle_36m(self):
+        print("test_part_rondelle_36m")
+
+        if os.path.exists("Scripts\\part_rondelle_36m.py"):
+            os.remove("Scripts\\part_rondelle_36m.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_rondelle_36m.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+    DOC = FreeCAD.activeDocument()
+
+    DOC_NAME = "part_rondelle_36m"
+
+
+    def clear_doc():
+        # Clear the active document deleting all the objects
+        for obj in DOC.Objects:
+            DOC.removeObject(obj.Name)
+
+
+    def setview():
+        # Rearrange View
+        FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+        FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+    if DOC is None:
+        FreeCAD.newDocument(DOC_NAME)
+        FreeCAD.setActiveDocument(DOC_NAME)
+        DOC = FreeCAD.activeDocument()
+    else:
+        clear_doc()
+
+    # EPS= tolerance to use to cut the parts
+    EPS = 0.10
+    EPS_C = EPS * -0.5
+
+    d1 = 37
+    d2 = 70
+    s = 5
+
+    cylinder_1 = Part.makeCylinder(d2/2, s)
+
+    cylinder_2 = Part.makeCylinder(d1/2, s)
+
+    cylinder_1 = cylinder_1.cut(cylinder_2)
+
+    Part.show(cylinder_1)
+
+    DOC.recompute()
+
+    __objs__=[]
+
+    __objs__.append(FreeCAD.getDocument("part_rondelle_36m").getObject("Shape"))
+
+    stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_rondelle_36m.stl"
+
+    Mesh.export(__objs__, stl_file)
+
+    setview()
+
+    # Generate PNG files
+    file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\part_rondelle_36m_'
+    # Ombré
+    Gui.runCommand('Std_DrawStyle',5)
+    i = 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    # Filaire
+    Gui.runCommand('Std_DrawStyle',2)
+    i += 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+    """)
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_rondelle_36m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)

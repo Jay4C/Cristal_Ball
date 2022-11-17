@@ -20484,7 +20484,7 @@ My profile is : https://datarade.ai/data-providers/holomorphe/profile
 
 Kind regards,
 
-Mr Jason ALOYAU
+Mr 
 President of the Holomorphe company
 General engineer graduated from the Leonardo da Vinci School of Engineering in Paris La Défense
 Headquarters address: 31 Avenue de Ségur 75007 Paris
@@ -20610,7 +20610,7 @@ My profile is : https://datarade.ai/data-providers/holomorphe/profile
 
 Kind regards,
 
-Mr Jason ALOYAU
+Mr 
 President of the Holomorphe company
 General engineer graduated from the Leonardo da Vinci School of Engineering in Paris La Défense
 Headquarters address: 31 Avenue de Ségur 75007 Paris

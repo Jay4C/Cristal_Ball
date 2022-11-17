@@ -1,0 +1,63 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Candidature spontan&eacute;e pour un emploi en tant que d&eacute;veloppeur Python
+                    en contrat &agrave; dur&eacute;e ind&eacute;termin&eacute;e &agrave;
+                    temps plein - Monsieur
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Je vous envoie mon CV pour postuler pour un emploi en tant que d&eacute;veloppeur Python.
+                    <br>
+                    <br>
+                    En attendant votre retour, je vous prie de croire, mes salutations les plus sinc&egrave;res.
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste dipl&ocirc;m&eacute; de l'&Eacute;cole Sup&eacute;rieure
+                    d'Ing&eacute;nieurs L&eacute;onard de Vinci
+                    <br>
+                    T&eacute;l&eacute;phone :
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

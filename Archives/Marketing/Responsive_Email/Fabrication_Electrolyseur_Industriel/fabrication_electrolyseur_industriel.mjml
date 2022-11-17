@@ -1,0 +1,143 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Demande de chiffrages pour la fabrication de pi&egrave;ces m&eacute;caniques de pr&eacute;cision
+                    pour des &eacute;lectrolyseurs &agrave; eau - Soci&eacute;t&eacute; Holomorphe
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Tout d'abord, je voudrai que vous me fabriquez des pi&egrave;ces m&eacute;caniques de
+                    pr&eacute;cision pour des &eacute;lectrolyseurs &agrave; eau en plexiglass et en acier
+                    inoxydable 316L par impression 3D ou par usinage pour un prix tr&egrave;s abordable.
+                    <br>
+                    <br>
+                    Apr&egrave;s, je vous informe que ces pi&egrave;ces m&eacute;caniques de pr&eacute;cision seront en
+                    contact de mani&egrave;re permanente avec l'eau &agrave; temp&eacute;rature ambiante et la
+                    pression du m&eacute;lange gazeux de dihydrog&egrave;ne et dioxyg&egrave;ne ne d&eacute;passera
+                    pas 10 bars au sein des &eacute;lectrolyseurs &agrave; eau.
+                    <br>
+                    <br>
+                    De plus, le choix des mat&eacute;riaux de ces pi&egrave;ces m&eacute;caniques de pr&eacute;cision
+                    est list&eacute; ci-dessous :
+                    <br>
+                    - Pour la pi&egrave;ce "part_tank", il faut le fabriquer en plexiglass (Polym&eacute;thacrylate
+                    de m&eacute;thyle - PMMA - https://fr.wikipedia.org/wiki/Polym%C3%A9thacrylate_de_m%C3%A9thyle).
+                    <br>
+                    - Pour la pi&egrave;ce "part_disc_anode_d30", il faut le fabriquer en acier inoxydable 316L
+                    (https://www.sculpteo.com/fr/materiaux/binder-jetting-materiau/acier-inox-316-par-projection-de-liant/).
+                    <br>
+                    - Pour la pi&egrave;ce "part_disc_cathode_d30", il faut le fabriquer en acier inoxydable 316L
+                    (https://www.sculpteo.com/fr/materiaux/binder-jetting-materiau/acier-inox-316-par-projection-de-liant/).
+                    <br>
+                    <br>
+                    Puis, je souhaiterai recevoir des tarifs d&eacute;gressifs pour la fabrication de ces
+                    pi&egrave;ces m&eacute;caniques de pr&eacute;cision pour 1, 10, 100, 1000, 10000 exemplaires.
+                    <br>
+                    <br>
+                    Ensuite, mes questions sont :
+                    <br>
+                    - Est-ce que vous pourriez fabriquer ces pi&egrave;ces m&eacute;caniques de pr&eacute;cision
+                    selon leurs caract&eacute;ristiques s'il vous pla&icirc;t ?
+                    <br>
+                    - Est-ce que c'est possible de venir vous voir dans votre &eacute;tablissement avant de lancer ces
+                    fabrications s'il vous pla&icirc;t ?
+                    <br>
+                    - Est-ce que vous pouvez assurer la livraison de ces pi&egrave;ces m&eacute;caniques de
+                    pr&eacute;cision en France et &agrave; l'&eacute;tranger s'il vous pla&icirc;t ?
+                    <br>
+                    <br>
+                    Ainsi, je vous prie de bien vouloir trouver en pi&egrave;ces jointes les documents suivants :
+                    <br>
+                    - Un fichier STL pour la pi&egrave;ce "part_disc_anode_d30.stl"
+                    <br>
+                    - Un fichier STL pour la pi&egrave;ce "part_disc_cathode_d30.stl"
+                    <br>
+                    - Un fichier STL pour la pi&egrave;ce "part_tank.stl"
+                    <br>
+                    <br>
+                    Dans l'attente de votre retour, je vous prie de croire, mes sinc&egrave;res salutations.
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Pr&eacute;sident de la soci&eacute;t&eacute; Holomorphe
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste diplom&eacute; &agrave; l'&Eacute;cole Sup&eacute;rieure
+                    d'Ing&eacute;nieurs L&eacute;onard de Vinci &agrave; Paris La D&eacute;fense
+                    <br>
+                    Adresse du si&egrave;ge social : 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    T&eacute;l&eacute;phone : 07.49.16.33.29
+                    <br>
+                    <br>
+                    N.B. : N'h&eacute;sitez pas &agrave; me laisser un message vocal ou un sms, et je vous rappelerai
+                    dans les meilleurs d&eacute;lais.
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -129,7 +129,7 @@ class UnitTestsWebAutomationAimntBoutique(unittest.TestCase):
             '/html/body/div[1]/div[3]/section/div/div/div/div[3]/div/form/div[1]/div/div[1]/div[5]/div/div[4]/input'
         )
         karteninhaber_input.clear()
-        karteninhaber_input.send_keys("Mr Jason ALOYAU")
+        karteninhaber_input.send_keys("Mr ")
         time.sleep(10)
 
         # Click on the "Kartennummer" button

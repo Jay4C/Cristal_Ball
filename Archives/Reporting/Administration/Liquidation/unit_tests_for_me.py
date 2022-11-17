@@ -181,7 +181,7 @@ class UnitTestsReportingAdministrationLiquidationForMe(unittest.TestCase):
               </div>
               <div class="card-body">
                 L'actionnaire unique de la société par actions simplifiée unipersonnelle à capital variable HOLOMORPHE 
-                donne tous pouvoirs à Monsieur Jason ALOYAU pour effectuer les formalités légales afférentes aux 
+                donne tous pouvoirs à Monsieur  pour effectuer les formalités légales afférentes aux 
                 décisions adoptées ci-dessus.
 
                 <br>

@@ -1,0 +1,124 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Demande d'informations pour l'achat de capteurs - Soci&eacute;t&eacute; Holomorphe
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Tout d'abord, je suis en train de monter un projet de production de gaz (hydrog&egrave;ne et/ou
+                    m&eacute;thane de synth&egrave;se) directement inject&eacute;e dans un r&eacute;seau de transport
+                    de gaz naturel.
+                    <br>
+                    <br>
+                    Apr&egrave;s, je suis &agrave; la recherche de plusieurs types de capteurs tels que le capteur de
+                    niveau d'eau vissable de 150mm de longueur, le capteur de temp&eacute;rature avec une temp&eacute;rature
+                    inf&eacute;rieure &agrave; 100 degr&eacute;s celsius et le capteur de pression de gaz pour un
+                    m&eacute;lange de gaz compos&eacute; de dihydrog&egrave;ne, de dioxyg&egrave;ne et d'autres gaz
+                    produit par &eacute;lectrolyse de l'eau dont la pression du m&eacute;lange gazeux ne d&eacute;passe pas
+                    10 bars.
+                    <br>
+                    <br>
+                    Puis, les capteurs devront &ecirc;tre vissables sur un mamelon
+                    &agrave; visser laiton M 12 x 17 (https://www.leroymerlin.fr/produits/chauffage-plomberie/circuit-alimentation-en-eau/tube-et-raccord-alimentation/raccord-alimentation/lot-de-2-mamelons-a-visser-laiton-m-12-x-17-pour-tube-en-cuivre-65814721.html)
+                    et renvoyer l'information avec le protocole Modbus TCP/IPv4.
+                    <br>
+                    <br>
+                    Ainsi, ma question est :
+                    <br>
+                    - Est-ce que vous pourriez m'envoyer des documents techniques pour ces types de capteur avec les
+                    tarifs et les frais de livraison s'il vous pla&icirc;t ?
+                    <br>
+                    <br>
+                    Pour apporter des informations compl&eacute;mentaires &agrave; ce futur projet, j'ai mis en
+                    pi&egrave;ce jointe le document suivant :
+                    <br>
+                    - Un sch&eacute;ma tr&egrave;s simplifi&eacute; de la production de m&eacute;thane de
+                    synth&egrave;se au format PNG.
+                    <br>
+                    <br>
+                    Dans l'attente de votre retour, je vous prie de croire, mes sinc&egrave;res salutations.
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Pr&eacute;sident de la soci&eacute;t&eacute; Holomorphe
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste diplom&eacute; &agrave; l'&Eacute;cole Sup&eacute;rieure
+                    d'Ing&eacute;nieurs L&eacute;onard de Vinci &agrave; Paris La D&eacute;fense
+                    <br>
+                    Adresse du si&egrave;ge social : 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    T&eacute;l&eacute;phone :
+                    <br>
+                    <br>
+                    N.B. : N'h&eacute;sitez pas &agrave; me laisser un message vocal ou un sms, et je vous
+                    t&eacute;l&eacute;phonerai dans les meilleurs d&eacute;lais.
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,140 @@
+<mjml>
+  <mj-body>
+    <!-- Title content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+                <h1>
+                    Objet
+                </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Demande d'informations pour l'adaptation de groupe &eacute;lectrog&egrave;ne avec les technologies de
+                    l'hydrog&egrave;ne de Stanley Meyer – Soci&eacute;t&eacute; Holomorphe
+                </h1>
+            </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Message content -->
+    <mj-section>
+        <mj-column border="1px solid #dddddd">
+            <mj-text align="center">
+              <h1>
+                Message
+              </h1>
+            </mj-text>
+            <mj-divider border-width="1px" border-style="dotted" border-color="lightgrey" padding="0 20px" />
+            <mj-text align="center">
+                <h1>
+                    Bonjour,
+                    <br>
+                    <br>
+                    Tout d'abord, je suis en train de faire des conceptions assist&eacute;es par ordinateur en open source
+                    sur les technologies de l'hydrog&egrave;ne de Stanley Meyer. Ces conceptions assist&eacute;es par ordinateur
+                    seront diffus&eacute;es sur mon compte GitHub : https://github.com/Jay4C/Python-Macros-For-FreeCAD.
+                    <br>
+                    <br>
+                    Puis, je suis &agrave; la recherche de fabricants de groupe &eacute;lectrog&egrave;ne qui seraient
+                    capables de fabriquer et d'int&eacute;grer les technologies de l'hydrog&egrave;ne de Stanley Meyer
+                    sur leurs groupes &eacute;lectrog&egrave;nes afin que ces groupes &eacute;lectrog&egrave;nes
+                    fonctionneront avec de l'hydrog&egrave;ne comme pr&eacute;conis&eacute; par Stanley Meyer.
+                    <br>
+                    <br>
+                    De plus, les technologies de l'hydrog&egrave;ne de Stanley Meyer list&eacute;es de mani&egrave;re
+                    non exhaustive sont les suivantes :
+                    <br>
+                    - Brevet US5149407 : https://patents.google.com/patent/US5149407A/en?oq=US5149407
+                    <br>
+                    - Brevet US4389981 : https://patents.google.com/patent/US4389981A/en?oq=US4389981
+                    <br>
+                    - Brevet US4798661 : https://patents.google.com/patent/US4798661A/en?oq=US4798661
+                    <br>
+                    - Brevet US5293857 : https://patents.google.com/patent/US5293857A/en?oq=US5293857
+                    <br>
+                    - Brevet US4936961 : https://patents.google.com/patent/US4936961A/en?oq=US4936961
+                    <br>
+                    <br>
+                    Ainsi, mes questions sont :
+                    <br>
+                    - Est-ce que vous pourriez fabriquer et int&eacute;grer ses inventions sur vos groupes
+                    &eacute;lectrog&egrave;nes s'il vous pla&icirc;t ?
+                    <br>
+                    - Est-ce que vous pourriez commercialiser des groupes &eacute;lectrog&egrave;nes en grande
+                    s&eacute;rie avec l'int&eacute;gration des technologies de l'hydrog&egrave;ne de Stanley Meyer
+                    s'il vous pla&icirc;t ?
+                    <br>
+                    <br>
+                    D'ailleurs, vous pourriez trouver plus d'informations sur les technologies de Stanley Meyer
+                    au lien suivant : https://github.com/Jay4C/Free-energy-devices/tree/master/Stanley_Meyer
+                    <br>
+                    <br>
+                    Dans l'attente de votre retour, je vous prie de croire, mes sinc&egrave;res salutations.
+                    <br>
+                    <br>
+                    Monsieur
+                    <br>
+                    Pr&eacute;sident de la soci&eacute;t&eacute; Holomorphe
+                    <br>
+                    Ing&eacute;nieur g&eacute;n&eacute;raliste diplom&eacute; &agrave; l'E.S.I.L.V. Paris La Défense
+                    <br>
+                    Adresse du si&egrave;ge social : 31 Avenue de S&eacute;gur 75007 Paris
+                    <br>
+                    T&eacute;l&eacute;phone : 07.49.16.33.29
+                    <br>
+                    <br>
+                    N.B. : N'h&eacute;sitez pas &agrave; me laisser un message vocal ou un sms, et je vous
+                    t&eacute;l&eacute;phonerai dans les meilleurs d&eacute;lais.
+                </h1>
+            </mj-text>
+        </mj-column>
+    </mj-section>
+
+    <!-- References -->
+    <mj-section border="1px solid #dddddd">
+        <!-- Holomorphe -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.holomorphe.com/">
+                Holomorphe
+            </mj-button>
+        </mj-column>
+
+        <!-- YouTube -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA">
+                YouTube
+            </mj-button>
+        </mj-column>
+
+        <!-- Datarade -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://datarade.ai/data-providers/holomorphe/profile">
+                Datarade
+            </mj-button>
+        </mj-column>
+    </mj-section>
+
+    <mj-section border="1px solid #dddddd">
+        <!-- github -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://github.com/Jay4C">
+                GitHub
+            </mj-button>
+        </mj-column>
+
+        <!-- Societe.com -->
+        <mj-column>
+            <mj-button font-family="Helvetica" background-color="#528BFF" color="black"
+            href="https://www.societe.com/societe/holomorphe-883632556.html">
+                Societe.com
+            </mj-button>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

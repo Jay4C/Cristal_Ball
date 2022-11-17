@@ -1499,7 +1499,7 @@ class UnitTestsReportingHumanResourcesResumeForGitHub(unittest.TestCase):
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
     crossorigin="anonymous">
 
-    <title>CV de Jason ALOYAU - Ouvrier non qualifié de manutention</title>
+    <title>CV de  - Ouvrier non qualifié de manutention</title>
   </head>
   <body>
     <!-- Container -->
