@@ -795,8 +795,8 @@ class UnitTestsDataMinerYellowPagesSuisseWithRequests(unittest.TestCase):
                 # Credentials
                 host = "localhost"
                 port = 27017
-                username = "Admin"
-                password = "123aqwZSX"
+                username = ""
+                password = ""
                 uri = "mongodb://" + username + ":" + password + "@" + host + ":" + str(port)
                 myclient = pymongo.MongoClient(uri)
                 companydb = myclient["companydb"]
