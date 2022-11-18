@@ -1125,6 +1125,159 @@ setview()
         pywinauto.keyboard.send_keys('{ENTER}')
 
     # ok
+    # https://www.sculpteo.com/fr/
+    def test_part_support_generator(self):
+        print("test_part_support_generator")
+
+        if os.path.exists("Scripts\\part_support_generator.py"):
+            os.remove("Scripts\\part_support_generator.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_support_generator.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh, math
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_support_generator"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+# tube diameter
+d_tube = 140 + 10*2 + 5*2
+
+# nut diameter
+d_nut = 24
+
+# main diameter
+d1 = d_tube + 5*2 + 2*2 + d_nut*2 + 2*2
+
+# maximum length
+h1 = (700 - 170)/2
+
+# hole length
+h2 = h1 - 5
+
+# inner diamter for fixing the tube
+d_inner_tube = d_tube
+
+# radius for fixing the device
+r_f_d = (d_tube + 5*2 + 2*2 + d_nut)/2
+
+# screw diameter
+d_vis = 12.1
+
+d3 = d1
+
+d4 = d_tube + 5*2
+
+d_arbre = 20.1
+
+# part_palier_4_fixations dimensions
+r_f_p = math.sqrt(math.pow(32, 2) + math.pow(32, 2))
+
+d_vis_palier = 8.1
+
+# Cylinder_1
+cylinder_1 = Part.makeCylinder(d1/2, h1)
+
+# Cut cylinder_1 by cylinder_2
+cylinder_2 = Part.makeCylinder(d_inner_tube/2, h2)
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+# holes for fixing the device
+degre = 15
+for i in range(int(360/degre)):
+    radius = r_f_d
+    alpha=(i*degre*math.pi)/180
+    hole_vector = FreeCAD.Vector(radius*math.cos(alpha), radius*math.sin(alpha), 0)
+    hole = Part.makeCylinder(d_vis/2, h1)
+    hole.translate(hole_vector)
+    cylinder_1 = cylinder_1.cut(hole)
+
+# Cylinder_3
+cylinder_3 = Part.makeCylinder(d3/2, h2)
+
+# Cut cylinder_3 by cylinder_4
+cylinder_4 = Part.makeCylinder(d4/2, h2)
+cylinder_3 = cylinder_3.cut(cylinder_4)
+
+# Cut cylinder_1 by cylinder_3
+cylinder_3_vector = FreeCAD.Vector(0, 0, 5)
+cylinder_3.translate(cylinder_3_vector)
+cylinder_1 = cylinder_1.cut(cylinder_3)
+
+# Cut cylinder_1 by cylinder_5
+cylinder_5 = Part.makeCylinder(d_arbre/2, h1)
+cylinder_1 = cylinder_1.cut(cylinder_5)
+
+# cut cylinder_1 by trou_vis for fixing the part_palier_4_fixations
+for degre in [45, 45*3, 45*5, 45*7]:
+    radius = r_f_p
+    alpha = (degre*math.pi)/180
+    hole_vector = FreeCAD.Vector(radius*math.cos(alpha), radius*math.sin(alpha), 0)
+    hole = Part.makeCylinder(d_vis_palier/2, h1)
+    hole.translate(hole_vector)
+    cylinder_1 = cylinder_1.cut(hole)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__ = []
+
+__objs__.append(FreeCAD.getDocument("part_support_generator").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/part_support_generator.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\part_support_generator.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
     # https://i0.wp.com/3transmissions.eu/wp-content/uploads/2021/04/accouplements_rigides_fendus_ks.png?ssl=1
     def test_part_accouplement_rigide_mecanique(self):
             print("test_part_accouplement_rigide_mecanique")
@@ -2067,6 +2220,185 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
 
 class UnitTestsHGVersion3Assemblies(unittest.TestCase):
+    # ok
+    def test_assembly_magnet(self):
+        print("test_assembly_magnet")
+
+        if os.path.exists("Scripts\\assembly_magnet.py"):
+            os.remove("Scripts\\assembly_magnet.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\assembly_magnet.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Drawing, math, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "assembly_magnet"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+assembly = "assembly_magnet"
+
+h_magnet = 20
+h_faraday_disc = 5
+
+# part_faraday_disc
+color = (0.90, 0.80, 0.70)
+x = 0
+y = 0
+z = 0
+title = 'part_faraday_disc'
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + title + ".stl"
+Mesh.insert(stl_file,assembly)
+FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = color
+FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
+
+# part_magnet_1d140_2d60_20e
+color = (0.10, 0.80, 0.10)
+x = 0
+y = 0
+z = 5
+title = 'part_magnet_1d140_2d60_20e'
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + title + ".stl"
+Mesh.insert(stl_file,assembly)
+FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = color
+FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
+
+# part_support_magnet
+color = (0.20, 0.40, 0.00)
+x = 0
+y = 0
+z = h_faraday_disc + h_magnet + 2
+title = 'part_support_magnet'
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + title + ".stl"
+Mesh.insert(stl_file,assembly)
+FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = color
+FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,1,0),180))
+
+setview()
+
+# Export
+__objs__ = []
+
+title = "part_faraday_disc"
+__objs__.append(FreeCAD.getDocument(assembly).getObject(title))
+
+title = "part_magnet_1d140_2d60_20e"
+__objs__.append(FreeCAD.getDocument(assembly).getObject(title))
+
+title = "part_support_magnet"
+__objs__.append(FreeCAD.getDocument(assembly).getObject(title))
+
+Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + assembly + ".stl")
+
+del __objs__
+
+# Generate PNG files
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Png\\\\' + assembly + '_'
+# Ombré
+Gui.runCommand('Std_DrawStyle',5)
+i = 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+# Filaire
+Gui.runCommand('Std_DrawStyle',2)
+i += 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(690 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\HG\\\\Version_3\\\\Scripts\\\\assembly_magnet.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
     #
     def test_assembly_shaft(self):
         print("test_assembly_shaft")

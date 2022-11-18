@@ -32,7 +32,7 @@ d_magnet = 140
 
 d_exterieur = d_magnet + 2*2
 d_interieur = d_magnet
-d_arbre = 36.1
+d_arbre = 30.1
 h_support_global = 5
 h_support_magnet = 3
 
