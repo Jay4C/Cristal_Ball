@@ -7,14 +7,15 @@ from random_user_agent.user_agent import UserAgent
 from random_user_agent.params import SoftwareName, OperatingSystem
 from OpenSSL import SSL
 
-url = "https://s-insight.optimzen.com/account/signin?next=/"
+url = ""
 email = ""
+host = ""
 
 
 class UnitTestsDiagnosisPentrationTestingWithBFA(unittest.TestCase):
     #
-    def test_bfa_with_one_c(self):
-        print("test_bfa_with_one_c")
+    def test_bfa_1(self):
+        print("test_bfa_1")
 
         context = SSL.Context(SSL.TLSv1_2_METHOD)
         context.minimum_version = ssl.TLSVersion.TLSv1_2
@@ -48,19 +49,19 @@ class UnitTestsDiagnosisPentrationTestingWithBFA(unittest.TestCase):
 
         headers = {
             'User-Agent': user_agent,
-            'referer': 'https://s-insight.optimzen.com/account/signin?next=/',
-            'origin': 'https://s-insight.optimzen.com',
+            'referer': url,
+            'origin': host,
             'Scheme': 'https'
         }
 
         # collect the data needed from "inspect element"
         data = {
-            'csrfmiddlewaretoken': 'KyG7fevUoK6ZFckPHxFkmIjXAA81HPU8Z6h9B6WcSjnxDiBNe7msTmqMEoe0idug',
+            'csrfmiddlewaretoken': '',
             'email': '',
             'password': ''
         }
 
-        send_data_url = requests.post(url, headers=headers, data=data, verify=ssl.CERT_NONE)
+        send_data_url = requests.post(url, headers=headers, data=data, verify=False)
 
         print(send_data_url.content)
 
