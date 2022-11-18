@@ -58,7 +58,7 @@ class UnitTestsArchivesTradingXTBAvailableStreamingCommands(unittest.TestCase):
     def test_get_balance(self):
         print('test_get_balance')
         ws = websocket.WebSocket()
-        url = 'wss://ws.xtb.com/real'
+        url = 'wss://ws.xtb.com/realStream'
 
         ws.connect(url=url)
 

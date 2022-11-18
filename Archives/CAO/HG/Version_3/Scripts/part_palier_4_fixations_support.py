@@ -41,7 +41,7 @@ part_palier_4_fixations_support = part_palier_4_fixations_support.cut(trou_arbre
 # Cut part_palier_4_fixations_support by trou_vis
 degres = [45*1, 45*3, 45*5, 45*7]
 P = 100
-D_vis = 16
+D_vis = 12
 for degre in degres:
     radius = P/2
     alpha=(degre*math.pi)/180
