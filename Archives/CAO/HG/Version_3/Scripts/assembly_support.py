@@ -44,11 +44,6 @@ L_tube = 1000 - (e_support + h_palier_4_fixation_support + h_rondelle_30m + h_ec
 
 h1 = (L_tube - 170)/2
 
-# radius for fixing the device
-d_tube = 159
-d_nut = 36
-r_f_d = (d_tube + 5*2 + 2*2 + d_nut)/2
-
 # part_support_generator
 x = 0
 y = 0
@@ -221,6 +216,12 @@ for degre in degres:
     i3 += 1
 
 # part_rondelle_20m
+
+# radius for fixing the device
+d_tube = 159
+d_nut = 36
+r_f_d = (d_tube + 5*2 + 2*2 + d_nut)/2
+
 color = (0.10, 0.50, 0.90)
 title = 'part_rondelle_20m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/HG/Version_3/Stl/" + title + ".stl"

@@ -1785,6 +1785,7 @@ d_nut = 36
 
 # main diameter
 d1 = d_tube + 5*2 + 2*2 + d_nut*2 + 2*2
+print(d1)
 
 h_rondelle_30m = 4
 h_ecrou_30m = 30*0.8
