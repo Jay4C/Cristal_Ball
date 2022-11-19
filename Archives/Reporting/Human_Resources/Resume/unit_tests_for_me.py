@@ -43,11 +43,11 @@ class UnitTestsReportingHumanResourcesResumeForMe(unittest.TestCase):
               </thead>
               <tbody>
                 <tr>
-                  <td>Monsieur </td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>28 ans</td>
+                  <td>Monsieur Jason ALOYAU</td>
+                  <td>Région Ile-de-France</td>
+                  <td>-</td>
+                  <td>jason.aloyau@outlook.fr</td>
+                  <td>29 ans</td>
                   <td>Française</td>
                 </tr>
               </tbody>
@@ -202,15 +202,15 @@ class UnitTestsReportingHumanResourcesResumeForMe(unittest.TestCase):
                                 Planification des étapes d'un projet
                             </li>
                             <li>
-                                Management dela connaissance / 
+                                Management de la connaissance / 
                                 Management de projet / 
                                 Management des opérations / 
                                 Management du changement / 
-                                Management dela qualité
+                                Management de la qualité
                             </li>
                             <li>
                                 Analyse des besoins du client / 
-                                Établissement d’un cahier des charges
+                                Établissement d'un cahier des charges
                             </li>
                             <li>
                                 Rédaction d'un support technique / 
@@ -547,12 +547,12 @@ class UnitTestsReportingHumanResourcesResumeForMe(unittest.TestCase):
             'page-size': 'A4',
             'footer-right': '[page] sur [topage]',
             'footer-left': 'Développeur Python',
-            'header-center': 'CV de Monsieur ',
+            'header-center': 'CV de Monsieur Jason ALOYAU',
         }
 
         pdfkit.from_string(
             body,
-            "Resume_For_Me\\CV_De__[Developpeur_Python].pdf",
+            "Resume_For_Me\\CV_De_Jason_ALOYAU_[Developpeur_Python].pdf",
             options=options
         )
 

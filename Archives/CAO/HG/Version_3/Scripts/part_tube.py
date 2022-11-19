@@ -32,12 +32,12 @@ EPS_C = EPS * -0.5
 r_tube = 159/2
 e_tube = 4
 h_rondelle_30m = 4
-h_ecrou_30m = 30
+h_ecrou_30m = 30*0.8
 e_support = 5
-h_palier_2_fixation_support = 40.2
+h_palier_4_fixation_support = 38.1
 h_palier_2_fixation_ossature = 48
 h_poulie_generator = 25.4
-L = 1000 - (e_support + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_poulie_generator + h_rondelle_30m + h_ecrou_30m) - (e_support + h_palier_2_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m)
+L = 1000 - (e_support + h_palier_4_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_poulie_generator/2 + h_rondelle_30m + h_ecrou_30m) - (e_support + h_palier_4_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m)
 
 print(L)
 

@@ -37,8 +37,16 @@ d_nut = 36
 # main diameter
 d1 = d_tube + 5*2 + 2*2 + d_nut*2 + 2*2
 
+h_rondelle_30m = 4
+h_ecrou_30m = 30*0.8
+e_support = 5
+h_palier_4_fixation_support = 38.1
+h_palier_2_fixation_ossature = 48
+h_poulie_generator = 25.4
+L_tube = 1000 - (e_support + h_palier_4_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_poulie_generator/2 + h_rondelle_30m + h_ecrou_30m) - (e_support + h_palier_4_fixation_support + h_rondelle_30m + h_ecrou_30m + h_rondelle_30m + h_palier_2_fixation_ossature + h_rondelle_30m + h_ecrou_30m)
+
 # maximum length
-h1 = (700 - 170)/2
+h1 = (L_tube - 170)/2
 
 # hole length
 h2 = h1 - 5
@@ -56,7 +64,9 @@ d3 = d1
 
 d4 = d_tube + 5*2
 
-d_arbre = 30.1
+d_ecrou_30m = 30*1.6 + 5*2
+
+d_arbre = d_ecrou_30m
 
 # part_palier_4_fixations dimensions
 r_f_p = 100/2
@@ -107,7 +117,7 @@ for degre in [45, 45*3, 45*5, 45*7]:
 
 # Cut the holes for emptying the part
 degre = 20
-for i1 in range(0, 9):
+for i1 in range(0, 8):
     for i2 in range(int(360/degre)):
         d_hole = 20
         z_hole = (d_hole + 5) * ( i1 + 1)
