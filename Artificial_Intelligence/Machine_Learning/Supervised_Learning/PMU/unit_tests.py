@@ -7,13 +7,14 @@ from selenium import webdriver
 from pmu import PMUFinal
 from selenium.webdriver.firefox.options import Options
 import pymysql.cursors
+from selenium.webdriver.common.by import By
 
 # unibet race url
-global_url = "https://www.unibet.fr/turf/race/07-11-2022-R3-C8-bordeaux-le-bouscat-prix-de-verdelais.html"
+global_url = "https://www.unibet.fr/turf/race/20-11-2022-R9-C1-amiens-prix-jean-masset.html"
 
 
 class UnitTestsSupervisedLearningPMU(unittest.TestCase):
-    # number of disqualified from musique from pmu : ok
+    # 1 - number of disqualified from musique from pmu : ok
     def test_scoring_the_runners_by_number_of_disqualified_with_dark_web(self):
         print("test_scoring_the_runners_by_number_of_disqualified_with_dark_web")
 
@@ -72,7 +73,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # age : ok
+    # 2 - age : ok
     def test_scoring_the_runners_by_age_with_dark_web(self):
         print("test_scoring_the_runners_by_age_with_dark_web")
 
@@ -128,7 +129,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # placeCorde : ok
+    # 3 - placeCorde : ok
     def test_scoring_the_runners_by_place_corde_with_dark_web(self):
         print("test_scoring_the_runners_by_place_corde_with_dark_web")
 
@@ -184,7 +185,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # nombreCourses : ok
+    # 4 - nombreCourses : ok
     def test_scoring_the_runners_by_nombre_courses_with_dark_web(self):
         print("test_scoring_the_runners_by_nombre_courses_with_dark_web")
 
@@ -241,7 +242,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # nombreVictoires : ok
+    # 5 - nombreVictoires : ok
     def test_scoring_the_runners_by_nombre_victoires_with_dark_web(self):
         print("test_scoring_the_runners_by_nombre_victoires_with_dark_web")
 
@@ -297,7 +298,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # nombrePlaces : ok
+    # 6 - nombrePlaces : ok
     def test_scoring_the_runners_by_nombre_places_with_dark_web(self):
         print("test_scoring_the_runners_by_nombre_places_with_dark_web")
 
@@ -353,7 +354,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # nombrePlacesSecond : ok
+    # 7 - nombrePlacesSecond : ok
     def test_scoring_the_runners_by_nombre_places_second_with_dark_web(self):
         print("test_scoring_the_runners_by_nombre_places_second_with_dark_web")
 
@@ -409,7 +410,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # nombrePlacesTroisieme : ok
+    # 8 - nombrePlacesTroisieme : ok
     def test_scoring_the_runners_by_nombre_places_troisieme_with_dark_web(self):
         print("test_scoring_the_runners_by_nombre_places_troisieme_with_dark_web")
 
@@ -465,7 +466,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # gainsParticipant of gainsCarriere : ok
+    # 9 - gainsParticipant of gainsCarriere : ok
     def test_scoring_the_runners_by_gains_participant_of_gains_carriere_with_dark_web(self):
         print("test_scoring_the_runners_by_gains_participant_of_gains_carriere_with_dark_web")
 
@@ -521,7 +522,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # gainsParticipant of gainsVictoires : ok
+    # 10 - gainsParticipant of gainsVictoires : ok
     def test_scoring_the_runners_by_gains_participant_of_gains_victoires_with_dark_web(self):
         print("test_scoring_the_runners_by_gains_participant_of_gains_victoires_with_dark_web")
 
@@ -577,7 +578,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # gainsParticipant of gainsPlace : ok
+    # 11 - gainsParticipant of gainsPlace : ok
     def test_scoring_the_runners_by_gains_participant_of_gains_place_with_dark_web(self):
         print("test_scoring_the_runners_by_gains_participant_of_gains_place_with_dark_web")
 
@@ -633,7 +634,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # gainsParticipant of gainsAnneeEnCours : ok
+    # 12 - gainsParticipant of gainsAnneeEnCours : ok
     def test_scoring_the_runners_by_gains_participant_of_gains_annee_en_cours_with_dark_web(self):
         print("test_scoring_the_runners_by_gains_participant_of_gains_annee_en_cours_with_dark_web")
 
@@ -689,7 +690,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # gainsParticipant of gainsAnneePrecedente : ok
+    # 13 - gainsParticipant of gainsAnneePrecedente : ok
     def test_scoring_the_runners_by_gains_participant_of_gains_annee_precedente_with_dark_web(self):
         print("test_scoring_the_runners_by_gains_participant_of_gains_annee_precedente_with_dark_web")
 
@@ -745,7 +746,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # supplement : ok
+    # 14 - supplement : ok
     def test_scoring_the_runners_by_supplement_with_dark_web(self):
         print("test_scoring_the_runners_by_supplement_with_dark_web")
 
@@ -801,7 +802,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # handicapDistance : ok
+    # 15 - handicapDistance : ok
     def test_scoring_the_runners_by_handicap_distance_with_dark_web(self):
         print("test_scoring_the_runners_by_handicap_distance_with_dark_web")
 
@@ -857,7 +858,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # dernierRapportDirect of rapport : ok
+    # 16 - dernierRapportDirect of rapport : ok
     def test_scoring_the_runners_by_dernier_rapport_direct_of_rapport_with_dark_web(self):
         print("test_scoring_the_runners_by_dernier_rapport_direct_of_rapport_with_dark_web")
 
@@ -913,7 +914,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # dernierRapportDirect of nombreIndicateurTendance : ok
+    # 17 - dernierRapportDirect of nombreIndicateurTendance : ok
     def test_scoring_the_runners_by_dernier_rapport_direct_of_nombre_indicateur_tendance_with_dark_web(self):
         print("test_scoring_the_runners_by_dernier_rapport_direct_of_nombre_indicateur_tendance_with_dark_web")
 
@@ -969,7 +970,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # dernierRapportDirect of permutation : ok
+    # 18 - dernierRapportDirect of permutation : ok
     def test_scoring_the_runners_by_dernier_rapport_direct_of_permutation_with_dark_web(self):
         print("test_scoring_the_runners_by_dernier_rapport_direct_of_permutation_with_dark_web")
 
@@ -1025,7 +1026,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # dernierRapportDirect of numPmu1 : ok
+    # 19 - dernierRapportDirect of numPmu1 : ok
     def test_scoring_the_runners_by_dernier_rapport_direct_of_num_pmu_1_with_dark_web(self):
         print("test_scoring_the_runners_by_dernier_rapport_direct_of_num_pmu_1_with_dark_web")
 
@@ -1081,7 +1082,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # dernierRapportReference of rapport : ok
+    # 20 - dernierRapportReference of rapport : ok
     def test_scoring_the_runners_by_dernier_rapport_reference_of_rapport_with_dark_web(self):
         print("test_scoring_the_runners_by_dernier_rapport_reference_of_rapport_with_dark_web")
 
@@ -1137,7 +1138,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # dernierRapportReference of nombreIndicateurTendance : ok
+    # 21 - dernierRapportReference of nombreIndicateurTendance : ok
     def test_scoring_the_runners_by_dernier_rapport_reference_of_nombre_indicateur_tendance_with_dark_web(self):
         print("test_scoring_the_runners_by_dernier_rapport_reference_of_nombre_indicateur_tendance_with_dark_web")
 
@@ -1193,7 +1194,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # dernierRapportReference of permutation : ok
+    # 22 - dernierRapportReference of permutation : ok
     def test_scoring_the_runners_by_dernier_rapport_reference_of_permutation_with_dark_web(self):
         print("test_scoring_the_runners_by_dernier_rapport_reference_of_nombre_indicateur_tendance_with_dark_web")
 
@@ -1249,7 +1250,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # dernierRapportReference of numPmu1 : ok
+    # 23 - dernierRapportReference of numPmu1 : ok
     def test_scoring_the_runners_by_dernier_rapport_reference_of_num_pmu_1_with_dark_web(self):
         print("test_scoring_the_runners_by_dernier_rapport_reference_of_num_pmu_1_with_dark_web")
 
@@ -1305,7 +1306,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # musique : ok
+    # 24 - musique : ok
     def test_scoring_the_runners_by_musique_with_dark_web(self):
         print("test_scoring_the_runners_by_musique_with_dark_web")
 
@@ -1388,7 +1389,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # musique from unibet : ok
+    # 25 - musique from unibet : ok
     def test_scoring_the_runners_by_musique_from_unibet(self):
         print("test_scoring_the_runners_by_musique_from_unibet")
 
@@ -1396,12 +1397,19 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         url = global_url
 
-        warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
+        warnings.filterwarnings(
+            action="ignore",
+            message="unclosed",
+            category=ResourceWarning
+        )
 
         # with Firefox
         options = Options()
         options.headless = True
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe', options=options)
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -1416,25 +1424,27 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
-                "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                      "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
-                    "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique")\
-                    .text \
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[8]"
+                ).text\
                     .replace('a', '') \
                     .replace('m', '') \
                     .replace('D', '') \
@@ -1447,6 +1457,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
                     .replace('c', '') \
                     .replace('T', '') \
                     .replace(' ', '') \
+                    .replace('(22)', '') \
                     .replace('(21)', '') \
                     .replace('(20)', '') \
                     .replace('(19)', '') \
@@ -1485,9 +1496,9 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # cote direct from unibet : ok
+    # 26 - cote direct from unibet : ok
     def test_scoring_the_runners_by_cote_direct_from_unibet(self):
-        print("test_scoring_the_runners_by_cote_direct_from_unibet_with_dark_web")
+        print("test_scoring_the_runners_by_cote_direct_from_unibet")
 
         reverse = False
 
@@ -1498,7 +1509,10 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         # with Firefox
         options = Options()
         options.headless = True
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe', options=options)
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -1513,23 +1527,27 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath("//p[@class='race-meta ui-mainview-block']").text
-                .lower().split(" - ")[3].replace(' partants', '')
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
+            ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
-                "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                      "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                cote_direct = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
-                    "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("price-live").text
+                cote_direct = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[9]/span[2]"
+                ).text
 
                 print("num_pmu : " + str(num_pmu) + " , cote_direct : " + str(cote_direct))
 
@@ -1559,7 +1577,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # cotes matin from unibet : ok
+    # 27 - cotes matin from unibet : ok
     def test_scoring_the_runners_by_cote_matin_from_unibet(self):
         print('test_scoring_the_runners_by_cote_matin_from_unibet')
 
@@ -1572,7 +1590,10 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         # with Firefox
         options = Options()
         options.headless = True
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe', options=options)
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -1587,27 +1608,31 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath("//p[@class='race-meta ui-mainview-block']").text.lower().split(" - ")[
-                3].replace(' partants', '')
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
+            ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
-                "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                      "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                cote_matin = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
-                    "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("price-morning").text
+                cote_matin = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[9]/span[1]"
+                ).text
 
                 print("num_pmu : " + str(num_pmu) + " , cote_matin : " + str(cote_matin))
 
-                if cote_matin != "NP":
+                if cote_matin != "NP" and cote_matin != "":
                     runners[num_pmu] = float(cote_matin)
                 else:
                     runners[num_pmu] = 200
@@ -1633,7 +1658,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # poids from unibet : ok
+    # 28 - poids from unibet : ok
     def test_scoring_the_runners_by_poids_from_unibet(self):
         print("test_scoring_the_runners_by_poids_from_unibet")
 
@@ -1646,7 +1671,10 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         # with Firefox
         options = Options()
         options.headless = True
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe', options=options)
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -1661,24 +1689,27 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
-                "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                      "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                poids = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                poids = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("weight").text.lower().replace(' ', '').replace('kg', '')
+                ).find_element(by=By.CLASS_NAME, value="weight").text.lower().replace(' ', '').replace('kg', '')
 
                 runners[num_pmu] = poids
             except Exception as e:
@@ -1704,7 +1735,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # number of disqualified from musique from unibet : ok
+    # 29 - number of disqualified from musique from unibet : ok
     def test_scoring_the_runners_by_number_of_disqualified_from_unibet(self):
         print("test_scoring_the_runners_by_number_of_disqualified_from_unibet")
 
@@ -1717,7 +1748,10 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         # with Firefox
         options = Options()
         options.headless = True
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe', options=options)
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -1732,24 +1766,27 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
-                "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                      "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
-                    "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[8]"
+                ).text
 
                 number_of_disqualified = musique.count("D")
 
@@ -1776,7 +1813,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # musique from unibet x cote direct : ok
+    # 30 - musique from unibet x cote direct : ok
     def test_scoring_the_runners_by_musique_from_unibet_x_cote_direct(self):
         print("test_scoring_the_runners_by_musique_from_unibet_x_cote_direct")
 
@@ -1789,7 +1826,10 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         # with Firefox
         options = Options()
         options.headless = True
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe', options=options)
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -1804,25 +1844,27 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
-                "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                      "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
-                    "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique")\
-                    .text \
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[8]"
+                ).text\
                     .replace('a', '') \
                     .replace('m', '') \
                     .replace('D', '') \
@@ -1835,6 +1877,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
                     .replace('c', '') \
                     .replace('T', '') \
                     .replace(' ', '') \
+                    .replace('(22)', '') \
                     .replace('(21)', '') \
                     .replace('(20)', '') \
                     .replace('(19)', '') \
@@ -1850,10 +1893,11 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
                 average_musique = average / len(musique)
 
-                cote_direct = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
-                    "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("price-live").text
+                cote_direct = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[9]/span[2]"
+                ).text
 
                 print("num_pmu : " + str(num_pmu) + " , cote_direct : " + str(cote_direct))
 
@@ -1883,7 +1927,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # musique from unibet x cote matin : ok
+    # 31 - musique from unibet x cote matin : ok
     def test_scoring_the_runners_by_musique_from_unibet_x_cote_matin(self):
         print("test_scoring_the_runners_by_musique_from_unibet_x_cote_matin")
 
@@ -1896,7 +1940,10 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         # with Firefox
         options = Options()
         options.headless = True
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe', options=options)
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -1911,25 +1958,27 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
-                    "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique")\
-                    .text \
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[8]"
+                ).text\
                     .replace('a', '') \
                     .replace('m', '') \
                     .replace('D', '') \
@@ -1942,6 +1991,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
                     .replace('c', '') \
                     .replace('T', '') \
                     .replace(' ', '') \
+                    .replace('(22)', '') \
                     .replace('(21)', '') \
                     .replace('(20)', '') \
                     .replace('(19)', '') \
@@ -1957,14 +2007,15 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
                 average_musique = average / len(musique)
 
-                cote_matin = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
-                    "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("price-morning").text
+                cote_matin = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[9]/span[1]"
+                ).text
 
                 print("num_pmu : " + str(num_pmu) + " , cote_matin : " + str(cote_matin))
 
-                if cote_matin != "NP":
+                if cote_matin != "NP" and cote_matin != "":
                     runners[num_pmu] = float(cote_matin) * average_musique
                 else:
                     runners[num_pmu] = average_musique
@@ -1990,7 +2041,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # musique from unibet x nombre_courses : ok
+    # 32 - musique from unibet x nombre_courses :
     def test_scoring_the_runners_by_musique_from_unibet_x_nombre_courses(self):
         print("test_scoring_the_runners_by_musique_from_unibet_x_nombre_courses")
 
@@ -2003,7 +2054,10 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         # with Firefox
         options = Options()
         options.headless = True
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe', options=options)
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -2019,8 +2073,9 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
             time.sleep(20)
 
             number_of_racers = int(
-                browser.find_element_by_xpath(
-                    "//p[@class='race-meta ui-mainview-block']"
+                browser.find_element(
+                    by=By.XPATH,
+                    value="//p[@class='race-meta ui-mainview-block']"
                 ).text.lower().split(" - ")[3].replace(' partants', '')
             )
 
@@ -2056,26 +2111,30 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
             chevaux = []
 
-            for participant in response.json()['participants']:
-                if participant_key in participant:
-                    criteria = int(participant[participant_key])
+            try:
+                for participant in response.json()['participants']:
+                    if participant_key in participant:
+                        criteria = int(participant[participant_key])
 
-                    chevaux.append(criteria)
+                        chevaux.append(criteria)
+            except Exception as e:
+                print('error participants : ' + str(e))
 
             musiques = []
 
             for i in range(1, number_of_racers + 1):
-                num_pmu = browser.find_element_by_xpath(
-                    "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                num_pmu = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                     "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
                 ).text
 
                 try:
-                    musique = browser.find_element_by_xpath(
-                        "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
-                        "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                    ).find_element_by_class_name("musique") \
-                        .text \
+                    musique = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
+                              "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[8]"
+                    ).text \
                         .replace('a', '') \
                         .replace('m', '') \
                         .replace('D', '') \
@@ -2088,6 +2147,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
                         .replace('c', '') \
                         .replace('T', '') \
                         .replace(' ', '') \
+                        .replace('(22)', '') \
                         .replace('(21)', '') \
                         .replace('(20)', '') \
                         .replace('(19)', '') \
@@ -2111,9 +2171,10 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
             for i in range(1, number_of_racers + 1):
                 try:
-                    num_pmu = browser.find_element_by_xpath(
-                        "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
-                        "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
+                    num_pmu = browser.find_element(
+                        by=By.XPATH,
+                        value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                              "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
                     ).text
 
                     runners[num_pmu] = chevaux[i - 1] * musiques[i - 1]
@@ -2231,7 +2292,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -2246,24 +2312,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique")\
+                ).find_element(by=By.CLASS_NAME, value="musique")\
                     .text \
                     .replace('a', '') \
                     .replace('m', '') \
@@ -2321,7 +2390,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -2336,24 +2410,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(by=By.CLASS_NAME, value="musique").text
 
                 number_of_disqualified = musique.count(this_character)
 
@@ -2454,7 +2531,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -2469,24 +2551,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(by=By.CLASS_NAME, value="musique").text
 
                 number_of_disqualified = musique.count(this_character)
 
@@ -2587,7 +2672,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -2602,24 +2692,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(by=By.CLASS_NAME, value="musique").text
 
                 number_of_disqualified = musique.count(this_character)
 
@@ -2720,7 +2813,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -2735,24 +2833,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(by=By.CLASS_NAME, value="musique").text
 
                 number_of_disqualified = musique.count(this_character)
 
@@ -2853,7 +2954,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -2868,24 +2974,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(by=By.CLASS_NAME, value="musique").text
 
                 number_of_disqualified = musique.count(this_character)
 
@@ -2986,7 +3095,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -3001,24 +3115,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(by=By.CLASS_NAME, value="musique").text
 
                 number_of_disqualified = musique.count(this_character)
 
@@ -3119,7 +3236,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -3134,24 +3256,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(by=By.CLASS_NAME, value="musique").text
 
                 number_of_disqualified = musique.count(this_character)
 
@@ -3252,7 +3377,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -3267,24 +3397,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(by=By.CLASS_NAME, value="musique").text
 
                 number_of_disqualified = musique.count(this_character)
 
@@ -3385,7 +3518,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -3400,24 +3538,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(by=By.CLASS_NAME, value="musique").text
 
                 number_of_disqualified = musique.count(this_character)
 
@@ -3516,7 +3657,12 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -3531,24 +3677,27 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(by=By.CLASS_NAME, value="musique").text
 
                 number_of_disqualified = musique.count("p")
 

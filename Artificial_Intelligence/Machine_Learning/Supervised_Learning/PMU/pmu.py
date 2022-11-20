@@ -24,7 +24,10 @@ class PMU:
         # with Firefox
         options = Options()
         options.headless = True
-        browser = webdriver.Firefox(executable_path='geckodriver.exe', options=options)
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
 
         time.sleep(10)
 
@@ -39,24 +42,30 @@ class PMU:
         time.sleep(20)
 
         number_of_racers = int(
-            browser.find_element_by_xpath(
-                "//p[@class='race-meta ui-mainview-block']"
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
             ).text.lower().split(" - ")[3].replace(' partants', '')
         )
 
         runners = {}
 
         for i in range(1, number_of_racers + 1):
-            num_pmu = browser.find_element_by_xpath(
-                "/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+            num_pmu = browser.find_element(
+                by=By.XPATH,
+                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                 "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
-                musique = browser.find_element_by_xpath(
-                    "/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
+                musique = browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]"
                     "/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div"
-                ).find_element_by_class_name("musique").text
+                ).find_element(
+                    by=By.CLASS_NAME,
+                    value="musique"
+                ).text
 
                 number_of_disqualified = musique.count("D")
 
