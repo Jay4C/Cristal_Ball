@@ -1,8 +1,8 @@
 import unittest
-from Machine_Learning.Supervised_Learning.Forex import tradingeconomics
-from Machine_Learning.Supervised_Learning.Forex import worldometers
+import tradingeconomics
+import worldometers
 import statistics
-from Machine_Learning.Supervised_Learning.Forex import forex
+import forex
 
 
 class UnitTestsSupervisedLearningForex(unittest.TestCase):

@@ -10,6 +10,7 @@ import pymysql.cursors
 
 
 class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
+    # ok
     def test_download_one_zip_file_for_one_city_about_parcelles_from_cadastre_data_gouv_fr(self):
         print("test_download_one_zip_file_for_one_city_about_parcelles_from_cadastre_data_gouv_fr")
 
@@ -28,6 +29,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
         gz_file.write(resp.content)
         gz_file.close()
 
+    # ok
     def test_extract_one_zip_file_for_one_city_about_parcelles_from_cadastre_data_gouv_fr(self):
         print("test_extract_one_zip_file_for_one_city_about_parcelles_from_cadastre_data_gouv_fr")
 
@@ -39,6 +41,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
         output.write(s)
         output.close()
 
+    # ok
     def test_download_and_extract_one_gz_file_for_one_city_about_parcelles_from_cadastre_data_gouv_fr(self):
         print("test_download_and_extract_one_gz_file_for_one_city_about_parcelles_from_cadastre_data_gouv_fr")
 
@@ -69,11 +72,13 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
         output_file.write(s)
         output_file.close()
 
+    # ok
     def test_delete_one_gz_file_for_one_city_about_parcelles_from_cadastre_gouv_fr(self):
         print("test_delete_one_gz_file_for_one_city_about_parcelles_from_cadastre_gouv_fr")
 
         os.remove("cadastre-01001-parcelles.json.gz")
 
+    # ok
     def test_download_and_extract_one_gz_file_for_one_city_about_batiments_from_cadastre_data_gouv_fr(self):
         print("test_download_and_extract_one_gz_file_for_one_city_about_batiments_from_cadastre_data_gouv_fr")
 
@@ -85,7 +90,12 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
         url_zip_file_for_batiments = "https://cadastre.data.gouv.fr/data/etalab-cadastre/latest/geojson/communes/" \
                                      + code_insee_departement + "/" \
-                                     + code_insee_commune + "/cadastre-" + code_insee_commune + "-" + about + ".json.gz"
+                                     + code_insee_commune \
+                                     + "/cadastre-" \
+                                     + code_insee_commune \
+                                     + "-" \
+                                     + about \
+                                     + ".json.gz"
 
         resp = requests.get(url_zip_file_for_batiments, stream=True)
 
@@ -104,6 +114,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
         output_file.write(s)
         output_file.close()
 
+    # ok
     def test_download_and_extract_one_gz_file_for_one_city_about_feuilles_from_cadastre_data_gouv_fr(self):
         print("test_download_and_extract_one_gz_file_for_one_city_about_feuilles_from_cadastre_data_gouv_fr")
 
@@ -115,7 +126,12 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
         url_zip_file_for_batiments = "https://cadastre.data.gouv.fr/data/etalab-cadastre/2020-07-01/geojson/communes/" \
                                      + code_insee_departement + "/" \
-                                     + code_insee_commune + "/cadastre-" + code_insee_commune + "-" + about + ".json.gz"
+                                     + code_insee_commune \
+                                     + "/cadastre-" \
+                                     + code_insee_commune \
+                                     + "-" \
+                                     + about \
+                                     + ".json.gz"
 
         resp = requests.get(url_zip_file_for_batiments, stream=True)
 
@@ -134,11 +150,13 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
         output_file.write(s)
         output_file.close()
 
+    # ok
     def test_delete_one_gz_file_for_one_city_about_batiments_from_cadastre_gouv_fr(self):
         print("test_delete_one_gz_file_for_one_city_about_parcelles_from_cadastre_gouv_fr")
 
         os.remove("cadastre-01001-batiments.json.gz")
 
+    # ok
     def test_download_and_extract_and_delete_one_gz_file_for_one_city_about_batiments_and_parcelles_into_one_folder_from_cadastre_data_gouv_fr(self):
         print("test_download_and_extract_and_delete_one_gz_file_for_one_city_about_batiments_and_parcelles_into_one_folder_from_cadastre_data_gouv_fr")
 
@@ -152,16 +170,22 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
         ]
 
         # Create target Directory if don't exist
-        if not os.path.exists("C:\\Users\\DELL\\Downloads\\Cadastre_Communes\\" + str(code_insee_commune)):
-            os.mkdir("C:\\Users\\DELL\\Downloads\\Cadastre_Communes\\" + str(code_insee_commune))
-            print("Directory ", "C:\\Users\\DELL\\Downloads\\Cadastre_Communes\\" + str(code_insee_commune), " Created ")
+        if not os.path.exists("C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes\\" + str(code_insee_commune)):
+            os.mkdir("C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes\\" + str(code_insee_commune))
+            print("Directory ", "C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes\\" + str(code_insee_commune), " Created ")
         else:
-            print("Directory ", "C:\\Users\\DELL\\Downloads\\Cadastre_Communes\\" + str(code_insee_commune), " already exists")
+            print("Directory ", "C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes\\" + str(code_insee_commune), " already exists")
 
         for about in abouts:
             url_zip_file = "https://cadastre.data.gouv.fr/data/etalab-cadastre/2020-07-01/geojson/communes/" \
-                                         + code_insee_departement + "/" \
-                                         + code_insee_commune + "/cadastre-" + code_insee_commune + "-" + about + ".json.gz"
+                           + code_insee_departement \
+                           + "/" \
+                           + code_insee_commune \
+                           + "/cadastre-" \
+                           + code_insee_commune \
+                           + "-"\
+                           + about \
+                           + ".json.gz"
 
             resp = requests.get(url_zip_file, stream=True)
 
@@ -175,19 +199,21 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
             input_file = gzip.GzipFile(gz_filename, 'rb')
             s = input_file.read()
             input_file.close()
-            output_file = open("C:\\Users\\DELL\\Downloads\\Cadastre_Communes\\" + str(code_insee_commune) + "\\" + gz_filename[:-3], 'wb')
+            output_file = open("C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes\\" + str(code_insee_commune) + "\\" + gz_filename[:-3], 'wb')
             output_file.write(s)
             output_file.close()
 
             # delete gz file
             os.remove(gz_filename)
 
-    def test_download_and_extract_and_delete_one_gz_file_for_some_cities_about_batiments_and_parcelles_into_one_specific_folder_from_cadastre_data_gouv_fr(self):
+    # ok
+    def test_download_and_extract_and_delete_one_gz_file_for_all_cities_with_less_1000_people_about_batiments_and_parcelles_into_one_specific_folder_from_cadastre_data_gouv_fr(self):
         print("test_download_and_extract_and_delete_one_gz_file_for_all_cities_with_less_1000_people_about_batiments_and_parcelles_into_one_specific_folder_from_cadastre_data_gouv_fr")
 
         url = "https://geo.api.gouv.fr/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre"
 
         payload = {}
+
         headers = {}
 
         response = requests.request("GET", url, headers=headers, data=payload)
@@ -196,7 +222,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
         for commune in communes:
             try:
-                if commune['population'] < 100 and commune['code'] != '77304':
+                if commune['population'] < 1000 and commune['code'] != '77304':
                     print("ville : " + commune['nom']
                           + " _ code insee commune : " + commune['code']
                           + " _ population : " + str(commune['population']))
@@ -206,11 +232,11 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
                     code_insee_commune = commune['code']
 
                     # Create target Directory if don't exist
-                    if not os.path.exists("C:\\Users\\DELL\\Downloads\\Cadastre_Communes\\" + str(code_insee_commune)):
-                        os.mkdir("C:\\Users\\DELL\\Downloads\\Cadastre_Communes\\" + str(code_insee_commune))
-                        print("Directory ", "C:\\Users\\DELL\\Downloads\\Cadastre_Communes\\" + str(code_insee_commune), " Created ")
+                    if not os.path.exists("C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes\\" + str(code_insee_commune)):
+                        os.mkdir("C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes\\" + str(code_insee_commune))
+                        print("Directory ", "C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes\\" + str(code_insee_commune), " Created ")
                     else:
-                        print("Directory ", "C:\\Users\\DELL\\Downloads\\Cadastre_Communes\\" + str(code_insee_commune), " already exists")
+                        print("Directory ", "C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes\\" + str(code_insee_commune), " already exists")
 
                     abouts = [
                         "parcelles",
@@ -235,7 +261,8 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
                         input_file = gzip.GzipFile(gz_filename, 'rb')
                         s = input_file.read()
                         input_file.close()
-                        output_file = open("C:\\Users\\DELL\\Downloads\\Cadastre_Communes\\"
+                        output_file = open("C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence"
+                                           "\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes\\"
                                            + str(code_insee_commune) + "\\" + gz_filename[:-3], 'wb')
                         output_file.write(s)
                         output_file.close()
@@ -245,11 +272,12 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
             except Exception as e:
                 print("error : " + str(e))
 
+    # ok
     def test_write_url_path_for_some_city_about_batiments_and_parcelles_into_txt_file(self):
         print("test_write_url_path_for_some_city_about_batiments_and_parcelles_into_txt_file")
 
         # display all directory names for each city from Cadastre_France folder
-        directories = os.listdir("C:\\Users\\DELL\\Downloads\\Cadastre_Communes")
+        directories = os.listdir("C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes")
 
         f = open("urls_path.txt", "w")
 
@@ -262,11 +290,12 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
         f.close()
 
+    # ok
     def test_write_views_functions_for_some_city_about_batiments_and_parcelles_into_txt_file(self):
         print("test_write_views_functions_for_some_city_about_batiments_and_parcelles_into_txt_file")
 
         # display all directory names for each city from Cadastre_France folder
-        directories = os.listdir("C:\\Users\\DELL\\Downloads\\Cadastre_Communes")
+        directories = os.listdir("C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes")
 
         f = open("views_functions.txt", "w")
 
@@ -285,11 +314,13 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
         f.close()
 
+    # ok
     def test_write_getjson_html_for_some_city_about_batiments_and_parcelles_into_txt_file(self):
         print("test_write_getjson_html_for_some_city_about_batiments_and_parcelles_into_txt_file")
 
         # display all directory names for each city from Cadastre_France folder
-        directories = os.listdir("C:\\Users\\DELL\\Downloads\\Cadastre_Communes")
+        directories = os.listdir("C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence"
+                                 "\\Artificial_Creativity\\Cadastre_France\\Cadastre_Communes")
 
         f = open("javascript_get_json.txt", "w")
 
@@ -310,6 +341,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
         f.close()
 
+    # ok
     def test_show_all_cities_with_a_gas_distribution_network_in_france(self):
         print("test_show_all_cities_with_a_gas_network_in_france")
 
@@ -322,11 +354,13 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
             print(str(code_insee_commune))
         f.close()
 
+    # ok
     def test_show_all_cities_with_some_biogas_stations(self):
         print("test_show_all_cities_with_some_biogas_stations")
 
         array_code_insee_commune_biogas = []
-        f = open('les-sites-dinjection-de-biomethane-en-france.json', "r")
+        f = open('C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity'
+                 '\\les-sites-dinjection-de-biomethane-en-france.json', "r")
         data = json.loads(f.read())
         for feature in data['features']:
             code_insee_commune = feature['properties']['code_commune']
@@ -334,8 +368,9 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
             print(str(code_insee_commune))
         f.close()
 
-    def test_show_all_parcelles_with_at_least_1000_square_meters_for_some_departments(self):
-        print("test_show_all_parcelles_with_at_least_1000_square_meters")
+    # ok
+    def test_show_all_parcelles_with_at_least_10000_square_meters_for_some_departments(self):
+        print("test_show_all_parcelles_with_at_least_10000_square_meters_for_some_departments")
 
         url = "https://geo.api.gouv.fr/communes?fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre"
 
@@ -346,7 +381,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
         communes = response.json()
 
-        departements = ["77", "78", "91", "95"]
+        departements = ["75", "77", "78", "91", "92", "93", "94", "95"]
 
         about = "parcelles"
 
@@ -355,48 +390,59 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
             code_insee_commune = commune['code']
 
-            if code_insee_departement in departements:
-                url_zip_file_for_parcelles = "https://cadastre.data.gouv.fr/data/etalab-cadastre/2020-07-01/geojson/communes/" \
-                                             + code_insee_departement + "/" \
-                                             + code_insee_commune + "/cadastre-" + code_insee_commune + "-" + about + ".json.gz"
+            try:
+                if code_insee_departement in departements:
+                    url_zip_file_for_parcelles = "https://cadastre.data.gouv.fr/data/etalab-cadastre/2020-07-01/geojson/communes/" \
+                                                 + code_insee_departement \
+                                                 + "/" \
+                                                 + code_insee_commune \
+                                                 + "/cadastre-" \
+                                                 + code_insee_commune \
+                                                 + "-" \
+                                                 + about \
+                                                 + ".json.gz"
 
-                resp = requests.get(url_zip_file_for_parcelles, stream=True)
+                    resp = requests.get(url_zip_file_for_parcelles, stream=True)
 
-                # donwload gz file
-                gz_filename = "cadastre-" + code_insee_commune + "-" + about + ".json.gz"
-                gz_file = open(gz_filename, 'wb')
-                gz_file.write(resp.content)
-                gz_file.close()
+                    # donwload gz file
+                    gz_filename = "cadastre-" + code_insee_commune + "-" + about + ".json.gz"
+                    gz_file = open(gz_filename, 'wb')
+                    gz_file.write(resp.content)
+                    gz_file.close()
 
-                # extract json file
-                input_file = gzip.GzipFile(gz_filename, 'rb')
-                s = input_file.read()
-                input_file.close()
-                output_file = open(gz_filename[:-3], 'wb')
-                output_file.write(s)
-                output_file.close()
+                    # extract json file
+                    input_file = gzip.GzipFile(gz_filename, 'rb')
+                    s = input_file.read()
+                    input_file.close()
+                    output_file = open(gz_filename[:-3], 'wb')
+                    output_file.write(s)
+                    output_file.close()
 
-                output_file = open(gz_filename[:-3])
-                data = json.loads(output_file.read())
+                    output_file = open(gz_filename[:-3])
+                    data = json.loads(output_file.read())
 
-                for feature in data['features']:
-                    properties = feature['properties']
+                    for feature in data['features']:
+                        properties = feature['properties']
 
-                    if properties['contenance'] > 1000:
-                        print(properties)
+                        if properties['contenance'] > 10000:
+                            print(properties)
 
-                output_file.close()
+                    output_file.close()
 
-                # delete gz file and json file
-                os.remove(gz_filename[:-3])
-                os.remove(gz_filename)
+                    # delete gz file and json file
+                    os.remove(gz_filename[:-3])
+                    os.remove(gz_filename)
+            except Exception as e:
+                print('error : ' + str(e))
 
+    # ok
     def test_show_all_cities_with_train_station_for_travellers(self):
         print('test_show_all_cities_with_train_station_for_travellers')
 
         # array of the cities have at least one train station for travellers
         array_code_insee_commune_with_train_station_for_travellers = []
-        f = open('gares_ferroviaires_de_tous_types_exploitees_ou_non.json', "r")
+        f = open('C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Artificial_Intelligence\\Artificial_Creativity'
+                 '\\gares_ferroviaires_de_tous_types_exploitees_ou_non.json', "r")
         data = json.loads(f.read())
         for feature in data:
             code_postal = feature['fields']['cp']
@@ -418,6 +464,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
                     print(commune)
         f.close()
 
+    # ok
     def test_show_all_suitable_parcelles_for_injecting_gas_in_france_into_excel_without_archive_url(self):
         print("test_show_all_suitable_parcelles_for_injecting_gas_in_france_into_excel")
 
@@ -610,6 +657,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
         except Exception as e:
             print('error main : ' + str(e))
 
+     #
     def test_show_all_suitable_parcelles_for_injecting_gas_in_france_into_excel_with_archive_url(self):
         print("test_show_all_suitable_parcelles_for_injecting_gas_in_france_into_excel")
 
@@ -849,6 +897,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
         except Exception as e:
             print('error main : ' + str(e))
 
+    #
     def test_show_all_suitable_biogas_sites_in_excel(self):
         print('test_show_all_suitable_biogas_sites_in_excel')
 
@@ -966,6 +1015,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
         workbook.close()
 
+    #
     def test_show_all_biogas_sites_in_excel(self):
         print('test_show_all_biogas_sites_in_excel')
 
@@ -1059,6 +1109,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
         workbook.close()
 
+    #
     def test_show_all_suitable_gas_cities_with_contacts_in_excel(self):
         print('test_show_all_suitable_gas_cities_with_contacts_in_excel')
 
@@ -1327,6 +1378,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
         except Exception as e:
             print('error main : ' + str(e))
 
+    #
     def test_show_all_cities_with_a_gas_transport_network_in_france(self):
         print("test_show_all_cities_with_a_gas_transport_network_in_france")
 
@@ -1364,6 +1416,7 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
 
         f.close()
 
+    #
     def test_show_all_suitable_parcelles_for_injecting_gas_in_france_in_gas_transport_network_into_excel_without_archive_url(self):
         print("test_show_all_cities_with_a_gas_transport_network_in_france")
 
@@ -4133,6 +4186,12 @@ class UnitTestsDataCreationCadastreFrance(unittest.TestCase):
                     print("error commune : " + str(e))
         except Exception as e:
             print('error main : ' + str(e))
+
+
+class UnitTestsDataCreationGeothermalAccenta(unittest.TestCase):
+    #
+    def test_extract_suitable_lands_for_geothermal_accenta(self):
+        print('test_extract_suitable_lands_for_geothermal_accenta')
 
 
 if __name__ == '__main__':
