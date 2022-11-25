@@ -79,16 +79,16 @@ class UnitTestsRecherches(unittest.TestCase):
                         <tbody>
                             <tr>
                                 <td>
-                                    Monsieur 
+                                     
                                 </td>
                                 <td>
-                                    31 Avenue de Ségur 75007 Paris
+                                    
                                 </td>
                                 <td>
-                                    07.49.16.33.29
+                                    
                                 </td>
                                 <td>
-                                    jason.aloyau@holomorphe.com
+                                    
                                 </td>
                             </tr>
                         </tbody>
@@ -571,16 +571,16 @@ class UnitTestsRecherches(unittest.TestCase):
                         <tbody>
                             <tr>
                                 <td>
-                                    Monsieur 
+                                     
                                 </td>
                                 <td>
-                                    31 Avenue de Ségur 75007 Paris
+                                    
                                 </td>
                                 <td>
-                                    07.45.75.27.00
+                                    
                                 </td>
                                 <td>
-                                    jason.aloyau@outlook.fr
+                                    
                                 </td>
                             </tr>
                         </tbody>
