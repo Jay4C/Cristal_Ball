@@ -11,7 +11,7 @@ username = ""
 password = ""
 
 
-class UnitTestsDataMiningDiverseTecice(unittest.TestCase):
+class UnitTestsDataMiningDiverseT(unittest.TestCase):
     # ok
     def test_close_all_processes(self):
         print('test_close_all_processes')
