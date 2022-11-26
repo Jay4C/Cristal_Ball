@@ -36,13 +36,13 @@ e2 = de_tube
 e3 = e1
 e4 = e2 + 2*5
 e5 = de_tube + 2*5 + 2*2 + 2*2 + 2*(d2_rondelle_10m/2)
-e7 = 16.1
-e8 = e7 + 2*3
+e7 = 13
+e8 = e7 + 2*2
 e6 = e8 + d2_rondelle_10m*2
-h1 = 25
+h1 = 30
 marge_etancheite = 5
 h2 = h1 - marge_etancheite
-h3 = 25
+h3 = h1
 
 # Cylinder_1
 cylinder_1 = Part.makeCylinder(e1/2, h1)

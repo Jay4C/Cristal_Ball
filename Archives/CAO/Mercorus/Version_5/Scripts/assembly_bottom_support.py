@@ -42,11 +42,15 @@ FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.00,0.90,0.00)
 FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,1,0),180))
 
 # part_tube_plexiglass
+color = (0.60,0.80,0.90)
+x = 0
+y = 0
+z = -25
 title = "part_tube_plexiglass"
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_5/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
-FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.60,0.80,0.90)
-FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,-20),App.Rotation(App.Vector(0,1,0),0))
+FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = color
+FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,1,0),0))
 
 # part_ecrou_10m
 color = (0.90,0.00,0.90)
@@ -130,7 +134,7 @@ for i in range(i1, i1 + i3):
     alpha=((i-i1)*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = - 25 - h_ecrou_10m - 2
+    z = - 25 - h_ecrou_10m - 2 - 5
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -165,7 +169,7 @@ for i in range(0, i4):
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
     k = 6.4
-    z = - 25 + 5 + k + 2
+    z = - 25 + 5 + k + 2 - 5
     rotation = App.Rotation(App.Vector(0,1,0),180)
 
     if i == 0:
@@ -199,7 +203,7 @@ for i in range(i1 + i3, i1 + i3 + i5):
     alpha=((i - (i1 + i3))*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 25
+    z = 25 - 5
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -218,13 +222,6 @@ for i in range(i1 + i3, i1 + i3 + i5):
         FreeCADGui.getDocument(assembly).getObject(title + str(i)).ShapeColor = color
         FreeCAD.getDocument(assembly).getObject(title + str(i)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
 
-# part_mamelon_a_visser_12_17_m
-title = "part_mamelon_a_visser_12_17_m"
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_5/Stl/" + title + ".stl"
-Mesh.insert(stl_file,assembly)
-FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.188,0.835,0.784)
-FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,- 25*2 - 11),App.Rotation(App.Vector(0,1,0),0))
-
 # part_rondelle_10m
 color = (0.10,0.00,0.90)
 i6 = 6
@@ -240,7 +237,7 @@ for i in range(0, i6):
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = - 25
+    z = - 25 - 5
     rotation = App.Rotation(App.Vector(0,1,0),180)
 
     if i == 0:
@@ -275,7 +272,7 @@ for i in range(i6, i6 + i7):
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = - 25 + 5 + 2
+    z = - 25 + 5 + 2 - 5
     rotation = App.Rotation(App.Vector(0,1,0),180)
 
     if i == 0:
@@ -368,7 +365,7 @@ __objs__=[]
 title = "part_bottom_support"
 __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
 
-title = "part_tube_inox"
+title = "part_tube_plexiglass"
 __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
 
 title = "part_ecrou_10m"

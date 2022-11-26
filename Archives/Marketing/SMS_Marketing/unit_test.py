@@ -474,7 +474,7 @@ class UnitTestSmsMarketing(unittest.TestCase):
         time.sleep(5)
 
         # Type a phone umber
-        pywinauto.keyboard.send_keys("003374554")
+        pywinauto.keyboard.send_keys("")
 
         time.sleep(5)
 

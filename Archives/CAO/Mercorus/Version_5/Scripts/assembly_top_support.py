@@ -30,26 +30,16 @@ EPS_C = EPS * -0.5
 
 assembly = "assembly_top_support"
 
-# part_top_support
-title = "part_top_support"
+# part_bottom_support
+color = (0.00,0.90,0.00)
+x = 0
+y = 0
+z = 0
+title = "part_bottom_support"
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_5/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
-FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.00,0.90,0.00)
-FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,1,0),0))
-
-# part_mamelon_a_visser_12_17_m
-title = "part_mamelon_a_visser_12_17_m"
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_5/Stl/" + title + ".stl"
-Mesh.insert(stl_file,assembly)
-FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.188,0.835,0.784)
-FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,11),App.Rotation(App.Vector(0,1,0),0))
-
-# part_manchon_a_visser_12_17_f
-title = "part_manchon_a_visser_12_17_f"
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_5/Stl/" + title + ".stl"
-Mesh.insert(stl_file,assembly)
-FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.20,0.30,0.40)
-FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,1,0),0))
+FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = color
+FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,1,0),0))
 
 # part_ecrou_10m
 color = (0.90,0.00,0.90)
@@ -99,7 +89,7 @@ for i in range(i1, i1 + i2):
     alpha=((i-i1)*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 25 + 2
+    z = 25 + 2 + 5
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -130,10 +120,10 @@ for i in range(i1 + i2, i1 + i2 + i3):
     e8 = e7 + 2*3
     e6 = e8 + d2_rondelle_10m*2
     radius = e6/2
-    alpha=((i-i1)*degre*math.pi)/180
+    alpha=((i-(i1 + i2))*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 25 - 5 - 10*0.85 - 2
+    z = 25 - 5 - 10*0.85 - 2 + 5
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -167,7 +157,7 @@ for i in range(0, i4):
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = -20
+    z = -50
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -219,18 +209,80 @@ for i in range(0, i5):
         FreeCADGui.getDocument(assembly).getObject(title + str(i)).ShapeColor = color
         FreeCAD.getDocument(assembly).getObject(title + str(i)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
 
+# part_rondelle_10m
+color = (0.10,0.50,0.00)
+i6 = 6
+title = 'part_rondelle_10m'
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_5/Stl/" + title + ".stl"
+for i in range(i5, i5 + i6):
+    degre = 60
+    d2_rondelle_10m = 20
+    e7 = 16.1
+    e8 = e7 + 2*3
+    e6 = e8 + d2_rondelle_10m*2
+    radius = e6/2
+    alpha=((i-i5)*degre*math.pi)/180
+    x = radius*math.cos(alpha)
+    y = radius*math.sin(alpha)
+    z = 25 + 5
+
+    if i == 0:
+        Mesh.insert(stl_file,assembly)
+        FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = color
+        FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
+    elif i >= 1 and i < 10:
+        Mesh.insert(stl_file,assembly)
+        FreeCADGui.getDocument(assembly).getObject(title + "00" + str(i)).ShapeColor = color
+        FreeCAD.getDocument(assembly).getObject(title + "00" + str(i)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
+    elif i >= 10 and i < 100:
+        Mesh.insert(stl_file,assembly)
+        FreeCADGui.getDocument(assembly).getObject(title + "0" + str(i)).ShapeColor = color
+        FreeCAD.getDocument(assembly).getObject(title + "0" + str(i)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
+    elif i >= 100 and i < 1000:
+        Mesh.insert(stl_file,assembly)
+        FreeCADGui.getDocument(assembly).getObject(title + str(i)).ShapeColor = color
+        FreeCAD.getDocument(assembly).getObject(title + str(i)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
+
+# part_rondelle_10m
+color = (0.10,0.50,0.00)
+i7 = 6
+title = 'part_rondelle_10m'
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_5/Stl/" + title + ".stl"
+for i in range(i5 + i6, (i5 + i6) + i7):
+    degre = 60
+    d2_rondelle_10m = 20
+    e7 = 16.1
+    e8 = e7 + 2*3
+    e6 = e8 + d2_rondelle_10m*2
+    radius = e6/2
+    alpha=((i-i1)*degre*math.pi)/180
+    x = radius*math.cos(alpha)
+    y = radius*math.sin(alpha)
+    z = 25 - 5 - 2 + 5
+
+    if i == 0:
+        Mesh.insert(stl_file,assembly)
+        FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = color
+        FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
+    elif i >= 1 and i < 10:
+        Mesh.insert(stl_file,assembly)
+        FreeCADGui.getDocument(assembly).getObject(title + "00" + str(i)).ShapeColor = color
+        FreeCAD.getDocument(assembly).getObject(title + "00" + str(i)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
+    elif i >= 10 and i < 100:
+        Mesh.insert(stl_file,assembly)
+        FreeCADGui.getDocument(assembly).getObject(title + "0" + str(i)).ShapeColor = color
+        FreeCAD.getDocument(assembly).getObject(title + "0" + str(i)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
+    elif i >= 100 and i < 1000:
+        Mesh.insert(stl_file,assembly)
+        FreeCADGui.getDocument(assembly).getObject(title + str(i)).ShapeColor = color
+        FreeCAD.getDocument(assembly).getObject(title + str(i)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
+
 setview()
 
 # Export
 __objs__ = []
 
-title = "part_top_support"
-__objs__.append(FreeCAD.getDocument(assembly).getObject(title))
-
-title = "part_mamelon_a_visser_12_17_m"
-__objs__.append(FreeCAD.getDocument(assembly).getObject(title))
-
-title = "part_manchon_a_visser_12_17_f"
+title = "part_bottom_support"
 __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
 
 title = "part_ecrou_10m"
@@ -279,6 +331,28 @@ for i in range(0, i4):
 
 title = "part_rondelle_10m"
 for i in range(0, i5):
+    if i == 0:
+        __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
+    elif i >= 1 and i < 10:
+        __objs__.append(FreeCAD.getDocument(assembly).getObject(title + "00" + str(i)))
+    elif i >= 10 and i < 100:
+        __objs__.append(FreeCAD.getDocument(assembly).getObject(title + "0" + str(i)))
+    elif i >= 100 and i < 1000:
+        __objs__.append(FreeCAD.getDocument(assembly).getObject(title + str(i)))
+
+title = "part_rondelle_10m"
+for i in range(i5, i5 + i6):
+    if i == 0:
+        __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
+    elif i >= 1 and i < 10:
+        __objs__.append(FreeCAD.getDocument(assembly).getObject(title + "00" + str(i)))
+    elif i >= 10 and i < 100:
+        __objs__.append(FreeCAD.getDocument(assembly).getObject(title + "0" + str(i)))
+    elif i >= 100 and i < 1000:
+        __objs__.append(FreeCAD.getDocument(assembly).getObject(title + str(i)))
+
+title = "part_rondelle_10m"
+for i in range((i5 + i6), (i5 + i6) + i7):
     if i == 0:
         __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
     elif i >= 1 and i < 10:
