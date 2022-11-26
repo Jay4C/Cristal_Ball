@@ -461,24 +461,24 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    #
-    # https://www.visseriefixations.fr/vis-a-tete-hexagonale/vis-a-tete-hexagonale-standard/acier-8-8-noir/th-acier-8-8-noir-filetage-total-din-933/th-m10x30-acier-8-8-noir-ef-din-933.html
-    def test_part_vis_metal_m10_30l(self):
-        print("test_part_vis_metal_m10_30l")
+    # ok
+    # https://www.visseriefixations.fr/vis-a-tete-hexagonale/vis-a-tete-hexagonale-standard/acier-8-8-noir/th-acier-8-8-noir-filetage-total-din-933/th-m14x50-acier-8-8-noir-ef-din-933.html
+    def test_part_vis_metal_m14_50l(self):
+        print("test_part_vis_metal_m14_50l")
 
-        if os.path.exists("Scripts\\part_vis_metal_m10_30l.py"):
-            os.remove("Scripts\\part_vis_metal_m10_30l.py")
+        if os.path.exists("Scripts\\part_vis_metal_m14_50l.py"):
+            os.remove("Scripts\\part_vis_metal_m14_50l.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("Scripts\\part_vis_metal_m10_30l.py", "w") as file:
+        with open("Scripts\\part_vis_metal_m14_50l.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
 DOC = FreeCAD.activeDocument()
 
-DOC_NAME = "part_vis_metal_m10_30l"
+DOC_NAME = "part_vis_metal_m14_50l"
 
 
 def clear_doc():
@@ -505,10 +505,10 @@ EPS = 0.10
 
 EPS_C = EPS * -0.5
 
-L = 30
-k = 6.4
-d1 = 10
-e = 18.9
+L = 50
+k = 8.8
+d1 = 14
+e = 24.49
 
 cylinder_1 = Part.makeCylinder(e/2, L+k)
 
@@ -529,16 +529,16 @@ Part.show(cylinder_1)
 DOC.recompute()
 
 __objs__=[]
-__objs__.append(FreeCAD.getDocument("part_vis_metal_m10_30l").getObject("Shape"))
+__objs__.append(FreeCAD.getDocument("part_vis_metal_m14_50l").getObject("Shape"))
 
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/part_vis_metal_m10_30l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/part_vis_metal_m14_50l.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_6\\\\Png\\\\part_vis_metal_m10_30l_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_6\\\\Png\\\\part_vis_metal_m14_50l_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
@@ -611,16 +611,16 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_6\\\\Scripts\\\\part_vis_metal_m10_30l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\Mercorus\\\\Version_6\\\\Scripts\\\\part_vis_metal_m14_50l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    #
-    # https://www.plexiglas-shop.com/fr/produits/plexiglas-xt/ro0a070gt.html?force_sid=vchai7u0ee1i8pjodvpug47mb3&cuttosize=
-    # I =  / E =  / L = 150
+    # ok
+    # https://www.plexiglas-shop.com/fr/produits/plexiglas-xt/ro0a070gt.html?force_sid=vchai7u0ee1i8pjodvpug47mb3
+    # I = 290 / E = 300 / L = 150
     def test_part_tube_plexiglass(self):
         print("test_part_tube_plexiglass")
 
@@ -662,8 +662,8 @@ else:
 EPS = 0.10
 EPS_C = EPS * -0.5
 
-e = 100
-i = 94
+e = 300
+i = 290
 h = 150
 
 cylinder_1 = Part.makeCylinder(e/2, h)
@@ -767,7 +767,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    #
+    # ok
     # https://www.sculpteo.com/fr/
     def test_part_support(self):
         print("test_part_support")
@@ -810,19 +810,19 @@ else:
 EPS = 0.10
 EPS_C = EPS * -0.5
 
-de_tube = 100
-d1_vis_10m = 10
-d2_rondelle_14m = 20
-e1 = de_tube + 2*5 + 2*2 + 2*2 + 2*d2_rondelle_14m + 2*2
+de_tube = 300
+d1_vis = 14
+d2_rondelle = 27
+marge_etancheite = 10
+e1 = de_tube + 2*marge_etancheite + 2*2 + 2*2 + 2*d2_rondelle + 2*2
 e2 = de_tube
 e3 = e1
-e4 = e2 + 2*5
-e5 = de_tube + 2*5 + 2*2 + 2*2 + 2*(d2_rondelle_14m/2)
+e4 = e2 + 2*marge_etancheite
+e5 = de_tube + 2*marge_etancheite + 2*2 + 2*2 + 2*(d2_rondelle/2)
 e7 = 13
 e8 = e7 + 2*2
-e6 = e8 + d2_rondelle_14m*2
-h1 = 30
-marge_etancheite = 5
+e6 = e8 + d2_rondelle*4
+h1 = marge_etancheite*4
 h2 = h1 - marge_etancheite
 h3 = h1
 
@@ -846,12 +846,12 @@ cylinder_3.translate(cylinder_3_vector)
 cylinder_1 = cylinder_1.cut(cylinder_3)
 
 # holes for fixing the device
-degre = 15
+degre = 10
 for i in range(int(360/degre)):
     radius = e5/2
     alpha=(i*degre*math.pi)/180
     hole_vector = FreeCAD.Vector(radius*math.cos(alpha), radius*math.sin(alpha), 0)
-    hole = Part.makeCylinder(d1_vis_10m/2, h1)
+    hole = Part.makeCylinder(d1_vis/2, h1)
     hole.translate(hole_vector)
     cylinder_1 = cylinder_1.cut(hole)
 
@@ -861,7 +861,7 @@ for i in range(int(360/degre)):
     radius = e6/2
     alpha=(i*degre*math.pi)/180
     hole_vector = FreeCAD.Vector(radius*math.cos(alpha), radius*math.sin(alpha), 0)
-    hole = Part.makeCylinder(d1_vis_10m/2, h1)
+    hole = Part.makeCylinder(d1_vis/2, h1)
     hole.translate(hole_vector)
     cylinder_1 = cylinder_1.cut(hole)
 
@@ -978,7 +978,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
 
 class UnitsTestsMercorusVersion6Assemblies(unittest.TestCase):
-    #
+    # ok
     def test_assembly_bottom_support(self):
         print("test_assembly_bottom_support")
 
@@ -1022,22 +1022,35 @@ EPS_C = EPS * -0.5
 
 assembly = "assembly_bottom_support"
 
-d1 = 10
+d1 = 14
 e = d1*1.65
-h_ecrou_14m = d1*0.85
+h_ecrou = d1*0.85
+k_vis_metal_m14_110l = 8.8
+de_tube = 300
+d2_rondelle = 27
+marge_etancheite = 10
+e5 = de_tube + 2*marge_etancheite + 2*2 + 2*2 + 2*(d2_rondelle/2)
+h_rondelle = 2.5
+e7 = 13
+e8 = e7 + 2*2
+e6 = e8 + d2_rondelle*4
 
 # part_support
+color = (0.00,0.90,0.00)
+x = 0
+y = 0
+z = 0
 title = "part_support"
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
-FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = (0.00,0.90,0.00)
-FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(0,0,0),App.Rotation(App.Vector(0,1,0),180))
+FreeCADGui.getDocument(assembly).getObject(title).ShapeColor = color
+FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,1,0),180))
 
 # part_tube_plexiglass
 color = (0.60,0.80,0.90)
 x = 0
 y = 0
-z = -25
+z = -30
 title = "part_tube_plexiglass"
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
@@ -1051,14 +1064,11 @@ title = 'part_ecrou_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(0, i1):
     degre = 60
-    de_tube = 100
-    d2_rondelle_14m = 20
-    e5 = de_tube + 2*5 + 2*2 + 2*2 + 2*(d2_rondelle_14m/2)
     radius = e5/2
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 2
+    z = h_rondelle
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -1084,15 +1094,11 @@ title = 'part_vis_metal_m14_110l'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(0, i2):
     degre = 60
-    k_vis_metal_m14_110l = 6.4
-    de_tube = 100
-    d2_rondelle_14m = 20
-    e5 = de_tube + 2*5 + 2*2 + 2*2 + 2*(d2_rondelle_14m/2)
     radius = e5/2
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = - k_vis_metal_m14_110l - 5 - 2
+    z = - k_vis_metal_m14_110l - marge_etancheite - h_rondelle
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -1118,15 +1124,11 @@ title = 'part_ecrou_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(i1, i1 + i3):
     degre = 60
-    d2_rondelle_14m = 20
-    e7 = 16.1
-    e8 = e7 + 2*3
-    e6 = e8 + d2_rondelle_14m*2
     radius = e6/2
     alpha=((i-i1)*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = - 25 - h_ecrou_14m - 2 - 5
+    z = - 30 - h_ecrou - h_rondelle - marge_etancheite
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -1145,23 +1147,19 @@ for i in range(i1, i1 + i3):
         FreeCADGui.getDocument(assembly).getObject(title + str(i)).ShapeColor = color
         FreeCAD.getDocument(assembly).getObject(title + str(i)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(1,0,0),0))
 
-# part_vis_metal_m10_30l
+# part_vis_metal_m14_50l
 color = (0.90,0.50,0.40)
 i4 = 6
-title = 'part_vis_metal_m10_30l'
+title = 'part_vis_metal_m14_50l'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(0, i4):
     degre = 60
-    d2_rondelle_14m = 20
-    e7 = 16.1
-    e8 = e7 + 2*3
-    e6 = e8 + d2_rondelle_14m*2
     radius = e6/2
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    k = 6.4
-    z = - 25 + 5 + k + 2 - 5
+    k = 8.8
+    z = - 30 + marge_etancheite + k + h_rondelle - marge_etancheite
     rotation = App.Rotation(App.Vector(0,1,0),180)
 
     if i == 0:
@@ -1188,14 +1186,11 @@ title = 'part_ecrou_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(i1 + i3, i1 + i3 + i5):
     degre = 60
-    de_tube = 100
-    d2_rondelle_14m = 20
-    e5 = de_tube + 2*5 + 2*2 + 2*2 + 2*(d2_rondelle_14m/2)
     radius = e5/2
     alpha=((i - (i1 + i3))*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 25 - 5
+    z = 30 - marge_etancheite
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -1221,15 +1216,11 @@ title = 'part_rondelle_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(0, i6):
     degre = 60
-    d2_rondelle_14m = 20
-    e7 = 16.1
-    e8 = e7 + 2*3
-    e6 = e8 + d2_rondelle_14m*2
     radius = e6/2
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = - 25 - 5
+    z = - 30 - marge_etancheite
     rotation = App.Rotation(App.Vector(0,1,0),180)
 
     if i == 0:
@@ -1256,15 +1247,11 @@ title = 'part_rondelle_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(i6, i6 + i7):
     degre = 60
-    d2_rondelle_14m = 20
-    e7 = 16.1
-    e8 = e7 + 2*3
-    e6 = e8 + d2_rondelle_14m*2
     radius = e6/2
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = - 25 + 5 + 2 - 5
+    z = - 30 + h_rondelle
     rotation = App.Rotation(App.Vector(0,1,0),180)
 
     if i == 0:
@@ -1291,14 +1278,11 @@ title = 'part_rondelle_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range((i6 + i7), (i6 + i7) + i8):
     degre = 60
-    de_tube = 100
-    d2_rondelle_14m = 20
-    e5 = de_tube + 2*5 + 2*2 + 2*2 + 2*(d2_rondelle_14m/2)
     radius = e5/2
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = - 5 - 2
+    z = - marge_etancheite - h_rondelle
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -1324,9 +1308,6 @@ title = 'part_rondelle_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range((i6 + i7 + i8), (i6 + i7 + i8) + i9):
     degre = 60
-    de_tube = 100
-    d2_rondelle_14m = 20
-    e5 = de_tube + 2*5 + 2*2 + 2*2 + 2*(d2_rondelle_14m/2)
     radius = e5/2
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
@@ -1393,7 +1374,7 @@ for i in range(i1, i1 + i3):
     elif i >= 100 and i < 1000:
         __objs__.append(FreeCAD.getDocument(assembly).getObject(title + str(i)))
 
-title = "part_vis_metal_m10_30l"
+title = "part_vis_metal_m14_50l"
 for i in range(0, i4):
     if i == 0:
         __objs__.append(FreeCAD.getDocument(assembly).getObject(title))
@@ -1458,9 +1439,6 @@ for i in range((i6 + i7 + i8), (i6 + i7 + i8) + i9):
         __objs__.append(FreeCAD.getDocument(assembly).getObject(title + "0" + str(i)))
     elif i >= 100 and i < 1000:
         __objs__.append(FreeCAD.getDocument(assembly).getObject(title + str(i)))
-
-title = "part_mamelon_a_visser_12_17_m"
-__objs__.append(FreeCAD.getDocument(assembly).getObject(title))
 
 Mesh.export(__objs__,u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + assembly + ".stl")
 
@@ -1547,7 +1525,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    #
+    # ok
     def test_assembly_top_support(self):
         print("test_assembly_top_support")
 
@@ -1591,6 +1569,19 @@ EPS_C = EPS * -0.5
 
 assembly = "assembly_top_support"
 
+d1 = 14
+e = d1*1.65
+h_ecrou = d1*0.85
+k_vis_metal_m14_110l = 8.8
+de_tube = 300
+d2_rondelle = 27
+marge_etancheite = 10
+e5 = de_tube + 2*marge_etancheite + 2*2 + 2*2 + 2*(d2_rondelle/2)
+h_rondelle = 2.5
+e7 = 13
+e8 = e7 + 2*2
+e6 = e8 + d2_rondelle*4
+
 # part_support
 color = (0.00,0.90,0.00)
 x = 0
@@ -1609,14 +1600,11 @@ title = 'part_ecrou_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(0, i1):
     degre = 60
-    de_tube = 100
-    d2_rondelle_14m = 20
-    e5 = de_tube + 2*5 + 2*2 + 2*2 + 2*(d2_rondelle_14m/2)
     radius = e5/2
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 5 + 2
+    z = marge_etancheite + h_rondelle
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -1642,15 +1630,11 @@ title = 'part_ecrou_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(i1, i1 + i2):
     degre = 60
-    d2_rondelle_14m = 20
-    e7 = 16.1
-    e8 = e7 + 2*3
-    e6 = e8 + d2_rondelle_14m*2
     radius = e6/2
     alpha=((i-i1)*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 25 + 2 + 5
+    z = 30 + h_rondelle + marge_etancheite
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -1676,15 +1660,11 @@ title = 'part_ecrou_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(i1 + i2, i1 + i2 + i3):
     degre = 60
-    d2_rondelle_14m = 20
-    e7 = 16.1
-    e8 = e7 + 2*3
-    e6 = e8 + d2_rondelle_14m*2
     radius = e6/2
     alpha=((i-(i1 + i2))*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 25 - 5 - 10*0.85 - 2 + 5
+    z = 30 - d1*0.85 - h_rondelle
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -1710,10 +1690,6 @@ title = 'part_vis_metal_m14_110l'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(0, i4):
     degre = 60
-    d2_rondelle_14m = 20
-    e7 = 16.1
-    e8 = e7 + 2*3
-    e6 = e8 + d2_rondelle_14m*2
     radius = e6/2
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
@@ -1744,14 +1720,11 @@ title = 'part_rondelle_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(0, i5):
     degre = 60
-    de_tube = 100
-    d2_rondelle_14m = 20
-    e5 = de_tube + 2*5 + 2*2 + 2*2 + 2*(d2_rondelle_14m/2)
     radius = e5/2
     alpha=(i*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 5
+    z = marge_etancheite
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -1777,15 +1750,11 @@ title = 'part_rondelle_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(i5, i5 + i6):
     degre = 60
-    d2_rondelle_14m = 20
-    e7 = 16.1
-    e8 = e7 + 2*3
-    e6 = e8 + d2_rondelle_14m*2
     radius = e6/2
     alpha=((i-i5)*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 25 + 5
+    z = 30 + marge_etancheite
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -1811,15 +1780,11 @@ title = 'part_rondelle_14m'
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 for i in range(i5 + i6, (i5 + i6) + i7):
     degre = 60
-    d2_rondelle_14m = 20
-    e7 = 16.1
-    e8 = e7 + 2*3
-    e6 = e8 + d2_rondelle_14m*2
     radius = e6/2
     alpha=((i-i1)*degre*math.pi)/180
     x = radius*math.cos(alpha)
     y = radius*math.sin(alpha)
-    z = 25 - 5 - 2 + 5
+    z = 30 - h_rondelle
 
     if i == 0:
         Mesh.insert(stl_file,assembly)
@@ -2008,7 +1973,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    #
+    # ok
     def test_assembly_device(self):
         print("test_assembly_device")
 
@@ -2067,7 +2032,7 @@ FreeCAD.getDocument(assembly).getObject(title).Placement = App.Placement(App.Vec
 color = (0.188,0.835,0.784)
 x = 0
 y = 0
-z = 130 - 30
+z = 130 - 40
 title = "assembly_top_support"
 stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/Mercorus/Version_6/Stl/" + title + ".stl"
 Mesh.insert(stl_file,assembly)
