@@ -5,19 +5,19 @@ import pywinauto.mouse
 import pywinauto.keyboard
 
 
-class UnitTestsArchieBlueHydrogenGeneratorVersion4ForParts(unittest.TestCase):
+class UnitTestsArchieBlueHydrogenGeneratorVersion5ForParts(unittest.TestCase):
     # ok
     # https://www.visseriefixations.fr/ecrous/ecrous-hexagonaux/ecrou-hexagonal-hu/ecrou-hu-inox-a2-din-934/ecrou-hu-m6-inox-a2-din-934.html
     def test_part_ecrou_inox_6m(self):
         print("test_part_ecrou_inox_6m")
 
-        if os.path.exists("part_ecrou_inox_6m.py"):
-            os.remove("part_ecrou_inox_6m.py")
+        if os.path.exists("Scripts\\part_ecrou_inox_6m.py"):
+            os.remove("Scripts\\part_ecrou_inox_6m.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_ecrou_inox_6m.py", "w") as file:
+        with open("Scripts\\part_ecrou_inox_6m.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
@@ -65,87 +65,87 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_ecrou_inox_6m").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_ecrou_inox_6m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_ecrou_inox_6m.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_ecrou_inox_6m_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_ecrou_inox_6m_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_ecrou_inox_6m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_ecrou_inox_6m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -157,13 +157,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_ecrou_nylon_6m(self):
         print("test_part_ecrou_nylon_6m")
 
-        if os.path.exists("part_ecrou_nylon_6m.py"):
-            os.remove("part_ecrou_nylon_6m.py")
+        if os.path.exists("Scripts\\part_ecrou_nylon_6m.py"):
+            os.remove("Scripts\\part_ecrou_nylon_6m.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_ecrou_nylon_6m.py", "w") as file:
+        with open("Scripts\\part_ecrou_nylon_6m.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
@@ -211,87 +211,87 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_ecrou_nylon_6m").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_ecrou_nylon_6m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_ecrou_nylon_6m.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_ecrou_nylon_6m_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_ecrou_nylon_6m_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_ecrou_nylon_6m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_ecrou_nylon_6m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -303,13 +303,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_tank_d40_150l(self):
         print("test_part_tank_d40_150l")
 
-        if os.path.exists("part_tank_d40_150l.py"):
-            os.remove("part_tank_d40_150l.py")
+        if os.path.exists("Scripts\\part_tank_d40_150l.py"):
+            os.remove("Scripts\\part_tank_d40_150l.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_tank_d40_150l.py", "w") as file:
+        with open("Scripts\\part_tank_d40_150l.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math
 
@@ -363,87 +363,87 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_tank_d40_150l").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_tank_d40_150l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_tank_d40_150l.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_tank_d40_150l_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_tank_d40_150l_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_tank_d40_150l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_tank_d40_150l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -455,13 +455,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_tank_d50_150l(self):
         print("test_part_tank_d50_150l")
 
-        if os.path.exists("part_tank_d50_150l.py"):
-            os.remove("part_tank_d50_150l.py")
+        if os.path.exists("Scripts\\part_tank_d50_150l.py"):
+            os.remove("Scripts\\part_tank_d50_150l.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_tank_d50_150l.py", "w") as file:
+        with open("Scripts\\part_tank_d50_150l.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math
 
@@ -515,87 +515,87 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_tank_d50_150l").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_tank_d50_150l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_tank_d50_150l.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_tank_d50_150l_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_tank_d50_150l_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_tank_d50_150l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_tank_d50_150l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -607,13 +607,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_tank_d60_150l(self):
         print("test_part_tank_d60_150l")
 
-        if os.path.exists("part_tank_d60_150l.py"):
-            os.remove("part_tank_d60_150l.py")
+        if os.path.exists("Scripts\\part_tank_d60_150l.py"):
+            os.remove("Scripts\\part_tank_d60_150l.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_tank_d60_150l.py", "w") as file:
+        with open("Scripts\\part_tank_d60_150l.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math
 
@@ -667,87 +667,87 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_tank_d60_150l").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_tank_d60_150l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_tank_d60_150l.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_tank_d60_150l_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_tank_d60_150l_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_tank_d60_150l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_tank_d60_150l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -759,13 +759,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_vis_metal_inox_m6_120l(self):
         print("test_part_vis_metal_inox_m6_120l")
 
-        if os.path.exists("part_vis_metal_inox_m6_120l.py"):
-            os.remove("part_vis_metal_inox_m6_120l.py")
+        if os.path.exists("Scripts\\part_vis_metal_inox_m6_120l.py"):
+            os.remove("Scripts\\part_vis_metal_inox_m6_120l.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_vis_metal_inox_m6_120l.py", "w") as file:
+        with open("Scripts\\part_vis_metal_inox_m6_120l.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
@@ -820,87 +820,87 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_vis_metal_inox_m6_120l").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_vis_metal_inox_m6_120l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_vis_metal_inox_m6_120l.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_vis_metal_inox_m6_120l_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_vis_metal_inox_m6_120l_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_vis_metal_inox_m6_120l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_vis_metal_inox_m6_120l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -912,13 +912,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_vis_metal_inox_m6_90l(self):
         print("test_part_vis_metal_inox_m6_90l")
 
-        if os.path.exists("part_vis_metal_inox_m6_90l.py"):
-            os.remove("part_vis_metal_inox_m6_90l.py")
+        if os.path.exists("Scripts\\part_vis_metal_inox_m6_90l.py"):
+            os.remove("Scripts\\part_vis_metal_inox_m6_90l.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_vis_metal_inox_m6_90l.py", "w") as file:
+        with open("Scripts\\part_vis_metal_inox_m6_90l.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
@@ -973,87 +973,87 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_vis_metal_inox_m6_90l").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_vis_metal_inox_m6_90l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_vis_metal_inox_m6_90l.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_vis_metal_inox_m6_90l_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_vis_metal_inox_m6_90l_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_vis_metal_inox_m6_90l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_vis_metal_inox_m6_90l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1065,13 +1065,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_vis_nylon_m6_60l(self):
         print("test_part_vis_nylon_m6_60l")
 
-        if os.path.exists("part_vis_nylon_m6_60l.py"):
-            os.remove("part_vis_nylon_m6_60l.py")
+        if os.path.exists("Scripts\\part_vis_nylon_m6_60l.py"):
+            os.remove("Scripts\\part_vis_nylon_m6_60l.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_vis_nylon_m6_60l.py", "w") as file:
+        with open("Scripts\\part_vis_nylon_m6_60l.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
@@ -1126,87 +1126,87 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_vis_nylon_m6_60l").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_vis_nylon_m6_60l.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_vis_nylon_m6_60l.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_vis_nylon_m6_60l_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_vis_nylon_m6_60l_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_vis_nylon_m6_60l.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_vis_nylon_m6_60l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1218,13 +1218,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_rondelle_nylon_6m(self):
         print("test_part_rondelle_nylon_6m")
 
-        if os.path.exists("part_rondelle_nylon_6m.py"):
-            os.remove("part_rondelle_nylon_6m.py")
+        if os.path.exists("Scripts\\part_rondelle_nylon_6m.py"):
+            os.remove("Scripts\\part_rondelle_nylon_6m.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_rondelle_nylon_6m.py", "w") as file:
+        with open("Scripts\\part_rondelle_nylon_6m.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
@@ -1270,87 +1270,87 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_rondelle_nylon_6m").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_rondelle_nylon_6m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_rondelle_nylon_6m.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_rondelle_nylon_6m_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_rondelle_nylon_6m_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_rondelle_nylon_6m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_rondelle_nylon_6m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1362,13 +1362,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_capacitor_plate(self):
         print("test_part_capacitor_plate")
 
-        if os.path.exists("part_capacitor_plate.py"):
-            os.remove("part_capacitor_plate.py")
+        if os.path.exists("Scripts\\part_capacitor_plate.py"):
+            os.remove("Scripts\\part_capacitor_plate.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_capacitor_plate.py", "w") as file:
+        with open("Scripts\\part_capacitor_plate.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, math, Mesh, ImportGui, importDXF
 
@@ -1396,14 +1396,13 @@ if DOC is None:
 else:
     clear_doc()
 
+e = 1
 d_vis = 6
 d_fixing = d_vis + e*3.5
 epaisseur = 1
 
 # Diametre exterieur du tank
 diametre_exterieur_tank = 50
-
-e = 1
 
 # Diametre interieur du tank
 diametre_interieur_tank = 44
@@ -1422,7 +1421,7 @@ degre = 0
 radius = diametre_maximal_capacitor_plate/2 - e - d_vis/2
 alpha=(degre*math.pi)/180
 hole_vector = FreeCAD.Vector(radius*math.cos(alpha), radius*math.sin(alpha), 0)
-hole = Part.makeCylinder(d_vis/2, epaisseur)
+hole = Part.makeCylinder(d_fixing/2, epaisseur)
 hole.translate(hole_vector)
 cylinder_1 = cylinder_1.cut(hole)
 
@@ -1440,7 +1439,7 @@ degre = 180
 radius = diametre_maximal_capacitor_plate/2 - e - d_vis/2
 alpha=(degre*math.pi)/180
 hole_vector = FreeCAD.Vector(radius*math.cos(alpha), radius*math.sin(alpha), 0)
-hole = Part.makeCylinder(d_vis/2, epaisseur)
+hole = Part.makeCylinder(d_fixing/2, epaisseur)
 hole.translate(hole_vector)
 cylinder_1 = cylinder_1.cut(hole)
 
@@ -1461,11 +1460,11 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_capacitor_plate").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_capacitor_plate.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_capacitor_plate.stl"
 
 Mesh.export(__objs__, stl_file)
 
-dxf_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_capacitor_plate.dxf"
+dxf_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_capacitor_plate.dxf"
 
 importDXF.export(__objs__, dxf_file)
 
@@ -1474,80 +1473,80 @@ del __objs__
 setview()
 
 # Generate PNG files
-file = 'part_capacitor_plate_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_capacitor_plate_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_capacitor_plate.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_capacitor_plate.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1559,13 +1558,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_bottom_support_capacitor_plate(self):
         print("test_part_bottom_support_capacitor_plate")
 
-        if os.path.exists("part_bottom_support_capacitor_plate.py"):
-            os.remove("part_bottom_support_capacitor_plate.py")
+        if os.path.exists("Scripts\\part_bottom_support_capacitor_plate.py"):
+            os.remove("Scripts\\part_bottom_support_capacitor_plate.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_bottom_support_capacitor_plate.py", "w") as file:
+        with open("Scripts\\part_bottom_support_capacitor_plate.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, math, Mesh, ImportGui, importDXF
 
@@ -1631,7 +1630,7 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_bottom_support_capacitor_plate").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_bottom_support_capacitor_plate.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_bottom_support_capacitor_plate.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -1640,80 +1639,80 @@ del __objs__
 setview()
 
 # Generate PNG files
-file = 'part_bottom_support_capacitor_plate_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_bottom_support_capacitor_plate_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_bottom_support_capacitor_plate.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_bottom_support_capacitor_plate.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1725,13 +1724,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_manchon_a_visser_12_17_f(self):
         print("test_part_manchon_a_visser_12_17_f")
 
-        if os.path.exists("part_manchon_a_visser_12_17_f.py"):
-            os.remove("part_manchon_a_visser_12_17_f.py")
+        if os.path.exists("Scripts\\part_manchon_a_visser_12_17_f.py"):
+            os.remove("Scripts\\part_manchon_a_visser_12_17_f.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_manchon_a_visser_12_17_f.py", "w") as file:
+        with open("Scripts\\part_manchon_a_visser_12_17_f.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
@@ -1779,87 +1778,87 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_manchon_a_visser_12_17_f").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_manchon_a_visser_12_17_f.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_manchon_a_visser_12_17_f.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_manchon_a_visser_12_17_f_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_manchon_a_visser_12_17_f_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_manchon_a_visser_12_17_f.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_manchon_a_visser_12_17_f.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1871,13 +1870,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_manchon_a_visser_12_17_m(self):
         print("test_part_manchon_a_visser_12_17_m")
 
-        if os.path.exists("part_manchon_a_visser_12_17_m.py"):
-            os.remove("part_manchon_a_visser_12_17_m.py")
+        if os.path.exists("Scripts\\part_manchon_a_visser_12_17_m.py"):
+            os.remove("Scripts\\part_manchon_a_visser_12_17_m.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_manchon_a_visser_12_17_m.py", "w") as file:
+        with open("Scripts\\part_manchon_a_visser_12_17_m.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
@@ -1937,87 +1936,87 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_manchon_a_visser_12_17_m").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_manchon_a_visser_12_17_m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_manchon_a_visser_12_17_m.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_manchon_a_visser_12_17_m_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_manchon_a_visser_12_17_m_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_manchon_a_visser_12_17_m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_manchon_a_visser_12_17_m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -2029,13 +2028,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_manchon_8_13_f(self):
         print("test_part_manchon_8_13_f")
 
-        if os.path.exists("part_manchon_8_13_f.py"):
-            os.remove("part_manchon_8_13_f.py")
+        if os.path.exists("Scripts\\part_manchon_8_13_f.py"):
+            os.remove("Scripts\\part_manchon_8_13_f.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_manchon_8_13_f.py", "w") as file:
+        with open("Scripts\\part_manchon_8_13_f.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
@@ -2083,87 +2082,87 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_manchon_8_13_f").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_manchon_8_13_f.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_manchon_8_13_f.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_manchon_8_13_f_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_manchon_8_13_f_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_manchon_8_13_f.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_manchon_8_13_f.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -2175,13 +2174,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_mamelon_a_visser_8_13_m(self):
         print("test_part_mamelon_a_visser_8_13_m")
 
-        if os.path.exists("part_mamelon_a_visser_8_13_m.py"):
-            os.remove("part_mamelon_a_visser_8_13_m.py")
+        if os.path.exists("Scripts\\part_mamelon_a_visser_8_13_m.py"):
+            os.remove("Scripts\\part_mamelon_a_visser_8_13_m.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_mamelon_a_visser_8_13_m.py", "w") as file:
+        with open("Scripts\\part_mamelon_a_visser_8_13_m.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh
 
@@ -2247,87 +2246,87 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_mamelon_a_visser_8_13_m").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_mamelon_a_visser_8_13_m.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_mamelon_a_visser_8_13_m.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_mamelon_a_visser_8_13_m_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_mamelon_a_visser_8_13_m_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_mamelon_a_visser_8_13_m.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_mamelon_a_visser_8_13_m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -2339,13 +2338,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_bottom_support(self):
         print("test_part_bottom_support")
 
-        if os.path.exists("part_bottom_support.py"):
-            os.remove("part_bottom_support.py")
+        if os.path.exists("Scripts\\part_bottom_support.py"):
+            os.remove("Scripts\\part_bottom_support.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_bottom_support.py", "w") as file:
+        with open("Scripts\\part_bottom_support.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math, importDXF
 
@@ -2435,87 +2434,87 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_bottom_support").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_bottom_support.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_bottom_support.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_bottom_support_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_bottom_support_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_bottom_support.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_bottom_support.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -2527,13 +2526,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_part_top_support(self):
         print("test_part_top_support")
 
-        if os.path.exists("part_top_support.py"):
-            os.remove("part_top_support.py")
+        if os.path.exists("Scripts\\part_top_support.py"):
+            os.remove("Scripts\\part_top_support.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_top_support.py", "w") as file:
+        with open("Scripts\\part_top_support.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math
 
@@ -2648,87 +2647,87 @@ __objs__=[]
 
 __objs__.append(FreeCAD.getDocument("part_top_support").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_top_support.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_top_support.stl"
 
 Mesh.export(__objs__, stl_file)
 
 setview()
 
 # Generate PNG files
-file = 'part_top_support_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_top_support_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\part_top_support.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_top_support.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -2736,18 +2735,18 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
         pywinauto.keyboard.send_keys('{ENTER}')
 
 
-class UnitTestsArchieBlueHydrogenGeneratorVersion4ForAssemblies(unittest.TestCase):
+class UnitTestsArchieBlueHydrogenGeneratorVersion5ForAssemblies(unittest.TestCase):
     # ok
     def test_assembly_bottom(self):
         print("test_assembly_bottom")
 
-        if os.path.exists("assembly_bottom.py"):
-            os.remove("assembly_bottom.py")
+        if os.path.exists("Scripts\\assembly_bottom.py"):
+            os.remove("Scripts\\assembly_bottom.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("assembly_bottom.py", "w") as file:
+        with open("Scripts\\assembly_bottom.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math
 
@@ -2778,13 +2777,13 @@ else:
 __objs__ = []
 
 # For placing part_bottom_support
-Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_bottom_support.stl", DOC_NAME)
+Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_bottom_support.stl", DOC_NAME)
 FreeCAD.getDocument(DOC_NAME).getObject("part_bottom_support").Placement = App.Placement(App.Vector(0, 0, 0), App.Rotation(App.Vector(1,0,0), 0))
 FreeCADGui.getDocument(DOC_NAME).getObject("part_bottom_support").ShapeColor = (0.30,0.60,0.90)
 __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject("part_bottom_support"))
 
 # For placing part_tank_d60_150l
-Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_tank_d60_150l.stl", DOC_NAME)
+Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_tank_d60_150l.stl", DOC_NAME)
 FreeCAD.getDocument(DOC_NAME).getObject("part_tank_d60_150l").Placement = App.Placement(App.Vector(0, 0, 5), App.Rotation(App.Vector(1,0,0), 0))
 FreeCADGui.getDocument(DOC_NAME).getObject("part_tank_d60_150l").ShapeColor = (0.90,6.00,0.30)
 __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject("part_tank_d60_150l"))
@@ -2814,22 +2813,22 @@ for i1 in range(0, number_of_holes):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i1)))
@@ -2847,22 +2846,22 @@ for i1 in range(number_of_holes, number_of_holes*2):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i1)))
@@ -2880,22 +2879,22 @@ for i2 in range(0, number_of_holes):
     color = (0.30,0.30,0.30)
 
     if i2 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     if 1 <= i2 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i2)))
     elif 10 <= i2 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i2)))
     elif 100 <= i2 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i2)))
@@ -2913,22 +2912,22 @@ for i2 in range(number_of_holes, number_of_holes*2):
     color = (0.30,0.30,0.30)
 
     if i2 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     if 1 <= i2 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i2)))
     elif 10 <= i2 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i2)))
     elif 100 <= i2 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i2)))
@@ -2947,109 +2946,109 @@ for i3 in range(0, number_of_holes):
     color = (0.30,0.70,0.70)
 
     if i3 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     if 1 <= i3 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i3)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i3)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i3)))
     elif 10 <= i3 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i3)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i3)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i3)))
     elif 100 <= i3 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i3)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i3)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i3)))
 
 setview()
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/assembly_bottom.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/assembly_bottom.stl"
 
 Mesh.export(__objs__, stl_file)
 
 del __objs__
 
 # Generate PNG files
-file = 'assembly_bottom_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\assembly_bottom_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\assembly_bottom.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\assembly_bottom.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -3060,13 +3059,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_assembly_top(self):
         print("test_assembly_top")
 
-        if os.path.exists("assembly_top.py"):
-            os.remove("assembly_top.py")
+        if os.path.exists("Scripts\\assembly_top.py"):
+            os.remove("Scripts\\assembly_top.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("assembly_top.py", "w") as file:
+        with open("Scripts\\assembly_top.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math
 
@@ -3097,7 +3096,7 @@ else:
 __objs__ = []
 
 # For placing the part_top_support
-Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_top_support.stl", DOC_NAME)
+Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_top_support.stl", DOC_NAME)
 FreeCAD.getDocument(DOC_NAME).getObject("part_top_support").Placement = App.Placement(App.Vector(0, 0, 0), App.Rotation(App.Vector(1,0,0), 0))
 FreeCADGui.getDocument(DOC_NAME).getObject("part_top_support").ShapeColor = (0.30,0.60,0.90)
 __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject("part_top_support"))
@@ -3136,22 +3135,22 @@ for i1 in range(0, number_of_holes):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     elif 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i1)))
@@ -3170,22 +3169,22 @@ for i1 in range(number_of_holes, number_of_holes+2):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     elif 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i1)))
@@ -3204,22 +3203,22 @@ for i1 in range(number_of_holes+2, number_of_holes+4):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     elif 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i1)))
@@ -3237,22 +3236,22 @@ for i2 in range(0, number_of_holes):
     color = (0.90,0.90,0.00)
 
     if i2 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     elif 1 <= i2 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i2)))
     elif 10 <= i2 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i2)))
     elif 100 <= i2 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i2)))
@@ -3270,22 +3269,22 @@ for i2 in range(number_of_holes, number_of_holes+2):
     color = (0.90,0.90,0.00)
 
     if i2 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     elif 1 <= i2 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i2)))
     elif 10 <= i2 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i2)))
     elif 100 <= i2 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i2)))
@@ -3303,22 +3302,22 @@ for i2 in range(number_of_holes + 2, number_of_holes + 4):
     color = (0.90,0.90,0.00)
 
     if i2 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file))
     elif 1 <= i2 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "00" + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "00" + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "00" + str(i2)))
     elif 10 <= i2 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + "0" + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + "0" + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + "0" + str(i2)))
     elif 100 <= i2 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
         FreeCADGui.getDocument(doc).getObject(file + str(i2)).ShapeColor = color
         FreeCAD.getDocument(doc).getObject(file + str(i2)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(doc).getObject(file + str(i2)))
@@ -3330,7 +3329,7 @@ x = 0
 y = 0
 z = - 18
 color = (0.90,0.00,0.90)
-Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
 FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
 FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
 __objs__.append(FreeCAD.getDocument(doc).getObject(file))
@@ -3342,94 +3341,94 @@ x = 0
 y = 0
 z = - ((14 - 3)/2 - 3)
 color = (0.10,0.10,0.90)
-Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",doc)
+Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",doc)
 FreeCADGui.getDocument(doc).getObject(file).ShapeColor = color
 FreeCAD.getDocument(doc).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
 __objs__.append(FreeCAD.getDocument(doc).getObject(file))
 
 setview()
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/assembly_top.stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/assembly_top.stl"
 
 Mesh.export(__objs__, stl_file)
 
 del __objs__
 
 # Generate PNG files
-file = 'assembly_top_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\assembly_top_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\assembly_top.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\assembly_top.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -3440,13 +3439,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_assembly_capacitors(self):
         print("test_assembly_capacitors")
 
-        if os.path.exists("assembly_capacitors.py"):
-            os.remove("assembly_capacitors.py")
+        if os.path.exists("Scripts\\assembly_capacitors.py"):
+            os.remove("Scripts\\assembly_capacitors.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("assembly_capacitors.py", "w") as file:
+        with open("Scripts\\assembly_capacitors.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math
 
@@ -3507,7 +3506,7 @@ l_vis_60 = 60
 number_of_capacitors = int((l_vis_60 - e - s_rondelle_nylon_6m*2 - h_ecrou_inox_6m)/(e_capacitor_plate + s_rondelle_nylon_6m))
 
 # For placing the part_bottom_support_capacitor_plate
-Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/part_bottom_support_capacitor_plate.stl", DOC_NAME)
+Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_bottom_support_capacitor_plate.stl", DOC_NAME)
 FreeCAD.getDocument(DOC_NAME).getObject("part_bottom_support_capacitor_plate").Placement = App.Placement(App.Vector(0, 0, 0), App.Rotation(App.Vector(1,0,0), 0))
 FreeCADGui.getDocument(DOC_NAME).getObject("part_bottom_support_capacitor_plate").ShapeColor = (0.30,0.60,0.90)
 __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject("part_bottom_support_capacitor_plate"))
@@ -3525,22 +3524,22 @@ for i1 in range(0, 4):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)))
@@ -3558,22 +3557,22 @@ for i1 in range(4, 8):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)))
@@ -3591,22 +3590,22 @@ for i1 in range(0, 4):
     color = (0.40,0.50,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)))
@@ -3625,22 +3624,22 @@ for i3 in range(0, 2):
     color = (0.30,0.30,0.60)
 
     if i3 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i3 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i3)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i3)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i3)))
     elif 10 <= i3 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i3)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i3)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i3)))
     elif 100 <= i3 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i3)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i3)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i3)))
@@ -3660,22 +3659,22 @@ for degre in degres:
     color = (0.30,0.60,0.60)
 
     if i3 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i3 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i3)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i3)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i3)))
     elif 10 <= i3 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i3)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i3)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i3)))
     elif 100 <= i3 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i3)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i3)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i3)))
@@ -3695,22 +3694,22 @@ for i1 in range(8, number_of_capacitors + 4):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)))
@@ -3728,22 +3727,22 @@ for i1 in range(number_of_capacitors + 4, number_of_capacitors*2):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)))
@@ -3761,22 +3760,22 @@ for i1 in range(number_of_capacitors*2, number_of_capacitors*3 - 4):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)))
@@ -3794,22 +3793,22 @@ for i1 in range(number_of_capacitors*3 - 4, number_of_capacitors*4 - 8):
     color = (0.90,0.00,0.00)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)))
@@ -3827,22 +3826,22 @@ for i1 in range(4, 8):
     color = (0.40,0.50,0.40)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)))
@@ -3864,22 +3863,22 @@ for i1 in range(0, number_of_capacitors - 5):
         angle_rotation = -90
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),angle_rotation))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),angle_rotation))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),angle_rotation))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),angle_rotation))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)))
@@ -3897,109 +3896,109 @@ for i1 in range(8, 12):
     color = (0.40,0.50,0.40)
 
     if i1 == 0:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file))
     if 1 <= i1 < 10:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "00" + str(i1)))
     elif 10 <= i1 < 100:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + "0" + str(i1)))
     elif 100 <= i1 < 1000:
-        Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + file + ".stl",DOC_NAME)
+        Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + file + ".stl",DOC_NAME)
         FreeCADGui.getDocument(DOC_NAME).getObject(file + str(i1)).ShapeColor = color
         FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)).Placement = App.Placement(App.Vector(x,y,z),App.Rotation(App.Vector(0,0,1),0))
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(i1)))
 
 setview()
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + DOC_NAME + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + DOC_NAME + ".stl"
 
 Mesh.export(__objs__, stl_file)
 
 del __objs__
 
 # Generate PNG files
-file = DOC_NAME + '_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\assembly_capacitors_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\assembly_capacitors.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\assembly_capacitors.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -4010,13 +4009,13 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
     def test_assembly_global(self):
         print("test_assembly_global")
 
-        if os.path.exists("assembly_global.py"):
-            os.remove("assembly_global.py")
+        if os.path.exists("Scripts\\assembly_global.py"):
+            os.remove("Scripts\\assembly_global.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("assembly_global.py", "w") as file:
+        with open("Scripts\\assembly_global.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math
 
@@ -4047,108 +4046,108 @@ else:
 __objs__ = []
 
 # For placing the assembly_bottom
-Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/assembly_bottom.stl", DOC_NAME)
+Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/assembly_bottom.stl", DOC_NAME)
 FreeCAD.getDocument(DOC_NAME).getObject("assembly_bottom").Placement = App.Placement(App.Vector(0, 0, 0), App.Rotation(App.Vector(1,0,0), 0))
 FreeCADGui.getDocument(DOC_NAME).getObject("assembly_bottom").ShapeColor = (0.30,0.60,0.90)
 FreeCADGui.getDocument(DOC_NAME).getObject("assembly_bottom").Transparency = 0
 __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject("assembly_bottom"))
 
 # For placing the assembly_top
-Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/assembly_top.stl", DOC_NAME)
+Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/assembly_top.stl", DOC_NAME)
 FreeCAD.getDocument(DOC_NAME).getObject("assembly_top").Placement = App.Placement(App.Vector(0, 0, 150 + 8), App.Rotation(App.Vector(0,1,0), 180))
 FreeCADGui.getDocument(DOC_NAME).getObject("assembly_top").ShapeColor = (0.60,0.90,0.30)
 FreeCADGui.getDocument(DOC_NAME).getObject("assembly_top").Transparency = 0
 __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject("assembly_top"))
 
 # For placing the assembly_capacitors
-Mesh.insert(u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/assembly_capacitors.stl", DOC_NAME)
+Mesh.insert(u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/assembly_capacitors.stl", DOC_NAME)
 FreeCAD.getDocument(DOC_NAME).getObject("assembly_capacitors").Placement = App.Placement(App.Vector(0, 0, 55), App.Rotation(App.Vector(1,0,0), 0))
 FreeCADGui.getDocument(DOC_NAME).getObject("assembly_capacitors").ShapeColor = (0.90,0.30,0.60)
 __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject("assembly_capacitors"))
 
 setview()
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/" + DOC_NAME + ".stl"
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/" + DOC_NAME + ".stl"
 
 Mesh.export(__objs__, stl_file)
 
 del __objs__
 
 # Generate PNG files
-file = DOC_NAME + '_'
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\assembly_global_'
 # Ombré
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/1_Holomorphe/Archie_Blue/5/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\assembly_global.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\assembly_global.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)

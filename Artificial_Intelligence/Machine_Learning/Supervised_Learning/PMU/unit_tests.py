@@ -10,7 +10,7 @@ import pymysql.cursors
 from selenium.webdriver.common.by import By
 
 # unibet race url
-global_url = "https://www.unibet.fr/turf/race/20-11-2022-R9-C1-amiens-prix-jean-masset.html"
+global_url = "https://www.unibet.fr/turf/race/27-11-2022-R8-C8-gavea-premio-bat-masterson.html"
 
 
 class UnitTestsSupervisedLearningPMU(unittest.TestCase):
@@ -1395,7 +1395,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(
             action="ignore",
@@ -1502,7 +1502,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -1583,7 +1583,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -1658,13 +1658,13 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # 28 - poids from unibet : ok
+    # 28 - poids from unibet :
     def test_scoring_the_runners_by_poids_from_unibet(self):
         print("test_scoring_the_runners_by_poids_from_unibet")
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -1741,7 +1741,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -1819,7 +1819,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -1863,7 +1863,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
                 musique = browser.find_element(
                     by=By.XPATH,
                     value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
-                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[8]"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[9]"
                 ).text\
                     .replace('a', '') \
                     .replace('m', '') \
@@ -1896,7 +1896,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
                 cote_direct = browser.find_element(
                     by=By.XPATH,
                     value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
-                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[9]/span[2]"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[10]/span[2]"
                 ).text
 
                 print("num_pmu : " + str(num_pmu) + " , cote_direct : " + str(cote_direct))
@@ -1933,7 +1933,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -1969,15 +1969,15 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         for i in range(1, number_of_racers + 1):
             num_pmu = browser.find_element(
                 by=By.XPATH,
-                value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
-                "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
+                value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                      "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
             ).text
 
             try:
                 musique = browser.find_element(
                     by=By.XPATH,
                     value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
-                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[8]"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[9]"
                 ).text\
                     .replace('a', '') \
                     .replace('m', '') \
@@ -2010,7 +2010,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
                 cote_matin = browser.find_element(
                     by=By.XPATH,
                     value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
-                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[9]/span[1]"
+                          "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[10]/span[1]"
                 ).text
 
                 print("num_pmu : " + str(num_pmu) + " , cote_matin : " + str(cote_matin))
@@ -2041,13 +2041,13 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
 
         print(scoring_runners)
 
-    # 32 - musique from unibet x nombre_courses :
+    # 32 - musique from unibet x nombre_courses : ok
     def test_scoring_the_runners_by_musique_from_unibet_x_nombre_courses(self):
         print("test_scoring_the_runners_by_musique_from_unibet_x_nombre_courses")
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -2125,15 +2125,15 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
             for i in range(1, number_of_racers + 1):
                 num_pmu = browser.find_element(
                     by=By.XPATH,
-                    value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
-                    "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
+                    value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                          "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
                 ).text
 
                 try:
                     musique = browser.find_element(
                         by=By.XPATH,
                         value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/"
-                              "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[8]"
+                              "div[3]/ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[9]"
                     ).text \
                         .replace('a', '') \
                         .replace('m', '') \
@@ -2173,7 +2173,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
                 try:
                     num_pmu = browser.find_element(
                         by=By.XPATH,
-                        value="/html/body/div/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
+                        value="/html/body/div[1]/div[2]/div[5]/div/div/section/div/div/div/div/div/div/div/div[2]/div/div[3]/"
                               "ul[2]/li/div/div[2]/ul/li[" + str(i + 1) + "]/div/div[1]/span"
                     ).text
 
@@ -2201,6 +2201,47 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
             print('error 1 : ' + str(e))
 
             browser.quit()
+
+    # 33 - number of racers from unibet : ok
+    def test_number_of_racers_from_unibet(self):
+        print("test_number_of_racers_from_unibet")
+
+        url = str(global_url)
+
+        warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
+
+        # with Firefox
+        options = Options()
+        options.headless = True
+        browser = webdriver.Firefox(
+            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
+
+        time.sleep(10)
+
+        # maximize window
+        browser.maximize_window()
+
+        time.sleep(5)
+
+        # open
+        browser.get(url)
+
+        time.sleep(20)
+
+        number_of_racers = int(
+            browser.find_element(
+                by=By.XPATH,
+                value="//p[@class='race-meta ui-mainview-block']"
+            ).text.lower().split(" - ")[3].replace(' partants', '')
+        )
+
+        time.sleep(3)
+
+        print("number_of_racers : " + str(number_of_racers))
+
+        browser.quit()
 
 
 class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
@@ -2287,7 +2328,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = True
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -2385,7 +2426,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -2526,7 +2567,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -2667,7 +2708,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -2808,7 +2849,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = False
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -2949,7 +2990,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = True
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -3090,7 +3131,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = True
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -3231,7 +3272,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = True
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -3372,7 +3413,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = True
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -3513,7 +3554,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = True
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
@@ -3652,7 +3693,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
         reverse = True
 
-        url = global_url
+        url = str(global_url)
 
         warnings.filterwarnings(action="ignore", message="unclosed", category=ResourceWarning)
 
