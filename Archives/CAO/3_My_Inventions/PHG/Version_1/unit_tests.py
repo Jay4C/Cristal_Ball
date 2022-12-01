@@ -1395,7 +1395,7 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
 
 class UnitsTestsPHGVersion1Assemblies(unittest.TestCase):
-    #
+    # ok
     def test_assembly_device(self):
         print("test_assembly_device")
 
