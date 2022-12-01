@@ -117,8 +117,8 @@ class UnitTestsWebAutomationSculpteo(unittest.TestCase):
 
         password = ""
 
-        file_path = "C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Archives\\CAO\\Mercorus\\Version_7\\Stl" \
-                    "\\part_support.stl"
+        file_path = "C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\Archives\\CAO\\1_Holomorphe\\Archie_Blue" \
+                    "\\Version_5\\Stl\\part_bottom_support.stl"
 
         time.sleep(5)
 

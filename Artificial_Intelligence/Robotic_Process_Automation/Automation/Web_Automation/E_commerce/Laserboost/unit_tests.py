@@ -2,6 +2,7 @@ import unittest
 import time
 import warnings
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
 class UnitTestsWebAutomationLaserboost(unittest.TestCase):
@@ -40,7 +41,7 @@ class UnitTestsWebAutomationLaserboost(unittest.TestCase):
     def test_se_connecter(self):
         print('test_se_connecter')
 
-        email = ".@outlook.fr"
+        email = ""
 
         password = ""
 
@@ -56,7 +57,7 @@ class UnitTestsWebAutomationLaserboost(unittest.TestCase):
 
         # with Firefox
         browser = webdriver.Firefox(
-            executable_path='..\\..\\geckodriver.exe'
+            executable_path='C:\\Users\\Jason\\Documents\Devs\\Cristal_Ball\\geckodriver.exe'
         )
 
         time.sleep(5)
@@ -72,16 +73,18 @@ class UnitTestsWebAutomationLaserboost(unittest.TestCase):
         time.sleep(5)
 
         # Click on the "Accept" button
-        accept_button = browser.find_element_by_xpath(
-            '//*[@id="cookie_action_close_header"]'
+        accept_button = browser.find_element(
+            by=By.XPATH,
+            value='//*[@id="cookie_action_close_header"]'
         )
         accept_button.click()
 
         time.sleep(10)
 
         # Click on the "Account" button
-        account_button = browser.find_element_by_xpath(
-            "/html/body/div[1]/div/section/div/div/div[3]/div/div/section[1]/div/div/div[4]/div/div/div/div"
+        account_button = browser.find_element(
+            by=By.XPATH,
+            value="/html/body/div[1]/div/section/div/div/div[3]/div/div/section[1]/div/div/div[4]/div/div/div/div"
             "/div/a/span/span[2]"
         )
         account_button.click()
@@ -89,22 +92,25 @@ class UnitTestsWebAutomationLaserboost(unittest.TestCase):
         time.sleep(10)
 
         # Insert the "E-Mail Address" input
-        adresse_email_input = browser.find_element_by_xpath(
-            '//*[@id="email"]'
+        adresse_email_input = browser.find_element(
+            by=By.XPATH,
+            value='//*[@id="email"]'
         )
         adresse_email_input.send_keys(email)
         time.sleep(10)
 
         # Insert the "Password" input
-        mot_de_passe_input = browser.find_element_by_xpath(
-            '//*[@id="password"]'
+        mot_de_passe_input = browser.find_element(
+            by=By.XPATH,
+            value='//*[@id="password"]'
         )
         mot_de_passe_input.send_keys(password)
         time.sleep(10)
 
         # Click on the "Log in" button
-        log_in_button = browser.find_element_by_xpath(
-            '/html/body/section/div/div/div/form/div[5]/button'
+        log_in_button = browser.find_element(
+            by=By.XPATH,
+            value='/html/body/section/div/div/div/form/div[5]/button'
         )
         log_in_button.click()
         time.sleep(10)
@@ -113,7 +119,7 @@ class UnitTestsWebAutomationLaserboost(unittest.TestCase):
     def test_online_quote_1mm(self):
         print('test_online_quote_1mm')
 
-        email = ".@outlook.fr"
+        email = ""
 
         password = ""
 
@@ -262,7 +268,7 @@ class UnitTestsWebAutomationLaserboost(unittest.TestCase):
     def test_online_quote_5mm(self):
         print('test_online_quote_5mm')
 
-        email = ".@outlook.fr"
+        email = ""
 
         password = ""
 

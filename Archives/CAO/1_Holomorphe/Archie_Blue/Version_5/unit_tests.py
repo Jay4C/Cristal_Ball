@@ -153,456 +153,6 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
         pywinauto.keyboard.send_keys('{ENTER}')
 
     # ok
-    # https://www.visseriefixations.fr/visserie-nylon/ecrou-hu-nylon-pa6-6-naturel-din-555/ecrou-hu-m6-pa6-6-blanc-din-555.html
-    def test_part_ecrou_nylon_6m(self):
-        print("test_part_ecrou_nylon_6m")
-
-        if os.path.exists("Scripts\\part_ecrou_nylon_6m.py"):
-            os.remove("Scripts\\part_ecrou_nylon_6m.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_ecrou_nylon_6m.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_ecrou_nylon_6m"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# Parameters
-d1 = 6
-m = 4.6
-e = 10.89
-s = 10
-
-cylinder_1 = Part.makeCylinder(e/2, m)
-
-cylinder_2 = Part.makeCylinder(d1/2, m)
-
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__=[]
-
-__objs__.append(FreeCAD.getDocument("part_ecrou_nylon_6m").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_ecrou_nylon_6m.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_ecrou_nylon_6m_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_ecrou_nylon_6m.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.plexiglas-shop.com/fr/produits/plexiglas-xt/ro0a070gt.html?force_sid=hdhbk391d16to9fcfpc6scnai7
-    def test_part_tank_d40_150l(self):
-        print("test_part_tank_d40_150l")
-
-        if os.path.exists("Scripts\\part_tank_d40_150l.py"):
-            os.remove("Scripts\\part_tank_d40_150l.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_tank_d40_150l.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh, math
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_tank_d40_150l"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS = tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-# Diametres du tank
-diametre_exterieur = 40
-diametre_interieur = 34
-
-# Hauteur maximale du tank
-hauteur_maximale = 150
-
-cylinder_1 = Part.makeCylinder(diametre_exterieur/2, hauteur_maximale)
-
-cylinder_2 = Part.makeCylinder(diametre_interieur/2, hauteur_maximale)
-
-# cylinder_1 cut by cylinder_2
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__=[]
-
-__objs__.append(FreeCAD.getDocument("part_tank_d40_150l").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_tank_d40_150l.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_tank_d40_150l_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_tank_d40_150l.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.plexiglas-shop.com/fr/produits/plexiglas-xt/ro0a070gt.html?force_sid=hdhbk391d16to9fcfpc6scnai7
-    def test_part_tank_d50_150l(self):
-        print("test_part_tank_d50_150l")
-
-        if os.path.exists("Scripts\\part_tank_d50_150l.py"):
-            os.remove("Scripts\\part_tank_d50_150l.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_tank_d50_150l.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh, math
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_tank_d50_150l"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS = tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-# Diametres du tank
-diametre_exterieur = 50
-diametre_interieur = 44
-
-# Hauteur maximale du tank
-hauteur_maximale = 150
-
-cylinder_1 = Part.makeCylinder(diametre_exterieur/2, hauteur_maximale)
-
-cylinder_2 = Part.makeCylinder(diametre_interieur/2, hauteur_maximale)
-
-# cylinder_1 cut by cylinder_2
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__=[]
-
-__objs__.append(FreeCAD.getDocument("part_tank_d50_150l").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_tank_d50_150l.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_tank_d50_150l_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_tank_d50_150l.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
     # https://www.plexiglas-shop.com/fr/produits/plexiglas-xt/ro0a070gt.html?force_sid=hdhbk391d16to9fcfpc6scnai7
     def test_part_tank_d60_150l(self):
         print("test_part_tank_d60_150l")
@@ -1054,159 +604,6 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys(
             'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_vis_metal_inox_m6_90l.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.visseriefixations.fr/visserie-nylon/tete-cylindrique-fendue-tc-din-84-nylon-pa6-6-naturel/tc-m6x60-pa6-6-blanc-din-84.html
-    def test_part_vis_nylon_m6_60l(self):
-        print("test_part_vis_nylon_m6_60l")
-
-        if os.path.exists("Scripts\\part_vis_nylon_m6_60l.py"):
-            os.remove("Scripts\\part_vis_nylon_m6_60l.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_vis_nylon_m6_60l.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_vis_nylon_m6_60l"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-d1 = 6
-d2 = 10
-L = 60
-k = 3.9
-
-cylinder_1 = Part.makeCylinder(d2/2, L + k)
-
-cylinder_2 = Part.makeCylinder(d1/2, L)
-
-cylinder_3 = Part.makeCylinder(d2/2, L)
-
-# cylinder_3 cut by cylinder_2
-cylinder_3 = cylinder_3.cut(cylinder_2)
-
-# cylinder_1 cut by cylinder_3
-cylinder_3_vector = FreeCAD.Vector(0, 0, k)
-cylinder_3.translate(cylinder_3_vector)
-cylinder_1 = cylinder_1.cut(cylinder_3)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__ = []
-
-__objs__.append(FreeCAD.getDocument("part_vis_nylon_m6_60l").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_vis_nylon_m6_60l.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_vis_nylon_m6_60l_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_vis_nylon_m6_60l.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -1713,310 +1110,6 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys(
             'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_bottom_support_capacitor_plate.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.leroymerlin.fr/produits/chauffage-plomberie/circuit-alimentation-en-eau/tube-et-raccord-alimentation/raccord-alimentation/lot-de-2-manchons-a-visser-laiton-f-12-x-17-pour-tube-en-cuivre-65815253.html
-    def test_part_manchon_a_visser_12_17_f(self):
-        print("test_part_manchon_a_visser_12_17_f")
-
-        if os.path.exists("Scripts\\part_manchon_a_visser_12_17_f.py"):
-            os.remove("Scripts\\part_manchon_a_visser_12_17_f.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_manchon_a_visser_12_17_f.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_manchon_a_visser_12_17_f"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-diametre_maximal = 22
-
-cylinder_1 = Part.makeCylinder(diametre_maximal/2, 18)
-
-cylinder_2 = Part.makeCylinder(16.4/2, 18)
-
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__=[]
-
-__objs__.append(FreeCAD.getDocument("part_manchon_a_visser_12_17_f").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_manchon_a_visser_12_17_f.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_manchon_a_visser_12_17_f_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_manchon_a_visser_12_17_f.py"{)}.read{(}{)}{)}'
-        )
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys('{ENTER}')
-
-    # ok
-    # https://www.leroymerlin.fr/produits/chauffage-plomberie/circuit-alimentation-en-eau/tube-et-raccord-alimentation/raccord-alimentation/lot-de-2-mamelons-a-visser-laiton-m-12-x-17-pour-tube-en-cuivre-65814231.html
-    def test_part_manchon_a_visser_12_17_m(self):
-        print("test_part_manchon_a_visser_12_17_m")
-
-        if os.path.exists("Scripts\\part_manchon_a_visser_12_17_m.py"):
-            os.remove("Scripts\\part_manchon_a_visser_12_17_m.py")
-        else:
-            print("The file does not exist")
-
-        # Writing to file
-        with open("Scripts\\part_manchon_a_visser_12_17_m.py", "w") as file:
-            # Writing data to a file
-            file.write("""import FreeCAD, Part, Mesh
-
-DOC = FreeCAD.activeDocument()
-
-DOC_NAME = "part_manchon_a_visser_12_17_m"
-
-
-def clear_doc():
-    # Clear the active document deleting all the objects
-    for obj in DOC.Objects:
-        DOC.removeObject(obj.Name)
-
-
-def setview():
-    # Rearrange View
-    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
-    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
-
-
-if DOC is None:
-    FreeCAD.newDocument(DOC_NAME)
-    FreeCAD.setActiveDocument(DOC_NAME)
-    DOC = FreeCAD.activeDocument()
-else:
-    clear_doc()
-
-# EPS= tolerance to use to cut the parts
-EPS = 0.10
-EPS_C = EPS * -0.5
-
-diametre_maximal = 19
-
-cylinder_1 = Part.makeCylinder(diametre_maximal/2, 19)
-
-cylinder_2 = Part.makeCylinder(11/2, 19)
-
-cylinder_1 = cylinder_1.cut(cylinder_2)
-
-cylinder_3 = Part.makeCylinder(diametre_maximal/2, 8)
-
-cylinder_4 = Part.makeCylinder(16/2, 8)
-
-cylinder_3 = cylinder_3.cut(cylinder_4)
-
-cylinder_1 = cylinder_1.cut(cylinder_3)
-
-cylinder_3_vector = FreeCAD.Vector(0, 0, 11)
-cylinder_3.translate(cylinder_3_vector)
-cylinder_1 = cylinder_1.cut(cylinder_3)
-
-Part.show(cylinder_1)
-
-DOC.recompute()
-
-__objs__=[]
-
-__objs__.append(FreeCAD.getDocument("part_manchon_a_visser_12_17_m").getObject("Shape"))
-
-stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_manchon_a_visser_12_17_m.stl"
-
-Mesh.export(__objs__, stl_file)
-
-setview()
-
-# Generate PNG files
-file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_manchon_a_visser_12_17_m_'
-# Ombré
-Gui.runCommand('Std_DrawStyle',5)
-i = 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-# Filaire
-Gui.runCommand('Std_DrawStyle',2)
-i += 1
-Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-
-i += 1
-Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
-""")
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
-
-        time.sleep(3)
-
-        pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_manchon_a_visser_12_17_m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -4148,6 +3241,915 @@ Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Cur
 
         pywinauto.keyboard.send_keys(
             'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\assembly_global.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+
+class UnitTestsArchieBlueHydrogenGeneratorVersion5ForPartsTrash(unittest.TestCase):
+    # ok
+    # https://www.plexiglas-shop.com/fr/produits/plexiglas-xt/ro0a070gt.html?force_sid=hdhbk391d16to9fcfpc6scnai7
+    def test_part_tank_d40_150l(self):
+        print("test_part_tank_d40_150l")
+
+        if os.path.exists("Scripts\\part_tank_d40_150l.py"):
+            os.remove("Scripts\\part_tank_d40_150l.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_tank_d40_150l.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh, math
+
+    DOC = FreeCAD.activeDocument()
+
+    DOC_NAME = "part_tank_d40_150l"
+
+
+    def clear_doc():
+        # Clear the active document deleting all the objects
+        for obj in DOC.Objects:
+            DOC.removeObject(obj.Name)
+
+
+    def setview():
+        # Rearrange View
+        FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+        FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+    if DOC is None:
+        FreeCAD.newDocument(DOC_NAME)
+        FreeCAD.setActiveDocument(DOC_NAME)
+        DOC = FreeCAD.activeDocument()
+    else:
+        clear_doc()
+
+    # EPS = tolerance to use to cut the parts
+    EPS = 0.10
+    EPS_C = EPS * -0.5
+
+    # Diametres du tank
+    diametre_exterieur = 40
+    diametre_interieur = 34
+
+    # Hauteur maximale du tank
+    hauteur_maximale = 150
+
+    cylinder_1 = Part.makeCylinder(diametre_exterieur/2, hauteur_maximale)
+
+    cylinder_2 = Part.makeCylinder(diametre_interieur/2, hauteur_maximale)
+
+    # cylinder_1 cut by cylinder_2
+    cylinder_1 = cylinder_1.cut(cylinder_2)
+
+    Part.show(cylinder_1)
+
+    DOC.recompute()
+
+    __objs__=[]
+
+    __objs__.append(FreeCAD.getDocument("part_tank_d40_150l").getObject("Shape"))
+
+    stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_tank_d40_150l.stl"
+
+    Mesh.export(__objs__, stl_file)
+
+    setview()
+
+    # Generate PNG files
+    file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_tank_d40_150l_'
+    # Ombré
+    Gui.runCommand('Std_DrawStyle',5)
+    i = 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    # Filaire
+    Gui.runCommand('Std_DrawStyle',2)
+    i += 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+    """)
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_tank_d40_150l.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://www.plexiglas-shop.com/fr/produits/plexiglas-xt/ro0a070gt.html?force_sid=hdhbk391d16to9fcfpc6scnai7
+    def test_part_tank_d50_150l(self):
+        print("test_part_tank_d50_150l")
+
+        if os.path.exists("Scripts\\part_tank_d50_150l.py"):
+            os.remove("Scripts\\part_tank_d50_150l.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_tank_d50_150l.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh, math
+
+    DOC = FreeCAD.activeDocument()
+
+    DOC_NAME = "part_tank_d50_150l"
+
+
+    def clear_doc():
+        # Clear the active document deleting all the objects
+        for obj in DOC.Objects:
+            DOC.removeObject(obj.Name)
+
+
+    def setview():
+        # Rearrange View
+        FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+        FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+    if DOC is None:
+        FreeCAD.newDocument(DOC_NAME)
+        FreeCAD.setActiveDocument(DOC_NAME)
+        DOC = FreeCAD.activeDocument()
+    else:
+        clear_doc()
+
+    # EPS = tolerance to use to cut the parts
+    EPS = 0.10
+    EPS_C = EPS * -0.5
+
+    # Diametres du tank
+    diametre_exterieur = 50
+    diametre_interieur = 44
+
+    # Hauteur maximale du tank
+    hauteur_maximale = 150
+
+    cylinder_1 = Part.makeCylinder(diametre_exterieur/2, hauteur_maximale)
+
+    cylinder_2 = Part.makeCylinder(diametre_interieur/2, hauteur_maximale)
+
+    # cylinder_1 cut by cylinder_2
+    cylinder_1 = cylinder_1.cut(cylinder_2)
+
+    Part.show(cylinder_1)
+
+    DOC.recompute()
+
+    __objs__=[]
+
+    __objs__.append(FreeCAD.getDocument("part_tank_d50_150l").getObject("Shape"))
+
+    stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_tank_d50_150l.stl"
+
+    Mesh.export(__objs__, stl_file)
+
+    setview()
+
+    # Generate PNG files
+    file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_tank_d50_150l_'
+    # Ombré
+    Gui.runCommand('Std_DrawStyle',5)
+    i = 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    # Filaire
+    Gui.runCommand('Std_DrawStyle',2)
+    i += 1
+    Gui.activeDocument().activeView().viewIsometric()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewFront()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewTop()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRight()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewRear()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewBottom()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+    i += 1
+    Gui.activeDocument().activeView().viewLeft()
+    Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+    """)
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_tank_d50_150l.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://www.visseriefixations.fr/visserie-nylon/tete-cylindrique-fendue-tc-din-84-nylon-pa6-6-naturel/tc-m6x60-pa6-6-blanc-din-84.html
+    def test_part_vis_nylon_m6_60l(self):
+        print("test_part_vis_nylon_m6_60l")
+
+        if os.path.exists("Scripts\\part_vis_nylon_m6_60l.py"):
+            os.remove("Scripts\\part_vis_nylon_m6_60l.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_vis_nylon_m6_60l.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_vis_nylon_m6_60l"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+d1 = 6
+d2 = 10
+L = 60
+k = 3.9
+
+cylinder_1 = Part.makeCylinder(d2/2, L + k)
+
+cylinder_2 = Part.makeCylinder(d1/2, L)
+
+cylinder_3 = Part.makeCylinder(d2/2, L)
+
+# cylinder_3 cut by cylinder_2
+cylinder_3 = cylinder_3.cut(cylinder_2)
+
+# cylinder_1 cut by cylinder_3
+cylinder_3_vector = FreeCAD.Vector(0, 0, k)
+cylinder_3.translate(cylinder_3_vector)
+cylinder_1 = cylinder_1.cut(cylinder_3)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__ = []
+
+__objs__.append(FreeCAD.getDocument("part_vis_nylon_m6_60l").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_vis_nylon_m6_60l.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+
+# Generate PNG files
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_vis_nylon_m6_60l_'
+# Ombré
+Gui.runCommand('Std_DrawStyle',5)
+i = 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+# Filaire
+Gui.runCommand('Std_DrawStyle',2)
+i += 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_vis_nylon_m6_60l.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://www.leroymerlin.fr/produits/chauffage-plomberie/circuit-alimentation-en-eau/tube-et-raccord-alimentation/raccord-alimentation/lot-de-2-manchons-a-visser-laiton-f-12-x-17-pour-tube-en-cuivre-65815253.html
+    def test_part_manchon_a_visser_12_17_f(self):
+        print("test_part_manchon_a_visser_12_17_f")
+
+        if os.path.exists("Scripts\\part_manchon_a_visser_12_17_f.py"):
+            os.remove("Scripts\\part_manchon_a_visser_12_17_f.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_manchon_a_visser_12_17_f.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_manchon_a_visser_12_17_f"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+diametre_maximal = 22
+
+cylinder_1 = Part.makeCylinder(diametre_maximal/2, 18)
+
+cylinder_2 = Part.makeCylinder(16.4/2, 18)
+
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__=[]
+
+__objs__.append(FreeCAD.getDocument("part_manchon_a_visser_12_17_f").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_manchon_a_visser_12_17_f.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+
+# Generate PNG files
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_manchon_a_visser_12_17_f_'
+# Ombré
+Gui.runCommand('Std_DrawStyle',5)
+i = 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+# Filaire
+Gui.runCommand('Std_DrawStyle',2)
+i += 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_manchon_a_visser_12_17_f.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://www.leroymerlin.fr/produits/chauffage-plomberie/circuit-alimentation-en-eau/tube-et-raccord-alimentation/raccord-alimentation/lot-de-2-mamelons-a-visser-laiton-m-12-x-17-pour-tube-en-cuivre-65814231.html
+    def test_part_manchon_a_visser_12_17_m(self):
+        print("test_part_manchon_a_visser_12_17_m")
+
+        if os.path.exists("Scripts\\part_manchon_a_visser_12_17_m.py"):
+            os.remove("Scripts\\part_manchon_a_visser_12_17_m.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_manchon_a_visser_12_17_m.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_manchon_a_visser_12_17_m"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# EPS= tolerance to use to cut the parts
+EPS = 0.10
+EPS_C = EPS * -0.5
+
+diametre_maximal = 19
+
+cylinder_1 = Part.makeCylinder(diametre_maximal/2, 19)
+
+cylinder_2 = Part.makeCylinder(11/2, 19)
+
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+cylinder_3 = Part.makeCylinder(diametre_maximal/2, 8)
+
+cylinder_4 = Part.makeCylinder(16/2, 8)
+
+cylinder_3 = cylinder_3.cut(cylinder_4)
+
+cylinder_1 = cylinder_1.cut(cylinder_3)
+
+cylinder_3_vector = FreeCAD.Vector(0, 0, 11)
+cylinder_3.translate(cylinder_3_vector)
+cylinder_1 = cylinder_1.cut(cylinder_3)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__=[]
+
+__objs__.append(FreeCAD.getDocument("part_manchon_a_visser_12_17_m").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_manchon_a_visser_12_17_m.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+
+# Generate PNG files
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_manchon_a_visser_12_17_m_'
+# Ombré
+Gui.runCommand('Std_DrawStyle',5)
+i = 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+# Filaire
+Gui.runCommand('Std_DrawStyle',2)
+i += 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_manchon_a_visser_12_17_m.py"{)}.read{(}{)}{)}'
+        )
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys('{ENTER}')
+
+    # ok
+    # https://www.visseriefixations.fr/visserie-nylon/ecrou-hu-nylon-pa6-6-naturel-din-555/ecrou-hu-m6-pa6-6-blanc-din-555.html
+    def test_part_ecrou_nylon_6m(self):
+        print("test_part_ecrou_nylon_6m")
+
+        if os.path.exists("Scripts\\part_ecrou_nylon_6m.py"):
+            os.remove("Scripts\\part_ecrou_nylon_6m.py")
+        else:
+            print("The file does not exist")
+
+        # Writing to file
+        with open("Scripts\\part_ecrou_nylon_6m.py", "w") as file:
+            # Writing data to a file
+            file.write("""import FreeCAD, Part, Mesh
+
+DOC = FreeCAD.activeDocument()
+
+DOC_NAME = "part_ecrou_nylon_6m"
+
+
+def clear_doc():
+    # Clear the active document deleting all the objects
+    for obj in DOC.Objects:
+        DOC.removeObject(obj.Name)
+
+
+def setview():
+    # Rearrange View
+    FreeCAD.Gui.SendMsgToActiveView("ViewFit")
+    FreeCAD.Gui.activeDocument().activeView().viewAxometric()
+
+
+if DOC is None:
+    FreeCAD.newDocument(DOC_NAME)
+    FreeCAD.setActiveDocument(DOC_NAME)
+    DOC = FreeCAD.activeDocument()
+else:
+    clear_doc()
+
+# Parameters
+d1 = 6
+m = 4.6
+e = 10.89
+s = 10
+
+cylinder_1 = Part.makeCylinder(e/2, m)
+
+cylinder_2 = Part.makeCylinder(d1/2, m)
+
+cylinder_1 = cylinder_1.cut(cylinder_2)
+
+Part.show(cylinder_1)
+
+DOC.recompute()
+
+__objs__=[]
+
+__objs__.append(FreeCAD.getDocument("part_ecrou_nylon_6m").getObject("Shape"))
+
+stl_file = u"C:/Users/Jason/Documents/Devs/Cristal_Ball/Archives/CAO/1_Holomorphe/Archie_Blue/Version_5/Stl/part_ecrou_nylon_6m.stl"
+
+Mesh.export(__objs__, stl_file)
+
+setview()
+
+# Generate PNG files
+file = 'C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Png\\\\part_ecrou_nylon_6m_'
+# Ombré
+Gui.runCommand('Std_DrawStyle',5)
+i = 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+# Filaire
+Gui.runCommand('Std_DrawStyle',2)
+i += 1
+Gui.activeDocument().activeView().viewIsometric()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewFront()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewTop()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRight()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewRear()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewBottom()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+
+i += 1
+Gui.activeDocument().activeView().viewLeft()
+Gui.activeDocument().activeView().saveImage(file + str(i) + '.png',1117,388,'Current')
+""")
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
+
+        time.sleep(3)
+
+        pywinauto.keyboard.send_keys(
+            'exec{(}open{(}"C:\\\\Users\\\\Jason\\\\Documents\\\\Devs\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\1_Holomorphe\\\\Archie_Blue\\\\Version_5\\\\Scripts\\\\part_ecrou_nylon_6m.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
