@@ -11,7 +11,7 @@ class UnitTestsGeopy(unittest.TestCase):
         loc = Nominatim(user_agent="GetLoc")
 
         # entering the location name
-        getLoc = loc.geocode("Place de Cornavin 7 1201 Genève Suisse")
+        getLoc = loc.geocode("5 rue Nadar 92000 Rueil Malmaison")
 
         # printing address
         print(getLoc.address)

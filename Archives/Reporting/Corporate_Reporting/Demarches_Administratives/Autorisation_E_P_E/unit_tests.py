@@ -1,6 +1,9 @@
 import unittest
 import pdfkit
 from PyPDF2 import PdfFileWriter, PdfFileReader
+from PIL import Image
+import img2pdf
+import codecs
 
 
 class UnitTestsDemandeAutorisationExploiterInstallationProductionElectricitePassTechParis(unittest.TestCase):
@@ -700,6 +703,679 @@ class UnitTestsDemandeAutorisationExploiterInstallationProductionElectricitePass
         output_stream = open(file_location
                              + "\\Dossier_D_A_E_I_P_E_[Holomorphe]_["
                              + str(location) + "]" + ".pdf", "wb")
+        output.write(output_stream)
+        output_stream.close()
+
+
+class UnitTestsDemandeAutorisationExploiterInstallationProductionElectricitePersonnePhysique(unittest.TestCase):
+    # ok
+    def test_demande_autorisation_exploiter_installation_production_electricite_personne_physique(self):
+        print("test_demande_autorisation_exploiter_installation_production_electricite_personne_physique")
+
+        demandeur = ''
+
+        body = """
+        <!doctype html>
+        <html lang="en">
+          <head>
+            <!-- Required meta tags -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <!-- Bootstrap CSS -->
+            <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
+            crossorigin="anonymous">
+
+            <title>
+                Demande d'autorisation d'exploiter une installation de production d'électricité
+            </title>
+          </head>
+          <body>
+            <!-- container -->
+            <div class="container">
+
+                <br>
+
+                <!-- Informations générales de la société Holomorphe -->
+                <div class="card text-center">
+                  <div class="card-header">
+                    Informations générales du pétitionnaire
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        Nom et prénom : 
+                      </li>
+                      <li class="list-group-item">
+                        Domicile :  
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Informations générales de la société Holomorphe -->
+
+                <br>
+
+                <!-- Contact -->
+                <div class="card text-center">
+                  <div class="card-header">
+                    Contact du pétitionnaire
+                  </div>
+                  <div class="card-body">
+                    <!-- Informations personnelles -->
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Pétitionnaire</th>
+                                <th scope="col">Domicile</th>
+                                <th scope="col">Téléphone</th>
+                                <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                     
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- Contact -->
+
+                <br>
+
+                <!-- Destinataire -->
+                <div class="card text-center">
+                  <div class="card-header">
+                    Destinataire
+                  </div>
+                  <div class="card-body">
+                    Bureau des réseaux électriques et de la réglementation de l’énergie
+                    <br>
+                    Direction générale de l'énergie et du climat
+                    <br>
+                    Ministère de l’environnement, de l’énergie et de la mer
+                    <br>
+                    Tour Séquoia
+                    <br>
+                    92055 La Défense Cedex
+                  </div>
+                </div>
+                <!-- Destinataire -->
+
+                <br>
+
+                <!-- Objet -->
+                <div class="card text-center">
+                  <div class="card-header">
+                    Objet
+                  </div>
+                  <div class="card-body">
+                    Demande d'autorisation d'exploiter une installation de production d'électricité en utilisant 
+                    l'énergie quantique du vide extraite par distortion spatiale grâce aux champs magnétiques des 
+                    aimants permanents en rotation avec le générateur homopolaire de Bruce DePalma.
+                  </div>
+                </div>
+                <!-- Objet -->
+
+                <br>
+
+                <!-- Message -->
+                <div class="card text-center">
+                  <div class="card-header">
+                    Message
+                  </div>
+                  <div class="card-body">
+                    Bonjour,
+                    <br>
+                    <br>
+                    Vu les articles L311-5 à L311-9 du code de l'énergie concernant l'autorisation d'exploiter 
+                    une installation de production d'électricité,
+                    <br>
+                    Vu les articles R311-1 à R311-11-1 du code de l'énergie concernant l'autorisation d'exploiter 
+                    une installation de production d'électricité,
+                    <br>
+                    Vu le code de l'environnement,
+                    <br>
+                    Vu le code de la propriété intellectuelle,
+
+                    <br>
+                    <br>
+
+                    Conformément à l'article R311-5 du code de l'énergie, cette demande d'autorisation d'exploiter 
+                    une installation de production d'électricité en utilisant l'énergie quantique du vide extraite par 
+                    distortion spatiale grâce aux champs magnétiques des aimants permanents en rotation avec le 
+                    générateur homopolaire de Bruce DePalma est adressée au ministre chargé de l'énergie par le 
+                    pétitionnaire en un seul exemplaire.
+
+                    <br>
+                    <br>
+
+                    Les informations nécessaires à l'instruction de cette demande d'autorisation d'exploiter 
+                    une installation de production d'électricité en utilisant l'énergie quantique du vide extraite par 
+                    distortion spatiale grâce aux champs magnétiques des aimants permanents en rotation avec le 
+                    générateur homopolaire de Bruce DePalma sont détaillées ci-après.
+
+                    <br>
+                    <br>
+
+                    <!-- Note précisant les capacités techniques, économiques et financières du pétitionnaire -->
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Note précisant les capacités techniques, économiques et financières du pétitionnaire
+                      </div>
+                      <div class="card-body">
+                        <!-- Capacités techniques -->
+                        <div class="card text-center">
+                          <div class="card-header">
+                            Capacités techniques
+                          </div>
+                          <div class="card-body">
+                            Le pétitionnaire exécute seul ses travaux, et éventuellement en compagnie de ses 
+                            éventuels partenaires.
+                            <br>
+                            <br>
+                            Après, le pétitionnaire posséde en général les moyens matériels suivants pour effectuer 
+                            ses travaux :
+                            <br>
+                            - Un ordinateur portable équipé de plusieurs logiciels applicatifs spécifiques pour 
+                            l'ingénierie.
+                            <br>
+                            - Un diable de manutention pouvant supporter une charge de 250 kilogrammes équipé de roues 
+                            increvables.
+                            <br>
+                            - Une cantine métallique de 100 centimètres pouvant être installée sur un diable de 
+                            manutention.
+                            <br>
+                            - Une perceuse pour percer des matériaux et visser des vis.
+                            <br>
+                            - Une scie sauteuse pour couper des matérieux (bois, métal ...).
+                            <br>
+                            - Plusieurs forêts pour le perçage de différents types de matériaux (bois, métal ...).
+                            <br>
+                            - Plusieurs clés plates.
+                            <br>
+                            - Plusieurs clés à douille.
+                            <br>
+                            - Plusieurs embouts de vissage.
+                            <br>
+                            - Plusieurs clés Allen.
+                            <br>
+                            - Plusieurs palettes de manutention.
+                            <br>
+                            - Plusieurs rallonges électriques.
+                            <br>
+                            - Un mètre.
+                            <br>
+                            - Plusieurs cordes de manutention.
+                          </div>
+                        </div>
+                        <!-- Capacités techniques -->
+
+                        <br>
+
+                        <!-- Capacités économiques -->
+                        <div class="card text-center">
+                          <div class="card-header">
+                            Capacités économiques
+                          </div>
+                          <div class="card-body">
+                            Le pétitionnaire a un revenu salarié annuel brut compris entre 20 000 et 50 000 euros.
+                          </div>
+                        </div>
+                        <!-- Capacités économiques -->
+
+                        <br>
+
+                        <!-- Capacités financières -->
+                        <div class="card text-center">
+                          <div class="card-header">
+                            Capacités financières
+                          </div>
+                          <div class="card-body">
+                            Le pétitionnaire finance ses projets en utilisant les moyens financiers suivants :
+                            <br>
+                            - Ses fonds propres.
+                            <br>
+                            - Les apports en nature.
+                            <br>
+                            - Les prêts bancaires octroyés auprès d'établissements financiers.
+                          </div>
+                        </div>
+                        <!-- Capacités financières -->
+                      </div>
+                    </div>
+                    <!-- Note précisant les capacités techniques, économiques et financières du pétitionnaire -->
+
+                    <br>
+
+                    <!-- Caractéristiques principales de l'installation de production -->
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Caractéristiques principales de l'installation de production
+                      </div>
+                      <div class="card-body">
+                        <!-- Capacité de production -->
+                        <div class="card text-center">
+                          <div class="card-header">
+                            Capacité de production
+                          </div>
+                          <div class="card-body">
+                            La capacité de production d'électricité de cette installation sera comprise entre 10 
+                            kilowatts et 50 mégawatts .
+                          </div>
+                        </div>
+                        <!-- Capacité de production -->
+
+                        <br>
+
+                        <!-- Energies primaires -->
+                        <div class="card text-center">
+                          <div class="card-header">
+                            Energies primaires
+                          </div>
+                          <div class="card-body">
+                            Les énergies primaires de cette installation de production d'électricité sont les 
+                            suivantes :
+                            <br>
+                            - Energie électrique provenant de batteries électriques pour amorcer un moteur électrique.
+                            <br>
+                            - Energie quantique du vide extraite par distortion spatiale grâce aux champs magnétiques 
+                            des aimants permanents en rotation avec le générateur homopolaire de Bruce DePalma.
+                          </div>
+                        </div>
+                        <!-- Energies primaires -->
+
+                        <br>
+
+                        <!-- Techniques de production utilisées -->
+                        <div class="card text-center">
+                          <div class="card-header">
+                            Technique de production utilisée
+                          </div>
+                          <div class="card-body">
+                            La technique de production d'électricité utilisée par cette installation se base sur 
+                            la création d'un générateur homopolaire extrayant de l'énergie quantique du vide extraite 
+                            par distortion spatiale grâce aux champs magnétiques des aimants permanents en rotation 
+                            avec le générateur homopolaire de Bruce DePalma.
+                            <br>
+                            <br>
+                            Après, ce générateur homopolaire est composé des éléments suivants :
+                            <br>
+                            - Une batterie électrique.
+                            <br>
+                            - Un moteur électrique.
+                            <br>
+                            - Des aimants permanents.
+                            <br>
+                            - Des disques de cuivre.
+                            <br>
+                            - Un arbre de rotation.
+                            <br>
+                            - Un socle.
+                            <br>
+                            - Plusieurs poulies.
+                            <br>
+                            - Plusieurs courroies.
+                            <br>
+                            - Plusieurs paliers à roulements à billes.
+                            <br>
+                            - Plusieurs équipements électriques (interrupteurs, disjoncteur, régulateur ...).
+                            <br>
+                            - Plusieurs équipements mécaniques (tige filetée, rondelles, écrous, vis ...).
+                            <br>
+                            <br>
+                            Puis, ce générateur homopolaire est construit en suivant les idées publiées par l' 
+                            invention tombée dans le domaine public qui est la suivante : 
+                            <br>
+                            - Brevet WO1995008210A1 intitulé "Générateur homopolaire" dont l'inventeur est Bruce DePalma.
+                            <br>
+                            <br> 
+                            Ensuite, ce générateur homopolaire suit les théories de l'électromagnétisme, la loi de la 
+                            conservation de l'énergie et la théorie sur le disque de Faraday.
+                            <br>
+                            <br>
+                            De plus, il y a plusieurs dessins de ce générateur homopolaire qui sont joints 
+                            en annexe de cette demande d'autorisation d'exploiter une installation de production 
+                            d'électricité.
+                          </div>
+                        </div>
+                        <!-- Techniques de production utilisées -->
+
+                        <br>
+
+                        <!-- Rendements énergétiques -->
+                        <div class="card text-center">
+                          <div class="card-header">
+                            Rendement énergétique
+                          </div>
+                          <div class="card-body">
+                            Le coefficient de performance de cette installation de production d'électricité est compris 
+                            entre 10 et 1000.
+                          </div>
+                        </div>
+                        <!-- Rendements énergétiques -->
+
+                        <br>
+
+                        <!-- Durées de fonctionnement -->
+                        <div class="card text-center">
+                          <div class="card-header">
+                            Durées de fonctionnement
+                          </div>
+                          <div class="card-body">
+                            Les durées de fonctionnement en base, en semi-base et en pointe de cette installation de 
+                            production d'électricité sont illimitées, sans prendre en compte la durée des éventuelles 
+                            maintenances.
+                          </div>
+                        </div>
+                        <!-- Durées de fonctionnement -->
+
+                        <br>
+
+                        <!-- Quantité de gaz à effet de serre émise par cette installation -->
+                        <div class="card text-center">
+                          <div class="card-header">
+                            Quantité de gaz à effet de serre émise par cette installation
+                          </div>
+                          <div class="card-body">
+                            Conformément aux articles L229-1 à L229-69 et D229-1 à R229-105 du code de 
+                            l'environnement, la quantité de gaz à effet de serre émise par cette installation 
+                            de production d'électricité est égale à zéro gramme.
+                          </div>
+                        </div>
+                        <!-- Quantité de gaz à effet de serre émise par cette installation -->
+                      </div>
+                    </div>
+                    <!-- Caractéristiques principales de l'installation de production -->
+
+                    <br>
+
+                    <!-- Localisation de l'installation de production -->
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Localisation de l'installation de production
+                      </div>
+                      <div class="card-body">
+                        La localisation de l'installation de production d'électricité sera située à l'adresse suivante :
+                        <br>
+                         
+                      </div>
+                    </div>
+                    <!-- Localisation de l'installation de production -->
+
+                    <br>
+
+                    <!-- Note relative à l'efficacité énergétique de l'installation comparée aux meilleures 
+                    techniques disponibles à un coût économiquement acceptable -->
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Note relative à l'efficacité énergétique de l'installation comparée aux meilleures 
+                        techniques disponibles à un coût économiquement acceptable
+                      </div>
+                      <div class="card-body">
+                        Vu les articles L100-1 A à L100-5 du code de l'énergie concernant les objectifs de la 
+                        politique énergétique nationale pour répondre à l'urgence écologique et climatique,
+                        <br>
+                        Vu la directive 2012/27/UE du Parlement européen et du Conseil du 25 octobre 2012 
+                        relative à l'efficacité énergétique, modifiant les directives 2009/125/CE et 2010/30/UE et 
+                        abrogeant les directives 2004/8/CE et 2006/32/CE,
+                        <br>
+                        Vu le règlement (UE) 2017/1938 du Parlement européen et du Conseil du 25 octobre 2017 
+                        concernant des mesures visant à garantir la sécurité de l'approvisionnement en gaz 
+                        naturel et abrogeant le règlement (UE) n° 994/2010,
+                        <br>
+                        Vu le protocole de Kyoto visant à la réduction des émissions de gaz à effet de serre,
+                        <br>
+                        Vu l'accord de Paris sur le climat concernant l'atténuation et l'adaptation au changement 
+                        climatique,
+                        <br>
+                        <br>
+                        Conformément aux objectifs d'efficacité énergétique, à la sécurité d'approvisionnement 
+                        énergétique et à la lutte contre le réchauffement climatique dictés par certaines directives 
+                        de l'Union européenne et certains accords internationaux, cette installation de production 
+                        d'électricité présente des avantages significatives en matière d'efficacité énergétique, de la 
+                        sécurité d'apprivisionnement énergétique et de la contribution à la lutte contre le 
+                        réchauffement climatique énoncés par les points suivants :
+                        <br>
+                        - Aucune émission de gaz à effet de serre.
+                        <br>
+                        - Aucune consommation énergétique primaire fossile.
+                        <br>
+                        - Utilisation d'une énergie renouvelable provenant de l'énergie quantique du vide disponible 
+                        sans interruption, de jour comme de nuit.
+                        <br>
+                        - Capacité de maintenir une autonomie énergétique dans les départements d'outre-mer.
+                        <br>
+                        - Capacité de favoriser l'émergence d'une économie compétitive et riche en emplois grâce 
+                        à la mobilisation de toutes les filières industrielles, notamment celles de la croissance 
+                        verte qui se définit comme un mode de développement économique respectueux de l'environnement, 
+                        à la fois sobre et efficace en énergie et en consommation de ressources et de carbone, 
+                        socialement inclusif, soutenant le potentiel d'innovation et garant de la compétitivité des 
+                        entreprises.
+                        <br>
+                        - Capacité d'assurer la sécurité d'approvisionnement et de réduire la dépendance aux 
+                        importations d'énergies fossiles et nucléaires.
+                        <br>
+                        - Capacité de préserver la santé humaine et l'environnement, en particulier en luttant 
+                        contre l'aggravation de l'effet de serre et contre les risques industriels majeurs, 
+                        en réduisant l'exposition des citoyens à la pollution de l'air.
+                        <br>
+                        - Capacité de garantir la cohésion sociale et territoriale en assurant un droit d'accès 
+                        de tous les ménages à l'énergie sans coût excessif au regard de leurs ressources.
+                        <br>
+                        - Capacité de lutter contre la précarité énergétique.
+                        <br>
+                        - Capacité de contribuer à la mise en place d'une Union européenne de l'énergie, 
+                        qui vise à garantir la sécurité d'approvisionnement et à construire une économie 
+                        décarbonée et compétitive, au moyen du développement des énergies renouvelables, 
+                        des interconnexions physiques, des moyens de flexibilité du système électrique, 
+                        du soutien à l'amélioration de l'efficacité énergétique et de la mise en place 
+                        d'instruments de coordination des politiques nationales.
+                      </div>
+                    </div>
+                    <!-- Note relative à l'efficacité énergétique de l'installation comparée aux meilleures 
+                    techniques disponibles à un coût économiquement acceptable -->
+
+                    <br>
+
+                    <!-- Destination prévue de l'électricité produite -->
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Destination prévue de l'électricité produite
+                      </div>
+                      <div class="card-body">
+                        Vu les articles L315-1 à L315-8 du code de l'énergie concernant l'autoconsommation vis-à-vis 
+                        des dispositions relatives à la production d'électricité,
+                        <br>
+                        Vu les articles D315-1 à R315-16 du code de l'énergie concernant l'autoconsommation vis-à-vis 
+                        des dispositions relatives à la production d'électricité,
+                        <br>
+                        <br>
+                        Conformément à l'article L315-1 du code de l'énergie, la destination prévue de l'électricité 
+                        produite est destinée pour une opération d'autoconsommation individuelle pour les besoins 
+                        propres du pétitionnaire.
+                      </div>
+                    </div>
+                    <!-- Destination prévue de l'électricité produite -->
+
+                    <br>
+
+                    Dans l'attente de votre décision, je vous prie d'agréer, l'expression de mes sincères salutations.
+
+                    <br>
+
+                    
+                  </div>
+                </div>
+                <!-- Message -->
+
+                <br>
+
+                <!-- Lieu, date et signature -->
+                <div class="card text-center">
+                  <div class="card-header">
+                    Lieu, date et signature du pétitionnaire
+                  </div>
+                  <div class="card-body">
+                    Fait à , le 07 Décembre 2022.
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                  </div>
+                </div>
+                <!-- Lieu, date et signature -->
+            </div>
+            <!-- container -->
+
+            <br>
+
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+            crossorigin="anonymous"></script>
+          </body>
+        </html>
+        """
+
+        options = {
+            'page-size': 'A4',
+            'header-center': "Demande d'autorisation d'exploiter une installation de production d'électricité",
+            'footer-right': '[page] sur [topage]',
+            'footer-left': demandeur
+        }
+
+        path_wkthmltopdf = "C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltopdf.exe"
+        config = pdfkit.configuration(wkhtmltopdf=path_wkthmltopdf)
+        pdfkit.from_string(
+            body,
+            "Home\\Demande_Autorisation_Exploiter_I_P_E_[" + demandeur.replace(" ", "_") + "].pdf",
+            configuration=config,
+            options=options
+        )
+
+    # ok
+    def test_dossier_demande_autorisation_exploiter_installation_production_electricite_personne_physique(self):
+        print("test_dossier_demande_autorisation_exploiter_installation_production_electricite_personne_physique")
+
+        def converter_png_to_pdf(image_location, pdfstore_location):
+            myimage = Image.open(image_location)
+            pdf_data = img2pdf.convert(myimage.filename)
+            converted_file = open(pdfstore_location, "wb")
+            converted_file.write(pdf_data)
+            myimage.close()
+            converted_file.close()
+            return pdfstore_location
+
+        demandeur = ""
+
+        location = "Home"
+
+        output = PdfFileWriter()
+
+        # demande_a_e_i_p_e
+        demande_a_e_i_p_e = str(location) + "\\Demande_Autorisation_Exploiter_I_P_E_[" + demandeur.replace(" ", "_") + "].pdf"
+
+        demande_a_e_i_p_e_pdf = PdfFileReader(open(demande_a_e_i_p_e, "rb"))
+
+        for i in range(0, demande_a_e_i_p_e_pdf.getNumPages()):
+            output.addPage(demande_a_e_i_p_e_pdf.getPage(i))
+
+        # isometric
+        isometric = converter_png_to_pdf(
+            str(location) + "\\Isometric.png",
+            str(location) + "\\Isometric.pdf"
+        )
+
+        isometric_pdf = PdfFileReader(open(isometric, "rb"))
+
+        for i in range(0, isometric_pdf.getNumPages()):
+            output.addPage(isometric_pdf.getPage(i))
+
+        # face
+        face = converter_png_to_pdf(
+            str(location) + "\\Face.png",
+            str(location) + "\\Face.pdf"
+        )
+
+        face_pdf = PdfFileReader(open(face, "rb"))
+
+        for i in range(0, face_pdf.getNumPages()):
+            output.addPage(face_pdf.getPage(i))
+
+        # droite
+        droite = converter_png_to_pdf(
+            str(location) + "\\Droite.png",
+            str(location) + "\\Droite.pdf",
+        )
+
+        droite_pdf = PdfFileReader(open(droite, "rb"))
+
+        for i in range(0, droite_pdf.getNumPages()):
+            output.addPage(droite_pdf.getPage(i))
+
+        # gauche
+        gauche = converter_png_to_pdf(
+            str(location) + "\\Gauche.png",
+            str(location) + "\\Gauche.pdf"
+        )
+
+        gauche_pdf = PdfFileReader(open(gauche, "rb"))
+
+        for i in range(0, gauche_pdf.getNumPages()):
+            output.addPage(gauche_pdf.getPage(i))
+
+        # dessus
+        dessus = converter_png_to_pdf(
+            str(location) + "\\Dessus.png",
+            str(location) + "\\Dessus.pdf"
+        )
+
+        dessus_pdf = PdfFileReader(open(dessus, "rb"))
+
+        for i in range(0, dessus_pdf.getNumPages()):
+            output.addPage(dessus_pdf.getPage(i))
+
+        # dessous
+        dessous = converter_png_to_pdf(
+            str(location) + "\\Dessous.png",
+            str(location) + "\\Dessous.pdf"
+        )
+
+        dessous_pdf = PdfFileReader(open(dessous, "rb"))
+
+        for i in range(0, dessous_pdf.getNumPages()):
+            output.addPage(dessous_pdf.getPage(i))
+
+        # arriere
+        arriere = converter_png_to_pdf(
+            str(location) + "\\Arriere.png",
+            str(location) + "\\Arriere.pdf"
+        )
+
+        arriere_pdf = PdfFileReader(open(arriere, "rb"))
+
+        for i in range(0, arriere_pdf.getNumPages()):
+            output.addPage(arriere_pdf.getPage(i))
+
+        # finally, write "output" to a real file
+        file_location = str(location)
+        output_stream = open(file_location + "\\Dossier_D_A_E_I_P_E_[" + str(location) + "].pdf", "wb")
         output.write(output_stream)
         output_stream.close()
 

@@ -35,8 +35,7 @@ class UnitTestsRPAWATradingXtb(unittest.TestCase):
         options = Options()
         options.headless = False
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
-                            '\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -77,8 +76,7 @@ class UnitTestsRPAWATradingXtb(unittest.TestCase):
         options = Options()
         options.headless = False
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Dropbox\\1_Personnel\\1_Recurrentes\\3_Outils_Numeriques\\GitHub'
-                            '\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
