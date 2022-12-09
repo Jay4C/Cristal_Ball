@@ -3,7 +3,7 @@ import pandas as pd
 
 
 class UnitTestsDataAnalysisPandas(unittest.TestCase):
-    #
+    # ok
     def test_1(self):
         print('test_1')
 

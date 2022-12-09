@@ -14,6 +14,9 @@ url = ""
 
 # ok
 def browser():
+    """
+    :return:
+    """
     # with Firefox
     options = Options()
     options.headless = True
@@ -26,6 +29,11 @@ def browser():
 
 # ok
 def bfa(browser, username, password):
+    """
+    :param browser:
+    :param username:
+    :param password:
+    """
     # Insert the email
     email_input = browser.find_element(
         by=By.XPATH,
@@ -56,6 +64,10 @@ def bfa(browser, username, password):
 
 # ok
 def starting(url, browser):
+    """
+    :param url:
+    :param browser:
+    """
     time.sleep(5)
 
     warnings.filterwarnings(
@@ -79,7 +91,7 @@ def starting(url, browser):
     time.sleep(10)
 
 
-class UnitTestsRPADiversInsightV2(unittest.TestCase):
+class UnitTestsRPADiversIV2(unittest.TestCase):
     # ok
     def test_close_all_processes(self):
         print('test_close_all_processes')
@@ -190,7 +202,7 @@ class UnitTestsRPADiversInsightV2(unittest.TestCase):
             print("connection")
 
 
-class UnitTestsRPADiverseInsightV2BFA(unittest.TestCase):
+class UnitTestsRPADiverseIV2BFA(unittest.TestCase):
     # ok
     def test_bfa_1(self):
         print('test_bfa_1')
@@ -643,6 +655,72 @@ class UnitTestsRPADiverseInsightV2BFA(unittest.TestCase):
                                                 else:
                                                     print("connection : " + str(_password))
                                                     break
+
+
+class UnitTestsRPADiverseIV2CheckPages(unittest.TestCase):
+    @staticmethod
+    def test_check_all_parks():
+        print('test_check_all_parks')
+        _username = ""
+        _password = ""
+
+        time.sleep(5)
+
+        warnings.filterwarnings(
+            action="ignore",
+            message="unclosed",
+            category=ResourceWarning
+        )
+
+        time.sleep(5)
+
+        # with Firefox
+        options = Options()
+        options.headless = False
+        _browser = webdriver.Firefox(
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
+            options=options
+        )
+
+        time.sleep(5)
+
+        # maximize window
+        _browser.maximize_window()
+
+        time.sleep(5)
+
+        for i in range(1, 120):
+            _browser.get('http://localhost/dashboard/parc?parc=' + str(i))
+
+            if _browser.current_url == "http://localhost/account/signin":
+                # Insert the email
+                email_input = _browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/div/form/div[1]/input"
+                )
+                email_input.send_keys(_username)
+
+                time.sleep(1)
+
+                # Insert the password
+                password_input = _browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/div/form/div[2]/input"
+                )
+                password_input.send_keys(_password)
+
+                time.sleep(1)
+
+                # Click on the 'Sign in' button
+                sign_in_button = _browser.find_element(
+                    by=By.XPATH,
+                    value="/html/body/div[2]/div/div/div[2]/div/div/div/div/div/div[2]/div/form/button"
+                )
+                sign_in_button.click()
+
+                time.sleep(1)
+
+            time.sleep(5)
 
 
 if __name__ == '__main__':
