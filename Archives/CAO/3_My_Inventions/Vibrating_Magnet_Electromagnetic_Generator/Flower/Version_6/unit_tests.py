@@ -14,7 +14,7 @@ import pywinauto.keyboard
 
 
 class UnitTestsVibratingMagnetElectromagneticGeneratorFlowerVersion2ForParts(unittest.TestCase):
-    # ok
+    #
     # 3D printing
     def test_part_coil_80de(self):
         print('test_part_coil_80de')
@@ -201,7 +201,7 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    # ok
+    #
     # Laser cutting
     def test_part_support(self):
         print('test_part_support')
@@ -379,7 +379,7 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
 
 
 class UnitTestsVibratingMagnetElectromagneticGeneratorFlowerForAssemblies(unittest.TestCase):
-    # ok
+    #
     def test_assembly(self):
         print("test_assembly")
 
