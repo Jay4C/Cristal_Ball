@@ -1,5 +1,5 @@
 999
-FreeCAD v0.19 24267 +99 (Git)
+FreeCAD v0.20 29410 (Git)
   0
 SECTION
   2
@@ -32,6 +32,14 @@ STANDARD
 $CMLSTYLE
   2
 STANDARD
+  9
+$LUNITS
+ 70
+2
+  9
+$INSUNITS
+ 70
+4
   9
 $PEXTMAX
  10

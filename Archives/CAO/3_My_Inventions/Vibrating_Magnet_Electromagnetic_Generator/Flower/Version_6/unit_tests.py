@@ -13,19 +13,19 @@ import pywinauto.keyboard
 # part_p_m_r_1D40_2D20_10h for assembly : ok
 
 
-class UnitTestsVibratingMagnetElectromagneticGeneratorFlowerVersion2ForParts(unittest.TestCase):
-    #
+class UnitTestsVibratingMagnetElectromagneticGeneratorFlowerVersion6ForParts(unittest.TestCase):
+    # ok
     # 3D printing
     def test_part_coil_80de(self):
         print('test_part_coil_80de')
 
-        if os.path.exists("part_coil_80de.py"):
-            os.remove("part_coil_80de.py")
+        if os.path.exists("Scripts\\part_coil_80de.py"):
+            os.remove("Scripts\\part_coil_80de.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_coil_80de.py", "w") as file:
+        with open("Scripts\\part_coil_80de.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math, importDXF
 
@@ -114,7 +114,7 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_coil_80de").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/part_coil_80de.stl"
+stl_file = u"A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Stl/part_coil_80de.stl"
 
 Mesh.export(__objs__, stl_file)
 
@@ -126,93 +126,93 @@ file = 'part_coil_80de_'
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\3_My_Inventions\\\\Vibrating_Magnet_Electromagnetic_Generator\\\\Flower\\\\Version_6\\\\part_coil_80de.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"A:\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\3_My_Inventions\\\\Vibrating_Magnet_Electromagnetic_Generator\\\\Flower\\\\Version_6\\\\Scripts\\\\part_coil_80de.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys('{ENTER}')
 
-    #
+    # ok
     # Laser cutting
     def test_part_support(self):
         print('test_part_support')
 
-        if os.path.exists("part_support.py"):
-            os.remove("part_support.py")
+        if os.path.exists("Scripts\\part_support.py"):
+            os.remove("Scripts\\part_support.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("part_support.py", "w") as file:
+        with open("Scripts\\part_support.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math, importDXF
 
@@ -286,11 +286,11 @@ __objs__ = []
 
 __objs__.append(FreeCAD.getDocument("part_support").getObject("Shape"))
 
-stl_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/part_support.stl"
+stl_file = u"A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Stl/part_support.stl"
 
 Mesh.export(__objs__, stl_file)
 
-dxf_file = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/part_support.dxf"
+dxf_file = u"A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/part_support.dxf"
 
 importDXF.export(__objs__, dxf_file)
 
@@ -302,75 +302,75 @@ file = 'part_support_'
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\3_My_Inventions\\\\Vibrating_Magnet_Electromagnetic_Generator\\\\Flower\\\\Version_6\\\\part_support.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"A:\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\3_My_Inventions\\\\Vibrating_Magnet_Electromagnetic_Generator\\\\Flower\\\\Version_6\\\\Scripts\\\\part_support.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
@@ -378,18 +378,18 @@ Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_A
         pywinauto.keyboard.send_keys('{ENTER}')
 
 
-class UnitTestsVibratingMagnetElectromagneticGeneratorFlowerForAssemblies(unittest.TestCase):
-    #
+class UnitTestsVibratingMagnetElectromagneticGeneratorFlowerVersion6ForAssemblies(unittest.TestCase):
+    # ok
     def test_assembly(self):
         print("test_assembly")
 
-        if os.path.exists("assembly.py"):
-            os.remove("assembly.py")
+        if os.path.exists("Scripts\\assembly.py"):
+            os.remove("Scripts\\assembly.py")
         else:
             print("The file does not exist")
 
         # Writing to file
-        with open("assembly.py", "w") as file:
+        with open("Scripts\\assembly.py", "w") as file:
             # Writing data to a file
             file.write("""import FreeCAD, Part, Mesh, math
 
@@ -444,7 +444,7 @@ number_of_steps = int(round(h_tige/(h_support*2 + h_coil)))
 # Insertion the part_support
 b = 0
 for i in range(0, number_of_steps + 1):
-    folder = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/"
+    folder = u"A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Stl/"
     file = "part_support"
     filename = folder + file + ".stl"
 
@@ -475,14 +475,14 @@ for i in range(0, number_of_steps + 1):
         __objs__.append(FreeCAD.getDocument(DOC_NAME).getObject(file + str(b)))
 
     b += 1
-# Insertion the part_support
 
+# Insertion the part_support
 # ok
 # Insertion the part_tige_filetee_acier_20d
 c = 0
 color = (0.50,0.50,0.50)
 
-folder = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/4_Basics/Fixations/"
+folder = u"A:/GitHub/Cristal_Ball/Archives/CAO/4_Basics/Fixations/"
 file = "part_tige_filetee_acier_20d"
 filename = folder + file + ".stl"
 
@@ -530,7 +530,7 @@ for i in range(0, int(360/degre)):
 d = 0
 color = (0.50,0.30,0.10)
 
-folder = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/4_Basics/Permanent_Magnets/Ferrite/"
+folder = u"A:/GitHub/Cristal_Ball/Archives/CAO/4_Basics/Permanent_Magnets/Ferrite/"
 file = "part_p_m_r_1D40_2D20_10h"
 filename = folder + file + ".stl"
 
@@ -572,7 +572,7 @@ for i3 in range(0, number_of_steps):
 # Insertion the part_p_m_r_1D40_2D20_10h (middle)
 color = (0.50,0.30,0.10)
 
-folder = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/4_Basics/Permanent_Magnets/Ferrite/"
+folder = u"A:/GitHub/Cristal_Ball/Archives/CAO/4_Basics/Permanent_Magnets/Ferrite/"
 file = "part_p_m_r_1D40_2D20_10h"
 filename = folder + file + ".stl"
 
@@ -611,7 +611,7 @@ for i1 in range(0, number_of_steps):
 e = 0
 color = (0.10,0.30,0.90)
 
-folder = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/"
+folder = u"A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Stl/"
 file = "part_coil_80de"
 filename = folder + file + ".stl"
 
@@ -652,7 +652,7 @@ for i1 in range(0, number_of_steps):
 # Insertion the part_coil_80de
 color = (0.10,0.30,0.90)
 
-folder = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/"
+folder = u"A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Stl/"
 file = "part_coil_80de"
 filename = folder + file + ".stl"
 
@@ -690,7 +690,7 @@ for i1 in range(0, number_of_steps):
 f = 0
 color = (0.30,0.60,0.90)
 
-folder = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/4_Basics/Fixations/"
+folder = u"A:/GitHub/Cristal_Ball/Archives/CAO/4_Basics/Fixations/"
 file = "part_ecrou_metal_20d_32_95e_16m"
 filename = folder + file + ".stl"
 
@@ -738,7 +738,7 @@ for i in range(0, int(360/degre)):
 degre = 36
 color = (0.30,0.60,0.90)
 
-folder = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/4_Basics/Fixations/"
+folder = u"A:/GitHub/Cristal_Ball/Archives/CAO/4_Basics/Fixations/"
 file = "part_ecrou_metal_20d_32_95e_16m"
 filename = folder + file + ".stl"
 
@@ -776,7 +776,7 @@ for i in range(0, int(360/degre)):
 # Insertion the part_ecrou_metal_20d_32_95e_16m
 color = (0.30,0.60,0.90)
 
-folder = u"A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/CAO/4_Basics/Fixations/"
+folder = u"A:/GitHub/Cristal_Ball/Archives/CAO/4_Basics/Fixations/"
 file = "part_ecrou_metal_20d_32_95e_16m"
 filename = folder + file + ".stl"
 
@@ -817,75 +817,75 @@ file = DOC_NAME + '_'
 Gui.runCommand('Std_DrawStyle',5)
 i = 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 # Filaire
 Gui.runCommand('Std_DrawStyle',2)
 i += 1
 Gui.activeDocument().activeView().viewIsometric()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewFront()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewTop()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRight()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewRear()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewBottom()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 
 i += 1
 Gui.activeDocument().activeView().viewLeft()
-Gui.activeDocument().activeView().saveImage('A:/1_Professionnel/1_Holomorphe/2_Archives/2_Outils_Numeriques/My_Tools/Test/Service/Archives/Images_To_Videos/3_My_Inventions/VMEG/Flower/6/' + file + str(i) + '.png',1117,388,'Current')
+Gui.activeDocument().activeView().saveImage('A:/GitHub/Cristal_Ball/Archives/CAO/3_My_Inventions/Vibrating_Magnet_Electromagnetic_Generator/Flower/Version_6/Png/' + file + str(i) + '.png',1117,388,'Current')
 """)
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(460, 750))
+        pywinauto.mouse.click(button="left", coords=(round(670 * 1.5), round(695 * 1.5)))
 
         time.sleep(3)
 
-        pywinauto.mouse.click(button="left", coords=(70, 670))
+        pywinauto.mouse.click(button="left", coords=(round(60 * 1.5), round(615 * 1.5)))
 
         time.sleep(3)
 
         pywinauto.keyboard.send_keys(
-            'exec{(}open{(}"A:\\\\1_Professionnel\\\\1_Holomorphe\\\\2_Archives\\\\2_Outils_Numeriques\\\\My_Tools\\\\Test\\\\Service\\\\Archives\\\\CAO\\\\3_My_Inventions\\\\Vibrating_Magnet_Electromagnetic_Generator\\\\Flower\\\\Version_6\\\\assembly.py"{)}.read{(}{)}{)}'
+            'exec{(}open{(}"A:\\\\GitHub\\\\Cristal_Ball\\\\Archives\\\\CAO\\\\3_My_Inventions\\\\Vibrating_Magnet_Electromagnetic_Generator\\\\Flower\\\\Version_6\\\\Scripts\\\\assembly.py"{)}.read{(}{)}{)}'
         )
 
         time.sleep(3)
