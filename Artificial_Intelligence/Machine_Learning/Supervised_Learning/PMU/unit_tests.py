@@ -1,3 +1,4 @@
+import subprocess
 import time
 import unittest
 import warnings
@@ -10,7 +11,7 @@ import pymysql.cursors
 from selenium.webdriver.common.by import By
 
 # unibet race url
-global_url = "https://www.unibet.fr/turf/race/27-11-2022-R8-C8-gavea-premio-bat-masterson.html"
+global_url = "https://www.unibet.fr/turf/race/11-12-2022-R6-C4-son-pardo-criterium-dels-2-anys.html"
 
 
 class UnitTestsSupervisedLearningPMU(unittest.TestCase):
@@ -1407,7 +1408,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -1510,7 +1511,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -1591,7 +1592,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -1672,7 +1673,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -1749,7 +1750,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -1827,7 +1828,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -1941,7 +1942,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -2055,7 +2056,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -2214,7 +2215,7 @@ class UnitTestsSupervisedLearningPMU(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -2336,7 +2337,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -2434,7 +2435,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -2575,7 +2576,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -2716,7 +2717,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -2857,7 +2858,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -2998,7 +2999,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -3139,7 +3140,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -3280,7 +3281,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -3421,7 +3422,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -3562,7 +3563,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -3701,7 +3702,7 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
         options = Options()
         options.headless = True
         browser = webdriver.Firefox(
-            executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+            executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
             options=options
         )
 
@@ -3826,6 +3827,13 @@ class UnitTestsSupervisedLearningPMUV1(unittest.TestCase):
 
 
 class UnitTestsSupervisedLearningPMUFinal(unittest.TestCase):
+    # ok
+    def test_close_all_processes(self):
+        print('test_close_all_processes')
+
+        subprocess.run('taskkill /f /im firefox.exe')
+        subprocess.run('taskkill /f /im geckodriver.exe')
+
     # global_scoring_runners : ok
     def test_global_scoring_runners(self=None):
         print('starting')

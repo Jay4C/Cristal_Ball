@@ -3,19 +3,19 @@ import unittest
 import time
 import warnings
 from selenium import webdriver
-from Service.MachineLearning.SupervisedLearning.PMU.pmu import PMUFinal
+from Artificial_Intelligence.Machine_Learning.Supervised_Learning.PMU.pmu import PMUFinal
 
 
 # unibet race url
-global_url = "https://www.unibet.fr/turf/race/24-01-2022-R3-C8-marseille-vivaux-prix-de-cazan.html"
+global_url = ""
 
 
 class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
-    # ok
+    #
     def test_se_connecter(self):
         print("test_se_connecter")
 
-        username = ".@outlook.fr"
+        username = ""
 
         password = ""
 
@@ -28,7 +28,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -87,7 +87,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
-    # simple gagnant : ok
+    # simple gagnant :
     def test_selectionner_un_cheval_pour_un_simple_gagnant(self):
         print('test_selectionner_un_cheval_pour_un_simple_gagnant')
 
@@ -102,7 +102,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -161,7 +161,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -264,7 +264,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # simple place : ok
+    # simple place :
     def test_selectionner_un_cheval_pour_un_simple_place(self):
         print('test_selectionner_un_cheval_pour_un_simple_gagnant')
 
@@ -279,7 +279,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -322,6 +322,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_un_simple_place(self):
         print('test_miser_un_simple_place')
 
@@ -338,7 +339,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -441,7 +442,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # jumelé desordre gagnant : ok
+    # jumelé desordre gagnant :
     def test_selectionner_deux_chevaux_pour_un_jumele_desordre_gagnant(self):
         print('test_selectionner_deux_chevaux_pour_un_jumele_desordre_gagnant')
 
@@ -458,7 +459,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -517,6 +518,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_un_jumele_desordre_gagnant(self):
         print('test_miser_un_jumele_desordre_gagnant')
 
@@ -535,7 +537,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -654,7 +656,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # jumele ordre : ok
+    # jumele ordre :
     def test_selectionner_deux_chevaux_pour_un_jumele_ordre(self):
         print('test_selectionner_deux_chevaux_pour_un_jumele_ordre')
 
@@ -671,7 +673,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -722,6 +724,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_un_jumele_ordre(self):
         print('test_miser_un_jumele_ordre')
 
@@ -740,7 +743,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -851,7 +854,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # trio : ok
+    # trio :
     def test_selectionner_trois_chevaux_pour_un_trio_desordre(self):
         print('test_selectionner_trois_chevaux_pour_un_trio_desordre')
 
@@ -870,7 +873,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -929,6 +932,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_un_trio_desordre(self):
         print('test_miser_un_trio_desordre')
 
@@ -949,7 +953,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -1068,7 +1072,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # trio ordre : ok
+    # trio ordre :
     def test_selectionner_trois_chevaux_pour_un_trio_ordre(self):
         print('test_selectionner_trois_chevaux_pour_un_trio_ordre')
 
@@ -1087,7 +1091,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -1146,6 +1150,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_un_trio_ordre(self):
         print('test_miser_un_trio_ordre')
 
@@ -1166,7 +1171,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -1285,7 +1290,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # 2 sur 4 : ok
+    # 2 sur 4 :
     def test_selectionner_deux_chevaux_pour_un_2_sur_4(self):
         print('test_selectionner_deux_chevaux_pour_un_2_sur_4')
 
@@ -1302,7 +1307,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -1353,6 +1358,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_un_2_sur_4(self):
         print('test_miser_un_2_sur_4')
 
@@ -1371,7 +1377,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -1482,7 +1488,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # quadri : ok
+    # quadri :
     def test_selectionner_trois_chevaux_pour_un_quadri_desordre(self):
         print('test_selectionner_trois_chevaux_pour_un_quadri_desordre')
 
@@ -1503,7 +1509,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -1570,6 +1576,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_un_quadri_desordre(self):
         print('test_miser_un_quadri_desordre')
 
@@ -1592,7 +1599,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -1710,7 +1717,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
-    # quadri ordre : ok
+    # quadri ordre :
     def test_selectionner_trois_chevaux_pour_un_quadri_ordre(self):
         print('test_selectionner_trois_chevaux_pour_un_quadri_ordre')
 
@@ -1731,7 +1738,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -1798,6 +1805,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_un_quadri_ordre(self):
         print('test_miser_un_quadri_ordre')
 
@@ -1820,7 +1828,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -1947,7 +1955,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # le deuzio : ok
+    # le deuzio :
     def test_selectionner_un_cheval_pour_un_deuzio(self):
         print('test_selectionner_un_cheval_pour_un_deuzio')
 
@@ -1962,7 +1970,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -2005,6 +2013,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_sur_un_deuzio(self):
         print('test_miser_sur_un_deuzio')
 
@@ -2021,7 +2030,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -2124,7 +2133,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # le boulet : ok
+    # le boulet :
     def test_selectionner_un_cheval_pour_un_boulet(self):
         print('test_selectionner_un_cheval_pour_un_boulet')
 
@@ -2139,7 +2148,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -2182,6 +2191,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_sur_un_boulet(self):
         print('test_miser_sur_un_boulet')
 
@@ -2198,7 +2208,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -2301,7 +2311,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # mix 4 : ok
+    # mix 4 :
     def test_selectionner_trois_chevaux_pour_un_mix_4(self):
         print('test_selectionner_trois_chevaux_pour_un_quadri_ordre')
 
@@ -2322,7 +2332,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -2389,6 +2399,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_un_mix_4(self):
         print('test_miser_un_mix_4')
 
@@ -2411,7 +2422,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -2538,7 +2549,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(5)
         """
 
-    # mix S : ok
+    # mix S :
     def test_selectionner_un_cheval_pour_un_mix_s(self):
         print('test_selectionner_un_cheval_pour_un_mix_s')
 
@@ -2553,7 +2564,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -2596,6 +2607,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_sur_un_mix_s(self):
         print('test_miser_sur_un_mix_s')
 
@@ -2612,7 +2624,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -2738,7 +2750,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -2813,6 +2825,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
         time.sleep(5)
 
+    #
     def test_miser_un_5_sur_5_desordre(self):
         print('test_miser_un_5_sur_5_desordre')
 
@@ -2837,7 +2850,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -2974,7 +2987,7 @@ class Unit_Tests_Web_Automation_Unibet(unittest.TestCase):
 
 
 class Unit_Tests_Web_Automation_Unibet_With_Artificial_Intelligence(unittest.TestCase):
-    # 5 sur 5 : ok
+    # 5 sur 5 :
     def test_miser_un_cinq_sur_cinq_desordre_avec_ia(self):
         print('test_miser_un_cinq_sur_cinq_desordre_avec_ia')
 
@@ -3009,7 +3022,7 @@ class Unit_Tests_Web_Automation_Unibet_With_Artificial_Intelligence(unittest.Tes
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -3142,7 +3155,7 @@ class Unit_Tests_Web_Automation_Unibet_With_Artificial_Intelligence(unittest.Tes
 
         time.sleep(5)
 
-    # ok
+    #
     def test_stop_firefox(self):
         print("test_stop_firefox")
 
@@ -3151,7 +3164,7 @@ class Unit_Tests_Web_Automation_Unibet_With_Artificial_Intelligence(unittest.Tes
 
 
 class Unit_Tests_Web_Automation_Unibet_With_Artificial_IntelligenceV1(unittest.TestCase):
-    # trio : ok
+    # trio :
     def test_miser_un_trio_desordre_avec_ia(self):
         print('test_miser_un_trio_desordre_avec_ia')
 
@@ -3179,7 +3192,7 @@ class Unit_Tests_Web_Automation_Unibet_With_Artificial_IntelligenceV1(unittest.T
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -3298,7 +3311,7 @@ class Unit_Tests_Web_Automation_Unibet_With_Artificial_IntelligenceV1(unittest.T
         time.sleep(5)
         """
 
-    # 2 sur 4 : ok
+    # 2 sur 4 :
     def test_miser_un_2_sur_4_avec_ia(self):
         print('test_miser_un_2_sur_4_avec_ia')
 
@@ -3321,7 +3334,7 @@ class Unit_Tests_Web_Automation_Unibet_With_Artificial_IntelligenceV1(unittest.T
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 
@@ -3430,7 +3443,7 @@ class Unit_Tests_Web_Automation_Unibet_With_Artificial_IntelligenceV1(unittest.T
 
         time.sleep(5)
 
-    # quadri : ok
+    # quadri :
     def test_miser_un_quadri_desordre_avec_ia(self):
         print('test_miser_un_quadri_desordre_avec_ia')
 
@@ -3461,7 +3474,7 @@ class Unit_Tests_Web_Automation_Unibet_With_Artificial_IntelligenceV1(unittest.T
         time.sleep(1)
 
         # with Firefox
-        browser = webdriver.Firefox(executable_path='..\\geckodriver.exe')
+        browser = webdriver.Firefox(executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe')
 
         time.sleep(5)
 

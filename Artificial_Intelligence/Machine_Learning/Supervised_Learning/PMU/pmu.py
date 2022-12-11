@@ -27,7 +27,7 @@ class PMU:
             options = Options()
             options.headless = True
             browser = webdriver.Firefox(
-                executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+                executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
                 options=options
             )
 
@@ -1630,7 +1630,7 @@ class PMU:
             options = Options()
             options.headless = True
             browser = webdriver.Firefox(
-                executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+                executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
                 options=options
             )
 
@@ -1715,7 +1715,7 @@ class PMU:
             options = Options()
             options.headless = True
             browser = webdriver.Firefox(
-                executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+                executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
                 options=options
             )
 
@@ -1804,7 +1804,7 @@ class PMU:
             options = Options()
             options.headless = True
             browser = webdriver.Firefox(
-                executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+                executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
                 options=options
             )
 
@@ -1909,7 +1909,7 @@ class PMU:
             options = Options()
             options.headless = True
             browser = webdriver.Firefox(
-                executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+                executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
                 options=options
             )
 
@@ -1956,7 +1956,7 @@ class PMU:
             options = Options()
             options.headless = True
             browser = webdriver.Firefox(
-                executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+                executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
                 options=options
             )
 
@@ -2074,7 +2074,7 @@ class PMU:
             options = Options()
             options.headless = True
             browser = webdriver.Firefox(
-                executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+                executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
                 options=options
             )
 
@@ -2192,7 +2192,7 @@ class PMU:
             options = Options()
             options.headless = True
             browser = webdriver.Firefox(
-                executable_path='C:\\Users\\Jason\\Documents\\Devs\\Cristal_Ball\\geckodriver.exe',
+                executable_path='A:\\GitHub\\Cristal_Ball\\geckodriver.exe',
                 options=options
             )
 
@@ -2343,6 +2343,8 @@ class PMU:
 
 
 class PMUFinal:
+    """
+    """
     def __init__(self):
         pass
 
