@@ -186,7 +186,7 @@ class UnitTestsRPAWATradingXtb(unittest.TestCase):
 
         time.sleep(5)
 
-    #
+    # ok
     def test_place_one_order_from_execution_instantanee(self):
         print('test_place_one_order_from_execution_instantanee')
 
@@ -263,20 +263,6 @@ class UnitTestsRPAWATradingXtb(unittest.TestCase):
         print("se_connecter_button.click()")
 
         time.sleep(10)
-
-        """
-        try:
-            # Click on the 'Cross' button
-            cross_button = browser.find_element(
-                by=By.XPATH,
-                value='/html/body/div[1]/div[2]/div[5]/div/div/div[1]/div'
-            )
-            cross_button.click()
-        except Exception as e:
-            print('error : ' + str(e))
-
-        time.sleep(7)
-        """
 
         # Insert the type of forex pair
         forex_pair_input = browser.find_element(
