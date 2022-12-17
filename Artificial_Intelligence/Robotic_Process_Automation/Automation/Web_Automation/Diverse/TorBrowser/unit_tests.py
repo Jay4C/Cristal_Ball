@@ -28,8 +28,12 @@ class UnitTestsWebAutomationTorBrowser(unittest.TestCase):
         firefox_options = Options()
         firefox_options.headless = True
         firefox_options.add_argument('--proxy-server=socks5://%s' % tor_proxy)
-        browser = webdriver.Firefox(firefox_profile=profile, firefox_binary=binary,
-                                    executable_path='..\\geckodriver.exe', options=firefox_options)
+        browser = webdriver.Firefox(
+            firefox_profile=profile,
+            firefox_binary=binary,
+            executable_path='..\\geckodriver.exe',
+            options=firefox_options
+        )
 
         # maximize window
         browser.maximize_window()

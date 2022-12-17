@@ -11,7 +11,7 @@ import pymysql.cursors
 from selenium.webdriver.common.by import By
 
 # unibet race url
-global_url = "https://www.unibet.fr/turf/race/11-12-2022-R6-C4-son-pardo-criterium-dels-2-anys.html"
+global_url = "https://www.unibet.fr/turf/race/16-12-2022-R1-C2-vincennes-prix-de-quissac.html"
 
 
 class UnitTestsSupervisedLearningPMU(unittest.TestCase):
